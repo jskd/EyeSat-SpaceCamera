@@ -1,0 +1,12 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# OpenFile D:/Users/jerome_skoda/workspace/EyeSat/EyeSat_CMOS_Image_Sensor/FPGA_Program/simulation/cmv_controller.mpf 
+# Loading project cmv_controller
+# Compile of tb_cmv_4000.vhd was successful.
+vsim -gui -t 10ns work.tb_cmv_4000
+# vsim -gui -t 10ns work.tb_cmv_4000 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_cmv_4000(tb_cmv_4000_arch)
+add wave -position insertpoint sim:/tb_cmv_4000/*
+run
