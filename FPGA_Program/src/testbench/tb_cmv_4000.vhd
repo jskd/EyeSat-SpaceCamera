@@ -1,8 +1,9 @@
 library ieee;
 use ieee.std_logic_1164.all;
-use STD.textio.all;
-
-
+use std.textio.all;
+use work.txt_util.all;
+														
+														
 entity tb_cmv_4000 is
 	port
 	(
@@ -20,14 +21,12 @@ entity tb_cmv_4000 is
 		--TDIG1:			out	std_logic;
 		--LVDS_CLK:		in	std_logic;
 		OUTCLK:			out	std_logic;
-		OUTCTR:			out	std_logic;
-		OUT1:				out	std_logic;
-		OUT9:				out	std_logic
+		LVDS_OUTCTR:			out	std_logic;
+		LVDS_OUTDATA:		out	std_logic_vector(15 downto 0)
 	);
 end entity;
 
 architecture tb_cmv_4000_arch of tb_cmv_4000 is
-
   -- Procedure for clock generation
   procedure clk_gen(signal clk : out std_logic; constant FREQ : real) is
     constant PERIOD    : time := 1 sec / FREQ;        -- Full period
@@ -46,171 +45,86 @@ architecture tb_cmv_4000_arch of tb_cmv_4000 is
     end loop;
   end procedure;
 
-	
-	procedure read_pixel_output(
-		file f: text; 
-		signal data_OUT1: out std_logic_vector(9 downto 0); 
-		signal data_OUT9: out std_logic_vector(9 downto 0)
-	) is
-		variable buf: line;
-		variable c: character;
+	file f_data: text; 
 
-		begin
-		readline(f, buf);
-		for i in 0 to 9 loop
-			read(buf, c);
-			case c is
-				when '0' => data_OUT1(i) <= '0';
-				when '1' => data_OUT1(i) <= '1';
-				when others => data_OUT1(i) <= 'X';
-			end case;
-		end loop;
-		
-		for i in 0 to 9 loop
-			read(buf, c);
-			case c is
-				when '0' => data_OUT9(i) <= '0';
-				when '1' => data_OUT9(i) <= '1';
-				when others => data_OUT9(i) <= 'X';
-			end case;
-		end loop;
-
-	end procedure;
-	
-
-	file data: text;
-	signal pixel_output : std_logic_vector(19 downto 0);
-	signal ctr_lvds : std_logic_vector(9 downto 0) := "1110000001";
-	signal clk_lvds : std_logic := '0';
-	signal DVAL : std_logic := '0';
-	signal LVAL : std_logic := '0';
-	signal FVAL : std_logic := '0';
-	signal SLOT : std_logic := '0';
-	signal ROW : std_logic := '0';
-	signal FOT : std_logic := '0';
-	signal INTE1 : std_logic := '0';
-	signal INTE2 : std_logic := '0';
-	signal data_OUTCTR : std_logic_vector(9 downto 0);
-	signal data_OUT1 : std_logic_vector(9 downto 0) := "0000000000";
-	signal data_OUT9 : std_logic_vector(9 downto 0) := "0000000000";
-	
-	
-	signal lvds_digit : integer range 0 to 10 := 0;
-	
-	
-	
-	signal line_n : integer range 0 to 2047 := 0;
-	signal burst_n : integer range 0 to 2047 := 0;
-	signal pixel_n : integer range 0 to 129 := 0;
-	
-	type state_t is (burst_oh, row_oh, pixel_out, waiting_req, line_oh, init);
-	signal curent_s: state_t := waiting_req;
-	signal next_s: state_t := waiting_req;
-	
 	signal clk : std_logic := '0';
 	signal clk_gen_lvds : std_logic := '0';
+	signal	clk_lvds: std_logic := '0';
+	
+	signal next_lvds_digit : integer range 0 to 10 := 0;
+	
+	signal current_lvds_digit: integer range 0 to 10 := 0;
+	
 
+	type state_t is (waiting_req, init, px_burst, burst_oh, row_oh);
+	signal curent_s: state_t := init;
+	
+	type YOUR_ARRAY_TYPE is array (0 to 15) of std_logic_vector(9 downto 0);
+	signal buf_LVDS_OUTDATA : YOUR_ARRAY_TYPE;
+	
+	signal buf_LVDS_OUTCTR : std_logic_vector(9 downto 0);
+	signal buf_curent_s : std_logic_vector(3 downto 0);
+	
+	signal buf : std_logic_vector(173 downto 0);
 begin
-	
-  clk_gen(clk_gen_lvds, 50.000E6);
 
-	data_OUTCTR <= DVAL & LVAL & FVAL & SLOT & ROW & FOT & INTE1 & INTE2 & '0' & '1';
+  clk_gen(clk_gen_lvds, 50.000E6);
 	clk_lvds <= SYS_RES_N and clk_gen_lvds;
-	
 	OUTCLK <= clk_lvds;
 
 	process(clk_lvds)
 	
+		variable f_line: line;		
+		variable f_str: string(1 to 174);
+		
 		begin
 		
-	  if rising_edge(clk_lvds) or falling_edge(clk_lvds) then
-			OUT1 <= data_OUT1(lvds_digit);
-			OUT9 <= data_OUT9(lvds_digit);		
-			OUTCTR <= data_OUTCTR(lvds_digit);
-
-			if lvds_digit = 9 then
-				curent_s <= next_s;
-				case next_s is
-					when pixel_out =>  
-						read_pixel_output(data, data_OUT1, data_OUT9);
-						DVAL <= '1';
-						LVAL <= '1';
-						FVAL <= '1';
-						SLOT <= '0';
-						pixel_n <= pixel_n+1;
-						
-					when burst_oh =>
-						data_OUT1 <= "0000000000";
-						data_OUT9 <= "0000000000";
-						DVAL <= '0';
-						SLOT <= '1';
-						pixel_n <= 0;
-						
-					when line_oh =>
-						data_OUT1 <= "0000000000";
-						data_OUT9 <= "0000000000";
-						DVAL <= '0';
-						LVAL <= '0';
-						SLOT <= '1';
-						pixel_n <= 0;
-						burst_n <= 0;
-						
-					when init =>
-						file_open(data, "..\src\testbench\pixel_ouput.data", read_mode);
-						DVAL <= '0';
-						SLOT <= '0';
-						pixel_n <= 0;
-						burst_n <= 0;
-						line_n <= 0;
-						
-					when others => 
-						data_OUT1 <= "0000000000";
-						data_OUT9 <= "0000000000";
-						DVAL <= '0';
-						LVAL <= '0';
-						FVAL <= '0';
-						SLOT <= '0';
-						ROW <= '0';
-						FOT <= '0';
-						INTE1 <= '0';
-						INTE2 <= '0';
-						pixel_n <= 0;
-						burst_n <= 0;
-						line_n <= 0;
-				end case;
+			current_lvds_digit <= next_lvds_digit;
+		
+			-- update outdata
+			for i in 0 to 15 loop
+				LVDS_OUTDATA(i) <= buf_LVDS_OUTDATA(i)(next_lvds_digit);
+			end loop;
+			
+			-- update ctr
+			LVDS_OUTCTR <= buf_LVDS_OUTCTR(next_lvds_digit);
 				
-				case next_s is
-					when pixel_out =>   
-						if pixel_n = 127 
-						then 
-						if burst_n = 8
-							then 
-								if line_n = 2047
-									then 
-										next_s <= waiting_req;
-									else 
-										next_s <= line_oh;
-									end if;
-								else 
-									next_s <= burst_oh;
-								end if;
-							else
-								next_s <= pixel_out;
-						end if;	
-					when burst_oh => next_s <= pixel_out;
-					when init => next_s <= pixel_out;
-					when others => next_s <= init;
-				end case;
+			-- update state
+			case buf_curent_s is
+				when "0000" => curent_s <= px_burst;
+				when "0001" => curent_s <= burst_oh;
+				when "0010" => curent_s <= row_oh;
+				when others => curent_s <= init;
+			end case;
+
+			-- read file
+			if (next_lvds_digit = 7) and (curent_s = init) then	
+				file_open(f_data, "..\src\testbench\pixel_ouput.data", read_mode);
 			end if;
 
-			
-			if lvds_digit = 9 then
-				lvds_digit <= 0;
-			else
-				lvds_digit <= lvds_digit+ 1;
+			-- read line of file
+			if (next_lvds_digit = 8) and (curent_s /= waiting_req) then
+				readline(f_data, f_line);
+				read(f_line, f_str);
+				buf <= to_std_logic_vector(f_str);
 			end if;
-			
-		end if;
+
+			-- update ouput buffer
+			if (next_lvds_digit = 9) and (curent_s /= waiting_req) then
+				buf_curent_s <= buf(buf'LEFT  downto buf'LEFT - 3);
+				buf_LVDS_OUTCTR <= buf(buf'LEFT - 4 downto buf'LEFT - 13);
+				for i in 0 to 15 loop
+					buf_LVDS_OUTDATA(i) <= buf(buf'LEFT - 14 - i*10 downto buf'LEFT - 23 - i*10);
+				end loop;
+			end if;
+
+			-- update conter
+			if next_lvds_digit = 9 then
+				next_lvds_digit <= 0;
+			else
+				next_lvds_digit <= next_lvds_digit+1;
+			end if;
+
 	end process;
 
 end architecture;
