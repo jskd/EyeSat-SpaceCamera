@@ -9,19 +9,19 @@ BURST_SIZE = 128
 pattern = (0,1,1,2) #rggb
 DATA_SIZE = 10
 
-STATE_PX_BURST_OUT_CTRL = "1000000111"
-STATE_BURST_OH_OUT_CTRL = "1000001110"
-STATE_ROW_OH_OUT_CTRL   = "1000011100"
+STATE_PX_BURST_OUT_CTRL = 0b001000000111
+STATE_BURST_OH_OUT_CTRL = 0b001000001110
+STATE_ROW_OH_OUT_CTRL   = 0b001000011100
 
-''' [0] DVAL [1]  LVAL [2] FVAL  [3] SLOT[4] ROW
-    [5] FOT  [6] INTE1 [7] INTE2 [8] '0' [9] '1' '''
+''' [0] DVAL	[1]	LVAL	[2] FVAL  [3] SLOT	[4] ROW	[5] FOT
+		[6] INTE1	[7]	INTE2	[8] '0'		[9] '1' 	[10]'0' [11] '0' '''
 
-STATE_PX_BURST= "0000"
-STATE_BURST_OH= "0001"
-STATE_ROW_OH  = "0010"
+STATE_PX_BURST= 0x01
+STATE_BURST_OH= 0x02
+STATE_ROW_OH  = 0x03
 
 def get_pixel_color_by_pattern( img, pattern, i, j):
-  return img[i,j][ pattern[ i%2 + (j%2) *2 ] ]
+  return img[i,j][ pattern[ (i%2) + ((j%2)*2) ] ]
 
 def generate_output_sensor_render(file):
   im = Image.open( file )
@@ -46,15 +46,20 @@ def generate_pattern_color_render(file):
       px[i,j] = color
   img.save( file + ".pattern-color.png", "PNG")
 
-def px_to_bin ( px ):
-  return "{0:b}".format(px).zfill(10)
+def hex_upper( v ):
+	return hex( v )[2:].upper()
+	
+def ch_to_hex ( px ):
+	return hex_upper( px ).zfill(3)
 
+def state_to_hex ( state ):
+	return hex_upper( state ).zfill(1)
+	
 def get_output_data_null() :
-  s = ''
-  for ch in range(MAX_CHANNELS):
-    for digit in range(DATA_SIZE):
-      s += '0'
-  return s
+	s = ''
+	for ch in range(MAX_CHANNELS):
+		s += ch_to_hex(0)
+	return s
 
 def write_lvds_file(file, pattern, n_channel):
   BURST_PER_ROW = IMAGE_SIZE // (BURST_SIZE * n_channel)
@@ -62,13 +67,13 @@ def write_lvds_file(file, pattern, n_channel):
   image = im.load()
   
   def get_output_px_burst( data ) :
-    return STATE_PX_BURST + STATE_PX_BURST_OUT_CTRL + data + '\n'
+    return state_to_hex(STATE_PX_BURST) + ch_to_hex(STATE_PX_BURST_OUT_CTRL) + data + '\n'
 
   def get_output_burst_oh() :
-    return STATE_BURST_OH + STATE_BURST_OH_OUT_CTRL + get_output_data_null() + '\n'
+    return state_to_hex(STATE_BURST_OH) + ch_to_hex(STATE_BURST_OH_OUT_CTRL) + get_output_data_null() + '\n'
 
   def get_output_row_oh() :
-    return STATE_ROW_OH + STATE_ROW_OH_OUT_CTRL + get_output_data_null() + '\n'
+    return state_to_hex(STATE_ROW_OH) + ch_to_hex(STATE_ROW_OH_OUT_CTRL) + get_output_data_null() + '\n'
 
   def get_output_px (row, burst, pixel):
     data = ''
@@ -76,7 +81,7 @@ def write_lvds_file(file, pattern, n_channel):
       i = pixel + channel * (IMAGE_SIZE // n_channel)
       j = row  
       for duplicate_data in range(MAX_CHANNELS // n_channel):
-        data += px_to_bin(   get_pixel_color_by_pattern( image, pattern, i, j) )
+        data += ch_to_hex(   get_pixel_color_by_pattern( image, pattern, i, j) )
     return get_output_px_burst(data)
 
   f = open(file + ".sim-data-lvds",'w')
@@ -105,7 +110,7 @@ def main():
     sys.stderr.write("Error: image incorecte (taille minimum "+str(IMAGE_SIZE)+"x"+str(IMAGE_SIZE)+"px)\n")
     return 1
 
-  sys.stdout.write("Génération des fichiers de simulation en cour\n")
+  sys.stdout.write("Generation des fichiers de simulation en cour\n")
   generate_output_sensor_render(file)
   generate_pattern_color_render(file)
   write_lvds_file( file, pattern, 2)
