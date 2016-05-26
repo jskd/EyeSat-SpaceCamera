@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone II"
 set_global_assignment -name DEVICE EP2C35F672C6
-set_global_assignment -name TOP_LEVEL_ENTITY de2_cyclone2
+set_global_assignment -name TOP_LEVEL_ENTITY lvds_decoder
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:56:41  MAY 25, 2016"
 set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
@@ -46,10 +46,17 @@ set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
-set_global_assignment -name VHDL_FILE ../src/design/LVDS_IN_serialize.vhd
-set_global_assignment -name BDF_FILE de2_cyclone2.bdf
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
+set_global_assignment -name EDA_NETLIST_WRITER_OUTPUT_DIR ../simulation -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_global_assignment -name VHDL_FILE ../src/design/lvds_in_map.vhd
+set_global_assignment -name BDF_FILE ./lvds_decoder.bdf
+set_global_assignment -name BDF_FILE ./de2_cyclone2.bdf
+set_global_assignment -name VHDL_FILE ../src/design/lvds_out_map.vhd
+set_global_assignment -name QIP_FILE ./altlvds_rx0/altlvds_rx0.qip
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

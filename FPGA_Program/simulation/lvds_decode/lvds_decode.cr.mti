@@ -1,0 +1,25 @@
+../../src/design/LVDS_IN_serialize.vhd {1 {vcom -work work -2002 -explicit C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/src/design/LVDS_IN_serialize.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity lvds_in_serialize
+-- Compiling architecture lvds_in_serialize_a of lvds_in_serialize
+
+} {} {}} ./lvds_decode.vht {1 {vcom -work work -2002 -explicit C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/simulation/lvds_decode/lvds_decode.vht
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity de2_cyclone2_vhd_tst
+-- Compiling architecture de2_cyclone2_arch of de2_cyclone2_vhd_tst
+
+} {} {}} ../../de2_cyclone2/altlvds_rx0/altlvds_rx0.vhd {1 {vcom -work work -2002 -explicit C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/altlvds_rx0/altlvds_rx0.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity altlvds_rx0
+-- Compiling architecture SYN of altlvds_rx0
+
+} {} {}}

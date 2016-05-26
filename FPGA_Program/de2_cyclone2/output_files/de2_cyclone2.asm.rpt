@@ -1,5 +1,5 @@
 Assembler report for de2_cyclone2
-Wed May 25 16:32:27 2016
+Thu May 26 17:03:05 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -35,9 +35,9 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed May 25 16:32:27 2016 ;
+; Assembler Status      ; Successful - Thu May 26 17:03:05 2016 ;
 ; Revision Name         ; de2_cyclone2                          ;
-; Top-level Entity Name ; de2_cyclone2                          ;
+; Top-level Entity Name ; lvds_decoder                          ;
 ; Family                ; Cyclone II                            ;
 ; Device                ; EP2C35F672C6                          ;
 +-----------------------+---------------------------------------+
@@ -81,13 +81,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Wed May 25 16:32:19 2016
+    Info: Processing started: Thu May 26 17:02:58 2016
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off de2_cyclone2 -c de2_cyclone2
 Warning (292011): Can't generate programming files because you are currently using the Quartus II software in Evaluation Mode
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 401 megabytes
-    Info: Processing ended: Wed May 25 16:32:27 2016
-    Info: Elapsed time: 00:00:08
+    Info: Processing ended: Thu May 26 17:03:05 2016
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:01
 
 

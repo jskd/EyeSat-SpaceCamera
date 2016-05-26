@@ -1,0 +1,110 @@
+m255
+K3
+13
+cModel Technology
+dC:\Users\innovlab\workspace\EyeSat_CMOS_Image_Sensor\FPGA_Program\simulation
+Ealtlvds_rx0
+Z0 w1464255902
+Z1 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z2 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z3 dC:\Users\innovlab\workspace\EyeSat_CMOS_Image_Sensor\FPGA_Program\simulation\lvds_decode
+Z4 8C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/altlvds_rx0/altlvds_rx0.vhd
+Z5 FC:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/altlvds_rx0/altlvds_rx0.vhd
+l0
+L42
+VMP0Ql`5ejfLe90Z^Ohm883
+!s100 @NPFco>c3AjZ510UUc7hl3
+Z6 OV;C;10.1d;51
+32
+!i10b 1
+Z7 !s108 1464265354.079000
+Z8 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/altlvds_rx0/altlvds_rx0.vhd|
+Z9 !s107 C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/altlvds_rx0/altlvds_rx0.vhd|
+Z10 o-work work -2002 -explicit -O0
+Z11 tExplicit 1
+Asyn
+R1
+R2
+Z12 DEx4 work 11 altlvds_rx0 0 22 MP0Ql`5ejfLe90Z^Ohm883
+l122
+L55
+Z13 VOIZ=fENH_5W`]Eb0ocXj=2
+Z14 !s100 DQAWJi2:BAR>ISG<fTi[n2
+R6
+32
+!i10b 1
+R7
+R8
+R9
+R10
+R11
+Ede2_cyclone2_vhd_tst
+Z15 w1464264485
+R1
+R2
+R3
+Z16 8C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/simulation/lvds_decode/lvds_decode.vht
+Z17 FC:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/simulation/lvds_decode/lvds_decode.vht
+l0
+L30
+Vk5o8JhQd:fW0jkb1V^aaX3
+R6
+32
+Z18 !s108 1464265353.454000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/simulation/lvds_decode/lvds_decode.vht|
+Z20 !s107 C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/simulation/lvds_decode/lvds_decode.vht|
+R10
+R11
+!s100 SXYCMYDPZ`EDGYUUEz7f71
+!i10b 1
+Ade2_cyclone2_arch
+R1
+R2
+DEx4 work 20 de2_cyclone2_vhd_tst 0 22 k5o8JhQd:fW0jkb1V^aaX3
+l53
+L32
+Vc_2PIMb_<]aVPAonRJfJC0
+R6
+32
+R18
+R19
+R20
+R10
+R11
+!s100 h9@l_g>hA^VJ?Eo2`B>6K1
+!i10b 1
+Elvds_in_serialize
+Z21 w1464255556
+R1
+R2
+R3
+Z22 8C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/src/design/LVDS_IN_serialize.vhd
+Z23 FC:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/src/design/LVDS_IN_serialize.vhd
+l0
+L4
+VXU4i>ib2CGN=48D]8f^o<3
+R6
+32
+Z24 !s108 1464265353.787000
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/src/design/LVDS_IN_serialize.vhd|
+Z26 !s107 C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/src/design/LVDS_IN_serialize.vhd|
+R10
+R11
+!s100 YQW061PYV9jRla6o;j1`?0
+!i10b 1
+Alvds_in_serialize_a
+R1
+R2
+DEx4 work 17 lvds_in_serialize 0 22 XU4i>ib2CGN=48D]8f^o<3
+l16
+L14
+Vk_?`;zaT1@TJdDM8SnCEY0
+!s100 9GXD_`8oBza`>aH0koh9f1
+R6
+32
+R24
+R25
+R26
+R10
+R11
+!i10b 1

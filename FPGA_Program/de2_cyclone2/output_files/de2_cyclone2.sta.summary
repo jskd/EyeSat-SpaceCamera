@@ -2,4 +2,60 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow Model Setup 'inst_1|ALTLVDS_RX_component|auto_generated|lvds_rx_pll|clk[0]'
+Slack : -0.647
+TNS   : -16.236
+
+Type  : Slow Model Setup 'inst_1|ALTLVDS_RX_component|auto_generated|lvds_rx_pll|clk[1]'
+Slack : 0.905
+TNS   : 0.000
+
+Type  : Slow Model Hold 'inst_1|ALTLVDS_RX_component|auto_generated|lvds_rx_pll|clk[1]'
+Slack : 0.514
+TNS   : 0.000
+
+Type  : Slow Model Hold 'inst_1|ALTLVDS_RX_component|auto_generated|lvds_rx_pll|clk[0]'
+Slack : 0.515
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'inst_1|ALTLVDS_RX_component|auto_generated|lvds_rx_pll|clk[0]'
+Slack : 0.250
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'LVDS_OUTCLK'
+Slack : 5.000
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'inst_1|ALTLVDS_RX_component|auto_generated|lvds_rx_pll|clk[1]'
+Slack : 5.250
+TNS   : 0.000
+
+Type  : Fast Model Setup 'inst_1|ALTLVDS_RX_component|auto_generated|lvds_rx_pll|clk[0]'
+Slack : 0.694
+TNS   : 0.000
+
+Type  : Fast Model Setup 'inst_1|ALTLVDS_RX_component|auto_generated|lvds_rx_pll|clk[1]'
+Slack : 1.743
+TNS   : 0.000
+
+Type  : Fast Model Hold 'inst_1|ALTLVDS_RX_component|auto_generated|lvds_rx_pll|clk[0]'
+Slack : 0.236
+TNS   : 0.000
+
+Type  : Fast Model Hold 'inst_1|ALTLVDS_RX_component|auto_generated|lvds_rx_pll|clk[1]'
+Slack : 0.236
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'inst_1|ALTLVDS_RX_component|auto_generated|lvds_rx_pll|clk[0]'
+Slack : 0.250
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'LVDS_OUTCLK'
+Slack : 5.000
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'inst_1|ALTLVDS_RX_component|auto_generated|lvds_rx_pll|clk[1]'
+Slack : 5.250
+TNS   : 0.000
+
 ------------------------------------------------------------
