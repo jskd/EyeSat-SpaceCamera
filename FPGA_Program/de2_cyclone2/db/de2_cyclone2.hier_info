@@ -1,184 +1,377 @@
-|lvds_decoder
-DATA_CLK <= altlvds_rx0:inst_1.rx_outclock
+|tb_lvds_decoder
+DATA_CLK <= lvds_decoder:inst.DATA_OUTCLK
+ARESET => lvds_decoder:inst.PLL_ARESET
+LVDS_CLK => lvds_decoder:inst.LVDS_OUTCLK
+LVDS_CTR => lvds_decoder:inst.LVDS_OUTCTR
+LVDS_CH[0] => lvds_decoder:inst.LVDS_OUTCH[0]
+LVDS_CH[1] => lvds_decoder:inst.LVDS_OUTCH[1]
+LVDS_CH[2] => lvds_decoder:inst.LVDS_OUTCH[2]
+LVDS_CH[3] => lvds_decoder:inst.LVDS_OUTCH[3]
+LVDS_CH[4] => lvds_decoder:inst.LVDS_OUTCH[4]
+LVDS_CH[5] => lvds_decoder:inst.LVDS_OUTCH[5]
+LVDS_CH[6] => lvds_decoder:inst.LVDS_OUTCH[6]
+LVDS_CH[7] => lvds_decoder:inst.LVDS_OUTCH[7]
+LVDS_CH[8] => lvds_decoder:inst.LVDS_OUTCH[8]
+LVDS_CH[9] => lvds_decoder:inst.LVDS_OUTCH[9]
+LVDS_CH[10] => lvds_decoder:inst.LVDS_OUTCH[10]
+LVDS_CH[11] => lvds_decoder:inst.LVDS_OUTCH[11]
+LVDS_CH[12] => lvds_decoder:inst.LVDS_OUTCH[12]
+LVDS_CH[13] => lvds_decoder:inst.LVDS_OUTCH[13]
+LVDS_CH[14] => lvds_decoder:inst.LVDS_OUTCH[14]
+LVDS_CH[15] => lvds_decoder:inst.LVDS_OUTCH[15]
+DATA_CH01[0] <= lvds_decoder:inst.DATA_OUTCH01[0]
+DATA_CH01[1] <= lvds_decoder:inst.DATA_OUTCH01[1]
+DATA_CH01[2] <= lvds_decoder:inst.DATA_OUTCH01[2]
+DATA_CH01[3] <= lvds_decoder:inst.DATA_OUTCH01[3]
+DATA_CH01[4] <= lvds_decoder:inst.DATA_OUTCH01[4]
+DATA_CH01[5] <= lvds_decoder:inst.DATA_OUTCH01[5]
+DATA_CH01[6] <= lvds_decoder:inst.DATA_OUTCH01[6]
+DATA_CH01[7] <= lvds_decoder:inst.DATA_OUTCH01[7]
+DATA_CH01[8] <= lvds_decoder:inst.DATA_OUTCH01[8]
+DATA_CH01[9] <= lvds_decoder:inst.DATA_OUTCH01[9]
+DATA_CH02[0] <= lvds_decoder:inst.DATA_OUTCH02[0]
+DATA_CH02[1] <= lvds_decoder:inst.DATA_OUTCH02[1]
+DATA_CH02[2] <= lvds_decoder:inst.DATA_OUTCH02[2]
+DATA_CH02[3] <= lvds_decoder:inst.DATA_OUTCH02[3]
+DATA_CH02[4] <= lvds_decoder:inst.DATA_OUTCH02[4]
+DATA_CH02[5] <= lvds_decoder:inst.DATA_OUTCH02[5]
+DATA_CH02[6] <= lvds_decoder:inst.DATA_OUTCH02[6]
+DATA_CH02[7] <= lvds_decoder:inst.DATA_OUTCH02[7]
+DATA_CH02[8] <= lvds_decoder:inst.DATA_OUTCH02[8]
+DATA_CH02[9] <= lvds_decoder:inst.DATA_OUTCH02[9]
+DATA_CH03[0] <= lvds_decoder:inst.DATA_OUTCH03[0]
+DATA_CH03[1] <= lvds_decoder:inst.DATA_OUTCH03[1]
+DATA_CH03[2] <= lvds_decoder:inst.DATA_OUTCH03[2]
+DATA_CH03[3] <= lvds_decoder:inst.DATA_OUTCH03[3]
+DATA_CH03[4] <= lvds_decoder:inst.DATA_OUTCH03[4]
+DATA_CH03[5] <= lvds_decoder:inst.DATA_OUTCH03[5]
+DATA_CH03[6] <= lvds_decoder:inst.DATA_OUTCH03[6]
+DATA_CH03[7] <= lvds_decoder:inst.DATA_OUTCH03[7]
+DATA_CH03[8] <= lvds_decoder:inst.DATA_OUTCH03[8]
+DATA_CH03[9] <= lvds_decoder:inst.DATA_OUTCH03[9]
+DATA_CH04[0] <= lvds_decoder:inst.DATA_OUTCH04[0]
+DATA_CH04[1] <= lvds_decoder:inst.DATA_OUTCH04[1]
+DATA_CH04[2] <= lvds_decoder:inst.DATA_OUTCH04[2]
+DATA_CH04[3] <= lvds_decoder:inst.DATA_OUTCH04[3]
+DATA_CH04[4] <= lvds_decoder:inst.DATA_OUTCH04[4]
+DATA_CH04[5] <= lvds_decoder:inst.DATA_OUTCH04[5]
+DATA_CH04[6] <= lvds_decoder:inst.DATA_OUTCH04[6]
+DATA_CH04[7] <= lvds_decoder:inst.DATA_OUTCH04[7]
+DATA_CH04[8] <= lvds_decoder:inst.DATA_OUTCH04[8]
+DATA_CH04[9] <= lvds_decoder:inst.DATA_OUTCH04[9]
+DATA_CH05[0] <= lvds_decoder:inst.DATA_OUTCH05[0]
+DATA_CH05[1] <= lvds_decoder:inst.DATA_OUTCH05[1]
+DATA_CH05[2] <= lvds_decoder:inst.DATA_OUTCH05[2]
+DATA_CH05[3] <= lvds_decoder:inst.DATA_OUTCH05[3]
+DATA_CH05[4] <= lvds_decoder:inst.DATA_OUTCH05[4]
+DATA_CH05[5] <= lvds_decoder:inst.DATA_OUTCH05[5]
+DATA_CH05[6] <= lvds_decoder:inst.DATA_OUTCH05[6]
+DATA_CH05[7] <= lvds_decoder:inst.DATA_OUTCH05[7]
+DATA_CH05[8] <= lvds_decoder:inst.DATA_OUTCH05[8]
+DATA_CH05[9] <= lvds_decoder:inst.DATA_OUTCH05[9]
+DATA_CH06[0] <= lvds_decoder:inst.DATA_OUTCH06[0]
+DATA_CH06[1] <= lvds_decoder:inst.DATA_OUTCH06[1]
+DATA_CH06[2] <= lvds_decoder:inst.DATA_OUTCH06[2]
+DATA_CH06[3] <= lvds_decoder:inst.DATA_OUTCH06[3]
+DATA_CH06[4] <= lvds_decoder:inst.DATA_OUTCH06[4]
+DATA_CH06[5] <= lvds_decoder:inst.DATA_OUTCH06[5]
+DATA_CH06[6] <= lvds_decoder:inst.DATA_OUTCH06[6]
+DATA_CH06[7] <= lvds_decoder:inst.DATA_OUTCH06[7]
+DATA_CH06[8] <= lvds_decoder:inst.DATA_OUTCH06[8]
+DATA_CH06[9] <= lvds_decoder:inst.DATA_OUTCH06[9]
+DATA_CH07[0] <= lvds_decoder:inst.DATA_OUTCH07[0]
+DATA_CH07[1] <= lvds_decoder:inst.DATA_OUTCH07[1]
+DATA_CH07[2] <= lvds_decoder:inst.DATA_OUTCH07[2]
+DATA_CH07[3] <= lvds_decoder:inst.DATA_OUTCH07[3]
+DATA_CH07[4] <= lvds_decoder:inst.DATA_OUTCH07[4]
+DATA_CH07[5] <= lvds_decoder:inst.DATA_OUTCH07[5]
+DATA_CH07[6] <= lvds_decoder:inst.DATA_OUTCH07[6]
+DATA_CH07[7] <= lvds_decoder:inst.DATA_OUTCH07[7]
+DATA_CH07[8] <= lvds_decoder:inst.DATA_OUTCH07[8]
+DATA_CH07[9] <= lvds_decoder:inst.DATA_OUTCH07[9]
+DATA_CH08[0] <= lvds_decoder:inst.DATA_OUTCH08[0]
+DATA_CH08[1] <= lvds_decoder:inst.DATA_OUTCH08[1]
+DATA_CH08[2] <= lvds_decoder:inst.DATA_OUTCH08[2]
+DATA_CH08[3] <= lvds_decoder:inst.DATA_OUTCH08[3]
+DATA_CH08[4] <= lvds_decoder:inst.DATA_OUTCH08[4]
+DATA_CH08[5] <= lvds_decoder:inst.DATA_OUTCH08[5]
+DATA_CH08[6] <= lvds_decoder:inst.DATA_OUTCH08[6]
+DATA_CH08[7] <= lvds_decoder:inst.DATA_OUTCH08[7]
+DATA_CH08[8] <= lvds_decoder:inst.DATA_OUTCH08[8]
+DATA_CH08[9] <= lvds_decoder:inst.DATA_OUTCH08[9]
+DATA_CH09[0] <= lvds_decoder:inst.DATA_OUTCH09[0]
+DATA_CH09[1] <= lvds_decoder:inst.DATA_OUTCH09[1]
+DATA_CH09[2] <= lvds_decoder:inst.DATA_OUTCH09[2]
+DATA_CH09[3] <= lvds_decoder:inst.DATA_OUTCH09[3]
+DATA_CH09[4] <= lvds_decoder:inst.DATA_OUTCH09[4]
+DATA_CH09[5] <= lvds_decoder:inst.DATA_OUTCH09[5]
+DATA_CH09[6] <= lvds_decoder:inst.DATA_OUTCH09[6]
+DATA_CH09[7] <= lvds_decoder:inst.DATA_OUTCH09[7]
+DATA_CH09[8] <= lvds_decoder:inst.DATA_OUTCH09[8]
+DATA_CH09[9] <= lvds_decoder:inst.DATA_OUTCH09[9]
+DATA_CH10[0] <= lvds_decoder:inst.DATA_OUTCH10[0]
+DATA_CH10[1] <= lvds_decoder:inst.DATA_OUTCH10[1]
+DATA_CH10[2] <= lvds_decoder:inst.DATA_OUTCH10[2]
+DATA_CH10[3] <= lvds_decoder:inst.DATA_OUTCH10[3]
+DATA_CH10[4] <= lvds_decoder:inst.DATA_OUTCH10[4]
+DATA_CH10[5] <= lvds_decoder:inst.DATA_OUTCH10[5]
+DATA_CH10[6] <= lvds_decoder:inst.DATA_OUTCH10[6]
+DATA_CH10[7] <= lvds_decoder:inst.DATA_OUTCH10[7]
+DATA_CH10[8] <= lvds_decoder:inst.DATA_OUTCH10[8]
+DATA_CH10[9] <= lvds_decoder:inst.DATA_OUTCH10[9]
+DATA_CH11[0] <= lvds_decoder:inst.DATA_OUTCH11[0]
+DATA_CH11[1] <= lvds_decoder:inst.DATA_OUTCH11[1]
+DATA_CH11[2] <= lvds_decoder:inst.DATA_OUTCH11[2]
+DATA_CH11[3] <= lvds_decoder:inst.DATA_OUTCH11[3]
+DATA_CH11[4] <= lvds_decoder:inst.DATA_OUTCH11[4]
+DATA_CH11[5] <= lvds_decoder:inst.DATA_OUTCH11[5]
+DATA_CH11[6] <= lvds_decoder:inst.DATA_OUTCH11[6]
+DATA_CH11[7] <= lvds_decoder:inst.DATA_OUTCH11[7]
+DATA_CH11[8] <= lvds_decoder:inst.DATA_OUTCH11[8]
+DATA_CH11[9] <= lvds_decoder:inst.DATA_OUTCH11[9]
+DATA_CH12[0] <= lvds_decoder:inst.DATA_OUTCH12[0]
+DATA_CH12[1] <= lvds_decoder:inst.DATA_OUTCH12[1]
+DATA_CH12[2] <= lvds_decoder:inst.DATA_OUTCH12[2]
+DATA_CH12[3] <= lvds_decoder:inst.DATA_OUTCH12[3]
+DATA_CH12[4] <= lvds_decoder:inst.DATA_OUTCH12[4]
+DATA_CH12[5] <= lvds_decoder:inst.DATA_OUTCH12[5]
+DATA_CH12[6] <= lvds_decoder:inst.DATA_OUTCH12[6]
+DATA_CH12[7] <= lvds_decoder:inst.DATA_OUTCH12[7]
+DATA_CH12[8] <= lvds_decoder:inst.DATA_OUTCH12[8]
+DATA_CH12[9] <= lvds_decoder:inst.DATA_OUTCH12[9]
+DATA_CH13[0] <= lvds_decoder:inst.DATA_OUTCH13[0]
+DATA_CH13[1] <= lvds_decoder:inst.DATA_OUTCH13[1]
+DATA_CH13[2] <= lvds_decoder:inst.DATA_OUTCH13[2]
+DATA_CH13[3] <= lvds_decoder:inst.DATA_OUTCH13[3]
+DATA_CH13[4] <= lvds_decoder:inst.DATA_OUTCH13[4]
+DATA_CH13[5] <= lvds_decoder:inst.DATA_OUTCH13[5]
+DATA_CH13[6] <= lvds_decoder:inst.DATA_OUTCH13[6]
+DATA_CH13[7] <= lvds_decoder:inst.DATA_OUTCH13[7]
+DATA_CH13[8] <= lvds_decoder:inst.DATA_OUTCH13[8]
+DATA_CH13[9] <= lvds_decoder:inst.DATA_OUTCH13[9]
+DATA_CH14[0] <= lvds_decoder:inst.DATA_OUTCH14[0]
+DATA_CH14[1] <= lvds_decoder:inst.DATA_OUTCH14[1]
+DATA_CH14[2] <= lvds_decoder:inst.DATA_OUTCH14[2]
+DATA_CH14[3] <= lvds_decoder:inst.DATA_OUTCH14[3]
+DATA_CH14[4] <= lvds_decoder:inst.DATA_OUTCH14[4]
+DATA_CH14[5] <= lvds_decoder:inst.DATA_OUTCH14[5]
+DATA_CH14[6] <= lvds_decoder:inst.DATA_OUTCH14[6]
+DATA_CH14[7] <= lvds_decoder:inst.DATA_OUTCH14[7]
+DATA_CH14[8] <= lvds_decoder:inst.DATA_OUTCH14[8]
+DATA_CH14[9] <= lvds_decoder:inst.DATA_OUTCH14[9]
+DATA_CH15[0] <= lvds_decoder:inst.DATA_OUTCH15[0]
+DATA_CH15[1] <= lvds_decoder:inst.DATA_OUTCH15[1]
+DATA_CH15[2] <= lvds_decoder:inst.DATA_OUTCH15[2]
+DATA_CH15[3] <= lvds_decoder:inst.DATA_OUTCH15[3]
+DATA_CH15[4] <= lvds_decoder:inst.DATA_OUTCH15[4]
+DATA_CH15[5] <= lvds_decoder:inst.DATA_OUTCH15[5]
+DATA_CH15[6] <= lvds_decoder:inst.DATA_OUTCH15[6]
+DATA_CH15[7] <= lvds_decoder:inst.DATA_OUTCH15[7]
+DATA_CH15[8] <= lvds_decoder:inst.DATA_OUTCH15[8]
+DATA_CH15[9] <= lvds_decoder:inst.DATA_OUTCH15[9]
+DATA_CH16[0] <= lvds_decoder:inst.DATA_OUTCH16[0]
+DATA_CH16[1] <= lvds_decoder:inst.DATA_OUTCH16[1]
+DATA_CH16[2] <= lvds_decoder:inst.DATA_OUTCH16[2]
+DATA_CH16[3] <= lvds_decoder:inst.DATA_OUTCH16[3]
+DATA_CH16[4] <= lvds_decoder:inst.DATA_OUTCH16[4]
+DATA_CH16[5] <= lvds_decoder:inst.DATA_OUTCH16[5]
+DATA_CH16[6] <= lvds_decoder:inst.DATA_OUTCH16[6]
+DATA_CH16[7] <= lvds_decoder:inst.DATA_OUTCH16[7]
+DATA_CH16[8] <= lvds_decoder:inst.DATA_OUTCH16[8]
+DATA_CH16[9] <= lvds_decoder:inst.DATA_OUTCH16[9]
+DATA_CTR[0] <= lvds_decoder:inst.DATA_OUTCTR[0]
+DATA_CTR[1] <= lvds_decoder:inst.DATA_OUTCTR[1]
+DATA_CTR[2] <= lvds_decoder:inst.DATA_OUTCTR[2]
+DATA_CTR[3] <= lvds_decoder:inst.DATA_OUTCTR[3]
+DATA_CTR[4] <= lvds_decoder:inst.DATA_OUTCTR[4]
+DATA_CTR[5] <= lvds_decoder:inst.DATA_OUTCTR[5]
+DATA_CTR[6] <= lvds_decoder:inst.DATA_OUTCTR[6]
+DATA_CTR[7] <= lvds_decoder:inst.DATA_OUTCTR[7]
+DATA_CTR[8] <= lvds_decoder:inst.DATA_OUTCTR[8]
+DATA_CTR[9] <= lvds_decoder:inst.DATA_OUTCTR[9]
+
+
+|tb_lvds_decoder|lvds_decoder:inst
+DATA_OUTCLK <= data_out_clk.DB_MAX_OUTPUT_PORT_TYPE
 PLL_ARESET => altlvds_rx0:inst_1.pll_areset
 LVDS_OUTCLK => altlvds_rx0:inst_1.rx_inclock
 LVDS_OUTCTR => lvds_in_map:inst_0.LVDS_CTR
-LVDS_OUT[0] => lvds_in_map:inst_0.LVDS_CH[0]
-LVDS_OUT[1] => lvds_in_map:inst_0.LVDS_CH[1]
-LVDS_OUT[2] => lvds_in_map:inst_0.LVDS_CH[2]
-LVDS_OUT[3] => lvds_in_map:inst_0.LVDS_CH[3]
-LVDS_OUT[4] => lvds_in_map:inst_0.LVDS_CH[4]
-LVDS_OUT[5] => lvds_in_map:inst_0.LVDS_CH[5]
-LVDS_OUT[6] => lvds_in_map:inst_0.LVDS_CH[6]
-LVDS_OUT[7] => lvds_in_map:inst_0.LVDS_CH[7]
-LVDS_OUT[8] => lvds_in_map:inst_0.LVDS_CH[8]
-LVDS_OUT[9] => lvds_in_map:inst_0.LVDS_CH[9]
-LVDS_OUT[10] => lvds_in_map:inst_0.LVDS_CH[10]
-LVDS_OUT[11] => lvds_in_map:inst_0.LVDS_CH[11]
-LVDS_OUT[12] => lvds_in_map:inst_0.LVDS_CH[12]
-LVDS_OUT[13] => lvds_in_map:inst_0.LVDS_CH[13]
-LVDS_OUT[14] => lvds_in_map:inst_0.LVDS_CH[14]
-LVDS_OUT[15] => lvds_in_map:inst_0.LVDS_CH[15]
-DATA_OUT19 <= lvds_out_map:inst_2.OUT19
-DATA_OUT18 <= lvds_out_map:inst_2.OUT18
-DATA_OUT17 <= lvds_out_map:inst_2.OUT17
-DATA_OUT16 <= lvds_out_map:inst_2.OUT16
-DATA_OUT15 <= lvds_out_map:inst_2.OUT15
-DATA_OUT14 <= lvds_out_map:inst_2.OUT14
-DATA_OUT13 <= lvds_out_map:inst_2.OUT13
-DATA_OUT12 <= lvds_out_map:inst_2.OUT12
-DATA_OUT11 <= lvds_out_map:inst_2.OUT11
-DATA_OUT10 <= lvds_out_map:inst_2.OUT10
-DATA_OUT109 <= lvds_out_map:inst_2.OUT109
-DATA_OUT108 <= lvds_out_map:inst_2.OUT108
-DATA_OUT107 <= lvds_out_map:inst_2.OUT107
-DATA_OUT106 <= lvds_out_map:inst_2.OUT106
-DATA_OUT105 <= lvds_out_map:inst_2.OUT105
-DATA_OUT104 <= lvds_out_map:inst_2.OUT104
-DATA_OUT103 <= lvds_out_map:inst_2.OUT103
-DATA_OUT102 <= lvds_out_map:inst_2.OUT102
-DATA_OUT101 <= lvds_out_map:inst_2.OUT101
-DATA_OUT100 <= lvds_out_map:inst_2.OUT100
-DATA_OUT119 <= lvds_out_map:inst_2.OUT119
-DATA_OUT118 <= lvds_out_map:inst_2.OUT118
-DATA_OUT117 <= lvds_out_map:inst_2.OUT117
-DATA_OUT116 <= lvds_out_map:inst_2.OUT116
-DATA_OUT115 <= lvds_out_map:inst_2.OUT115
-DATA_OUT114 <= lvds_out_map:inst_2.OUT114
-DATA_OUT113 <= lvds_out_map:inst_2.OUT113
-DATA_OUT112 <= lvds_out_map:inst_2.OUT112
-DATA_OUT111 <= lvds_out_map:inst_2.OUT111
-DATA_OUT110 <= lvds_out_map:inst_2.OUT110
-DATA_OUT129 <= lvds_out_map:inst_2.OUT129
-DATA_OUT128 <= lvds_out_map:inst_2.OUT128
-DATA_OUT127 <= lvds_out_map:inst_2.OUT127
-DATA_OUT126 <= lvds_out_map:inst_2.OUT126
-DATA_OUT125 <= lvds_out_map:inst_2.OUT125
-DATA_OUT124 <= lvds_out_map:inst_2.OUT124
-DATA_OUT123 <= lvds_out_map:inst_2.OUT123
-DATA_OUT122 <= lvds_out_map:inst_2.OUT122
-DATA_OUT121 <= lvds_out_map:inst_2.OUT121
-DATA_OUT120 <= lvds_out_map:inst_2.OUT120
-DATA_OUT139 <= lvds_out_map:inst_2.OUT139
-DATA_OUT138 <= lvds_out_map:inst_2.OUT138
-DATA_OUT137 <= lvds_out_map:inst_2.OUT137
-DATA_OUT136 <= lvds_out_map:inst_2.OUT136
-DATA_OUT135 <= lvds_out_map:inst_2.OUT135
-DATA_OUT134 <= lvds_out_map:inst_2.OUT134
-DATA_OUT133 <= lvds_out_map:inst_2.OUT133
-DATA_OUT132 <= lvds_out_map:inst_2.OUT132
-DATA_OUT131 <= lvds_out_map:inst_2.OUT131
-DATA_OUT130 <= lvds_out_map:inst_2.OUT130
-DATA_OUT149 <= lvds_out_map:inst_2.OUT149
-DATA_OUT148 <= lvds_out_map:inst_2.OUT148
-DATA_OUT147 <= lvds_out_map:inst_2.OUT147
-DATA_OUT146 <= lvds_out_map:inst_2.OUT146
-DATA_OUT145 <= lvds_out_map:inst_2.OUT145
-DATA_OUT144 <= lvds_out_map:inst_2.OUT144
-DATA_OUT143 <= lvds_out_map:inst_2.OUT143
-DATA_OUT142 <= lvds_out_map:inst_2.OUT142
-DATA_OUT141 <= lvds_out_map:inst_2.OUT141
-DATA_OUT140 <= lvds_out_map:inst_2.OUT140
-DATA_OUT159 <= lvds_out_map:inst_2.OUT159
-DATA_OUT158 <= lvds_out_map:inst_2.OUT158
-DATA_OUT157 <= lvds_out_map:inst_2.OUT157
-DATA_OUT156 <= lvds_out_map:inst_2.OUT156
-DATA_OUT155 <= lvds_out_map:inst_2.OUT155
-DATA_OUT154 <= lvds_out_map:inst_2.OUT154
-DATA_OUT153 <= lvds_out_map:inst_2.OUT153
-DATA_OUT152 <= lvds_out_map:inst_2.OUT152
-DATA_OUT151 <= lvds_out_map:inst_2.OUT151
-DATA_OUT150 <= lvds_out_map:inst_2.OUT150
-DATA_OUT169 <= lvds_out_map:inst_2.OUT169
-DATA_OUT168 <= lvds_out_map:inst_2.OUT168
-DATA_OUT167 <= lvds_out_map:inst_2.OUT167
-DATA_OUT166 <= lvds_out_map:inst_2.OUT166
-DATA_OUT165 <= lvds_out_map:inst_2.OUT165
-DATA_OUT164 <= lvds_out_map:inst_2.OUT164
-DATA_OUT163 <= lvds_out_map:inst_2.OUT163
-DATA_OUT162 <= lvds_out_map:inst_2.OUT162
-DATA_OUT161 <= lvds_out_map:inst_2.OUT161
-DATA_OUT160 <= lvds_out_map:inst_2.OUT160
-DATA_OUT2[0] <= lvds_out_map:inst_2.OUT2[0]
-DATA_OUT2[1] <= lvds_out_map:inst_2.OUT2[1]
-DATA_OUT2[2] <= lvds_out_map:inst_2.OUT2[2]
-DATA_OUT2[3] <= lvds_out_map:inst_2.OUT2[3]
-DATA_OUT2[4] <= lvds_out_map:inst_2.OUT2[4]
-DATA_OUT2[5] <= lvds_out_map:inst_2.OUT2[5]
-DATA_OUT2[6] <= lvds_out_map:inst_2.OUT2[6]
-DATA_OUT2[7] <= lvds_out_map:inst_2.OUT2[7]
-DATA_OUT2[8] <= lvds_out_map:inst_2.OUT2[8]
-DATA_OUT2[9] <= lvds_out_map:inst_2.OUT2[9]
-DATA_OUT3[0] <= lvds_out_map:inst_2.OUT3[0]
-DATA_OUT3[1] <= lvds_out_map:inst_2.OUT3[1]
-DATA_OUT3[2] <= lvds_out_map:inst_2.OUT3[2]
-DATA_OUT3[3] <= lvds_out_map:inst_2.OUT3[3]
-DATA_OUT3[4] <= lvds_out_map:inst_2.OUT3[4]
-DATA_OUT3[5] <= lvds_out_map:inst_2.OUT3[5]
-DATA_OUT3[6] <= lvds_out_map:inst_2.OUT3[6]
-DATA_OUT3[7] <= lvds_out_map:inst_2.OUT3[7]
-DATA_OUT3[8] <= lvds_out_map:inst_2.OUT3[8]
-DATA_OUT3[9] <= lvds_out_map:inst_2.OUT3[9]
-DATA_OUT4[0] <= lvds_out_map:inst_2.OUT4[0]
-DATA_OUT4[1] <= lvds_out_map:inst_2.OUT4[1]
-DATA_OUT4[2] <= lvds_out_map:inst_2.OUT4[2]
-DATA_OUT4[3] <= lvds_out_map:inst_2.OUT4[3]
-DATA_OUT4[4] <= lvds_out_map:inst_2.OUT4[4]
-DATA_OUT4[5] <= lvds_out_map:inst_2.OUT4[5]
-DATA_OUT4[6] <= lvds_out_map:inst_2.OUT4[6]
-DATA_OUT4[7] <= lvds_out_map:inst_2.OUT4[7]
-DATA_OUT4[8] <= lvds_out_map:inst_2.OUT4[8]
-DATA_OUT4[9] <= lvds_out_map:inst_2.OUT4[9]
-DATA_OUT5[0] <= lvds_out_map:inst_2.OUT5[0]
-DATA_OUT5[1] <= lvds_out_map:inst_2.OUT5[1]
-DATA_OUT5[2] <= lvds_out_map:inst_2.OUT5[2]
-DATA_OUT5[3] <= lvds_out_map:inst_2.OUT5[3]
-DATA_OUT5[4] <= lvds_out_map:inst_2.OUT5[4]
-DATA_OUT5[5] <= lvds_out_map:inst_2.OUT5[5]
-DATA_OUT5[6] <= lvds_out_map:inst_2.OUT5[6]
-DATA_OUT5[7] <= lvds_out_map:inst_2.OUT5[7]
-DATA_OUT5[8] <= lvds_out_map:inst_2.OUT5[8]
-DATA_OUT5[9] <= lvds_out_map:inst_2.OUT5[9]
-DATA_OUT6[0] <= lvds_out_map:inst_2.OUT6[0]
-DATA_OUT6[1] <= lvds_out_map:inst_2.OUT6[1]
-DATA_OUT6[2] <= lvds_out_map:inst_2.OUT6[2]
-DATA_OUT6[3] <= lvds_out_map:inst_2.OUT6[3]
-DATA_OUT6[4] <= lvds_out_map:inst_2.OUT6[4]
-DATA_OUT6[5] <= lvds_out_map:inst_2.OUT6[5]
-DATA_OUT6[6] <= lvds_out_map:inst_2.OUT6[6]
-DATA_OUT6[7] <= lvds_out_map:inst_2.OUT6[7]
-DATA_OUT6[8] <= lvds_out_map:inst_2.OUT6[8]
-DATA_OUT6[9] <= lvds_out_map:inst_2.OUT6[9]
-DATA_OUT7[0] <= lvds_out_map:inst_2.OUT7[0]
-DATA_OUT7[1] <= lvds_out_map:inst_2.OUT7[1]
-DATA_OUT7[2] <= lvds_out_map:inst_2.OUT7[2]
-DATA_OUT7[3] <= lvds_out_map:inst_2.OUT7[3]
-DATA_OUT7[4] <= lvds_out_map:inst_2.OUT7[4]
-DATA_OUT7[5] <= lvds_out_map:inst_2.OUT7[5]
-DATA_OUT7[6] <= lvds_out_map:inst_2.OUT7[6]
-DATA_OUT7[7] <= lvds_out_map:inst_2.OUT7[7]
-DATA_OUT7[8] <= lvds_out_map:inst_2.OUT7[8]
-DATA_OUT7[9] <= lvds_out_map:inst_2.OUT7[9]
-DATA_OUT8[0] <= lvds_out_map:inst_2.OUT8[0]
-DATA_OUT8[1] <= lvds_out_map:inst_2.OUT8[1]
-DATA_OUT8[2] <= lvds_out_map:inst_2.OUT8[2]
-DATA_OUT8[3] <= lvds_out_map:inst_2.OUT8[3]
-DATA_OUT8[4] <= lvds_out_map:inst_2.OUT8[4]
-DATA_OUT8[5] <= lvds_out_map:inst_2.OUT8[5]
-DATA_OUT8[6] <= lvds_out_map:inst_2.OUT8[6]
-DATA_OUT8[7] <= lvds_out_map:inst_2.OUT8[7]
-DATA_OUT8[8] <= lvds_out_map:inst_2.OUT8[8]
-DATA_OUT8[9] <= lvds_out_map:inst_2.OUT8[9]
-DATA_OUT9[0] <= lvds_out_map:inst_2.OUT9[0]
-DATA_OUT9[1] <= lvds_out_map:inst_2.OUT9[1]
-DATA_OUT9[2] <= lvds_out_map:inst_2.OUT9[2]
-DATA_OUT9[3] <= lvds_out_map:inst_2.OUT9[3]
-DATA_OUT9[4] <= lvds_out_map:inst_2.OUT9[4]
-DATA_OUT9[5] <= lvds_out_map:inst_2.OUT9[5]
-DATA_OUT9[6] <= lvds_out_map:inst_2.OUT9[6]
-DATA_OUT9[7] <= lvds_out_map:inst_2.OUT9[7]
-DATA_OUT9[8] <= lvds_out_map:inst_2.OUT9[8]
-DATA_OUT9[9] <= lvds_out_map:inst_2.OUT9[9]
+LVDS_OUTCH[0] => lvds_in_map:inst_0.LVDS_CH[0]
+LVDS_OUTCH[1] => lvds_in_map:inst_0.LVDS_CH[1]
+LVDS_OUTCH[2] => lvds_in_map:inst_0.LVDS_CH[2]
+LVDS_OUTCH[3] => lvds_in_map:inst_0.LVDS_CH[3]
+LVDS_OUTCH[4] => lvds_in_map:inst_0.LVDS_CH[4]
+LVDS_OUTCH[5] => lvds_in_map:inst_0.LVDS_CH[5]
+LVDS_OUTCH[6] => lvds_in_map:inst_0.LVDS_CH[6]
+LVDS_OUTCH[7] => lvds_in_map:inst_0.LVDS_CH[7]
+LVDS_OUTCH[8] => lvds_in_map:inst_0.LVDS_CH[8]
+LVDS_OUTCH[9] => lvds_in_map:inst_0.LVDS_CH[9]
+LVDS_OUTCH[10] => lvds_in_map:inst_0.LVDS_CH[10]
+LVDS_OUTCH[11] => lvds_in_map:inst_0.LVDS_CH[11]
+LVDS_OUTCH[12] => lvds_in_map:inst_0.LVDS_CH[12]
+LVDS_OUTCH[13] => lvds_in_map:inst_0.LVDS_CH[13]
+LVDS_OUTCH[14] => lvds_in_map:inst_0.LVDS_CH[14]
+LVDS_OUTCH[15] => lvds_in_map:inst_0.LVDS_CH[15]
+DATA_OUTCH01[0] <= lvds_out_map:inst.OUTCH01[0]
+DATA_OUTCH01[1] <= lvds_out_map:inst.OUTCH01[1]
+DATA_OUTCH01[2] <= lvds_out_map:inst.OUTCH01[2]
+DATA_OUTCH01[3] <= lvds_out_map:inst.OUTCH01[3]
+DATA_OUTCH01[4] <= lvds_out_map:inst.OUTCH01[4]
+DATA_OUTCH01[5] <= lvds_out_map:inst.OUTCH01[5]
+DATA_OUTCH01[6] <= lvds_out_map:inst.OUTCH01[6]
+DATA_OUTCH01[7] <= lvds_out_map:inst.OUTCH01[7]
+DATA_OUTCH01[8] <= lvds_out_map:inst.OUTCH01[8]
+DATA_OUTCH01[9] <= lvds_out_map:inst.OUTCH01[9]
+DATA_OUTCH02[0] <= lvds_out_map:inst.OUTCH02[0]
+DATA_OUTCH02[1] <= lvds_out_map:inst.OUTCH02[1]
+DATA_OUTCH02[2] <= lvds_out_map:inst.OUTCH02[2]
+DATA_OUTCH02[3] <= lvds_out_map:inst.OUTCH02[3]
+DATA_OUTCH02[4] <= lvds_out_map:inst.OUTCH02[4]
+DATA_OUTCH02[5] <= lvds_out_map:inst.OUTCH02[5]
+DATA_OUTCH02[6] <= lvds_out_map:inst.OUTCH02[6]
+DATA_OUTCH02[7] <= lvds_out_map:inst.OUTCH02[7]
+DATA_OUTCH02[8] <= lvds_out_map:inst.OUTCH02[8]
+DATA_OUTCH02[9] <= lvds_out_map:inst.OUTCH02[9]
+DATA_OUTCH03[0] <= lvds_out_map:inst.OUTCH03[0]
+DATA_OUTCH03[1] <= lvds_out_map:inst.OUTCH03[1]
+DATA_OUTCH03[2] <= lvds_out_map:inst.OUTCH03[2]
+DATA_OUTCH03[3] <= lvds_out_map:inst.OUTCH03[3]
+DATA_OUTCH03[4] <= lvds_out_map:inst.OUTCH03[4]
+DATA_OUTCH03[5] <= lvds_out_map:inst.OUTCH03[5]
+DATA_OUTCH03[6] <= lvds_out_map:inst.OUTCH03[6]
+DATA_OUTCH03[7] <= lvds_out_map:inst.OUTCH03[7]
+DATA_OUTCH03[8] <= lvds_out_map:inst.OUTCH03[8]
+DATA_OUTCH03[9] <= lvds_out_map:inst.OUTCH03[9]
+DATA_OUTCH04[0] <= lvds_out_map:inst.OUTCH04[0]
+DATA_OUTCH04[1] <= lvds_out_map:inst.OUTCH04[1]
+DATA_OUTCH04[2] <= lvds_out_map:inst.OUTCH04[2]
+DATA_OUTCH04[3] <= lvds_out_map:inst.OUTCH04[3]
+DATA_OUTCH04[4] <= lvds_out_map:inst.OUTCH04[4]
+DATA_OUTCH04[5] <= lvds_out_map:inst.OUTCH04[5]
+DATA_OUTCH04[6] <= lvds_out_map:inst.OUTCH04[6]
+DATA_OUTCH04[7] <= lvds_out_map:inst.OUTCH04[7]
+DATA_OUTCH04[8] <= lvds_out_map:inst.OUTCH04[8]
+DATA_OUTCH04[9] <= lvds_out_map:inst.OUTCH04[9]
+DATA_OUTCH05[0] <= lvds_out_map:inst.OUTCH05[0]
+DATA_OUTCH05[1] <= lvds_out_map:inst.OUTCH05[1]
+DATA_OUTCH05[2] <= lvds_out_map:inst.OUTCH05[2]
+DATA_OUTCH05[3] <= lvds_out_map:inst.OUTCH05[3]
+DATA_OUTCH05[4] <= lvds_out_map:inst.OUTCH05[4]
+DATA_OUTCH05[5] <= lvds_out_map:inst.OUTCH05[5]
+DATA_OUTCH05[6] <= lvds_out_map:inst.OUTCH05[6]
+DATA_OUTCH05[7] <= lvds_out_map:inst.OUTCH05[7]
+DATA_OUTCH05[8] <= lvds_out_map:inst.OUTCH05[8]
+DATA_OUTCH05[9] <= lvds_out_map:inst.OUTCH05[9]
+DATA_OUTCH06[0] <= lvds_out_map:inst.OUTCH06[0]
+DATA_OUTCH06[1] <= lvds_out_map:inst.OUTCH06[1]
+DATA_OUTCH06[2] <= lvds_out_map:inst.OUTCH06[2]
+DATA_OUTCH06[3] <= lvds_out_map:inst.OUTCH06[3]
+DATA_OUTCH06[4] <= lvds_out_map:inst.OUTCH06[4]
+DATA_OUTCH06[5] <= lvds_out_map:inst.OUTCH06[5]
+DATA_OUTCH06[6] <= lvds_out_map:inst.OUTCH06[6]
+DATA_OUTCH06[7] <= lvds_out_map:inst.OUTCH06[7]
+DATA_OUTCH06[8] <= lvds_out_map:inst.OUTCH06[8]
+DATA_OUTCH06[9] <= lvds_out_map:inst.OUTCH06[9]
+DATA_OUTCH07[0] <= lvds_out_map:inst.OUTCH07[0]
+DATA_OUTCH07[1] <= lvds_out_map:inst.OUTCH07[1]
+DATA_OUTCH07[2] <= lvds_out_map:inst.OUTCH07[2]
+DATA_OUTCH07[3] <= lvds_out_map:inst.OUTCH07[3]
+DATA_OUTCH07[4] <= lvds_out_map:inst.OUTCH07[4]
+DATA_OUTCH07[5] <= lvds_out_map:inst.OUTCH07[5]
+DATA_OUTCH07[6] <= lvds_out_map:inst.OUTCH07[6]
+DATA_OUTCH07[7] <= lvds_out_map:inst.OUTCH07[7]
+DATA_OUTCH07[8] <= lvds_out_map:inst.OUTCH07[8]
+DATA_OUTCH07[9] <= lvds_out_map:inst.OUTCH07[9]
+DATA_OUTCH08[0] <= lvds_out_map:inst.OUTCH08[0]
+DATA_OUTCH08[1] <= lvds_out_map:inst.OUTCH08[1]
+DATA_OUTCH08[2] <= lvds_out_map:inst.OUTCH08[2]
+DATA_OUTCH08[3] <= lvds_out_map:inst.OUTCH08[3]
+DATA_OUTCH08[4] <= lvds_out_map:inst.OUTCH08[4]
+DATA_OUTCH08[5] <= lvds_out_map:inst.OUTCH08[5]
+DATA_OUTCH08[6] <= lvds_out_map:inst.OUTCH08[6]
+DATA_OUTCH08[7] <= lvds_out_map:inst.OUTCH08[7]
+DATA_OUTCH08[8] <= lvds_out_map:inst.OUTCH08[8]
+DATA_OUTCH08[9] <= lvds_out_map:inst.OUTCH08[9]
+DATA_OUTCH09[0] <= lvds_out_map:inst.OUTCH09[0]
+DATA_OUTCH09[1] <= lvds_out_map:inst.OUTCH09[1]
+DATA_OUTCH09[2] <= lvds_out_map:inst.OUTCH09[2]
+DATA_OUTCH09[3] <= lvds_out_map:inst.OUTCH09[3]
+DATA_OUTCH09[4] <= lvds_out_map:inst.OUTCH09[4]
+DATA_OUTCH09[5] <= lvds_out_map:inst.OUTCH09[5]
+DATA_OUTCH09[6] <= lvds_out_map:inst.OUTCH09[6]
+DATA_OUTCH09[7] <= lvds_out_map:inst.OUTCH09[7]
+DATA_OUTCH09[8] <= lvds_out_map:inst.OUTCH09[8]
+DATA_OUTCH09[9] <= lvds_out_map:inst.OUTCH09[9]
+DATA_OUTCH10[0] <= lvds_out_map:inst.OUTCH10[0]
+DATA_OUTCH10[1] <= lvds_out_map:inst.OUTCH10[1]
+DATA_OUTCH10[2] <= lvds_out_map:inst.OUTCH10[2]
+DATA_OUTCH10[3] <= lvds_out_map:inst.OUTCH10[3]
+DATA_OUTCH10[4] <= lvds_out_map:inst.OUTCH10[4]
+DATA_OUTCH10[5] <= lvds_out_map:inst.OUTCH10[5]
+DATA_OUTCH10[6] <= lvds_out_map:inst.OUTCH10[6]
+DATA_OUTCH10[7] <= lvds_out_map:inst.OUTCH10[7]
+DATA_OUTCH10[8] <= lvds_out_map:inst.OUTCH10[8]
+DATA_OUTCH10[9] <= lvds_out_map:inst.OUTCH10[9]
+DATA_OUTCH11[0] <= lvds_out_map:inst.OUTCH11[0]
+DATA_OUTCH11[1] <= lvds_out_map:inst.OUTCH11[1]
+DATA_OUTCH11[2] <= lvds_out_map:inst.OUTCH11[2]
+DATA_OUTCH11[3] <= lvds_out_map:inst.OUTCH11[3]
+DATA_OUTCH11[4] <= lvds_out_map:inst.OUTCH11[4]
+DATA_OUTCH11[5] <= lvds_out_map:inst.OUTCH11[5]
+DATA_OUTCH11[6] <= lvds_out_map:inst.OUTCH11[6]
+DATA_OUTCH11[7] <= lvds_out_map:inst.OUTCH11[7]
+DATA_OUTCH11[8] <= lvds_out_map:inst.OUTCH11[8]
+DATA_OUTCH11[9] <= lvds_out_map:inst.OUTCH11[9]
+DATA_OUTCH12[0] <= lvds_out_map:inst.OUTCH12[0]
+DATA_OUTCH12[1] <= lvds_out_map:inst.OUTCH12[1]
+DATA_OUTCH12[2] <= lvds_out_map:inst.OUTCH12[2]
+DATA_OUTCH12[3] <= lvds_out_map:inst.OUTCH12[3]
+DATA_OUTCH12[4] <= lvds_out_map:inst.OUTCH12[4]
+DATA_OUTCH12[5] <= lvds_out_map:inst.OUTCH12[5]
+DATA_OUTCH12[6] <= lvds_out_map:inst.OUTCH12[6]
+DATA_OUTCH12[7] <= lvds_out_map:inst.OUTCH12[7]
+DATA_OUTCH12[8] <= lvds_out_map:inst.OUTCH12[8]
+DATA_OUTCH12[9] <= lvds_out_map:inst.OUTCH12[9]
+DATA_OUTCH13[0] <= lvds_out_map:inst.OUTCH13[0]
+DATA_OUTCH13[1] <= lvds_out_map:inst.OUTCH13[1]
+DATA_OUTCH13[2] <= lvds_out_map:inst.OUTCH13[2]
+DATA_OUTCH13[3] <= lvds_out_map:inst.OUTCH13[3]
+DATA_OUTCH13[4] <= lvds_out_map:inst.OUTCH13[4]
+DATA_OUTCH13[5] <= lvds_out_map:inst.OUTCH13[5]
+DATA_OUTCH13[6] <= lvds_out_map:inst.OUTCH13[6]
+DATA_OUTCH13[7] <= lvds_out_map:inst.OUTCH13[7]
+DATA_OUTCH13[8] <= lvds_out_map:inst.OUTCH13[8]
+DATA_OUTCH13[9] <= lvds_out_map:inst.OUTCH13[9]
+DATA_OUTCH14[0] <= lvds_out_map:inst.OUTCH14[0]
+DATA_OUTCH14[1] <= lvds_out_map:inst.OUTCH14[1]
+DATA_OUTCH14[2] <= lvds_out_map:inst.OUTCH14[2]
+DATA_OUTCH14[3] <= lvds_out_map:inst.OUTCH14[3]
+DATA_OUTCH14[4] <= lvds_out_map:inst.OUTCH14[4]
+DATA_OUTCH14[5] <= lvds_out_map:inst.OUTCH14[5]
+DATA_OUTCH14[6] <= lvds_out_map:inst.OUTCH14[6]
+DATA_OUTCH14[7] <= lvds_out_map:inst.OUTCH14[7]
+DATA_OUTCH14[8] <= lvds_out_map:inst.OUTCH14[8]
+DATA_OUTCH14[9] <= lvds_out_map:inst.OUTCH14[9]
+DATA_OUTCH15[0] <= lvds_out_map:inst.OUTCH15[0]
+DATA_OUTCH15[1] <= lvds_out_map:inst.OUTCH15[1]
+DATA_OUTCH15[2] <= lvds_out_map:inst.OUTCH15[2]
+DATA_OUTCH15[3] <= lvds_out_map:inst.OUTCH15[3]
+DATA_OUTCH15[4] <= lvds_out_map:inst.OUTCH15[4]
+DATA_OUTCH15[5] <= lvds_out_map:inst.OUTCH15[5]
+DATA_OUTCH15[6] <= lvds_out_map:inst.OUTCH15[6]
+DATA_OUTCH15[7] <= lvds_out_map:inst.OUTCH15[7]
+DATA_OUTCH15[8] <= lvds_out_map:inst.OUTCH15[8]
+DATA_OUTCH15[9] <= lvds_out_map:inst.OUTCH15[9]
+DATA_OUTCH16[0] <= lvds_out_map:inst.OUTCH16[0]
+DATA_OUTCH16[1] <= lvds_out_map:inst.OUTCH16[1]
+DATA_OUTCH16[2] <= lvds_out_map:inst.OUTCH16[2]
+DATA_OUTCH16[3] <= lvds_out_map:inst.OUTCH16[3]
+DATA_OUTCH16[4] <= lvds_out_map:inst.OUTCH16[4]
+DATA_OUTCH16[5] <= lvds_out_map:inst.OUTCH16[5]
+DATA_OUTCH16[6] <= lvds_out_map:inst.OUTCH16[6]
+DATA_OUTCH16[7] <= lvds_out_map:inst.OUTCH16[7]
+DATA_OUTCH16[8] <= lvds_out_map:inst.OUTCH16[8]
+DATA_OUTCH16[9] <= lvds_out_map:inst.OUTCH16[9]
 DATA_OUTCTR[0] <= outctr[0].DB_MAX_OUTPUT_PORT_TYPE
 DATA_OUTCTR[1] <= outctr[1].DB_MAX_OUTPUT_PORT_TYPE
 DATA_OUTCTR[2] <= outctr[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -191,7 +384,7 @@ DATA_OUTCTR[8] <= outctr[8].DB_MAX_OUTPUT_PORT_TYPE
 DATA_OUTCTR[9] <= outctr[9].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lvds_decoder|altlvds_rx0:inst_1
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1
 pll_areset => altlvds_rx:ALTLVDS_RX_component.pll_areset
 rx_data_align => altlvds_rx:ALTLVDS_RX_component.rx_data_align
 rx_in[0] => altlvds_rx:ALTLVDS_RX_component.rx_in[0]
@@ -385,7 +578,7 @@ rx_out[169] <= altlvds_rx:ALTLVDS_RX_component.rx_out[169]
 rx_outclock <= altlvds_rx:ALTLVDS_RX_component.rx_outclock
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component
 rx_in[0] => altlvds_rx0_lvds_rx:auto_generated.rx_in[0]
 rx_in[1] => altlvds_rx0_lvds_rx:auto_generated.rx_in[1]
 rx_in[2] => altlvds_rx0_lvds_rx:auto_generated.rx_in[2]
@@ -802,7 +995,7 @@ pll_phasecounterselect[3] <= <GND>
 pll_scanclk <= <GND>
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated
 pll_areset => rx_reg[0].ACLR
 pll_areset => rx_reg[1].ACLR
 pll_areset => rx_reg[2].ACLR
@@ -1576,7 +1769,7 @@ rx_out[169] <= rx_reg[169].DB_MAX_OUTPUT_PORT_TYPE
 rx_outclock <= lvds_rx_pll.CLK1
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_dffpipe:h_dffpipe
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_dffpipe:h_dffpipe
 clock => dffe104a[0].CLK
 clock => dffe104a[1].CLK
 clock => dffe104a[2].CLK
@@ -1681,7 +1874,7 @@ q[15] <= dffe104a[15].DB_MAX_OUTPUT_PORT_TYPE
 q[16] <= dffe104a[16].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_dffpipe:l_dffpipe
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_dffpipe:l_dffpipe
 clock => dffe104a[0].CLK
 clock => dffe104a[1].CLK
 clock => dffe104a[2].CLK
@@ -1786,7 +1979,7 @@ q[15] <= dffe104a[15].DB_MAX_OUTPUT_PORT_TYPE
 q[16] <= dffe104a[16].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_cntr:bitslip_cntr
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_cntr:bitslip_cntr
 clock => counter_reg_bit105a_0.CLK
 clock => counter_reg_bit105a_1.CLK
 clock => counter_reg_bit105a_2.CLK
@@ -1801,7 +1994,7 @@ q[2] <= wire_counter_reg_bit105a_regout[2].DB_MAX_OUTPUT_PORT_TYPE
 q[3] <= wire_counter_reg_bit105a_regout[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_cntr:bitslip_cntr|altlvds_rx0_cmpr:cmpr106
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_cntr:bitslip_cntr|altlvds_rx0_cmpr:cmpr106
 aeb <= aneb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
 dataa[0] => data_wire.IN0
 dataa[1] => data_wire.IN0
@@ -1813,7 +2006,7 @@ datab[2] => data_wire.IN1
 datab[3] => data_wire.IN1
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux101a
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux101a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -1846,7 +2039,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux11a
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux11a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -1879,7 +2072,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux17a
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux17a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -1912,7 +2105,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux23a
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux23a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -1945,7 +2138,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux29a
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux29a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -1978,7 +2171,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux35a
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux35a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -2011,7 +2204,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux41a
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux41a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -2044,7 +2237,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux47a
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux47a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -2077,7 +2270,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux53a
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux53a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -2110,7 +2303,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux59a
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux59a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -2143,7 +2336,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux5a
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux5a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -2176,7 +2369,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux65a
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux65a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -2209,7 +2402,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux71a
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux71a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -2242,7 +2435,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux77a
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux77a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -2275,7 +2468,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux83a
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux83a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -2308,7 +2501,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux89a
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux89a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -2341,7 +2534,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux95a
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux95a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -2374,7 +2567,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux102a
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux102a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -2407,7 +2600,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux12a
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux12a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -2440,7 +2633,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux18a
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux18a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -2473,7 +2666,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux24a
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux24a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -2506,7 +2699,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux30a
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux30a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -2539,7 +2732,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux36a
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux36a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -2572,7 +2765,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux42a
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux42a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -2605,7 +2798,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux48a
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux48a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -2638,7 +2831,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux54a
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux54a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -2671,7 +2864,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux60a
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux60a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -2704,7 +2897,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux66a
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux66a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -2737,7 +2930,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux6a
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux6a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -2770,7 +2963,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux72a
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux72a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -2803,7 +2996,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux78a
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux78a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -2836,7 +3029,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux84a
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux84a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -2869,7 +3062,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux90a
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux90a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -2902,7 +3095,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux96a
+|tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux96a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -2935,7 +3128,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|lvds_decoder|lvds_out_map:inst_2
+|tb_lvds_decoder|lvds_decoder:inst|lvds_out_map:inst
 LVDS_DATA[0] => OUTCTR[0].DATAIN
 LVDS_DATA[1] => OUTCTR[1].DATAIN
 LVDS_DATA[2] => OUTCTR[2].DATAIN
@@ -2946,166 +3139,166 @@ LVDS_DATA[6] => OUTCTR[6].DATAIN
 LVDS_DATA[7] => OUTCTR[7].DATAIN
 LVDS_DATA[8] => OUTCTR[8].DATAIN
 LVDS_DATA[9] => OUTCTR[9].DATAIN
-LVDS_DATA[10] => OUT1[0].DATAIN
-LVDS_DATA[11] => OUT1[1].DATAIN
-LVDS_DATA[12] => OUT1[2].DATAIN
-LVDS_DATA[13] => OUT1[3].DATAIN
-LVDS_DATA[14] => OUT1[4].DATAIN
-LVDS_DATA[15] => OUT1[5].DATAIN
-LVDS_DATA[16] => OUT1[6].DATAIN
-LVDS_DATA[17] => OUT1[7].DATAIN
-LVDS_DATA[18] => OUT1[8].DATAIN
-LVDS_DATA[19] => OUT1[9].DATAIN
-LVDS_DATA[20] => OUT2[0].DATAIN
-LVDS_DATA[21] => OUT2[1].DATAIN
-LVDS_DATA[22] => OUT2[2].DATAIN
-LVDS_DATA[23] => OUT2[3].DATAIN
-LVDS_DATA[24] => OUT2[4].DATAIN
-LVDS_DATA[25] => OUT2[5].DATAIN
-LVDS_DATA[26] => OUT2[6].DATAIN
-LVDS_DATA[27] => OUT2[7].DATAIN
-LVDS_DATA[28] => OUT2[8].DATAIN
-LVDS_DATA[29] => OUT2[9].DATAIN
-LVDS_DATA[30] => OUT3[0].DATAIN
-LVDS_DATA[31] => OUT3[1].DATAIN
-LVDS_DATA[32] => OUT3[2].DATAIN
-LVDS_DATA[33] => OUT3[3].DATAIN
-LVDS_DATA[34] => OUT3[4].DATAIN
-LVDS_DATA[35] => OUT3[5].DATAIN
-LVDS_DATA[36] => OUT3[6].DATAIN
-LVDS_DATA[37] => OUT3[7].DATAIN
-LVDS_DATA[38] => OUT3[8].DATAIN
-LVDS_DATA[39] => OUT3[9].DATAIN
-LVDS_DATA[40] => OUT4[0].DATAIN
-LVDS_DATA[41] => OUT4[1].DATAIN
-LVDS_DATA[42] => OUT4[2].DATAIN
-LVDS_DATA[43] => OUT4[3].DATAIN
-LVDS_DATA[44] => OUT4[4].DATAIN
-LVDS_DATA[45] => OUT4[5].DATAIN
-LVDS_DATA[46] => OUT4[6].DATAIN
-LVDS_DATA[47] => OUT4[7].DATAIN
-LVDS_DATA[48] => OUT4[8].DATAIN
-LVDS_DATA[49] => OUT4[9].DATAIN
-LVDS_DATA[50] => OUT5[0].DATAIN
-LVDS_DATA[51] => OUT5[1].DATAIN
-LVDS_DATA[52] => OUT5[2].DATAIN
-LVDS_DATA[53] => OUT5[3].DATAIN
-LVDS_DATA[54] => OUT5[4].DATAIN
-LVDS_DATA[55] => OUT5[5].DATAIN
-LVDS_DATA[56] => OUT5[6].DATAIN
-LVDS_DATA[57] => OUT5[7].DATAIN
-LVDS_DATA[58] => OUT5[8].DATAIN
-LVDS_DATA[59] => OUT5[9].DATAIN
-LVDS_DATA[60] => OUT6[0].DATAIN
-LVDS_DATA[61] => OUT6[1].DATAIN
-LVDS_DATA[62] => OUT6[2].DATAIN
-LVDS_DATA[63] => OUT6[3].DATAIN
-LVDS_DATA[64] => OUT6[4].DATAIN
-LVDS_DATA[65] => OUT6[5].DATAIN
-LVDS_DATA[66] => OUT6[6].DATAIN
-LVDS_DATA[67] => OUT6[7].DATAIN
-LVDS_DATA[68] => OUT6[8].DATAIN
-LVDS_DATA[69] => OUT6[9].DATAIN
-LVDS_DATA[70] => OUT7[0].DATAIN
-LVDS_DATA[71] => OUT7[1].DATAIN
-LVDS_DATA[72] => OUT7[2].DATAIN
-LVDS_DATA[73] => OUT7[3].DATAIN
-LVDS_DATA[74] => OUT7[4].DATAIN
-LVDS_DATA[75] => OUT7[5].DATAIN
-LVDS_DATA[76] => OUT7[6].DATAIN
-LVDS_DATA[77] => OUT7[7].DATAIN
-LVDS_DATA[78] => OUT7[8].DATAIN
-LVDS_DATA[79] => OUT7[9].DATAIN
-LVDS_DATA[80] => OUT8[0].DATAIN
-LVDS_DATA[81] => OUT8[1].DATAIN
-LVDS_DATA[82] => OUT8[2].DATAIN
-LVDS_DATA[83] => OUT8[3].DATAIN
-LVDS_DATA[84] => OUT8[4].DATAIN
-LVDS_DATA[85] => OUT8[5].DATAIN
-LVDS_DATA[86] => OUT8[6].DATAIN
-LVDS_DATA[87] => OUT8[7].DATAIN
-LVDS_DATA[88] => OUT8[8].DATAIN
-LVDS_DATA[89] => OUT8[9].DATAIN
-LVDS_DATA[90] => OUT9[0].DATAIN
-LVDS_DATA[91] => OUT9[1].DATAIN
-LVDS_DATA[92] => OUT9[2].DATAIN
-LVDS_DATA[93] => OUT9[3].DATAIN
-LVDS_DATA[94] => OUT9[4].DATAIN
-LVDS_DATA[95] => OUT9[5].DATAIN
-LVDS_DATA[96] => OUT9[6].DATAIN
-LVDS_DATA[97] => OUT9[7].DATAIN
-LVDS_DATA[98] => OUT9[8].DATAIN
-LVDS_DATA[99] => OUT9[9].DATAIN
-LVDS_DATA[100] => OUT10[0].DATAIN
-LVDS_DATA[101] => OUT10[1].DATAIN
-LVDS_DATA[102] => OUT10[2].DATAIN
-LVDS_DATA[103] => OUT10[3].DATAIN
-LVDS_DATA[104] => OUT10[4].DATAIN
-LVDS_DATA[105] => OUT10[5].DATAIN
-LVDS_DATA[106] => OUT10[6].DATAIN
-LVDS_DATA[107] => OUT10[7].DATAIN
-LVDS_DATA[108] => OUT10[8].DATAIN
-LVDS_DATA[109] => OUT10[9].DATAIN
-LVDS_DATA[110] => OUT11[0].DATAIN
-LVDS_DATA[111] => OUT11[1].DATAIN
-LVDS_DATA[112] => OUT11[2].DATAIN
-LVDS_DATA[113] => OUT11[3].DATAIN
-LVDS_DATA[114] => OUT11[4].DATAIN
-LVDS_DATA[115] => OUT11[5].DATAIN
-LVDS_DATA[116] => OUT11[6].DATAIN
-LVDS_DATA[117] => OUT11[7].DATAIN
-LVDS_DATA[118] => OUT11[8].DATAIN
-LVDS_DATA[119] => OUT11[9].DATAIN
-LVDS_DATA[120] => OUT12[0].DATAIN
-LVDS_DATA[121] => OUT12[1].DATAIN
-LVDS_DATA[122] => OUT12[2].DATAIN
-LVDS_DATA[123] => OUT12[3].DATAIN
-LVDS_DATA[124] => OUT12[4].DATAIN
-LVDS_DATA[125] => OUT12[5].DATAIN
-LVDS_DATA[126] => OUT12[6].DATAIN
-LVDS_DATA[127] => OUT12[7].DATAIN
-LVDS_DATA[128] => OUT12[8].DATAIN
-LVDS_DATA[129] => OUT12[9].DATAIN
-LVDS_DATA[130] => OUT13[0].DATAIN
-LVDS_DATA[131] => OUT13[1].DATAIN
-LVDS_DATA[132] => OUT13[2].DATAIN
-LVDS_DATA[133] => OUT13[3].DATAIN
-LVDS_DATA[134] => OUT13[4].DATAIN
-LVDS_DATA[135] => OUT13[5].DATAIN
-LVDS_DATA[136] => OUT13[6].DATAIN
-LVDS_DATA[137] => OUT13[7].DATAIN
-LVDS_DATA[138] => OUT13[8].DATAIN
-LVDS_DATA[139] => OUT13[9].DATAIN
-LVDS_DATA[140] => OUT14[0].DATAIN
-LVDS_DATA[141] => OUT14[1].DATAIN
-LVDS_DATA[142] => OUT14[2].DATAIN
-LVDS_DATA[143] => OUT14[3].DATAIN
-LVDS_DATA[144] => OUT14[4].DATAIN
-LVDS_DATA[145] => OUT14[5].DATAIN
-LVDS_DATA[146] => OUT14[6].DATAIN
-LVDS_DATA[147] => OUT14[7].DATAIN
-LVDS_DATA[148] => OUT14[8].DATAIN
-LVDS_DATA[149] => OUT14[9].DATAIN
-LVDS_DATA[150] => OUT15[0].DATAIN
-LVDS_DATA[151] => OUT15[1].DATAIN
-LVDS_DATA[152] => OUT15[2].DATAIN
-LVDS_DATA[153] => OUT15[3].DATAIN
-LVDS_DATA[154] => OUT15[4].DATAIN
-LVDS_DATA[155] => OUT15[5].DATAIN
-LVDS_DATA[156] => OUT15[6].DATAIN
-LVDS_DATA[157] => OUT15[7].DATAIN
-LVDS_DATA[158] => OUT15[8].DATAIN
-LVDS_DATA[159] => OUT15[9].DATAIN
-LVDS_DATA[160] => OUT16[0].DATAIN
-LVDS_DATA[161] => OUT16[1].DATAIN
-LVDS_DATA[162] => OUT16[2].DATAIN
-LVDS_DATA[163] => OUT16[3].DATAIN
-LVDS_DATA[164] => OUT16[4].DATAIN
-LVDS_DATA[165] => OUT16[5].DATAIN
-LVDS_DATA[166] => OUT16[6].DATAIN
-LVDS_DATA[167] => OUT16[7].DATAIN
-LVDS_DATA[168] => OUT16[8].DATAIN
-LVDS_DATA[169] => OUT16[9].DATAIN
+LVDS_DATA[10] => OUTCH01[0].DATAIN
+LVDS_DATA[11] => OUTCH01[1].DATAIN
+LVDS_DATA[12] => OUTCH01[2].DATAIN
+LVDS_DATA[13] => OUTCH01[3].DATAIN
+LVDS_DATA[14] => OUTCH01[4].DATAIN
+LVDS_DATA[15] => OUTCH01[5].DATAIN
+LVDS_DATA[16] => OUTCH01[6].DATAIN
+LVDS_DATA[17] => OUTCH01[7].DATAIN
+LVDS_DATA[18] => OUTCH01[8].DATAIN
+LVDS_DATA[19] => OUTCH01[9].DATAIN
+LVDS_DATA[20] => OUTCH02[0].DATAIN
+LVDS_DATA[21] => OUTCH02[1].DATAIN
+LVDS_DATA[22] => OUTCH02[2].DATAIN
+LVDS_DATA[23] => OUTCH02[3].DATAIN
+LVDS_DATA[24] => OUTCH02[4].DATAIN
+LVDS_DATA[25] => OUTCH02[5].DATAIN
+LVDS_DATA[26] => OUTCH02[6].DATAIN
+LVDS_DATA[27] => OUTCH02[7].DATAIN
+LVDS_DATA[28] => OUTCH02[8].DATAIN
+LVDS_DATA[29] => OUTCH02[9].DATAIN
+LVDS_DATA[30] => OUTCH03[0].DATAIN
+LVDS_DATA[31] => OUTCH03[1].DATAIN
+LVDS_DATA[32] => OUTCH03[2].DATAIN
+LVDS_DATA[33] => OUTCH03[3].DATAIN
+LVDS_DATA[34] => OUTCH03[4].DATAIN
+LVDS_DATA[35] => OUTCH03[5].DATAIN
+LVDS_DATA[36] => OUTCH03[6].DATAIN
+LVDS_DATA[37] => OUTCH03[7].DATAIN
+LVDS_DATA[38] => OUTCH03[8].DATAIN
+LVDS_DATA[39] => OUTCH03[9].DATAIN
+LVDS_DATA[40] => OUTCH04[0].DATAIN
+LVDS_DATA[41] => OUTCH04[1].DATAIN
+LVDS_DATA[42] => OUTCH04[2].DATAIN
+LVDS_DATA[43] => OUTCH04[3].DATAIN
+LVDS_DATA[44] => OUTCH04[4].DATAIN
+LVDS_DATA[45] => OUTCH04[5].DATAIN
+LVDS_DATA[46] => OUTCH04[6].DATAIN
+LVDS_DATA[47] => OUTCH04[7].DATAIN
+LVDS_DATA[48] => OUTCH04[8].DATAIN
+LVDS_DATA[49] => OUTCH04[9].DATAIN
+LVDS_DATA[50] => OUTCH05[0].DATAIN
+LVDS_DATA[51] => OUTCH05[1].DATAIN
+LVDS_DATA[52] => OUTCH05[2].DATAIN
+LVDS_DATA[53] => OUTCH05[3].DATAIN
+LVDS_DATA[54] => OUTCH05[4].DATAIN
+LVDS_DATA[55] => OUTCH05[5].DATAIN
+LVDS_DATA[56] => OUTCH05[6].DATAIN
+LVDS_DATA[57] => OUTCH05[7].DATAIN
+LVDS_DATA[58] => OUTCH05[8].DATAIN
+LVDS_DATA[59] => OUTCH05[9].DATAIN
+LVDS_DATA[60] => OUTCH06[0].DATAIN
+LVDS_DATA[61] => OUTCH06[1].DATAIN
+LVDS_DATA[62] => OUTCH06[2].DATAIN
+LVDS_DATA[63] => OUTCH06[3].DATAIN
+LVDS_DATA[64] => OUTCH06[4].DATAIN
+LVDS_DATA[65] => OUTCH06[5].DATAIN
+LVDS_DATA[66] => OUTCH06[6].DATAIN
+LVDS_DATA[67] => OUTCH06[7].DATAIN
+LVDS_DATA[68] => OUTCH06[8].DATAIN
+LVDS_DATA[69] => OUTCH06[9].DATAIN
+LVDS_DATA[70] => OUTCH07[0].DATAIN
+LVDS_DATA[71] => OUTCH07[1].DATAIN
+LVDS_DATA[72] => OUTCH07[2].DATAIN
+LVDS_DATA[73] => OUTCH07[3].DATAIN
+LVDS_DATA[74] => OUTCH07[4].DATAIN
+LVDS_DATA[75] => OUTCH07[5].DATAIN
+LVDS_DATA[76] => OUTCH07[6].DATAIN
+LVDS_DATA[77] => OUTCH07[7].DATAIN
+LVDS_DATA[78] => OUTCH07[8].DATAIN
+LVDS_DATA[79] => OUTCH07[9].DATAIN
+LVDS_DATA[80] => OUTCH08[0].DATAIN
+LVDS_DATA[81] => OUTCH08[1].DATAIN
+LVDS_DATA[82] => OUTCH08[2].DATAIN
+LVDS_DATA[83] => OUTCH08[3].DATAIN
+LVDS_DATA[84] => OUTCH08[4].DATAIN
+LVDS_DATA[85] => OUTCH08[5].DATAIN
+LVDS_DATA[86] => OUTCH08[6].DATAIN
+LVDS_DATA[87] => OUTCH08[7].DATAIN
+LVDS_DATA[88] => OUTCH08[8].DATAIN
+LVDS_DATA[89] => OUTCH08[9].DATAIN
+LVDS_DATA[90] => OUTCH09[0].DATAIN
+LVDS_DATA[91] => OUTCH09[1].DATAIN
+LVDS_DATA[92] => OUTCH09[2].DATAIN
+LVDS_DATA[93] => OUTCH09[3].DATAIN
+LVDS_DATA[94] => OUTCH09[4].DATAIN
+LVDS_DATA[95] => OUTCH09[5].DATAIN
+LVDS_DATA[96] => OUTCH09[6].DATAIN
+LVDS_DATA[97] => OUTCH09[7].DATAIN
+LVDS_DATA[98] => OUTCH09[8].DATAIN
+LVDS_DATA[99] => OUTCH09[9].DATAIN
+LVDS_DATA[100] => OUTCH10[0].DATAIN
+LVDS_DATA[101] => OUTCH10[1].DATAIN
+LVDS_DATA[102] => OUTCH10[2].DATAIN
+LVDS_DATA[103] => OUTCH10[3].DATAIN
+LVDS_DATA[104] => OUTCH10[4].DATAIN
+LVDS_DATA[105] => OUTCH10[5].DATAIN
+LVDS_DATA[106] => OUTCH10[6].DATAIN
+LVDS_DATA[107] => OUTCH10[7].DATAIN
+LVDS_DATA[108] => OUTCH10[8].DATAIN
+LVDS_DATA[109] => OUTCH10[9].DATAIN
+LVDS_DATA[110] => OUTCH11[0].DATAIN
+LVDS_DATA[111] => OUTCH11[1].DATAIN
+LVDS_DATA[112] => OUTCH11[2].DATAIN
+LVDS_DATA[113] => OUTCH11[3].DATAIN
+LVDS_DATA[114] => OUTCH11[4].DATAIN
+LVDS_DATA[115] => OUTCH11[5].DATAIN
+LVDS_DATA[116] => OUTCH11[6].DATAIN
+LVDS_DATA[117] => OUTCH11[7].DATAIN
+LVDS_DATA[118] => OUTCH11[8].DATAIN
+LVDS_DATA[119] => OUTCH11[9].DATAIN
+LVDS_DATA[120] => OUTCH12[0].DATAIN
+LVDS_DATA[121] => OUTCH12[1].DATAIN
+LVDS_DATA[122] => OUTCH12[2].DATAIN
+LVDS_DATA[123] => OUTCH12[3].DATAIN
+LVDS_DATA[124] => OUTCH12[4].DATAIN
+LVDS_DATA[125] => OUTCH12[5].DATAIN
+LVDS_DATA[126] => OUTCH12[6].DATAIN
+LVDS_DATA[127] => OUTCH12[7].DATAIN
+LVDS_DATA[128] => OUTCH12[8].DATAIN
+LVDS_DATA[129] => OUTCH12[9].DATAIN
+LVDS_DATA[130] => OUTCH13[0].DATAIN
+LVDS_DATA[131] => OUTCH13[1].DATAIN
+LVDS_DATA[132] => OUTCH13[2].DATAIN
+LVDS_DATA[133] => OUTCH13[3].DATAIN
+LVDS_DATA[134] => OUTCH13[4].DATAIN
+LVDS_DATA[135] => OUTCH13[5].DATAIN
+LVDS_DATA[136] => OUTCH13[6].DATAIN
+LVDS_DATA[137] => OUTCH13[7].DATAIN
+LVDS_DATA[138] => OUTCH13[8].DATAIN
+LVDS_DATA[139] => OUTCH13[9].DATAIN
+LVDS_DATA[140] => OUTCH14[0].DATAIN
+LVDS_DATA[141] => OUTCH14[1].DATAIN
+LVDS_DATA[142] => OUTCH14[2].DATAIN
+LVDS_DATA[143] => OUTCH14[3].DATAIN
+LVDS_DATA[144] => OUTCH14[4].DATAIN
+LVDS_DATA[145] => OUTCH14[5].DATAIN
+LVDS_DATA[146] => OUTCH14[6].DATAIN
+LVDS_DATA[147] => OUTCH14[7].DATAIN
+LVDS_DATA[148] => OUTCH14[8].DATAIN
+LVDS_DATA[149] => OUTCH14[9].DATAIN
+LVDS_DATA[150] => OUTCH15[0].DATAIN
+LVDS_DATA[151] => OUTCH15[1].DATAIN
+LVDS_DATA[152] => OUTCH15[2].DATAIN
+LVDS_DATA[153] => OUTCH15[3].DATAIN
+LVDS_DATA[154] => OUTCH15[4].DATAIN
+LVDS_DATA[155] => OUTCH15[5].DATAIN
+LVDS_DATA[156] => OUTCH15[6].DATAIN
+LVDS_DATA[157] => OUTCH15[7].DATAIN
+LVDS_DATA[158] => OUTCH15[8].DATAIN
+LVDS_DATA[159] => OUTCH15[9].DATAIN
+LVDS_DATA[160] => OUTCH16[0].DATAIN
+LVDS_DATA[161] => OUTCH16[1].DATAIN
+LVDS_DATA[162] => OUTCH16[2].DATAIN
+LVDS_DATA[163] => OUTCH16[3].DATAIN
+LVDS_DATA[164] => OUTCH16[4].DATAIN
+LVDS_DATA[165] => OUTCH16[5].DATAIN
+LVDS_DATA[166] => OUTCH16[6].DATAIN
+LVDS_DATA[167] => OUTCH16[7].DATAIN
+LVDS_DATA[168] => OUTCH16[8].DATAIN
+LVDS_DATA[169] => OUTCH16[9].DATAIN
 OUTCTR[0] <= LVDS_DATA[0].DB_MAX_OUTPUT_PORT_TYPE
 OUTCTR[1] <= LVDS_DATA[1].DB_MAX_OUTPUT_PORT_TYPE
 OUTCTR[2] <= LVDS_DATA[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -3116,169 +3309,169 @@ OUTCTR[6] <= LVDS_DATA[6].DB_MAX_OUTPUT_PORT_TYPE
 OUTCTR[7] <= LVDS_DATA[7].DB_MAX_OUTPUT_PORT_TYPE
 OUTCTR[8] <= LVDS_DATA[8].DB_MAX_OUTPUT_PORT_TYPE
 OUTCTR[9] <= LVDS_DATA[9].DB_MAX_OUTPUT_PORT_TYPE
-OUT1[0] <= LVDS_DATA[10].DB_MAX_OUTPUT_PORT_TYPE
-OUT1[1] <= LVDS_DATA[11].DB_MAX_OUTPUT_PORT_TYPE
-OUT1[2] <= LVDS_DATA[12].DB_MAX_OUTPUT_PORT_TYPE
-OUT1[3] <= LVDS_DATA[13].DB_MAX_OUTPUT_PORT_TYPE
-OUT1[4] <= LVDS_DATA[14].DB_MAX_OUTPUT_PORT_TYPE
-OUT1[5] <= LVDS_DATA[15].DB_MAX_OUTPUT_PORT_TYPE
-OUT1[6] <= LVDS_DATA[16].DB_MAX_OUTPUT_PORT_TYPE
-OUT1[7] <= LVDS_DATA[17].DB_MAX_OUTPUT_PORT_TYPE
-OUT1[8] <= LVDS_DATA[18].DB_MAX_OUTPUT_PORT_TYPE
-OUT1[9] <= LVDS_DATA[19].DB_MAX_OUTPUT_PORT_TYPE
-OUT2[0] <= LVDS_DATA[20].DB_MAX_OUTPUT_PORT_TYPE
-OUT2[1] <= LVDS_DATA[21].DB_MAX_OUTPUT_PORT_TYPE
-OUT2[2] <= LVDS_DATA[22].DB_MAX_OUTPUT_PORT_TYPE
-OUT2[3] <= LVDS_DATA[23].DB_MAX_OUTPUT_PORT_TYPE
-OUT2[4] <= LVDS_DATA[24].DB_MAX_OUTPUT_PORT_TYPE
-OUT2[5] <= LVDS_DATA[25].DB_MAX_OUTPUT_PORT_TYPE
-OUT2[6] <= LVDS_DATA[26].DB_MAX_OUTPUT_PORT_TYPE
-OUT2[7] <= LVDS_DATA[27].DB_MAX_OUTPUT_PORT_TYPE
-OUT2[8] <= LVDS_DATA[28].DB_MAX_OUTPUT_PORT_TYPE
-OUT2[9] <= LVDS_DATA[29].DB_MAX_OUTPUT_PORT_TYPE
-OUT3[0] <= LVDS_DATA[30].DB_MAX_OUTPUT_PORT_TYPE
-OUT3[1] <= LVDS_DATA[31].DB_MAX_OUTPUT_PORT_TYPE
-OUT3[2] <= LVDS_DATA[32].DB_MAX_OUTPUT_PORT_TYPE
-OUT3[3] <= LVDS_DATA[33].DB_MAX_OUTPUT_PORT_TYPE
-OUT3[4] <= LVDS_DATA[34].DB_MAX_OUTPUT_PORT_TYPE
-OUT3[5] <= LVDS_DATA[35].DB_MAX_OUTPUT_PORT_TYPE
-OUT3[6] <= LVDS_DATA[36].DB_MAX_OUTPUT_PORT_TYPE
-OUT3[7] <= LVDS_DATA[37].DB_MAX_OUTPUT_PORT_TYPE
-OUT3[8] <= LVDS_DATA[38].DB_MAX_OUTPUT_PORT_TYPE
-OUT3[9] <= LVDS_DATA[39].DB_MAX_OUTPUT_PORT_TYPE
-OUT4[0] <= LVDS_DATA[40].DB_MAX_OUTPUT_PORT_TYPE
-OUT4[1] <= LVDS_DATA[41].DB_MAX_OUTPUT_PORT_TYPE
-OUT4[2] <= LVDS_DATA[42].DB_MAX_OUTPUT_PORT_TYPE
-OUT4[3] <= LVDS_DATA[43].DB_MAX_OUTPUT_PORT_TYPE
-OUT4[4] <= LVDS_DATA[44].DB_MAX_OUTPUT_PORT_TYPE
-OUT4[5] <= LVDS_DATA[45].DB_MAX_OUTPUT_PORT_TYPE
-OUT4[6] <= LVDS_DATA[46].DB_MAX_OUTPUT_PORT_TYPE
-OUT4[7] <= LVDS_DATA[47].DB_MAX_OUTPUT_PORT_TYPE
-OUT4[8] <= LVDS_DATA[48].DB_MAX_OUTPUT_PORT_TYPE
-OUT4[9] <= LVDS_DATA[49].DB_MAX_OUTPUT_PORT_TYPE
-OUT5[0] <= LVDS_DATA[50].DB_MAX_OUTPUT_PORT_TYPE
-OUT5[1] <= LVDS_DATA[51].DB_MAX_OUTPUT_PORT_TYPE
-OUT5[2] <= LVDS_DATA[52].DB_MAX_OUTPUT_PORT_TYPE
-OUT5[3] <= LVDS_DATA[53].DB_MAX_OUTPUT_PORT_TYPE
-OUT5[4] <= LVDS_DATA[54].DB_MAX_OUTPUT_PORT_TYPE
-OUT5[5] <= LVDS_DATA[55].DB_MAX_OUTPUT_PORT_TYPE
-OUT5[6] <= LVDS_DATA[56].DB_MAX_OUTPUT_PORT_TYPE
-OUT5[7] <= LVDS_DATA[57].DB_MAX_OUTPUT_PORT_TYPE
-OUT5[8] <= LVDS_DATA[58].DB_MAX_OUTPUT_PORT_TYPE
-OUT5[9] <= LVDS_DATA[59].DB_MAX_OUTPUT_PORT_TYPE
-OUT6[0] <= LVDS_DATA[60].DB_MAX_OUTPUT_PORT_TYPE
-OUT6[1] <= LVDS_DATA[61].DB_MAX_OUTPUT_PORT_TYPE
-OUT6[2] <= LVDS_DATA[62].DB_MAX_OUTPUT_PORT_TYPE
-OUT6[3] <= LVDS_DATA[63].DB_MAX_OUTPUT_PORT_TYPE
-OUT6[4] <= LVDS_DATA[64].DB_MAX_OUTPUT_PORT_TYPE
-OUT6[5] <= LVDS_DATA[65].DB_MAX_OUTPUT_PORT_TYPE
-OUT6[6] <= LVDS_DATA[66].DB_MAX_OUTPUT_PORT_TYPE
-OUT6[7] <= LVDS_DATA[67].DB_MAX_OUTPUT_PORT_TYPE
-OUT6[8] <= LVDS_DATA[68].DB_MAX_OUTPUT_PORT_TYPE
-OUT6[9] <= LVDS_DATA[69].DB_MAX_OUTPUT_PORT_TYPE
-OUT7[0] <= LVDS_DATA[70].DB_MAX_OUTPUT_PORT_TYPE
-OUT7[1] <= LVDS_DATA[71].DB_MAX_OUTPUT_PORT_TYPE
-OUT7[2] <= LVDS_DATA[72].DB_MAX_OUTPUT_PORT_TYPE
-OUT7[3] <= LVDS_DATA[73].DB_MAX_OUTPUT_PORT_TYPE
-OUT7[4] <= LVDS_DATA[74].DB_MAX_OUTPUT_PORT_TYPE
-OUT7[5] <= LVDS_DATA[75].DB_MAX_OUTPUT_PORT_TYPE
-OUT7[6] <= LVDS_DATA[76].DB_MAX_OUTPUT_PORT_TYPE
-OUT7[7] <= LVDS_DATA[77].DB_MAX_OUTPUT_PORT_TYPE
-OUT7[8] <= LVDS_DATA[78].DB_MAX_OUTPUT_PORT_TYPE
-OUT7[9] <= LVDS_DATA[79].DB_MAX_OUTPUT_PORT_TYPE
-OUT8[0] <= LVDS_DATA[80].DB_MAX_OUTPUT_PORT_TYPE
-OUT8[1] <= LVDS_DATA[81].DB_MAX_OUTPUT_PORT_TYPE
-OUT8[2] <= LVDS_DATA[82].DB_MAX_OUTPUT_PORT_TYPE
-OUT8[3] <= LVDS_DATA[83].DB_MAX_OUTPUT_PORT_TYPE
-OUT8[4] <= LVDS_DATA[84].DB_MAX_OUTPUT_PORT_TYPE
-OUT8[5] <= LVDS_DATA[85].DB_MAX_OUTPUT_PORT_TYPE
-OUT8[6] <= LVDS_DATA[86].DB_MAX_OUTPUT_PORT_TYPE
-OUT8[7] <= LVDS_DATA[87].DB_MAX_OUTPUT_PORT_TYPE
-OUT8[8] <= LVDS_DATA[88].DB_MAX_OUTPUT_PORT_TYPE
-OUT8[9] <= LVDS_DATA[89].DB_MAX_OUTPUT_PORT_TYPE
-OUT9[0] <= LVDS_DATA[90].DB_MAX_OUTPUT_PORT_TYPE
-OUT9[1] <= LVDS_DATA[91].DB_MAX_OUTPUT_PORT_TYPE
-OUT9[2] <= LVDS_DATA[92].DB_MAX_OUTPUT_PORT_TYPE
-OUT9[3] <= LVDS_DATA[93].DB_MAX_OUTPUT_PORT_TYPE
-OUT9[4] <= LVDS_DATA[94].DB_MAX_OUTPUT_PORT_TYPE
-OUT9[5] <= LVDS_DATA[95].DB_MAX_OUTPUT_PORT_TYPE
-OUT9[6] <= LVDS_DATA[96].DB_MAX_OUTPUT_PORT_TYPE
-OUT9[7] <= LVDS_DATA[97].DB_MAX_OUTPUT_PORT_TYPE
-OUT9[8] <= LVDS_DATA[98].DB_MAX_OUTPUT_PORT_TYPE
-OUT9[9] <= LVDS_DATA[99].DB_MAX_OUTPUT_PORT_TYPE
-OUT10[0] <= LVDS_DATA[100].DB_MAX_OUTPUT_PORT_TYPE
-OUT10[1] <= LVDS_DATA[101].DB_MAX_OUTPUT_PORT_TYPE
-OUT10[2] <= LVDS_DATA[102].DB_MAX_OUTPUT_PORT_TYPE
-OUT10[3] <= LVDS_DATA[103].DB_MAX_OUTPUT_PORT_TYPE
-OUT10[4] <= LVDS_DATA[104].DB_MAX_OUTPUT_PORT_TYPE
-OUT10[5] <= LVDS_DATA[105].DB_MAX_OUTPUT_PORT_TYPE
-OUT10[6] <= LVDS_DATA[106].DB_MAX_OUTPUT_PORT_TYPE
-OUT10[7] <= LVDS_DATA[107].DB_MAX_OUTPUT_PORT_TYPE
-OUT10[8] <= LVDS_DATA[108].DB_MAX_OUTPUT_PORT_TYPE
-OUT10[9] <= LVDS_DATA[109].DB_MAX_OUTPUT_PORT_TYPE
-OUT11[0] <= LVDS_DATA[110].DB_MAX_OUTPUT_PORT_TYPE
-OUT11[1] <= LVDS_DATA[111].DB_MAX_OUTPUT_PORT_TYPE
-OUT11[2] <= LVDS_DATA[112].DB_MAX_OUTPUT_PORT_TYPE
-OUT11[3] <= LVDS_DATA[113].DB_MAX_OUTPUT_PORT_TYPE
-OUT11[4] <= LVDS_DATA[114].DB_MAX_OUTPUT_PORT_TYPE
-OUT11[5] <= LVDS_DATA[115].DB_MAX_OUTPUT_PORT_TYPE
-OUT11[6] <= LVDS_DATA[116].DB_MAX_OUTPUT_PORT_TYPE
-OUT11[7] <= LVDS_DATA[117].DB_MAX_OUTPUT_PORT_TYPE
-OUT11[8] <= LVDS_DATA[118].DB_MAX_OUTPUT_PORT_TYPE
-OUT11[9] <= LVDS_DATA[119].DB_MAX_OUTPUT_PORT_TYPE
-OUT12[0] <= LVDS_DATA[120].DB_MAX_OUTPUT_PORT_TYPE
-OUT12[1] <= LVDS_DATA[121].DB_MAX_OUTPUT_PORT_TYPE
-OUT12[2] <= LVDS_DATA[122].DB_MAX_OUTPUT_PORT_TYPE
-OUT12[3] <= LVDS_DATA[123].DB_MAX_OUTPUT_PORT_TYPE
-OUT12[4] <= LVDS_DATA[124].DB_MAX_OUTPUT_PORT_TYPE
-OUT12[5] <= LVDS_DATA[125].DB_MAX_OUTPUT_PORT_TYPE
-OUT12[6] <= LVDS_DATA[126].DB_MAX_OUTPUT_PORT_TYPE
-OUT12[7] <= LVDS_DATA[127].DB_MAX_OUTPUT_PORT_TYPE
-OUT12[8] <= LVDS_DATA[128].DB_MAX_OUTPUT_PORT_TYPE
-OUT12[9] <= LVDS_DATA[129].DB_MAX_OUTPUT_PORT_TYPE
-OUT13[0] <= LVDS_DATA[130].DB_MAX_OUTPUT_PORT_TYPE
-OUT13[1] <= LVDS_DATA[131].DB_MAX_OUTPUT_PORT_TYPE
-OUT13[2] <= LVDS_DATA[132].DB_MAX_OUTPUT_PORT_TYPE
-OUT13[3] <= LVDS_DATA[133].DB_MAX_OUTPUT_PORT_TYPE
-OUT13[4] <= LVDS_DATA[134].DB_MAX_OUTPUT_PORT_TYPE
-OUT13[5] <= LVDS_DATA[135].DB_MAX_OUTPUT_PORT_TYPE
-OUT13[6] <= LVDS_DATA[136].DB_MAX_OUTPUT_PORT_TYPE
-OUT13[7] <= LVDS_DATA[137].DB_MAX_OUTPUT_PORT_TYPE
-OUT13[8] <= LVDS_DATA[138].DB_MAX_OUTPUT_PORT_TYPE
-OUT13[9] <= LVDS_DATA[139].DB_MAX_OUTPUT_PORT_TYPE
-OUT14[0] <= LVDS_DATA[140].DB_MAX_OUTPUT_PORT_TYPE
-OUT14[1] <= LVDS_DATA[141].DB_MAX_OUTPUT_PORT_TYPE
-OUT14[2] <= LVDS_DATA[142].DB_MAX_OUTPUT_PORT_TYPE
-OUT14[3] <= LVDS_DATA[143].DB_MAX_OUTPUT_PORT_TYPE
-OUT14[4] <= LVDS_DATA[144].DB_MAX_OUTPUT_PORT_TYPE
-OUT14[5] <= LVDS_DATA[145].DB_MAX_OUTPUT_PORT_TYPE
-OUT14[6] <= LVDS_DATA[146].DB_MAX_OUTPUT_PORT_TYPE
-OUT14[7] <= LVDS_DATA[147].DB_MAX_OUTPUT_PORT_TYPE
-OUT14[8] <= LVDS_DATA[148].DB_MAX_OUTPUT_PORT_TYPE
-OUT14[9] <= LVDS_DATA[149].DB_MAX_OUTPUT_PORT_TYPE
-OUT15[0] <= LVDS_DATA[150].DB_MAX_OUTPUT_PORT_TYPE
-OUT15[1] <= LVDS_DATA[151].DB_MAX_OUTPUT_PORT_TYPE
-OUT15[2] <= LVDS_DATA[152].DB_MAX_OUTPUT_PORT_TYPE
-OUT15[3] <= LVDS_DATA[153].DB_MAX_OUTPUT_PORT_TYPE
-OUT15[4] <= LVDS_DATA[154].DB_MAX_OUTPUT_PORT_TYPE
-OUT15[5] <= LVDS_DATA[155].DB_MAX_OUTPUT_PORT_TYPE
-OUT15[6] <= LVDS_DATA[156].DB_MAX_OUTPUT_PORT_TYPE
-OUT15[7] <= LVDS_DATA[157].DB_MAX_OUTPUT_PORT_TYPE
-OUT15[8] <= LVDS_DATA[158].DB_MAX_OUTPUT_PORT_TYPE
-OUT15[9] <= LVDS_DATA[159].DB_MAX_OUTPUT_PORT_TYPE
-OUT16[0] <= LVDS_DATA[160].DB_MAX_OUTPUT_PORT_TYPE
-OUT16[1] <= LVDS_DATA[161].DB_MAX_OUTPUT_PORT_TYPE
-OUT16[2] <= LVDS_DATA[162].DB_MAX_OUTPUT_PORT_TYPE
-OUT16[3] <= LVDS_DATA[163].DB_MAX_OUTPUT_PORT_TYPE
-OUT16[4] <= LVDS_DATA[164].DB_MAX_OUTPUT_PORT_TYPE
-OUT16[5] <= LVDS_DATA[165].DB_MAX_OUTPUT_PORT_TYPE
-OUT16[6] <= LVDS_DATA[166].DB_MAX_OUTPUT_PORT_TYPE
-OUT16[7] <= LVDS_DATA[167].DB_MAX_OUTPUT_PORT_TYPE
-OUT16[8] <= LVDS_DATA[168].DB_MAX_OUTPUT_PORT_TYPE
-OUT16[9] <= LVDS_DATA[169].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH01[0] <= LVDS_DATA[10].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH01[1] <= LVDS_DATA[11].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH01[2] <= LVDS_DATA[12].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH01[3] <= LVDS_DATA[13].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH01[4] <= LVDS_DATA[14].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH01[5] <= LVDS_DATA[15].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH01[6] <= LVDS_DATA[16].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH01[7] <= LVDS_DATA[17].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH01[8] <= LVDS_DATA[18].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH01[9] <= LVDS_DATA[19].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH02[0] <= LVDS_DATA[20].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH02[1] <= LVDS_DATA[21].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH02[2] <= LVDS_DATA[22].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH02[3] <= LVDS_DATA[23].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH02[4] <= LVDS_DATA[24].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH02[5] <= LVDS_DATA[25].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH02[6] <= LVDS_DATA[26].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH02[7] <= LVDS_DATA[27].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH02[8] <= LVDS_DATA[28].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH02[9] <= LVDS_DATA[29].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH03[0] <= LVDS_DATA[30].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH03[1] <= LVDS_DATA[31].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH03[2] <= LVDS_DATA[32].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH03[3] <= LVDS_DATA[33].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH03[4] <= LVDS_DATA[34].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH03[5] <= LVDS_DATA[35].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH03[6] <= LVDS_DATA[36].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH03[7] <= LVDS_DATA[37].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH03[8] <= LVDS_DATA[38].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH03[9] <= LVDS_DATA[39].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH04[0] <= LVDS_DATA[40].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH04[1] <= LVDS_DATA[41].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH04[2] <= LVDS_DATA[42].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH04[3] <= LVDS_DATA[43].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH04[4] <= LVDS_DATA[44].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH04[5] <= LVDS_DATA[45].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH04[6] <= LVDS_DATA[46].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH04[7] <= LVDS_DATA[47].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH04[8] <= LVDS_DATA[48].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH04[9] <= LVDS_DATA[49].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH05[0] <= LVDS_DATA[50].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH05[1] <= LVDS_DATA[51].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH05[2] <= LVDS_DATA[52].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH05[3] <= LVDS_DATA[53].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH05[4] <= LVDS_DATA[54].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH05[5] <= LVDS_DATA[55].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH05[6] <= LVDS_DATA[56].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH05[7] <= LVDS_DATA[57].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH05[8] <= LVDS_DATA[58].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH05[9] <= LVDS_DATA[59].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH06[0] <= LVDS_DATA[60].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH06[1] <= LVDS_DATA[61].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH06[2] <= LVDS_DATA[62].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH06[3] <= LVDS_DATA[63].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH06[4] <= LVDS_DATA[64].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH06[5] <= LVDS_DATA[65].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH06[6] <= LVDS_DATA[66].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH06[7] <= LVDS_DATA[67].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH06[8] <= LVDS_DATA[68].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH06[9] <= LVDS_DATA[69].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH07[0] <= LVDS_DATA[70].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH07[1] <= LVDS_DATA[71].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH07[2] <= LVDS_DATA[72].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH07[3] <= LVDS_DATA[73].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH07[4] <= LVDS_DATA[74].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH07[5] <= LVDS_DATA[75].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH07[6] <= LVDS_DATA[76].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH07[7] <= LVDS_DATA[77].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH07[8] <= LVDS_DATA[78].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH07[9] <= LVDS_DATA[79].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH08[0] <= LVDS_DATA[80].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH08[1] <= LVDS_DATA[81].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH08[2] <= LVDS_DATA[82].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH08[3] <= LVDS_DATA[83].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH08[4] <= LVDS_DATA[84].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH08[5] <= LVDS_DATA[85].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH08[6] <= LVDS_DATA[86].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH08[7] <= LVDS_DATA[87].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH08[8] <= LVDS_DATA[88].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH08[9] <= LVDS_DATA[89].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH09[0] <= LVDS_DATA[90].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH09[1] <= LVDS_DATA[91].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH09[2] <= LVDS_DATA[92].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH09[3] <= LVDS_DATA[93].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH09[4] <= LVDS_DATA[94].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH09[5] <= LVDS_DATA[95].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH09[6] <= LVDS_DATA[96].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH09[7] <= LVDS_DATA[97].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH09[8] <= LVDS_DATA[98].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH09[9] <= LVDS_DATA[99].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH10[0] <= LVDS_DATA[100].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH10[1] <= LVDS_DATA[101].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH10[2] <= LVDS_DATA[102].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH10[3] <= LVDS_DATA[103].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH10[4] <= LVDS_DATA[104].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH10[5] <= LVDS_DATA[105].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH10[6] <= LVDS_DATA[106].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH10[7] <= LVDS_DATA[107].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH10[8] <= LVDS_DATA[108].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH10[9] <= LVDS_DATA[109].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH11[0] <= LVDS_DATA[110].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH11[1] <= LVDS_DATA[111].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH11[2] <= LVDS_DATA[112].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH11[3] <= LVDS_DATA[113].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH11[4] <= LVDS_DATA[114].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH11[5] <= LVDS_DATA[115].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH11[6] <= LVDS_DATA[116].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH11[7] <= LVDS_DATA[117].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH11[8] <= LVDS_DATA[118].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH11[9] <= LVDS_DATA[119].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH12[0] <= LVDS_DATA[120].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH12[1] <= LVDS_DATA[121].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH12[2] <= LVDS_DATA[122].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH12[3] <= LVDS_DATA[123].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH12[4] <= LVDS_DATA[124].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH12[5] <= LVDS_DATA[125].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH12[6] <= LVDS_DATA[126].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH12[7] <= LVDS_DATA[127].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH12[8] <= LVDS_DATA[128].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH12[9] <= LVDS_DATA[129].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH13[0] <= LVDS_DATA[130].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH13[1] <= LVDS_DATA[131].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH13[2] <= LVDS_DATA[132].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH13[3] <= LVDS_DATA[133].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH13[4] <= LVDS_DATA[134].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH13[5] <= LVDS_DATA[135].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH13[6] <= LVDS_DATA[136].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH13[7] <= LVDS_DATA[137].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH13[8] <= LVDS_DATA[138].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH13[9] <= LVDS_DATA[139].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH14[0] <= LVDS_DATA[140].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH14[1] <= LVDS_DATA[141].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH14[2] <= LVDS_DATA[142].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH14[3] <= LVDS_DATA[143].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH14[4] <= LVDS_DATA[144].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH14[5] <= LVDS_DATA[145].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH14[6] <= LVDS_DATA[146].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH14[7] <= LVDS_DATA[147].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH14[8] <= LVDS_DATA[148].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH14[9] <= LVDS_DATA[149].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH15[0] <= LVDS_DATA[150].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH15[1] <= LVDS_DATA[151].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH15[2] <= LVDS_DATA[152].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH15[3] <= LVDS_DATA[153].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH15[4] <= LVDS_DATA[154].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH15[5] <= LVDS_DATA[155].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH15[6] <= LVDS_DATA[156].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH15[7] <= LVDS_DATA[157].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH15[8] <= LVDS_DATA[158].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH15[9] <= LVDS_DATA[159].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH16[0] <= LVDS_DATA[160].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH16[1] <= LVDS_DATA[161].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH16[2] <= LVDS_DATA[162].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH16[3] <= LVDS_DATA[163].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH16[4] <= LVDS_DATA[164].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH16[5] <= LVDS_DATA[165].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH16[6] <= LVDS_DATA[166].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH16[7] <= LVDS_DATA[167].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH16[8] <= LVDS_DATA[168].DB_MAX_OUTPUT_PORT_TYPE
+OUTCH16[9] <= LVDS_DATA[169].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lvds_decoder|lvds_in_map:inst_0
+|tb_lvds_decoder|lvds_decoder:inst|lvds_in_map:inst_0
 LVDS_CTR => LVDS_DATA[16].DATAIN
 LVDS_CH[0] => LVDS_DATA[0].DATAIN
 LVDS_CH[1] => LVDS_DATA[1].DATAIN

@@ -49,7 +49,7 @@ architecture tb_cmv_4000_arch of tb_cmv_4000 is
 	
 	
 	
-	file f_data: text open read_mode is "../../src/testbench/pixel_ouput.data"; 
+	file f_data: text open read_mode is "../../src/testbench/test.png.sim-data-lvds"; 
 
 	
 	signal lvds_digit : integer range 0 to 10 := 0;

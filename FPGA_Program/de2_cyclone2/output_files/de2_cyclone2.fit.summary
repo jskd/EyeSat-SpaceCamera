@@ -1,7 +1,7 @@
-Fitter Status : Successful - Thu May 26 17:02:55 2016
+Fitter Status : Successful - Tue May 31 14:28:48 2016
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
 Revision Name : de2_cyclone2
-Top-level Entity Name : lvds_decoder
+Top-level Entity Name : tb_lvds_decoder
 Family : Cyclone II
 Device : EP2C35F672C6
 Timing Models : Final

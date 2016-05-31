@@ -129,7 +129,7 @@ BEGIN
 		cds_mode => "UNUSED",
 		common_rx_tx_pll => "OFF",
 		data_align_rollover => 4,
-		data_rate => "800.0 Mbps",
+		data_rate => "200.0 Mbps",
 		deserialization_factor => 10,
 		dpa_initial_phase_value => 0,
 		dpll_lock_count => 0,
@@ -147,14 +147,14 @@ BEGIN
 		inclock_data_alignment => "EDGE_ALIGNED",
 		inclock_period => 10000,
 		inclock_phase_shift => 0,
-		input_data_rate => 800,
+		input_data_rate => 200,
 		intended_device_family => "Cyclone II",
 		lose_lock_on_one_change => "UNUSED",
 		lpm_hint => "CBX_MODULE_PREFIX=altlvds_rx0",
 		lpm_type => "altlvds_rx",
 		number_of_channels => 17,
 		outclock_resource => "AUTO",
-		pll_operation_mode => "NORMAL",
+		pll_operation_mode => "SOURCE_SYNCHRONOUS",
 		pll_self_reset_on_loss_lock => "UNUSED",
 		port_rx_channel_data_align => "PORT_UNUSED",
 		port_rx_data_align => "PORT_USED",
@@ -193,7 +193,7 @@ END SYN;
 -- Retrieval info: PRIVATE: Bitslip NUMERIC "0"
 -- Retrieval info: PRIVATE: Clock_Choices STRING "tx_coreclock"
 -- Retrieval info: PRIVATE: Clock_Mode NUMERIC "0"
--- Retrieval info: PRIVATE: Data_rate STRING "800.0"
+-- Retrieval info: PRIVATE: Data_rate STRING "200.0"
 -- Retrieval info: PRIVATE: Deser_Factor NUMERIC "10"
 -- Retrieval info: PRIVATE: Dpll_Lock_Count NUMERIC "0"
 -- Retrieval info: PRIVATE: Dpll_Lock_Window NUMERIC "0"
@@ -224,7 +224,7 @@ END SYN;
 -- Retrieval info: CONSTANT: COMMON_RX_TX_PLL STRING "OFF"
 -- Retrieval info: CONSTANT: clk_src_is_pll STRING "off"
 -- Retrieval info: CONSTANT: DATA_ALIGN_ROLLOVER NUMERIC "4"
--- Retrieval info: CONSTANT: DATA_RATE STRING "800.0 Mbps"
+-- Retrieval info: CONSTANT: DATA_RATE STRING "200.0 Mbps"
 -- Retrieval info: CONSTANT: DESERIALIZATION_FACTOR NUMERIC "10"
 -- Retrieval info: CONSTANT: DPA_INITIAL_PHASE_VALUE NUMERIC "0"
 -- Retrieval info: CONSTANT: DPLL_LOCK_COUNT NUMERIC "0"
@@ -242,14 +242,14 @@ END SYN;
 -- Retrieval info: CONSTANT: INCLOCK_DATA_ALIGNMENT STRING "EDGE_ALIGNED"
 -- Retrieval info: CONSTANT: INCLOCK_PERIOD NUMERIC "10000"
 -- Retrieval info: CONSTANT: INCLOCK_PHASE_SHIFT NUMERIC "0"
--- Retrieval info: CONSTANT: INPUT_DATA_RATE NUMERIC "800"
+-- Retrieval info: CONSTANT: INPUT_DATA_RATE NUMERIC "200"
 -- Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "Cyclone II"
 -- Retrieval info: CONSTANT: LOSE_LOCK_ON_ONE_CHANGE STRING "UNUSED"
 -- Retrieval info: CONSTANT: LPM_HINT STRING "UNUSED"
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "altlvds_rx"
 -- Retrieval info: CONSTANT: NUMBER_OF_CHANNELS NUMERIC "17"
 -- Retrieval info: CONSTANT: OUTCLOCK_RESOURCE STRING "AUTO"
--- Retrieval info: CONSTANT: PLL_OPERATION_MODE STRING "NORMAL"
+-- Retrieval info: CONSTANT: PLL_OPERATION_MODE STRING "SOURCE_SYNCHRONOUS"
 -- Retrieval info: CONSTANT: PLL_SELF_RESET_ON_LOSS_LOCK STRING "UNUSED"
 -- Retrieval info: CONSTANT: PORT_RX_CHANNEL_DATA_ALIGN STRING "PORT_UNUSED"
 -- Retrieval info: CONSTANT: PORT_RX_DATA_ALIGN STRING "PORT_USED"
@@ -280,7 +280,7 @@ END SYN;
 -- Retrieval info: CONNECT: rx_outclock 0 0 0 0 @rx_outclock 0 0 0 0
 -- Retrieval info: GEN_FILE: TYPE_NORMAL altlvds_rx0.vhd TRUE FALSE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL altlvds_rx0.qip TRUE FALSE
--- Retrieval info: GEN_FILE: TYPE_NORMAL altlvds_rx0.bsf TRUE FALSE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL altlvds_rx0.bsf TRUE TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL altlvds_rx0_inst.vhd TRUE TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL altlvds_rx0.inc TRUE TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL altlvds_rx0.cmp TRUE TRUE

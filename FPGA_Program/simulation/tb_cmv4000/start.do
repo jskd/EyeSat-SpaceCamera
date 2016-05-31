@@ -1,4 +1,4 @@
-vsim -gui work.tb_cmv_4000
+vsim -gui -t 10fs work.tb_cmv_4000
 
 onerror {resume}
 quietly WaveActivateNextPane {} 0

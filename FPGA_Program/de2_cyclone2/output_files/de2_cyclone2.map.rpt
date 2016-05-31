@@ -1,5 +1,5 @@
 Analysis & Synthesis report for de2_cyclone2
-Thu May 26 17:02:24 2016
+Tue May 31 14:28:00 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -15,11 +15,11 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Ver
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis IP Cores Summary
   9. General Register Statistics
- 10. Source assignments for altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component
- 11. Source assignments for altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated
- 12. Source assignments for altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_dffpipe:h_dffpipe
- 13. Source assignments for altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_dffpipe:l_dffpipe
- 14. Parameter Settings for User Entity Instance: altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component
+ 10. Source assignments for lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component
+ 11. Source assignments for lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated
+ 12. Source assignments for lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_dffpipe:h_dffpipe
+ 13. Source assignments for lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_dffpipe:l_dffpipe
+ 14. Parameter Settings for User Entity Instance: lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component
  15. Elapsed Time Per Partition
  16. Analysis & Synthesis Messages
 
@@ -47,10 +47,10 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 26 17:02:24 2016            ;
+; Analysis & Synthesis Status        ; Successful - Tue May 31 14:28:00 2016            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; de2_cyclone2                                     ;
-; Top-level Entity Name              ; lvds_decoder                                     ;
+; Top-level Entity Name              ; tb_lvds_decoder                                  ;
 ; Family                             ; Cyclone II                                       ;
 ; Total logic elements               ; 814                                              ;
 ;     Total combinational functions  ; 235                                              ;
@@ -70,7 +70,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C35F672C6       ;                    ;
-; Top-level entity name                                                      ; lvds_decoder       ; de2_cyclone2       ;
+; Top-level entity name                                                      ; tb_lvds_decoder    ; de2_cyclone2       ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -171,6 +171,7 @@ applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                               ; Library ;
 +----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------------+---------+
+; tb_lvds_decoder.bdf              ; yes             ; User Block Diagram/Schematic File  ; C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/tb_lvds_decoder.bdf         ;         ;
 ; ../src/design/lvds_in_map.vhd    ; yes             ; User VHDL File                     ; C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/src/design/lvds_in_map.vhd               ;         ;
 ; lvds_decoder.bdf                 ; yes             ; User Block Diagram/Schematic File  ; C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/lvds_decoder.bdf            ;         ;
 ; ../src/design/lvds_out_map.vhd   ; yes             ; User VHDL File                     ; C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/src/design/lvds_out_map.vhd              ;         ;
@@ -188,97 +189,98 @@ applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                                                                    ;
-+---------------------------------------------+--------------------------------------------------------------------------------------------------+
-; Resource                                    ; Usage                                                                                            ;
-+---------------------------------------------+--------------------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 814                                                                                              ;
-;                                             ;                                                                                                  ;
-; Total combinational functions               ; 235                                                                                              ;
-; Logic element usage by number of LUT inputs ;                                                                                                  ;
-;     -- 4 input functions                    ; 171                                                                                              ;
-;     -- 3 input functions                    ; 55                                                                                               ;
-;     -- <=2 input functions                  ; 9                                                                                                ;
-;                                             ;                                                                                                  ;
-; Logic elements by mode                      ;                                                                                                  ;
-;     -- normal mode                          ; 231                                                                                              ;
-;     -- arithmetic mode                      ; 4                                                                                                ;
-;                                             ;                                                                                                  ;
-; Total registers                             ; 652                                                                                              ;
-;     -- Dedicated logic registers            ; 618                                                                                              ;
-;     -- I/O registers                        ; 34                                                                                               ;
-;                                             ;                                                                                                  ;
-; I/O pins                                    ; 207                                                                                              ;
-; Embedded Multiplier 9-bit elements          ; 0                                                                                                ;
-; Total PLLs                                  ; 1                                                                                                ;
-;     -- PLLs                                 ; 1                                                                                                ;
-;                                             ;                                                                                                  ;
-; Maximum fan-out node                        ; altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|fast_clock ;
-; Maximum fan-out                             ; 653                                                                                              ;
-; Total fan-out                               ; 2981                                                                                             ;
-; Average fan-out                             ; 2.81                                                                                             ;
-+---------------------------------------------+--------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                                                                      ;
++---------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+; Resource                                    ; Usage                                                                                                              ;
++---------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+; Estimated Total logic elements              ; 814                                                                                                                ;
+;                                             ;                                                                                                                    ;
+; Total combinational functions               ; 235                                                                                                                ;
+; Logic element usage by number of LUT inputs ;                                                                                                                    ;
+;     -- 4 input functions                    ; 171                                                                                                                ;
+;     -- 3 input functions                    ; 55                                                                                                                 ;
+;     -- <=2 input functions                  ; 9                                                                                                                  ;
+;                                             ;                                                                                                                    ;
+; Logic elements by mode                      ;                                                                                                                    ;
+;     -- normal mode                          ; 231                                                                                                                ;
+;     -- arithmetic mode                      ; 4                                                                                                                  ;
+;                                             ;                                                                                                                    ;
+; Total registers                             ; 652                                                                                                                ;
+;     -- Dedicated logic registers            ; 618                                                                                                                ;
+;     -- I/O registers                        ; 34                                                                                                                 ;
+;                                             ;                                                                                                                    ;
+; I/O pins                                    ; 207                                                                                                                ;
+; Embedded Multiplier 9-bit elements          ; 0                                                                                                                  ;
+; Total PLLs                                  ; 1                                                                                                                  ;
+;     -- PLLs                                 ; 1                                                                                                                  ;
+;                                             ;                                                                                                                    ;
+; Maximum fan-out node                        ; lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|fast_clock ;
+; Maximum fan-out                             ; 653                                                                                                                ;
+; Total fan-out                               ; 2981                                                                                                               ;
+; Average fan-out                             ; 2.81                                                                                                               ;
++---------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                   ;
-+-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                    ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                        ; Library Name ;
-+-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |lvds_decoder                                 ; 235 (2)           ; 618 (0)      ; 0           ; 0            ; 0       ; 0         ; 207  ; 0            ; |lvds_decoder                                                                                                                                              ; work         ;
-;    |altlvds_rx0:inst_1|                       ; 233 (0)           ; 618 (0)      ; 0           ; 0            ; 0       ; 0         ; 34   ; 0            ; |lvds_decoder|altlvds_rx0:inst_1                                                                                                                           ; work         ;
-;       |altlvds_rx:ALTLVDS_RX_component|       ; 233 (0)           ; 618 (0)      ; 0           ; 0            ; 0       ; 0         ; 34   ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component                                                                                           ; work         ;
-;          |altlvds_rx0_lvds_rx:auto_generated| ; 233 (1)           ; 618 (546)    ; 0           ; 0            ; 0       ; 0         ; 34   ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated                                                        ; work         ;
-;             |altlvds_rx0_cntr:bitslip_cntr|   ; 7 (6)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_cntr:bitslip_cntr                          ; work         ;
-;                |altlvds_rx0_cmpr:cmpr106|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_cntr:bitslip_cntr|altlvds_rx0_cmpr:cmpr106 ; work         ;
-;             |altlvds_rx0_dffpipe:h_dffpipe|   ; 0 (0)             ; 34 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_dffpipe:h_dffpipe                          ; work         ;
-;             |altlvds_rx0_dffpipe:l_dffpipe|   ; 0 (0)             ; 34 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_dffpipe:l_dffpipe                          ; work         ;
-;             |altlvds_rx0_mux:h_mux101a|       ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux101a                              ; work         ;
-;             |altlvds_rx0_mux:h_mux11a|        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux11a                               ; work         ;
-;             |altlvds_rx0_mux:h_mux17a|        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux17a                               ; work         ;
-;             |altlvds_rx0_mux:h_mux23a|        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux23a                               ; work         ;
-;             |altlvds_rx0_mux:h_mux29a|        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux29a                               ; work         ;
-;             |altlvds_rx0_mux:h_mux35a|        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux35a                               ; work         ;
-;             |altlvds_rx0_mux:h_mux41a|        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux41a                               ; work         ;
-;             |altlvds_rx0_mux:h_mux47a|        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux47a                               ; work         ;
-;             |altlvds_rx0_mux:h_mux53a|        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux53a                               ; work         ;
-;             |altlvds_rx0_mux:h_mux59a|        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux59a                               ; work         ;
-;             |altlvds_rx0_mux:h_mux5a|         ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux5a                                ; work         ;
-;             |altlvds_rx0_mux:h_mux65a|        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux65a                               ; work         ;
-;             |altlvds_rx0_mux:h_mux71a|        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux71a                               ; work         ;
-;             |altlvds_rx0_mux:h_mux77a|        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux77a                               ; work         ;
-;             |altlvds_rx0_mux:h_mux83a|        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux83a                               ; work         ;
-;             |altlvds_rx0_mux:h_mux89a|        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux89a                               ; work         ;
-;             |altlvds_rx0_mux:h_mux95a|        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux95a                               ; work         ;
-;             |altlvds_rx0_mux:l_mux102a|       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux102a                              ; work         ;
-;             |altlvds_rx0_mux:l_mux12a|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux12a                               ; work         ;
-;             |altlvds_rx0_mux:l_mux18a|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux18a                               ; work         ;
-;             |altlvds_rx0_mux:l_mux24a|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux24a                               ; work         ;
-;             |altlvds_rx0_mux:l_mux30a|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux30a                               ; work         ;
-;             |altlvds_rx0_mux:l_mux36a|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux36a                               ; work         ;
-;             |altlvds_rx0_mux:l_mux42a|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux42a                               ; work         ;
-;             |altlvds_rx0_mux:l_mux48a|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux48a                               ; work         ;
-;             |altlvds_rx0_mux:l_mux54a|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux54a                               ; work         ;
-;             |altlvds_rx0_mux:l_mux60a|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux60a                               ; work         ;
-;             |altlvds_rx0_mux:l_mux66a|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux66a                               ; work         ;
-;             |altlvds_rx0_mux:l_mux6a|         ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux6a                                ; work         ;
-;             |altlvds_rx0_mux:l_mux72a|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux72a                               ; work         ;
-;             |altlvds_rx0_mux:l_mux78a|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux78a                               ; work         ;
-;             |altlvds_rx0_mux:l_mux84a|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux84a                               ; work         ;
-;             |altlvds_rx0_mux:l_mux90a|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux90a                               ; work         ;
-;             |altlvds_rx0_mux:l_mux96a|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lvds_decoder|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux96a                               ; work         ;
-+-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                           ;
++--------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                       ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                             ; Library Name ;
++--------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |tb_lvds_decoder                                 ; 235 (1)           ; 618 (0)      ; 0           ; 0            ; 0       ; 0         ; 207  ; 0            ; |tb_lvds_decoder                                                                                                                                                                ; work         ;
+;    |lvds_decoder:inst|                           ; 234 (1)           ; 618 (0)      ; 0           ; 0            ; 0       ; 0         ; 34   ; 0            ; |tb_lvds_decoder|lvds_decoder:inst                                                                                                                                              ; work         ;
+;       |altlvds_rx0:inst_1|                       ; 233 (0)           ; 618 (0)      ; 0           ; 0            ; 0       ; 0         ; 34   ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1                                                                                                                           ; work         ;
+;          |altlvds_rx:ALTLVDS_RX_component|       ; 233 (0)           ; 618 (0)      ; 0           ; 0            ; 0       ; 0         ; 34   ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component                                                                                           ; work         ;
+;             |altlvds_rx0_lvds_rx:auto_generated| ; 233 (1)           ; 618 (546)    ; 0           ; 0            ; 0       ; 0         ; 34   ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated                                                        ; work         ;
+;                |altlvds_rx0_cntr:bitslip_cntr|   ; 7 (6)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_cntr:bitslip_cntr                          ; work         ;
+;                   |altlvds_rx0_cmpr:cmpr106|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_cntr:bitslip_cntr|altlvds_rx0_cmpr:cmpr106 ; work         ;
+;                |altlvds_rx0_dffpipe:h_dffpipe|   ; 0 (0)             ; 34 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_dffpipe:h_dffpipe                          ; work         ;
+;                |altlvds_rx0_dffpipe:l_dffpipe|   ; 0 (0)             ; 34 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_dffpipe:l_dffpipe                          ; work         ;
+;                |altlvds_rx0_mux:h_mux101a|       ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux101a                              ; work         ;
+;                |altlvds_rx0_mux:h_mux11a|        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux11a                               ; work         ;
+;                |altlvds_rx0_mux:h_mux17a|        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux17a                               ; work         ;
+;                |altlvds_rx0_mux:h_mux23a|        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux23a                               ; work         ;
+;                |altlvds_rx0_mux:h_mux29a|        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux29a                               ; work         ;
+;                |altlvds_rx0_mux:h_mux35a|        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux35a                               ; work         ;
+;                |altlvds_rx0_mux:h_mux41a|        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux41a                               ; work         ;
+;                |altlvds_rx0_mux:h_mux47a|        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux47a                               ; work         ;
+;                |altlvds_rx0_mux:h_mux53a|        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux53a                               ; work         ;
+;                |altlvds_rx0_mux:h_mux59a|        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux59a                               ; work         ;
+;                |altlvds_rx0_mux:h_mux5a|         ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux5a                                ; work         ;
+;                |altlvds_rx0_mux:h_mux65a|        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux65a                               ; work         ;
+;                |altlvds_rx0_mux:h_mux71a|        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux71a                               ; work         ;
+;                |altlvds_rx0_mux:h_mux77a|        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux77a                               ; work         ;
+;                |altlvds_rx0_mux:h_mux83a|        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux83a                               ; work         ;
+;                |altlvds_rx0_mux:h_mux89a|        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux89a                               ; work         ;
+;                |altlvds_rx0_mux:h_mux95a|        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux95a                               ; work         ;
+;                |altlvds_rx0_mux:l_mux102a|       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux102a                              ; work         ;
+;                |altlvds_rx0_mux:l_mux12a|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux12a                               ; work         ;
+;                |altlvds_rx0_mux:l_mux18a|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux18a                               ; work         ;
+;                |altlvds_rx0_mux:l_mux24a|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux24a                               ; work         ;
+;                |altlvds_rx0_mux:l_mux30a|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux30a                               ; work         ;
+;                |altlvds_rx0_mux:l_mux36a|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux36a                               ; work         ;
+;                |altlvds_rx0_mux:l_mux42a|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux42a                               ; work         ;
+;                |altlvds_rx0_mux:l_mux48a|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux48a                               ; work         ;
+;                |altlvds_rx0_mux:l_mux54a|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux54a                               ; work         ;
+;                |altlvds_rx0_mux:l_mux60a|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux60a                               ; work         ;
+;                |altlvds_rx0_mux:l_mux66a|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux66a                               ; work         ;
+;                |altlvds_rx0_mux:l_mux6a|         ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux6a                                ; work         ;
+;                |altlvds_rx0_mux:l_mux72a|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux72a                               ; work         ;
+;                |altlvds_rx0_mux:l_mux78a|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux78a                               ; work         ;
+;                |altlvds_rx0_mux:l_mux84a|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux84a                               ; work         ;
+;                |altlvds_rx0_mux:l_mux90a|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux90a                               ; work         ;
+;                |altlvds_rx0_mux:l_mux96a|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:l_mux96a                               ; work         ;
++--------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                                                                         ;
-+--------+--------------+---------+--------------+--------------+----------------------------------+------------------------------------------------------------------------------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                  ; IP Include File                                                                                            ;
-+--------+--------------+---------+--------------+--------------+----------------------------------+------------------------------------------------------------------------------------------------------------+
-; Altera ; ALTLVDS_RX   ; 13.0    ; N/A          ; N/A          ; |lvds_decoder|altlvds_rx0:inst_1 ; C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/altlvds_rx0/altlvds_rx0.vhd ;
-+--------+--------------+---------+--------------+--------------+----------------------------------+------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                                                              ;
++--------+--------------+---------+--------------+--------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                       ; IP Include File                                                                                            ;
++--------+--------------+---------+--------------+--------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+; Altera ; ALTLVDS_RX   ; 13.0    ; N/A          ; N/A          ; |tb_lvds_decoder|lvds_decoder:inst|altlvds_rx0:inst_1 ; C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/altlvds_rx0/altlvds_rx0.vhd ;
++--------+--------------+---------+--------------+--------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -296,96 +298,96 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------+
-; Source assignments for altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component ;
-+----------------------------+-------+------+-------------------------------+
-; Assignment                 ; Value ; From ; To                            ;
-+----------------------------+-------+------+-------------------------------+
-; REMOVE_DUPLICATE_REGISTERS ; OFF   ; -    ; -                             ;
-+----------------------------+-------+------+-------------------------------+
++---------------------------------------------------------------------------------------------+
+; Source assignments for lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component ;
++----------------------------+-------+------+-------------------------------------------------+
+; Assignment                 ; Value ; From ; To                                              ;
++----------------------------+-------+------+-------------------------------------------------+
+; REMOVE_DUPLICATE_REGISTERS ; OFF   ; -    ; -                                               ;
++----------------------------+-------+------+-------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------+
-; Source assignments for altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated ;
-+---------------------------------+-------+------+-------------------------------------------------------------+
-; Assignment                      ; Value ; From ; To                                                          ;
-+---------------------------------+-------+------+-------------------------------------------------------------+
-; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                           ;
-; IGNORE_MODE_FOR_MERGE           ; ON    ; -    ; lvds_rx_pll                                                 ;
-; AUTO_MERGE_PLLS                 ; OFF   ; -    ; lvds_rx_pll                                                 ;
-+---------------------------------+-------+------+-------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated ;
++---------------------------------+-------+------+-------------------------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                                            ;
++---------------------------------+-------+------+-------------------------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                                             ;
+; IGNORE_MODE_FOR_MERGE           ; ON    ; -    ; lvds_rx_pll                                                                   ;
+; AUTO_MERGE_PLLS                 ; OFF   ; -    ; lvds_rx_pll                                                                   ;
++---------------------------------+-------+------+-------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_dffpipe:h_dffpipe ;
-+---------------------------------+-------+------+-------------------------------------------------------------------------------------------+
-; Assignment                      ; Value ; From ; To                                                                                        ;
-+---------------------------------+-------+------+-------------------------------------------------------------------------------------------+
-; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                                                         ;
-+---------------------------------+-------+------+-------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_dffpipe:h_dffpipe ;
++---------------------------------+-------+------+-------------------------------------------------------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                                                                          ;
++---------------------------------+-------+------+-------------------------------------------------------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                                                                           ;
++---------------------------------+-------+------+-------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_dffpipe:l_dffpipe ;
-+---------------------------------+-------+------+-------------------------------------------------------------------------------------------+
-; Assignment                      ; Value ; From ; To                                                                                        ;
-+---------------------------------+-------+------+-------------------------------------------------------------------------------------------+
-; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                                                         ;
-+---------------------------------+-------+------+-------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_dffpipe:l_dffpipe ;
++---------------------------------+-------+------+-------------------------------------------------------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                                                                          ;
++---------------------------------+-------+------+-------------------------------------------------------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                                                                           ;
++---------------------------------+-------+------+-------------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component ;
-+--------------------------------------+---------------------+------------------------------------+
-; Parameter Name                       ; Value               ; Type                               ;
-+--------------------------------------+---------------------+------------------------------------+
-; AUTO_CARRY_CHAINS                    ; ON                  ; AUTO_CARRY                         ;
-; IGNORE_CARRY_BUFFERS                 ; OFF                 ; IGNORE_CARRY                       ;
-; AUTO_CASCADE_CHAINS                  ; ON                  ; AUTO_CASCADE                       ;
-; IGNORE_CASCADE_BUFFERS               ; OFF                 ; IGNORE_CASCADE                     ;
-; NUMBER_OF_CHANNELS                   ; 17                  ; Signed Integer                     ;
-; DESERIALIZATION_FACTOR               ; 10                  ; Signed Integer                     ;
-; REGISTERED_OUTPUT                    ; ON                  ; Untyped                            ;
-; INCLOCK_PERIOD                       ; 10000               ; Signed Integer                     ;
-; INCLOCK_BOOST                        ; 0                   ; Signed Integer                     ;
-; CDS_MODE                             ; UNUSED              ; Untyped                            ;
-; INTENDED_DEVICE_FAMILY               ; Cyclone II          ; Untyped                            ;
-; DEVICE_FAMILY                        ; Cyclone II          ; Untyped                            ;
-; PORT_RX_DATA_ALIGN                   ; PORT_USED           ; Untyped                            ;
-; INPUT_DATA_RATE                      ; 800                 ; Signed Integer                     ;
-; INCLOCK_DATA_ALIGNMENT               ; EDGE_ALIGNED        ; Untyped                            ;
-; INCLOCK_PHASE_SHIFT                  ; 0                   ; Signed Integer                     ;
-; REGISTERED_DATA_ALIGN_INPUT          ; ON                  ; Untyped                            ;
-; COMMON_RX_TX_PLL                     ; OFF                 ; Untyped                            ;
-; ENABLE_DPA_MODE                      ; OFF                 ; Untyped                            ;
-; ENABLE_DPA_FIFO                      ; ON                  ; Untyped                            ;
-; USE_DPLL_RAWPERROR                   ; OFF                 ; Untyped                            ;
-; USE_CORECLOCK_INPUT                  ; OFF                 ; Untyped                            ;
-; DPLL_LOCK_COUNT                      ; 0                   ; Signed Integer                     ;
-; DPLL_LOCK_WINDOW                     ; 0                   ; Signed Integer                     ;
-; OUTCLOCK_RESOURCE                    ; AUTO                ; Untyped                            ;
-; RX_ALIGN_DATA_REG                    ; RISING_EDGE         ; Untyped                            ;
-; DATA_ALIGN_ROLLOVER                  ; 4                   ; Signed Integer                     ;
-; LOSE_LOCK_ON_ONE_CHANGE              ; OFF                 ; Untyped                            ;
-; RESET_FIFO_AT_FIRST_LOCK             ; ON                  ; Untyped                            ;
-; USE_EXTERNAL_PLL                     ; OFF                 ; Untyped                            ;
-; IMPLEMENT_IN_LES                     ; ON                  ; Untyped                            ;
-; BUFFER_IMPLEMENTATION                ; RAM                 ; Untyped                            ;
-; DPA_INITIAL_PHASE_VALUE              ; 0                   ; Signed Integer                     ;
-; ENABLE_DPA_ALIGN_TO_RISING_EDGE_ONLY ; OFF                 ; Untyped                            ;
-; ENABLE_DPA_INITIAL_PHASE_SELECTION   ; OFF                 ; Untyped                            ;
-; ENABLE_SOFT_CDR_MODE                 ; OFF                 ; Untyped                            ;
-; PLL_OPERATION_MODE                   ; NORMAL              ; Untyped                            ;
-; SIM_DPA_IS_NEGATIVE_PPM_DRIFT        ; OFF                 ; Untyped                            ;
-; SIM_DPA_NET_PPM_VARIATION            ; 0                   ; Signed Integer                     ;
-; SIM_DPA_OUTPUT_CLOCK_PHASE_SHIFT     ; 0                   ; Signed Integer                     ;
-; USE_NO_PHASE_SHIFT                   ; ON                  ; Untyped                            ;
-; PORT_RX_CHANNEL_DATA_ALIGN           ; PORT_UNUSED         ; Untyped                            ;
-; PLL_SELF_RESET_ON_LOSS_LOCK          ; OFF                 ; Untyped                            ;
-; X_ON_BITSLIP                         ; ON                  ; Untyped                            ;
-; ENABLE_DPA_PLL_CALIBRATION           ; OFF                 ; Untyped                            ;
-; CBXI_PARAMETER                       ; altlvds_rx0_lvds_rx ; Untyped                            ;
-+--------------------------------------+---------------------+------------------------------------+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component ;
++--------------------------------------+---------------------+------------------------------------------------------+
+; Parameter Name                       ; Value               ; Type                                                 ;
++--------------------------------------+---------------------+------------------------------------------------------+
+; AUTO_CARRY_CHAINS                    ; ON                  ; AUTO_CARRY                                           ;
+; IGNORE_CARRY_BUFFERS                 ; OFF                 ; IGNORE_CARRY                                         ;
+; AUTO_CASCADE_CHAINS                  ; ON                  ; AUTO_CASCADE                                         ;
+; IGNORE_CASCADE_BUFFERS               ; OFF                 ; IGNORE_CASCADE                                       ;
+; NUMBER_OF_CHANNELS                   ; 17                  ; Signed Integer                                       ;
+; DESERIALIZATION_FACTOR               ; 10                  ; Signed Integer                                       ;
+; REGISTERED_OUTPUT                    ; ON                  ; Untyped                                              ;
+; INCLOCK_PERIOD                       ; 10000               ; Signed Integer                                       ;
+; INCLOCK_BOOST                        ; 0                   ; Signed Integer                                       ;
+; CDS_MODE                             ; UNUSED              ; Untyped                                              ;
+; INTENDED_DEVICE_FAMILY               ; Cyclone II          ; Untyped                                              ;
+; DEVICE_FAMILY                        ; Cyclone II          ; Untyped                                              ;
+; PORT_RX_DATA_ALIGN                   ; PORT_USED           ; Untyped                                              ;
+; INPUT_DATA_RATE                      ; 800                 ; Signed Integer                                       ;
+; INCLOCK_DATA_ALIGNMENT               ; EDGE_ALIGNED        ; Untyped                                              ;
+; INCLOCK_PHASE_SHIFT                  ; 0                   ; Signed Integer                                       ;
+; REGISTERED_DATA_ALIGN_INPUT          ; ON                  ; Untyped                                              ;
+; COMMON_RX_TX_PLL                     ; OFF                 ; Untyped                                              ;
+; ENABLE_DPA_MODE                      ; OFF                 ; Untyped                                              ;
+; ENABLE_DPA_FIFO                      ; ON                  ; Untyped                                              ;
+; USE_DPLL_RAWPERROR                   ; OFF                 ; Untyped                                              ;
+; USE_CORECLOCK_INPUT                  ; OFF                 ; Untyped                                              ;
+; DPLL_LOCK_COUNT                      ; 0                   ; Signed Integer                                       ;
+; DPLL_LOCK_WINDOW                     ; 0                   ; Signed Integer                                       ;
+; OUTCLOCK_RESOURCE                    ; AUTO                ; Untyped                                              ;
+; RX_ALIGN_DATA_REG                    ; RISING_EDGE         ; Untyped                                              ;
+; DATA_ALIGN_ROLLOVER                  ; 4                   ; Signed Integer                                       ;
+; LOSE_LOCK_ON_ONE_CHANGE              ; OFF                 ; Untyped                                              ;
+; RESET_FIFO_AT_FIRST_LOCK             ; ON                  ; Untyped                                              ;
+; USE_EXTERNAL_PLL                     ; OFF                 ; Untyped                                              ;
+; IMPLEMENT_IN_LES                     ; ON                  ; Untyped                                              ;
+; BUFFER_IMPLEMENTATION                ; RAM                 ; Untyped                                              ;
+; DPA_INITIAL_PHASE_VALUE              ; 0                   ; Signed Integer                                       ;
+; ENABLE_DPA_ALIGN_TO_RISING_EDGE_ONLY ; OFF                 ; Untyped                                              ;
+; ENABLE_DPA_INITIAL_PHASE_SELECTION   ; OFF                 ; Untyped                                              ;
+; ENABLE_SOFT_CDR_MODE                 ; OFF                 ; Untyped                                              ;
+; PLL_OPERATION_MODE                   ; NORMAL              ; Untyped                                              ;
+; SIM_DPA_IS_NEGATIVE_PPM_DRIFT        ; OFF                 ; Untyped                                              ;
+; SIM_DPA_NET_PPM_VARIATION            ; 0                   ; Signed Integer                                       ;
+; SIM_DPA_OUTPUT_CLOCK_PHASE_SHIFT     ; 0                   ; Signed Integer                                       ;
+; USE_NO_PHASE_SHIFT                   ; ON                  ; Untyped                                              ;
+; PORT_RX_CHANNEL_DATA_ALIGN           ; PORT_UNUSED         ; Untyped                                              ;
+; PLL_SELF_RESET_ON_LOSS_LOCK          ; OFF                 ; Untyped                                              ;
+; X_ON_BITSLIP                         ; ON                  ; Untyped                                              ;
+; ENABLE_DPA_PLL_CALIBRATION           ; OFF                 ; Untyped                                              ;
+; CBXI_PARAMETER                       ; altlvds_rx0_lvds_rx ; Untyped                                              ;
++--------------------------------------+---------------------+------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -394,7 +396,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -404,9 +406,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Thu May 26 17:02:10 2016
+    Info: Processing started: Tue May 31 14:27:27 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off de2_cyclone2 -c de2_cyclone2
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file tb_lvds_decoder.bdf
+    Info (12023): Found entity 1: tb_lvds_decoder
 Info (12021): Found 2 design units, including 1 entities, in source file /users/innovlab/workspace/eyesat_cmos_image_sensor/fpga_program/src/design/lvds_in_map.vhd
     Info (12022): Found design unit 1: lvds_in_map-lvds_in_map_a
     Info (12023): Found entity 1: lvds_in_map
@@ -420,50 +424,12 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
 Info (12021): Found 2 design units, including 1 entities, in source file altlvds_rx0/altlvds_rx0.vhd
     Info (12022): Found design unit 1: altlvds_rx0-SYN
     Info (12023): Found entity 1: altlvds_rx0
-Info (12127): Elaborating entity "lvds_decoder" for the top level hierarchy
-Warning (275083): Bus "OUT10[9..0]" found using same base name as "OUT1", which might lead to a name conflict.
-Warning (275083): Bus "OUT11[9..0]" found using same base name as "OUT1", which might lead to a name conflict.
-Warning (275083): Bus "OUT12[9..0]" found using same base name as "OUT1", which might lead to a name conflict.
-Warning (275083): Bus "OUT13[9..0]" found using same base name as "OUT1", which might lead to a name conflict.
-Warning (275083): Bus "OUT14[9..0]" found using same base name as "OUT1", which might lead to a name conflict.
-Warning (275083): Bus "OUT15[9..0]" found using same base name as "OUT1", which might lead to a name conflict.
-Warning (275083): Bus "OUT16[9..0]" found using same base name as "OUT1", which might lead to a name conflict.
-Warning (275080): Converted elements in bus name "OUT1" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "OUT1[9..0]" to "OUT19..0"
-Warning (275080): Converted elements in bus name "OUT10" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "OUT10[9..0]" to "OUT109..0"
-Warning (275080): Converted elements in bus name "OUT11" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "OUT11[9..0]" to "OUT119..0"
-Warning (275080): Converted elements in bus name "OUT12" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "OUT12[9..0]" to "OUT129..0"
-Warning (275080): Converted elements in bus name "OUT13" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "OUT13[9..0]" to "OUT139..0"
-Warning (275080): Converted elements in bus name "OUT14" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "OUT14[9..0]" to "OUT149..0"
-Warning (275080): Converted elements in bus name "OUT15" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "OUT15[9..0]" to "OUT159..0"
-Warning (275080): Converted elements in bus name "OUT16" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "OUT16[9..0]" to "OUT169..0"
-Warning (275080): Converted elements in bus name "DATA_OUT1" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "DATA_OUT1[9..0]" to "DATA_OUT19..0"
-Warning (275080): Converted elements in bus name "DATA_OUT10" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "DATA_OUT10[9..0]" to "DATA_OUT109..0"
-Warning (275080): Converted elements in bus name "DATA_OUT11" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "DATA_OUT11[9..0]" to "DATA_OUT119..0"
-Warning (275080): Converted elements in bus name "DATA_OUT12" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "DATA_OUT12[9..0]" to "DATA_OUT129..0"
-Warning (275080): Converted elements in bus name "DATA_OUT13" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "DATA_OUT13[9..0]" to "DATA_OUT139..0"
-Warning (275080): Converted elements in bus name "DATA_OUT14" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "DATA_OUT14[9..0]" to "DATA_OUT149..0"
-Warning (275080): Converted elements in bus name "DATA_OUT15" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "DATA_OUT15[9..0]" to "DATA_OUT159..0"
-Warning (275080): Converted elements in bus name "DATA_OUT16" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "DATA_OUT16[9..0]" to "DATA_OUT169..0"
-Info (12128): Elaborating entity "altlvds_rx0" for hierarchy "altlvds_rx0:inst_1"
-Info (12128): Elaborating entity "altlvds_rx" for hierarchy "altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component"
-Info (12130): Elaborated megafunction instantiation "altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component"
-Info (12133): Instantiated megafunction "altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component" with the following parameter:
+Info (12127): Elaborating entity "tb_lvds_decoder" for the top level hierarchy
+Info (12128): Elaborating entity "lvds_decoder" for hierarchy "lvds_decoder:inst"
+Info (12128): Elaborating entity "altlvds_rx0" for hierarchy "lvds_decoder:inst|altlvds_rx0:inst_1"
+Info (12128): Elaborating entity "altlvds_rx" for hierarchy "lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component"
+Info (12130): Elaborated megafunction instantiation "lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component"
+Info (12133): Instantiated megafunction "lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component" with the following parameter:
     Info (12134): Parameter "buffer_implementation" = "RAM"
     Info (12134): Parameter "cds_mode" = "UNUSED"
     Info (12134): Parameter "common_rx_tx_pll" = "OFF"
@@ -517,13 +483,13 @@ Info (12021): Found 5 design units, including 5 entities, in source file db/altl
     Info (12023): Found entity 3: altlvds_rx0_cntr
     Info (12023): Found entity 4: altlvds_rx0_mux
     Info (12023): Found entity 5: altlvds_rx0_lvds_rx
-Info (12128): Elaborating entity "altlvds_rx0_lvds_rx" for hierarchy "altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated"
-Info (12128): Elaborating entity "altlvds_rx0_dffpipe" for hierarchy "altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_dffpipe:h_dffpipe"
-Info (12128): Elaborating entity "altlvds_rx0_cntr" for hierarchy "altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_cntr:bitslip_cntr"
-Info (12128): Elaborating entity "altlvds_rx0_cmpr" for hierarchy "altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_cntr:bitslip_cntr|altlvds_rx0_cmpr:cmpr106"
-Info (12128): Elaborating entity "altlvds_rx0_mux" for hierarchy "altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux101a"
-Info (12128): Elaborating entity "lvds_out_map" for hierarchy "lvds_out_map:inst_2"
-Info (12128): Elaborating entity "lvds_in_map" for hierarchy "lvds_in_map:inst_0"
+Info (12128): Elaborating entity "altlvds_rx0_lvds_rx" for hierarchy "lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated"
+Info (12128): Elaborating entity "altlvds_rx0_dffpipe" for hierarchy "lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_dffpipe:h_dffpipe"
+Info (12128): Elaborating entity "altlvds_rx0_cntr" for hierarchy "lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_cntr:bitslip_cntr"
+Info (12128): Elaborating entity "altlvds_rx0_cmpr" for hierarchy "lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_cntr:bitslip_cntr|altlvds_rx0_cmpr:cmpr106"
+Info (12128): Elaborating entity "altlvds_rx0_mux" for hierarchy "lvds_decoder:inst|altlvds_rx0:inst_1|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx:auto_generated|altlvds_rx0_mux:h_mux101a"
+Info (12128): Elaborating entity "lvds_out_map" for hierarchy "lvds_decoder:inst|lvds_out_map:inst"
+Info (12128): Elaborating entity "lvds_in_map" for hierarchy "lvds_decoder:inst|lvds_in_map:inst_0"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 1022 device resources after synthesis - the final resource count might be different
@@ -531,10 +497,10 @@ Info (21057): Implemented 1022 device resources after synthesis - the final reso
     Info (21059): Implemented 171 output pins
     Info (21061): Implemented 814 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 42 warnings
-    Info: Peak virtual memory: 515 megabytes
-    Info: Processing ended: Thu May 26 17:02:24 2016
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:04
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 527 megabytes
+    Info: Processing ended: Tue May 31 14:28:00 2016
+    Info: Elapsed time: 00:00:33
+    Info: Total CPU time (on all processors): 00:00:05
 
 
