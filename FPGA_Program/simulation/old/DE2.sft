@@ -1,5 +1,0 @@
-set tool_name "ModelSim-Altera (VHDL)"
-set corner_file_list {
-	{{"Slow Model"} {DE2.vho DE2_vhd.sdo}}
-	{{"Fast Model"} {DE2_fast.vho DE2_vhd_fast.sdo}}
-}
