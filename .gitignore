@@ -1,9 +1,5 @@
 /**/History/**
-
 *.sim-data-lvds
-
-# ignore work des simulation
-FPGA_Program/simulation/**/work/
 
 # ignore file Quartus
 *.cdb
