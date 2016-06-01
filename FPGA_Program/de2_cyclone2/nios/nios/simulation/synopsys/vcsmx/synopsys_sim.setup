@@ -1,0 +1,28 @@
+
+WORK > DEFAULT
+DEFAULT:                                                                ./libraries/work/                                                                  
+work:                                                                   ./libraries/work/                                                                  
+irq_mapper:                                                             ./libraries/irq_mapper/                                                            
+rsp_xbar_mux_001:                                                       ./libraries/rsp_xbar_mux_001/                                                      
+rsp_xbar_mux:                                                           ./libraries/rsp_xbar_mux/                                                          
+rsp_xbar_demux_001:                                                     ./libraries/rsp_xbar_demux_001/                                                    
+cmd_xbar_mux:                                                           ./libraries/cmd_xbar_mux/                                                          
+cmd_xbar_demux_001:                                                     ./libraries/cmd_xbar_demux_001/                                                    
+cmd_xbar_demux:                                                         ./libraries/cmd_xbar_demux/                                                        
+id_router_001:                                                          ./libraries/id_router_001/                                                         
+id_router:                                                              ./libraries/id_router/                                                             
+addr_router_001:                                                        ./libraries/addr_router_001/                                                       
+addr_router:                                                            ./libraries/addr_router/                                                           
+onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo: ./libraries/onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo/
+jtag_uart_0:                                                            ./libraries/jtag_uart_0/                                                           
+onchip_memory2_0:                                                       ./libraries/onchip_memory2_0/                                                      
+data_clk:                                                               ./libraries/data_clk/                                                              
+CPU:                                                                    ./libraries/CPU/                                                                   
+data_ctr:                                                               ./libraries/data_ctr/                                                              
+altera:                                                                 ./libraries/altera/                                                                
+lpm:                                                                    ./libraries/lpm/                                                                   
+sgate:                                                                  ./libraries/sgate/                                                                 
+altera_mf:                                                              ./libraries/altera_mf/                                                             
+altera_lnsim:                                                           ./libraries/altera_lnsim/                                                          
+cycloneii:                                                              ./libraries/cycloneii/                                                             
+LIBRARY_SCAN = TRUE
