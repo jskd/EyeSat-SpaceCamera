@@ -1,70 +1,22 @@
+vsim -gui -t 10fs work.tb_lvds_decoder_vhd_tst
+
 onerror {resume}
 quietly WaveActivateNextPane {} 0
-add wave -noupdate /tb_lvds_decoder_vhd_tst/cmv/SYS_RES_N
-add wave -noupdate /tb_lvds_decoder_vhd_tst/cmv/FRAME_REQ
-add wave -noupdate /tb_lvds_decoder_vhd_tst/cmv/OUTCLK
-add wave -noupdate /tb_lvds_decoder_vhd_tst/cmv/LVDS_OUTCTR
-add wave -noupdate /tb_lvds_decoder_vhd_tst/cmv/LVDS_OUTDATA
-add wave -noupdate /tb_lvds_decoder_vhd_tst/cmv/lvds_digit
-add wave -noupdate /tb_lvds_decoder_vhd_tst/cmv/curent_state
-add wave -noupdate /tb_lvds_decoder_vhd_tst/cmv/next_state
-add wave -noupdate -expand /tb_lvds_decoder_vhd_tst/cmv/current_channel_data_v
-add wave -noupdate /tb_lvds_decoder_vhd_tst/cmv/next_channel_data_v
-add wave -noupdate /tb_lvds_decoder_vhd_tst/cmv/current_channel_ctr_v
-add wave -noupdate /tb_lvds_decoder_vhd_tst/cmv/next_channel_ctr_v
-add wave -noupdate /tb_lvds_decoder_vhd_tst/cmv/clk_gen_lvds
-add wave -noupdate /tb_lvds_decoder_vhd_tst/cmv/clk
-add wave -noupdate /tb_lvds_decoder_vhd_tst/i1/ARESET
-add wave -noupdate /tb_lvds_decoder_vhd_tst/i1/LVDS_CLK
-add wave -noupdate /tb_lvds_decoder_vhd_tst/i1/LVDS_CTR
-add wave -noupdate /tb_lvds_decoder_vhd_tst/i1/LVDS_CH
-add wave -noupdate /tb_lvds_decoder_vhd_tst/i1/DATA_CLK
-add wave -noupdate /tb_lvds_decoder_vhd_tst/i1/DATA_CH01
-add wave -noupdate /tb_lvds_decoder_vhd_tst/i1/DATA_CH02
-add wave -noupdate /tb_lvds_decoder_vhd_tst/i1/DATA_CH03
-add wave -noupdate /tb_lvds_decoder_vhd_tst/i1/DATA_CH04
-add wave -noupdate /tb_lvds_decoder_vhd_tst/i1/DATA_CH05
-add wave -noupdate /tb_lvds_decoder_vhd_tst/i1/DATA_CH06
-add wave -noupdate /tb_lvds_decoder_vhd_tst/i1/DATA_CH07
-add wave -noupdate /tb_lvds_decoder_vhd_tst/i1/DATA_CH08
-add wave -noupdate /tb_lvds_decoder_vhd_tst/i1/DATA_CH09
-add wave -noupdate /tb_lvds_decoder_vhd_tst/i1/DATA_CH10
-add wave -noupdate /tb_lvds_decoder_vhd_tst/i1/DATA_CH11
-add wave -noupdate /tb_lvds_decoder_vhd_tst/i1/DATA_CH12
-add wave -noupdate /tb_lvds_decoder_vhd_tst/i1/DATA_CH13
-add wave -noupdate /tb_lvds_decoder_vhd_tst/i1/DATA_CH14
-add wave -noupdate /tb_lvds_decoder_vhd_tst/i1/DATA_CH15
-add wave -noupdate /tb_lvds_decoder_vhd_tst/i1/DATA_CH16
-add wave -noupdate /tb_lvds_decoder_vhd_tst/i1/DATA_CTR
-add wave -noupdate /tb_lvds_decoder_vhd_tst/SYS_RES_N
-add wave -noupdate /tb_lvds_decoder_vhd_tst/FRAME_REQ
-add wave -noupdate /tb_lvds_decoder_vhd_tst/ARESET
-add wave -noupdate /tb_lvds_decoder_vhd_tst/DATA_CH01
-add wave -noupdate /tb_lvds_decoder_vhd_tst/DATA_CH02
-add wave -noupdate /tb_lvds_decoder_vhd_tst/DATA_CH03
-add wave -noupdate /tb_lvds_decoder_vhd_tst/DATA_CH04
-add wave -noupdate /tb_lvds_decoder_vhd_tst/DATA_CH05
-add wave -noupdate /tb_lvds_decoder_vhd_tst/DATA_CH06
-add wave -noupdate /tb_lvds_decoder_vhd_tst/DATA_CH07
-add wave -noupdate /tb_lvds_decoder_vhd_tst/DATA_CH08
-add wave -noupdate /tb_lvds_decoder_vhd_tst/DATA_CH09
-add wave -noupdate /tb_lvds_decoder_vhd_tst/DATA_CH10
-add wave -noupdate /tb_lvds_decoder_vhd_tst/DATA_CH11
-add wave -noupdate /tb_lvds_decoder_vhd_tst/DATA_CH12
-add wave -noupdate /tb_lvds_decoder_vhd_tst/DATA_CH13
-add wave -noupdate /tb_lvds_decoder_vhd_tst/DATA_CH14
-add wave -noupdate /tb_lvds_decoder_vhd_tst/DATA_CH15
-add wave -noupdate /tb_lvds_decoder_vhd_tst/DATA_CH16
-add wave -noupdate /tb_lvds_decoder_vhd_tst/DATA_CLK
-add wave -noupdate /tb_lvds_decoder_vhd_tst/LVDS_CLK
-add wave -noupdate /tb_lvds_decoder_vhd_tst/DATA_CTR
-add wave -noupdate /tb_lvds_decoder_vhd_tst/LVDS_CH
-add wave -noupdate /tb_lvds_decoder_vhd_tst/LVDS_CTR
+add wave -noupdate -label {in sys res n} /tb_lvds_decoder_vhd_tst/SYS_RES_N
+add wave -noupdate -label {in frame req} /tb_lvds_decoder_vhd_tst/FRAME_REQ
+add wave -noupdate -label {in areset PLL} /tb_lvds_decoder_vhd_tst/ARESET
+add wave -noupdate -label {lvds CLK} /tb_lvds_decoder_vhd_tst/LVDS_CLK
+add wave -noupdate -label {lvds CTR} /tb_lvds_decoder_vhd_tst/LVDS_CTR
+add wave -noupdate -label {lvds CH} /tb_lvds_decoder_vhd_tst/LVDS_CH
+add wave -noupdate -label {out CLK} /tb_lvds_decoder_vhd_tst/DATA_CLK
+add wave -noupdate -label {out CTR} -radix hexadecimal /tb_lvds_decoder_vhd_tst/DATA_CTR
+add wave -noupdate -label {out CH1} -radix hexadecimal /tb_lvds_decoder_vhd_tst/DATA_CH01
+add wave -noupdate -label {out CH9} -radix hexadecimal /tb_lvds_decoder_vhd_tst/DATA_CH09
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {3823137590 fs} 0}
+WaveRestoreCursors {{Cursor 1} {1352588310 fs} 0}
 quietly wave cursor active 1
-configure wave -namecolwidth 308
-configure wave -valuecolwidth 100
+configure wave -namecolwidth 271
+configure wave -valuecolwidth 141
 configure wave -justifyvalue left
 configure wave -signalnamewidth 0
 configure wave -snapdistance 10
@@ -77,4 +29,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits fs
 update
-WaveRestoreZoom {3705169290 fs} {4054830720 fs}
+WaveRestoreZoom {0 fs} {3878050400 fs}

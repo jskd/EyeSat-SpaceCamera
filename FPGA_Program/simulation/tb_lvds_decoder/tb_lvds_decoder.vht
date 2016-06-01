@@ -135,18 +135,17 @@ BEGIN
 	LVDS_CLK => LVDS_CLK,
 	LVDS_CTR => LVDS_CTR
 	);
-init : PROCESS                                               
--- variable declarations                                     
-BEGIN                                                        
-        -- code that executes only once                      
-WAIT;                                                       
-END PROCESS init;                                           
-always : PROCESS                                              
--- optional sensitivity list                                  
--- (        )                                                 
--- variable declarations                                      
-BEGIN                                                         
-        -- code executes for every event on sensitivity list  
+                                                             
+always : PROCESS                                      
+BEGIN                                                                                             
+   	ARESET <= '0';  
+		SYS_RES_N <=  '1';
+		FRAME_REQ <=  '0';
+		wait for 100ns;
+		FRAME_REQ  <=  '1';
+		wait for 2ms;
+		assert false report "fin" severity failure;
+		 
 WAIT;                                                        
 END PROCESS always;                                          
 END tb_lvds_decoder_arch;
