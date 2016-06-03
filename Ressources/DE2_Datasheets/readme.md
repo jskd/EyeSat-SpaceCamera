@@ -1,0 +1,1 @@
+source: http://wl.altera.com/education/univ/materials/boards/de2/unv-de2-board.html
