@@ -1,1 +1,2 @@
 v1
+PLL_COMPENSATED_INPUTS_LIST,lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|lvds_rx_pll,LVDS_OUTCTR; LVDS_OUTCH[8]; LVDS_OUTCH[0],

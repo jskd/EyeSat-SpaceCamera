@@ -1,16 +1,16 @@
-Fitter Status : Successful - Tue May 31 14:28:48 2016
+Fitter Status : Successful - Fri Jun 03 12:03:35 2016
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
 Revision Name : de2_cyclone2
-Top-level Entity Name : tb_lvds_decoder
+Top-level Entity Name : cmv_controller
 Family : Cyclone II
 Device : EP2C35F672C6
 Timing Models : Final
-Total logic elements : 665 / 33,216 ( 2 % )
-    Total combinational functions : 235 / 33,216 ( < 1 % )
-    Dedicated logic registers : 618 / 33,216 ( 2 % )
-Total registers : 652
-Total pins : 207 / 475 ( 44 % )
+Total logic elements : 2,898 / 33,216 ( 9 % )
+    Total combinational functions : 2,515 / 33,216 ( 8 % )
+    Dedicated logic registers : 1,849 / 33,216 ( 6 % )
+Total registers : 1923
+Total pins : 69 / 475 ( 15 % )
 Total virtual pins : 0
-Total memory bits : 0 / 483,840 ( 0 % )
+Total memory bits : 44,032 / 483,840 ( 9 % )
 Embedded Multiplier 9-bit elements : 0 / 70 ( 0 % )
-Total PLLs : 1 / 4 ( 25 % )
+Total PLLs : 2 / 4 ( 50 % )

@@ -65,28 +65,28 @@
    type="VHDL"
    library="addr_router" />
  <file
-   path="nios/simulation/submodules/nios_onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo.vho"
+   path="nios/simulation/submodules/nios_onchip_memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo.vho"
    type="VHDL"
-   library="onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo" />
+   library="onchip_memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo" />
  <file
    path="nios/simulation/submodules/mentor/altera_merlin_slave_agent.sv"
    type="SYSTEM_VERILOG_ENCRYPT"
-   library="onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent"
+   library="onchip_memory_s1_translator_avalon_universal_slave_0_agent"
    simulator="modelsim" />
  <file
    path="nios/simulation/submodules/mentor/altera_merlin_burst_uncompressor.sv"
    type="SYSTEM_VERILOG_ENCRYPT"
-   library="onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent"
+   library="onchip_memory_s1_translator_avalon_universal_slave_0_agent"
    simulator="modelsim" />
  <file
    path="nios/simulation/submodules/aldec/altera_merlin_slave_agent.sv"
    type="SYSTEM_VERILOG_ENCRYPT"
-   library="onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent"
+   library="onchip_memory_s1_translator_avalon_universal_slave_0_agent"
    simulator="riviera" />
  <file
    path="nios/simulation/submodules/aldec/altera_merlin_burst_uncompressor.sv"
    type="SYSTEM_VERILOG_ENCRYPT"
-   library="onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent"
+   library="onchip_memory_s1_translator_avalon_universal_slave_0_agent"
    simulator="riviera" />
  <file
    path="nios/simulation/submodules/mentor/altera_merlin_master_agent.sv"
@@ -101,12 +101,12 @@
  <file
    path="nios/simulation/submodules/mentor/altera_merlin_slave_translator.sv"
    type="SYSTEM_VERILOG_ENCRYPT"
-   library="onchip_memory2_0_s1_translator"
+   library="onchip_memory_s1_translator"
    simulator="modelsim" />
  <file
    path="nios/simulation/submodules/aldec/altera_merlin_slave_translator.sv"
    type="SYSTEM_VERILOG_ENCRYPT"
-   library="onchip_memory2_0_s1_translator"
+   library="onchip_memory_s1_translator"
    simulator="riviera" />
  <file
    path="nios/simulation/submodules/mentor/altera_merlin_master_translator.sv"
@@ -119,17 +119,21 @@
    library="CPU_data_master_translator"
    simulator="riviera" />
  <file
-   path="nios/simulation/submodules/nios_jtag_uart_0.vhd"
+   path="nios/simulation/submodules/nios_uart.vhd"
    type="VHDL"
-   library="jtag_uart_0" />
+   library="uart" />
  <file
-   path="nios/simulation/submodules/nios_onchip_memory2_0.hex"
+   path="nios/simulation/submodules/nios_jtag_uart.vhd"
+   type="VHDL"
+   library="jtag_uart" />
+ <file
+   path="nios/simulation/submodules/nios_onchip_memory.hex"
    type="HEX"
-   library="onchip_memory2_0" />
+   library="onchip_memory" />
  <file
-   path="nios/simulation/submodules/nios_onchip_memory2_0.vhd"
+   path="nios/simulation/submodules/nios_onchip_memory.vhd"
    type="VHDL"
-   library="onchip_memory2_0" />
+   library="onchip_memory" />
  <file
    path="nios/simulation/submodules/nios_data_clk.vhd"
    type="VHDL"
@@ -208,16 +212,19 @@
    library="data_ctr" />
  <file path="nios/simulation/nios.vhd" type="VHDL" />
  <file
-   path="nios/simulation/nios_onchip_memory2_0_s1_translator.vhd"
+   path="nios/simulation/nios_onchip_memory_s1_translator.vhd"
    type="VHDL" />
  <file
-   path="nios/simulation/nios_jtag_uart_0_avalon_jtag_slave_translator.vhd"
+   path="nios/simulation/nios_jtag_uart_avalon_jtag_slave_translator.vhd"
    type="VHDL" />
  <file path="nios/simulation/nios_data_ch9_s1_translator.vhd" type="VHDL" />
  <file
    path="nios/simulation/nios_cpu_jtag_debug_module_translator.vhd"
    type="VHDL" />
+ <file path="nios/simulation/nios_uart_s1_translator.vhd" type="VHDL" />
  <file path="nios/simulation/nios_data_clk_s1_translator.vhd" type="VHDL" />
+ <file path="nios/simulation/nios_rst_controller.vhd" type="VHDL" />
+ <file path="nios/simulation/nios_rst_controller_001.vhd" type="VHDL" />
  <file
    path="nios/simulation/nios_cpu_data_master_translator.vhd"
    type="VHDL" />
@@ -226,7 +233,5 @@
    type="VHDL" />
  <topLevel name="nios" />
  <deviceFamily name="cycloneii" />
- <modelMap
-   controllerPath="nios.onchip_memory2_0"
-   modelPath="nios.onchip_memory2_0" />
+ <modelMap controllerPath="nios.onchip_memory" modelPath="nios.onchip_memory" />
 </simPackage>

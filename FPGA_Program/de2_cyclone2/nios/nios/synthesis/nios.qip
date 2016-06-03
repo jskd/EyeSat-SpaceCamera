@@ -2,43 +2,63 @@ set_global_assignment -entity "nios" -library "nios" -name IP_TOOL_NAME "Qsys"
 set_global_assignment -entity "nios" -library "nios" -name IP_TOOL_VERSION "13.0sp1"
 set_global_assignment -entity "nios" -library "nios" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "nios" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../nios.sopcinfo"]
-set_instance_assignment -entity "nios" -library "nios" -name SLD_INFO "QSYS_NAME nios HAS_SOPCINFO 1 GENERATION_ID 1464795788"
+set_instance_assignment -entity "nios" -library "nios" -name SLD_INFO "QSYS_NAME nios HAS_SOPCINFO 1 GENERATION_ID 1464870613"
 set_global_assignment -library "nios" -name MISC_FILE [file join $::quartus(qip_path) "../../nios.cmp"]
 set_global_assignment -name SYNTHESIS_ONLY_QIP ON
 set_global_assignment -library "nios" -name MISC_FILE [file join $::quartus(qip_path) "../../nios.qsys"]
 
 set_global_assignment -library "nios" -name VHDL_FILE [file join $::quartus(qip_path) "nios.vhd"]
-set_global_assignment -library "nios" -name VHDL_FILE [file join $::quartus(qip_path) "nios_onchip_memory2_0_s1_translator.vhd"]
-set_global_assignment -library "nios" -name VHDL_FILE [file join $::quartus(qip_path) "nios_jtag_uart_0_avalon_jtag_slave_translator.vhd"]
-set_global_assignment -library "nios" -name VHDL_FILE [file join $::quartus(qip_path) "nios_data_ch9_s1_translator.vhd"]
-set_global_assignment -library "nios" -name VHDL_FILE [file join $::quartus(qip_path) "nios_cpu_jtag_debug_module_translator.vhd"]
-set_global_assignment -library "nios" -name VHDL_FILE [file join $::quartus(qip_path) "nios_data_clk_s1_translator.vhd"]
-set_global_assignment -library "nios" -name VHDL_FILE [file join $::quartus(qip_path) "nios_cpu_data_master_translator.vhd"]
+set_global_assignment -library "nios" -name VHDL_FILE [file join $::quartus(qip_path) "nios_onchip_memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo.vhd"]
+set_global_assignment -library "nios" -name VHDL_FILE [file join $::quartus(qip_path) "nios_sdram_controller_s1_translator_avalon_universal_slave_0_agent_rsp_fifo.vhd"]
+set_global_assignment -library "nios" -name VHDL_FILE [file join $::quartus(qip_path) "nios_sdram_controller_s1_translator_avalon_universal_slave_0_agent_rdata_fifo.vhd"]
+set_global_assignment -library "nios" -name VHDL_FILE [file join $::quartus(qip_path) "nios_onchip_memory_s1_translator_avalon_universal_slave_0_agent.vhd"]
+set_global_assignment -library "nios" -name VHDL_FILE [file join $::quartus(qip_path) "nios_sdram_controller_s1_translator_avalon_universal_slave_0_agent.vhd"]
+set_global_assignment -library "nios" -name VHDL_FILE [file join $::quartus(qip_path) "nios_width_adapter.vhd"]
+set_global_assignment -library "nios" -name VHDL_FILE [file join $::quartus(qip_path) "nios_width_adapter_001.vhd"]
 set_global_assignment -library "nios" -name VHDL_FILE [file join $::quartus(qip_path) "nios_cpu_instruction_master_translator.vhd"]
+set_global_assignment -library "nios" -name VHDL_FILE [file join $::quartus(qip_path) "nios_cpu_data_master_translator.vhd"]
+set_global_assignment -library "nios" -name VHDL_FILE [file join $::quartus(qip_path) "nios_onchip_memory_s1_translator.vhd"]
+set_global_assignment -library "nios" -name VHDL_FILE [file join $::quartus(qip_path) "nios_cpu_jtag_debug_module_translator.vhd"]
+set_global_assignment -library "nios" -name VHDL_FILE [file join $::quartus(qip_path) "nios_jtag_uart_avalon_jtag_slave_translator.vhd"]
+set_global_assignment -library "nios" -name VHDL_FILE [file join $::quartus(qip_path) "nios_data_clk_s1_translator.vhd"]
+set_global_assignment -library "nios" -name VHDL_FILE [file join $::quartus(qip_path) "nios_data_ctr_s1_translator.vhd"]
+set_global_assignment -library "nios" -name VHDL_FILE [file join $::quartus(qip_path) "nios_spi_spi_control_port_translator.vhd"]
+set_global_assignment -library "nios" -name VHDL_FILE [file join $::quartus(qip_path) "nios_uart_s1_translator.vhd"]
+set_global_assignment -library "nios" -name VHDL_FILE [file join $::quartus(qip_path) "nios_sdram_controller_s1_translator.vhd"]
+set_global_assignment -library "nios" -name VHDL_FILE [file join $::quartus(qip_path) "nios_rst_controller.vhd"]
+set_global_assignment -library "nios" -name VHDL_FILE [file join $::quartus(qip_path) "nios_rst_controller_001.vhd"]
 set_global_assignment -library "nios" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/nios_irq_mapper.sv"]
+set_global_assignment -library "nios" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_width_adapter.sv"]
+set_global_assignment -library "nios" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_address_alignment.sv"]
+set_global_assignment -library "nios" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_burst_uncompressor.sv"]
 set_global_assignment -library "nios" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_arbitrator.sv"]
 set_global_assignment -library "nios" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/nios_rsp_xbar_mux_001.sv"]
 set_global_assignment -library "nios" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/nios_rsp_xbar_mux.sv"]
-set_global_assignment -library "nios" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/nios_rsp_xbar_demux_001.sv"]
+set_global_assignment -library "nios" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/nios_rsp_xbar_demux_002.sv"]
 set_global_assignment -library "nios" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/nios_cmd_xbar_mux.sv"]
 set_global_assignment -library "nios" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/nios_cmd_xbar_demux_001.sv"]
 set_global_assignment -library "nios" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/nios_cmd_xbar_demux.sv"]
 set_global_assignment -library "nios" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_reset_controller.v"]
 set_global_assignment -library "nios" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_reset_synchronizer.v"]
 set_global_assignment -library "nios" -name SDC_FILE [file join $::quartus(qip_path) "submodules/altera_reset_controller.sdc"]
-set_global_assignment -library "nios" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/nios_id_router_001.sv"]
+set_global_assignment -library "nios" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_burst_adapter.sv"]
+set_global_assignment -library "nios" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/nios_id_router_009.sv"]
+set_global_assignment -library "nios" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/nios_id_router_002.sv"]
 set_global_assignment -library "nios" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/nios_id_router.sv"]
 set_global_assignment -library "nios" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/nios_addr_router_001.sv"]
 set_global_assignment -library "nios" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/nios_addr_router.sv"]
 set_global_assignment -library "nios" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_avalon_sc_fifo.v"]
 set_global_assignment -library "nios" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_slave_agent.sv"]
-set_global_assignment -library "nios" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_burst_uncompressor.sv"]
 set_global_assignment -library "nios" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_master_agent.sv"]
 set_global_assignment -library "nios" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_slave_translator.sv"]
 set_global_assignment -library "nios" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_master_translator.sv"]
-set_global_assignment -library "nios" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/nios_jtag_uart_0.v"]
-set_global_assignment -library "nios" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/nios_onchip_memory2_0.hex"]
-set_global_assignment -library "nios" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/nios_onchip_memory2_0.v"]
+set_global_assignment -library "nios" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/nios_spi.v"]
+set_global_assignment -library "nios" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/nios_sdram_controller.v"]
+set_global_assignment -library "nios" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/nios_sdram_controller_test_component.v"]
+set_global_assignment -library "nios" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/nios_uart.v"]
+set_global_assignment -library "nios" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/nios_jtag_uart.v"]
+set_global_assignment -library "nios" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/nios_onchip_memory.hex"]
+set_global_assignment -library "nios" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/nios_onchip_memory.v"]
 set_global_assignment -library "nios" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/nios_data_clk.v"]
 set_global_assignment -library "nios" -name SDC_FILE [file join $::quartus(qip_path) "submodules/nios_CPU.sdc"]
 set_global_assignment -library "nios" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/nios_CPU.v"]
@@ -55,15 +75,18 @@ set_global_assignment -library "nios" -name VERILOG_FILE [file join $::quartus(q
 set_global_assignment -entity "nios_irq_mapper" -library "nios" -name IP_TOOL_NAME "altera_irq_mapper"
 set_global_assignment -entity "nios_irq_mapper" -library "nios" -name IP_TOOL_VERSION "13.0"
 set_global_assignment -entity "nios_irq_mapper" -library "nios" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "altera_merlin_width_adapter" -library "nios" -name IP_TOOL_NAME "altera_merlin_width_adapter"
+set_global_assignment -entity "altera_merlin_width_adapter" -library "nios" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "altera_merlin_width_adapter" -library "nios" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -entity "nios_rsp_xbar_mux_001" -library "nios" -name IP_TOOL_NAME "altera_merlin_multiplexer"
 set_global_assignment -entity "nios_rsp_xbar_mux_001" -library "nios" -name IP_TOOL_VERSION "13.0"
 set_global_assignment -entity "nios_rsp_xbar_mux_001" -library "nios" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -entity "nios_rsp_xbar_mux" -library "nios" -name IP_TOOL_NAME "altera_merlin_multiplexer"
 set_global_assignment -entity "nios_rsp_xbar_mux" -library "nios" -name IP_TOOL_VERSION "13.0"
 set_global_assignment -entity "nios_rsp_xbar_mux" -library "nios" -name IP_TOOL_ENV "Qsys"
-set_global_assignment -entity "nios_rsp_xbar_demux_001" -library "nios" -name IP_TOOL_NAME "altera_merlin_demultiplexer"
-set_global_assignment -entity "nios_rsp_xbar_demux_001" -library "nios" -name IP_TOOL_VERSION "13.0"
-set_global_assignment -entity "nios_rsp_xbar_demux_001" -library "nios" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "nios_rsp_xbar_demux_002" -library "nios" -name IP_TOOL_NAME "altera_merlin_demultiplexer"
+set_global_assignment -entity "nios_rsp_xbar_demux_002" -library "nios" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "nios_rsp_xbar_demux_002" -library "nios" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -entity "nios_cmd_xbar_mux" -library "nios" -name IP_TOOL_NAME "altera_merlin_multiplexer"
 set_global_assignment -entity "nios_cmd_xbar_mux" -library "nios" -name IP_TOOL_VERSION "13.0"
 set_global_assignment -entity "nios_cmd_xbar_mux" -library "nios" -name IP_TOOL_ENV "Qsys"
@@ -76,9 +99,15 @@ set_global_assignment -entity "nios_cmd_xbar_demux" -library "nios" -name IP_TOO
 set_global_assignment -entity "altera_reset_controller" -library "nios" -name IP_TOOL_NAME "altera_reset_controller"
 set_global_assignment -entity "altera_reset_controller" -library "nios" -name IP_TOOL_VERSION "13.0"
 set_global_assignment -entity "altera_reset_controller" -library "nios" -name IP_TOOL_ENV "Qsys"
-set_global_assignment -entity "nios_id_router_001" -library "nios" -name IP_TOOL_NAME "altera_merlin_router"
-set_global_assignment -entity "nios_id_router_001" -library "nios" -name IP_TOOL_VERSION "13.0"
-set_global_assignment -entity "nios_id_router_001" -library "nios" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "altera_merlin_burst_adapter" -library "nios" -name IP_TOOL_NAME "altera_merlin_burst_adapter"
+set_global_assignment -entity "altera_merlin_burst_adapter" -library "nios" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "altera_merlin_burst_adapter" -library "nios" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "nios_id_router_009" -library "nios" -name IP_TOOL_NAME "altera_merlin_router"
+set_global_assignment -entity "nios_id_router_009" -library "nios" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "nios_id_router_009" -library "nios" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "nios_id_router_002" -library "nios" -name IP_TOOL_NAME "altera_merlin_router"
+set_global_assignment -entity "nios_id_router_002" -library "nios" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "nios_id_router_002" -library "nios" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -entity "nios_id_router" -library "nios" -name IP_TOOL_NAME "altera_merlin_router"
 set_global_assignment -entity "nios_id_router" -library "nios" -name IP_TOOL_VERSION "13.0"
 set_global_assignment -entity "nios_id_router" -library "nios" -name IP_TOOL_ENV "Qsys"
@@ -103,12 +132,21 @@ set_global_assignment -entity "altera_merlin_slave_translator" -library "nios" -
 set_global_assignment -entity "altera_merlin_master_translator" -library "nios" -name IP_TOOL_NAME "altera_merlin_master_translator"
 set_global_assignment -entity "altera_merlin_master_translator" -library "nios" -name IP_TOOL_VERSION "13.0"
 set_global_assignment -entity "altera_merlin_master_translator" -library "nios" -name IP_TOOL_ENV "Qsys"
-set_global_assignment -entity "nios_jtag_uart_0" -library "nios" -name IP_TOOL_NAME "altera_avalon_jtag_uart"
-set_global_assignment -entity "nios_jtag_uart_0" -library "nios" -name IP_TOOL_VERSION "13.0.1.99.2"
-set_global_assignment -entity "nios_jtag_uart_0" -library "nios" -name IP_TOOL_ENV "Qsys"
-set_global_assignment -entity "nios_onchip_memory2_0" -library "nios" -name IP_TOOL_NAME "altera_avalon_onchip_memory2"
-set_global_assignment -entity "nios_onchip_memory2_0" -library "nios" -name IP_TOOL_VERSION "13.0.1.99.2"
-set_global_assignment -entity "nios_onchip_memory2_0" -library "nios" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "nios_spi" -library "nios" -name IP_TOOL_NAME "altera_avalon_spi"
+set_global_assignment -entity "nios_spi" -library "nios" -name IP_TOOL_VERSION "13.0.1.99.2"
+set_global_assignment -entity "nios_spi" -library "nios" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "nios_sdram_controller" -library "nios" -name IP_TOOL_NAME "altera_avalon_new_sdram_controller"
+set_global_assignment -entity "nios_sdram_controller" -library "nios" -name IP_TOOL_VERSION "13.0.1.99.2"
+set_global_assignment -entity "nios_sdram_controller" -library "nios" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "nios_uart" -library "nios" -name IP_TOOL_NAME "altera_avalon_uart"
+set_global_assignment -entity "nios_uart" -library "nios" -name IP_TOOL_VERSION "13.0.1.99.2"
+set_global_assignment -entity "nios_uart" -library "nios" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "nios_jtag_uart" -library "nios" -name IP_TOOL_NAME "altera_avalon_jtag_uart"
+set_global_assignment -entity "nios_jtag_uart" -library "nios" -name IP_TOOL_VERSION "13.0.1.99.2"
+set_global_assignment -entity "nios_jtag_uart" -library "nios" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "nios_onchip_memory" -library "nios" -name IP_TOOL_NAME "altera_avalon_onchip_memory2"
+set_global_assignment -entity "nios_onchip_memory" -library "nios" -name IP_TOOL_VERSION "13.0.1.99.2"
+set_global_assignment -entity "nios_onchip_memory" -library "nios" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -entity "nios_data_clk" -library "nios" -name IP_TOOL_NAME "altera_avalon_pio"
 set_global_assignment -entity "nios_data_clk" -library "nios" -name IP_TOOL_VERSION "13.0.1.99.2"
 set_global_assignment -entity "nios_data_clk" -library "nios" -name IP_TOOL_ENV "Qsys"

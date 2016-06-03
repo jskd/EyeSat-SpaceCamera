@@ -32,19 +32,19 @@
 	 ( 
 		 clk	:	IN  STD_LOGIC;
 		 reset	:	IN  STD_LOGIC;
-		 sink0_channel	:	IN  STD_LOGIC_VECTOR (6 DOWNTO 0);
+		 sink0_channel	:	IN  STD_LOGIC_VECTOR (7 DOWNTO 0);
 		 sink0_data	:	IN  STD_LOGIC_VECTOR (86 DOWNTO 0);
 		 sink0_endofpacket	:	IN  STD_LOGIC;
 		 sink0_ready	:	OUT  STD_LOGIC;
 		 sink0_startofpacket	:	IN  STD_LOGIC;
 		 sink0_valid	:	IN  STD_LOGIC;
-		 sink1_channel	:	IN  STD_LOGIC_VECTOR (6 DOWNTO 0);
+		 sink1_channel	:	IN  STD_LOGIC_VECTOR (7 DOWNTO 0);
 		 sink1_data	:	IN  STD_LOGIC_VECTOR (86 DOWNTO 0);
 		 sink1_endofpacket	:	IN  STD_LOGIC;
 		 sink1_ready	:	OUT  STD_LOGIC;
 		 sink1_startofpacket	:	IN  STD_LOGIC;
 		 sink1_valid	:	IN  STD_LOGIC;
-		 src_channel	:	OUT  STD_LOGIC_VECTOR (6 DOWNTO 0);
+		 src_channel	:	OUT  STD_LOGIC_VECTOR (7 DOWNTO 0);
 		 src_data	:	OUT  STD_LOGIC_VECTOR (86 DOWNTO 0);
 		 src_endofpacket	:	OUT  STD_LOGIC;
 		 src_ready	:	IN  STD_LOGIC;
@@ -64,6 +64,7 @@
 	 SIGNAL  wire_w_lg_sink0_valid553w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_lg_sink0_valid559w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_lg_sink0_valid565w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
+	 SIGNAL  wire_w_lg_sink0_valid571w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_lg_sink0_valid5w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_lg_sink0_valid66w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_lg_sink0_valid72w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
@@ -158,6 +159,7 @@
 	 SIGNAL  wire_w_lg_sink1_valid555w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_lg_sink1_valid561w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_lg_sink1_valid567w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
+	 SIGNAL  wire_w_lg_sink1_valid573w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_lg_sink1_valid7w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_lg_sink1_valid68w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_lg_sink1_valid74w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
@@ -252,6 +254,7 @@
 	 SIGNAL  wire_w_lg_w_lg_sink0_valid553w556w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_lg_w_lg_sink0_valid559w562w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_lg_w_lg_sink0_valid565w568w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
+	 SIGNAL  wire_w_lg_w_lg_sink0_valid571w574w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_lg_w_lg_sink0_valid5w8w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_lg_w_lg_sink0_valid66w69w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_lg_w_lg_sink0_valid72w75w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
@@ -346,6 +349,7 @@
 	 SIGNAL  wire_w_sink0_channel_range552w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_sink0_channel_range558w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_sink0_channel_range564w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
+	 SIGNAL  wire_w_sink0_channel_range570w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_sink0_data_range4w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_sink0_data_range65w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_sink0_data_range71w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
@@ -440,6 +444,7 @@
 	 SIGNAL  wire_w_sink1_channel_range554w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_sink1_channel_range560w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_sink1_channel_range566w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
+	 SIGNAL  wire_w_sink1_channel_range572w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_sink1_data_range6w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_sink1_data_range67w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_sink1_data_range73w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
@@ -536,6 +541,7 @@
 	wire_w_lg_sink0_valid553w(0) <= sink0_valid AND wire_w_sink0_channel_range552w(0);
 	wire_w_lg_sink0_valid559w(0) <= sink0_valid AND wire_w_sink0_channel_range558w(0);
 	wire_w_lg_sink0_valid565w(0) <= sink0_valid AND wire_w_sink0_channel_range564w(0);
+	wire_w_lg_sink0_valid571w(0) <= sink0_valid AND wire_w_sink0_channel_range570w(0);
 	wire_w_lg_sink0_valid5w(0) <= sink0_valid AND wire_w_sink0_data_range4w(0);
 	wire_w_lg_sink0_valid66w(0) <= sink0_valid AND wire_w_sink0_data_range65w(0);
 	wire_w_lg_sink0_valid72w(0) <= sink0_valid AND wire_w_sink0_data_range71w(0);
@@ -630,6 +636,7 @@
 	wire_w_lg_sink1_valid555w(0) <= sink1_valid AND wire_w_sink1_channel_range554w(0);
 	wire_w_lg_sink1_valid561w(0) <= sink1_valid AND wire_w_sink1_channel_range560w(0);
 	wire_w_lg_sink1_valid567w(0) <= sink1_valid AND wire_w_sink1_channel_range566w(0);
+	wire_w_lg_sink1_valid573w(0) <= sink1_valid AND wire_w_sink1_channel_range572w(0);
 	wire_w_lg_sink1_valid7w(0) <= sink1_valid AND wire_w_sink1_data_range6w(0);
 	wire_w_lg_sink1_valid68w(0) <= sink1_valid AND wire_w_sink1_data_range67w(0);
 	wire_w_lg_sink1_valid74w(0) <= sink1_valid AND wire_w_sink1_data_range73w(0);
@@ -724,6 +731,7 @@
 	wire_w_lg_w_lg_sink0_valid553w556w(0) <= wire_w_lg_sink0_valid553w(0) OR wire_w_lg_sink1_valid555w(0);
 	wire_w_lg_w_lg_sink0_valid559w562w(0) <= wire_w_lg_sink0_valid559w(0) OR wire_w_lg_sink1_valid561w(0);
 	wire_w_lg_w_lg_sink0_valid565w568w(0) <= wire_w_lg_sink0_valid565w(0) OR wire_w_lg_sink1_valid567w(0);
+	wire_w_lg_w_lg_sink0_valid571w574w(0) <= wire_w_lg_sink0_valid571w(0) OR wire_w_lg_sink1_valid573w(0);
 	wire_w_lg_w_lg_sink0_valid5w8w(0) <= wire_w_lg_sink0_valid5w(0) OR wire_w_lg_sink1_valid7w(0);
 	wire_w_lg_w_lg_sink0_valid66w69w(0) <= wire_w_lg_sink0_valid66w(0) OR wire_w_lg_sink1_valid68w(0);
 	wire_w_lg_w_lg_sink0_valid72w75w(0) <= wire_w_lg_sink0_valid72w(0) OR wire_w_lg_sink1_valid74w(0);
@@ -813,7 +821,7 @@
 	wire_w_lg_w_lg_sink0_valid60w63w(0) <= wire_w_lg_sink0_valid60w(0) OR wire_w_lg_sink1_valid62w(0);
 	sink0_ready <= (sink0_valid AND src_ready);
 	sink1_ready <= (sink1_valid AND src_ready);
-	src_channel <= ( wire_w_lg_w_lg_sink0_valid565w568w & wire_w_lg_w_lg_sink0_valid559w562w & wire_w_lg_w_lg_sink0_valid553w556w & wire_w_lg_w_lg_sink0_valid547w550w & wire_w_lg_w_lg_sink0_valid541w544w & wire_w_lg_w_lg_sink0_valid535w538w & wire_w_lg_w_lg_sink0_valid528w531w);
+	src_channel <= ( wire_w_lg_w_lg_sink0_valid571w574w & wire_w_lg_w_lg_sink0_valid565w568w & wire_w_lg_w_lg_sink0_valid559w562w & wire_w_lg_w_lg_sink0_valid553w556w & wire_w_lg_w_lg_sink0_valid547w550w & wire_w_lg_w_lg_sink0_valid541w544w & wire_w_lg_w_lg_sink0_valid535w538w & wire_w_lg_w_lg_sink0_valid528w531w);
 	src_data <= ( wire_w_lg_w_lg_sink0_valid522w525w & wire_w_lg_w_lg_sink0_valid516w519w & wire_w_lg_w_lg_sink0_valid510w513w & wire_w_lg_w_lg_sink0_valid504w507w & wire_w_lg_w_lg_sink0_valid498w501w & wire_w_lg_w_lg_sink0_valid492w495w & wire_w_lg_w_lg_sink0_valid486w489w & wire_w_lg_w_lg_sink0_valid480w483w & wire_w_lg_w_lg_sink0_valid474w477w & wire_w_lg_w_lg_sink0_valid468w471w & wire_w_lg_w_lg_sink0_valid462w465w & wire_w_lg_w_lg_sink0_valid456w459w & wire_w_lg_w_lg_sink0_valid450w453w & wire_w_lg_w_lg_sink0_valid444w447w & wire_w_lg_w_lg_sink0_valid438w441w & wire_w_lg_w_lg_sink0_valid432w435w & wire_w_lg_w_lg_sink0_valid426w429w & wire_w_lg_w_lg_sink0_valid420w423w & wire_w_lg_w_lg_sink0_valid414w417w & wire_w_lg_w_lg_sink0_valid408w411w & wire_w_lg_w_lg_sink0_valid402w405w & wire_w_lg_w_lg_sink0_valid396w399w & wire_w_lg_w_lg_sink0_valid390w393w & wire_w_lg_w_lg_sink0_valid384w387w & wire_w_lg_w_lg_sink0_valid378w381w & wire_w_lg_w_lg_sink0_valid372w375w & wire_w_lg_w_lg_sink0_valid366w369w & wire_w_lg_w_lg_sink0_valid360w363w & wire_w_lg_w_lg_sink0_valid354w357w & wire_w_lg_w_lg_sink0_valid348w351w & wire_w_lg_w_lg_sink0_valid342w345w & wire_w_lg_w_lg_sink0_valid336w339w & wire_w_lg_w_lg_sink0_valid330w333w & wire_w_lg_w_lg_sink0_valid324w327w & wire_w_lg_w_lg_sink0_valid318w321w & wire_w_lg_w_lg_sink0_valid312w315w & wire_w_lg_w_lg_sink0_valid306w309w & wire_w_lg_w_lg_sink0_valid300w303w & wire_w_lg_w_lg_sink0_valid294w297w & wire_w_lg_w_lg_sink0_valid288w291w & wire_w_lg_w_lg_sink0_valid282w285w & wire_w_lg_w_lg_sink0_valid276w279w & wire_w_lg_w_lg_sink0_valid270w273w & wire_w_lg_w_lg_sink0_valid264w267w & wire_w_lg_w_lg_sink0_valid258w261w & wire_w_lg_w_lg_sink0_valid252w255w & wire_w_lg_w_lg_sink0_valid246w249w & wire_w_lg_w_lg_sink0_valid240w243w & wire_w_lg_w_lg_sink0_valid234w237w & wire_w_lg_w_lg_sink0_valid228w231w & wire_w_lg_w_lg_sink0_valid222w225w & wire_w_lg_w_lg_sink0_valid216w219w & wire_w_lg_w_lg_sink0_valid210w213w & wire_w_lg_w_lg_sink0_valid204w207w & wire_w_lg_w_lg_sink0_valid198w201w 
 & wire_w_lg_w_lg_sink0_valid192w195w & wire_w_lg_w_lg_sink0_valid186w189w & wire_w_lg_w_lg_sink0_valid180w183w & wire_w_lg_w_lg_sink0_valid174w177w & wire_w_lg_w_lg_sink0_valid168w171w & wire_w_lg_w_lg_sink0_valid162w165w & wire_w_lg_w_lg_sink0_valid156w159w & wire_w_lg_w_lg_sink0_valid150w153w & wire_w_lg_w_lg_sink0_valid144w147w & wire_w_lg_w_lg_sink0_valid138w141w & wire_w_lg_w_lg_sink0_valid132w135w & wire_w_lg_w_lg_sink0_valid126w129w & wire_w_lg_w_lg_sink0_valid120w123w & wire_w_lg_w_lg_sink0_valid114w117w & wire_w_lg_w_lg_sink0_valid108w111w & wire_w_lg_w_lg_sink0_valid102w105w & wire_w_lg_w_lg_sink0_valid96w99w & wire_w_lg_w_lg_sink0_valid90w93w & wire_w_lg_w_lg_sink0_valid84w87w & wire_w_lg_w_lg_sink0_valid78w81w & wire_w_lg_w_lg_sink0_valid72w75w & wire_w_lg_w_lg_sink0_valid66w69w & wire_w_lg_w_lg_sink0_valid60w63w & wire_w_lg_w_lg_sink0_valid54w57w & wire_w_lg_w_lg_sink0_valid48w51w & wire_w_lg_w_lg_sink0_valid42w45w & wire_w_lg_w_lg_sink0_valid36w39w & wire_w_lg_w_lg_sink0_valid30w33w & wire_w_lg_w_lg_sink0_valid24w27w & wire_w_lg_w_lg_sink0_valid18w21w & wire_w_lg_w_lg_sink0_valid12w15w & wire_w_lg_w_lg_sink0_valid5w8w);
 	src_endofpacket <= ((sink0_valid AND sink0_endofpacket) OR (sink1_valid AND sink1_endofpacket));
@@ -826,6 +834,7 @@
 	wire_w_sink0_channel_range552w(0) <= sink0_channel(4);
 	wire_w_sink0_channel_range558w(0) <= sink0_channel(5);
 	wire_w_sink0_channel_range564w(0) <= sink0_channel(6);
+	wire_w_sink0_channel_range570w(0) <= sink0_channel(7);
 	wire_w_sink0_data_range4w(0) <= sink0_data(0);
 	wire_w_sink0_data_range65w(0) <= sink0_data(10);
 	wire_w_sink0_data_range71w(0) <= sink0_data(11);
@@ -920,6 +929,7 @@
 	wire_w_sink1_channel_range554w(0) <= sink1_channel(4);
 	wire_w_sink1_channel_range560w(0) <= sink1_channel(5);
 	wire_w_sink1_channel_range566w(0) <= sink1_channel(6);
+	wire_w_sink1_channel_range572w(0) <= sink1_channel(7);
 	wire_w_sink1_data_range6w(0) <= sink1_data(0);
 	wire_w_sink1_data_range67w(0) <= sink1_data(10);
 	wire_w_sink1_data_range73w(0) <= sink1_data(11);

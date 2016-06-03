@@ -33,6 +33,7 @@
 		 clk	:	IN  STD_LOGIC;
 		 receiver0_irq	:	IN  STD_LOGIC;
 		 receiver1_irq	:	IN  STD_LOGIC;
+		 receiver2_irq	:	IN  STD_LOGIC;
 		 reset	:	IN  STD_LOGIC;
 		 sender_irq	:	OUT  STD_LOGIC_VECTOR (31 DOWNTO 0)
 	 ); 
@@ -44,7 +45,7 @@
 	 ATTRIBUTE synthesis_clearbox OF RTL : ARCHITECTURE IS 1;
  BEGIN
 
-	sender_irq <= ( "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & receiver1_irq & receiver0_irq);
+	sender_irq <= ( "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & "0" & receiver2_irq & receiver1_irq & receiver0_irq);
 
  END RTL; --nios_irq_mapper
 --synopsys translate_on

@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 13.0sp1 232 win32 2016.06.01.17:34:30
+# ACDS 13.0sp1 232 win32 2016.06.02.13:08:45
 
 # ----------------------------------------
 # Auto-generated simulation script
@@ -52,7 +52,7 @@ if { [ string match "Active" $Aldec ] } {
 # Copy ROM/RAM files to simulation directory
 alias file_copy {
   echo "\[exec\] file_copy"
-  file copy -force $QSYS_SIMDIR/submodules/nios_onchip_memory2_0.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/nios_onchip_memory.hex ./
   file copy -force $QSYS_SIMDIR/submodules/nios_CPU_ociram_default_contents.dat ./
   file copy -force $QSYS_SIMDIR/submodules/nios_CPU_ociram_default_contents.hex ./
   file copy -force $QSYS_SIMDIR/submodules/nios_CPU_ociram_default_contents.mif ./
@@ -94,50 +94,52 @@ ensure_lib                  ./libraries/altera_lnsim
 vmap       altera_lnsim     ./libraries/altera_lnsim    
 ensure_lib                  ./libraries/cycloneii       
 vmap       cycloneii        ./libraries/cycloneii       
-ensure_lib                                                                        ./libraries/irq_mapper                                                            
-vmap       irq_mapper                                                             ./libraries/irq_mapper                                                            
-ensure_lib                                                                        ./libraries/rsp_xbar_mux_001                                                      
-vmap       rsp_xbar_mux_001                                                       ./libraries/rsp_xbar_mux_001                                                      
-ensure_lib                                                                        ./libraries/rsp_xbar_mux                                                          
-vmap       rsp_xbar_mux                                                           ./libraries/rsp_xbar_mux                                                          
-ensure_lib                                                                        ./libraries/rsp_xbar_demux_001                                                    
-vmap       rsp_xbar_demux_001                                                     ./libraries/rsp_xbar_demux_001                                                    
-ensure_lib                                                                        ./libraries/cmd_xbar_mux                                                          
-vmap       cmd_xbar_mux                                                           ./libraries/cmd_xbar_mux                                                          
-ensure_lib                                                                        ./libraries/cmd_xbar_demux_001                                                    
-vmap       cmd_xbar_demux_001                                                     ./libraries/cmd_xbar_demux_001                                                    
-ensure_lib                                                                        ./libraries/cmd_xbar_demux                                                        
-vmap       cmd_xbar_demux                                                         ./libraries/cmd_xbar_demux                                                        
-ensure_lib                                                                        ./libraries/rst_controller                                                        
-vmap       rst_controller                                                         ./libraries/rst_controller                                                        
-ensure_lib                                                                        ./libraries/id_router_001                                                         
-vmap       id_router_001                                                          ./libraries/id_router_001                                                         
-ensure_lib                                                                        ./libraries/id_router                                                             
-vmap       id_router                                                              ./libraries/id_router                                                             
-ensure_lib                                                                        ./libraries/addr_router_001                                                       
-vmap       addr_router_001                                                        ./libraries/addr_router_001                                                       
-ensure_lib                                                                        ./libraries/addr_router                                                           
-vmap       addr_router                                                            ./libraries/addr_router                                                           
-ensure_lib                                                                        ./libraries/onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo
-vmap       onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo ./libraries/onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo
-ensure_lib                                                                        ./libraries/onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent         
-vmap       onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent          ./libraries/onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent         
-ensure_lib                                                                        ./libraries/CPU_data_master_translator_avalon_universal_master_0_agent            
-vmap       CPU_data_master_translator_avalon_universal_master_0_agent             ./libraries/CPU_data_master_translator_avalon_universal_master_0_agent            
-ensure_lib                                                                        ./libraries/onchip_memory2_0_s1_translator                                        
-vmap       onchip_memory2_0_s1_translator                                         ./libraries/onchip_memory2_0_s1_translator                                        
-ensure_lib                                                                        ./libraries/CPU_data_master_translator                                            
-vmap       CPU_data_master_translator                                             ./libraries/CPU_data_master_translator                                            
-ensure_lib                                                                        ./libraries/jtag_uart_0                                                           
-vmap       jtag_uart_0                                                            ./libraries/jtag_uart_0                                                           
-ensure_lib                                                                        ./libraries/onchip_memory2_0                                                      
-vmap       onchip_memory2_0                                                       ./libraries/onchip_memory2_0                                                      
-ensure_lib                                                                        ./libraries/data_clk                                                              
-vmap       data_clk                                                               ./libraries/data_clk                                                              
-ensure_lib                                                                        ./libraries/CPU                                                                   
-vmap       CPU                                                                    ./libraries/CPU                                                                   
-ensure_lib                                                                        ./libraries/data_ctr                                                              
-vmap       data_ctr                                                               ./libraries/data_ctr                                                              
+ensure_lib                                                                     ./libraries/irq_mapper                                                         
+vmap       irq_mapper                                                          ./libraries/irq_mapper                                                         
+ensure_lib                                                                     ./libraries/rsp_xbar_mux_001                                                   
+vmap       rsp_xbar_mux_001                                                    ./libraries/rsp_xbar_mux_001                                                   
+ensure_lib                                                                     ./libraries/rsp_xbar_mux                                                       
+vmap       rsp_xbar_mux                                                        ./libraries/rsp_xbar_mux                                                       
+ensure_lib                                                                     ./libraries/rsp_xbar_demux_001                                                 
+vmap       rsp_xbar_demux_001                                                  ./libraries/rsp_xbar_demux_001                                                 
+ensure_lib                                                                     ./libraries/cmd_xbar_mux                                                       
+vmap       cmd_xbar_mux                                                        ./libraries/cmd_xbar_mux                                                       
+ensure_lib                                                                     ./libraries/cmd_xbar_demux_001                                                 
+vmap       cmd_xbar_demux_001                                                  ./libraries/cmd_xbar_demux_001                                                 
+ensure_lib                                                                     ./libraries/cmd_xbar_demux                                                     
+vmap       cmd_xbar_demux                                                      ./libraries/cmd_xbar_demux                                                     
+ensure_lib                                                                     ./libraries/rst_controller                                                     
+vmap       rst_controller                                                      ./libraries/rst_controller                                                     
+ensure_lib                                                                     ./libraries/id_router_001                                                      
+vmap       id_router_001                                                       ./libraries/id_router_001                                                      
+ensure_lib                                                                     ./libraries/id_router                                                          
+vmap       id_router                                                           ./libraries/id_router                                                          
+ensure_lib                                                                     ./libraries/addr_router_001                                                    
+vmap       addr_router_001                                                     ./libraries/addr_router_001                                                    
+ensure_lib                                                                     ./libraries/addr_router                                                        
+vmap       addr_router                                                         ./libraries/addr_router                                                        
+ensure_lib                                                                     ./libraries/onchip_memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo
+vmap       onchip_memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo ./libraries/onchip_memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo
+ensure_lib                                                                     ./libraries/onchip_memory_s1_translator_avalon_universal_slave_0_agent         
+vmap       onchip_memory_s1_translator_avalon_universal_slave_0_agent          ./libraries/onchip_memory_s1_translator_avalon_universal_slave_0_agent         
+ensure_lib                                                                     ./libraries/CPU_data_master_translator_avalon_universal_master_0_agent         
+vmap       CPU_data_master_translator_avalon_universal_master_0_agent          ./libraries/CPU_data_master_translator_avalon_universal_master_0_agent         
+ensure_lib                                                                     ./libraries/onchip_memory_s1_translator                                        
+vmap       onchip_memory_s1_translator                                         ./libraries/onchip_memory_s1_translator                                        
+ensure_lib                                                                     ./libraries/CPU_data_master_translator                                         
+vmap       CPU_data_master_translator                                          ./libraries/CPU_data_master_translator                                         
+ensure_lib                                                                     ./libraries/uart                                                               
+vmap       uart                                                                ./libraries/uart                                                               
+ensure_lib                                                                     ./libraries/jtag_uart                                                          
+vmap       jtag_uart                                                           ./libraries/jtag_uart                                                          
+ensure_lib                                                                     ./libraries/onchip_memory                                                      
+vmap       onchip_memory                                                       ./libraries/onchip_memory                                                      
+ensure_lib                                                                     ./libraries/data_clk                                                           
+vmap       data_clk                                                            ./libraries/data_clk                                                           
+ensure_lib                                                                     ./libraries/CPU                                                                
+vmap       CPU                                                                 ./libraries/CPU                                                                
+ensure_lib                                                                     ./libraries/data_ctr                                                           
+vmap       data_ctr                                                            ./libraries/data_ctr                                                           
 
 # ----------------------------------------
 # Compile device library files
@@ -170,57 +172,61 @@ alias dev_com {
 # Compile the design files in correct order
 alias com {
   echo "\[exec\] com"
-  vcom  "$QSYS_SIMDIR/submodules/nios_irq_mapper.vho"                                                             -work irq_mapper                                                            
-  vcom  "$QSYS_SIMDIR/submodules/nios_rsp_xbar_mux_001.vho"                                                       -work rsp_xbar_mux_001                                                      
-  vcom  "$QSYS_SIMDIR/submodules/nios_rsp_xbar_mux.vho"                                                           -work rsp_xbar_mux                                                          
-  vcom  "$QSYS_SIMDIR/submodules/nios_rsp_xbar_demux_001.vho"                                                     -work rsp_xbar_demux_001                                                    
-  vcom  "$QSYS_SIMDIR/submodules/nios_cmd_xbar_mux.vho"                                                           -work cmd_xbar_mux                                                          
-  vcom  "$QSYS_SIMDIR/submodules/nios_cmd_xbar_demux_001.vho"                                                     -work cmd_xbar_demux_001                                                    
-  vcom  "$QSYS_SIMDIR/submodules/nios_cmd_xbar_demux.vho"                                                         -work cmd_xbar_demux                                                        
-  vlog  "$QSYS_SIMDIR/submodules/aldec/altera_reset_controller.v"                                                 -work rst_controller                                                        
-  vlog  "$QSYS_SIMDIR/submodules/aldec/altera_reset_synchronizer.v"                                               -work rst_controller                                                        
-  vcom  "$QSYS_SIMDIR/submodules/nios_id_router_001.vho"                                                          -work id_router_001                                                         
-  vcom  "$QSYS_SIMDIR/submodules/nios_id_router.vho"                                                              -work id_router                                                             
-  vcom  "$QSYS_SIMDIR/submodules/nios_addr_router_001.vho"                                                        -work addr_router_001                                                       
-  vcom  "$QSYS_SIMDIR/submodules/nios_addr_router.vho"                                                            -work addr_router                                                           
-  vcom  "$QSYS_SIMDIR/submodules/nios_onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo.vho" -work onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo
-  vlog  "$QSYS_SIMDIR/submodules/aldec/altera_merlin_slave_agent.sv"                                              -work onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent         
-  vlog  "$QSYS_SIMDIR/submodules/aldec/altera_merlin_burst_uncompressor.sv"                                       -work onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent         
-  vlog  "$QSYS_SIMDIR/submodules/aldec/altera_merlin_master_agent.sv"                                             -work CPU_data_master_translator_avalon_universal_master_0_agent            
-  vlog  "$QSYS_SIMDIR/submodules/aldec/altera_merlin_slave_translator.sv"                                         -work onchip_memory2_0_s1_translator                                        
-  vlog  "$QSYS_SIMDIR/submodules/aldec/altera_merlin_master_translator.sv"                                        -work CPU_data_master_translator                                            
-  vcom  "$QSYS_SIMDIR/submodules/nios_jtag_uart_0.vhd"                                                            -work jtag_uart_0                                                           
-  vcom  "$QSYS_SIMDIR/submodules/nios_onchip_memory2_0.vhd"                                                       -work onchip_memory2_0                                                      
-  vcom  "$QSYS_SIMDIR/submodules/nios_data_clk.vhd"                                                               -work data_clk                                                              
-  vcom  "$QSYS_SIMDIR/submodules/nios_CPU.vhd"                                                                    -work CPU                                                                   
-  vcom  "$QSYS_SIMDIR/submodules/nios_CPU_jtag_debug_module_sysclk.vhd"                                           -work CPU                                                                   
-  vcom  "$QSYS_SIMDIR/submodules/nios_CPU_jtag_debug_module_tck.vhd"                                              -work CPU                                                                   
-  vcom  "$QSYS_SIMDIR/submodules/nios_CPU_jtag_debug_module_wrapper.vhd"                                          -work CPU                                                                   
-  vcom  "$QSYS_SIMDIR/submodules/nios_CPU_oci_test_bench.vhd"                                                     -work CPU                                                                   
-  vcom  "$QSYS_SIMDIR/submodules/nios_CPU_test_bench.vhd"                                                         -work CPU                                                                   
-  vcom  "$QSYS_SIMDIR/submodules/nios_data_ctr.vhd"                                                               -work data_ctr                                                              
-  vcom  "$QSYS_SIMDIR/nios.vhd"                                                                                                                                                               
-  vcom  "$QSYS_SIMDIR/nios_onchip_memory2_0_s1_translator.vhd"                                                                                                                                
-  vcom  "$QSYS_SIMDIR/nios_jtag_uart_0_avalon_jtag_slave_translator.vhd"                                                                                                                      
-  vcom  "$QSYS_SIMDIR/nios_data_ch9_s1_translator.vhd"                                                                                                                                        
-  vcom  "$QSYS_SIMDIR/nios_cpu_jtag_debug_module_translator.vhd"                                                                                                                              
-  vcom  "$QSYS_SIMDIR/nios_data_clk_s1_translator.vhd"                                                                                                                                        
-  vcom  "$QSYS_SIMDIR/nios_cpu_data_master_translator.vhd"                                                                                                                                    
-  vcom  "$QSYS_SIMDIR/nios_cpu_instruction_master_translator.vhd"                                                                                                                             
+  vcom  "$QSYS_SIMDIR/submodules/nios_irq_mapper.vho"                                                          -work irq_mapper                                                         
+  vcom  "$QSYS_SIMDIR/submodules/nios_rsp_xbar_mux_001.vho"                                                    -work rsp_xbar_mux_001                                                   
+  vcom  "$QSYS_SIMDIR/submodules/nios_rsp_xbar_mux.vho"                                                        -work rsp_xbar_mux                                                       
+  vcom  "$QSYS_SIMDIR/submodules/nios_rsp_xbar_demux_001.vho"                                                  -work rsp_xbar_demux_001                                                 
+  vcom  "$QSYS_SIMDIR/submodules/nios_cmd_xbar_mux.vho"                                                        -work cmd_xbar_mux                                                       
+  vcom  "$QSYS_SIMDIR/submodules/nios_cmd_xbar_demux_001.vho"                                                  -work cmd_xbar_demux_001                                                 
+  vcom  "$QSYS_SIMDIR/submodules/nios_cmd_xbar_demux.vho"                                                      -work cmd_xbar_demux                                                     
+  vlog  "$QSYS_SIMDIR/submodules/aldec/altera_reset_controller.v"                                              -work rst_controller                                                     
+  vlog  "$QSYS_SIMDIR/submodules/aldec/altera_reset_synchronizer.v"                                            -work rst_controller                                                     
+  vcom  "$QSYS_SIMDIR/submodules/nios_id_router_001.vho"                                                       -work id_router_001                                                      
+  vcom  "$QSYS_SIMDIR/submodules/nios_id_router.vho"                                                           -work id_router                                                          
+  vcom  "$QSYS_SIMDIR/submodules/nios_addr_router_001.vho"                                                     -work addr_router_001                                                    
+  vcom  "$QSYS_SIMDIR/submodules/nios_addr_router.vho"                                                         -work addr_router                                                        
+  vcom  "$QSYS_SIMDIR/submodules/nios_onchip_memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo.vho" -work onchip_memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo
+  vlog  "$QSYS_SIMDIR/submodules/aldec/altera_merlin_slave_agent.sv"                                           -work onchip_memory_s1_translator_avalon_universal_slave_0_agent         
+  vlog  "$QSYS_SIMDIR/submodules/aldec/altera_merlin_burst_uncompressor.sv"                                    -work onchip_memory_s1_translator_avalon_universal_slave_0_agent         
+  vlog  "$QSYS_SIMDIR/submodules/aldec/altera_merlin_master_agent.sv"                                          -work CPU_data_master_translator_avalon_universal_master_0_agent         
+  vlog  "$QSYS_SIMDIR/submodules/aldec/altera_merlin_slave_translator.sv"                                      -work onchip_memory_s1_translator                                        
+  vlog  "$QSYS_SIMDIR/submodules/aldec/altera_merlin_master_translator.sv"                                     -work CPU_data_master_translator                                         
+  vcom  "$QSYS_SIMDIR/submodules/nios_uart.vhd"                                                                -work uart                                                               
+  vcom  "$QSYS_SIMDIR/submodules/nios_jtag_uart.vhd"                                                           -work jtag_uart                                                          
+  vcom  "$QSYS_SIMDIR/submodules/nios_onchip_memory.vhd"                                                       -work onchip_memory                                                      
+  vcom  "$QSYS_SIMDIR/submodules/nios_data_clk.vhd"                                                            -work data_clk                                                           
+  vcom  "$QSYS_SIMDIR/submodules/nios_CPU.vhd"                                                                 -work CPU                                                                
+  vcom  "$QSYS_SIMDIR/submodules/nios_CPU_jtag_debug_module_sysclk.vhd"                                        -work CPU                                                                
+  vcom  "$QSYS_SIMDIR/submodules/nios_CPU_jtag_debug_module_tck.vhd"                                           -work CPU                                                                
+  vcom  "$QSYS_SIMDIR/submodules/nios_CPU_jtag_debug_module_wrapper.vhd"                                       -work CPU                                                                
+  vcom  "$QSYS_SIMDIR/submodules/nios_CPU_oci_test_bench.vhd"                                                  -work CPU                                                                
+  vcom  "$QSYS_SIMDIR/submodules/nios_CPU_test_bench.vhd"                                                      -work CPU                                                                
+  vcom  "$QSYS_SIMDIR/submodules/nios_data_ctr.vhd"                                                            -work data_ctr                                                           
+  vcom  "$QSYS_SIMDIR/nios.vhd"                                                                                                                                                         
+  vcom  "$QSYS_SIMDIR/nios_onchip_memory_s1_translator.vhd"                                                                                                                             
+  vcom  "$QSYS_SIMDIR/nios_jtag_uart_avalon_jtag_slave_translator.vhd"                                                                                                                  
+  vcom  "$QSYS_SIMDIR/nios_data_ch9_s1_translator.vhd"                                                                                                                                  
+  vcom  "$QSYS_SIMDIR/nios_cpu_jtag_debug_module_translator.vhd"                                                                                                                        
+  vcom  "$QSYS_SIMDIR/nios_uart_s1_translator.vhd"                                                                                                                                      
+  vcom  "$QSYS_SIMDIR/nios_data_clk_s1_translator.vhd"                                                                                                                                  
+  vcom  "$QSYS_SIMDIR/nios_rst_controller.vhd"                                                                                                                                          
+  vcom  "$QSYS_SIMDIR/nios_rst_controller_001.vhd"                                                                                                                                      
+  vcom  "$QSYS_SIMDIR/nios_cpu_data_master_translator.vhd"                                                                                                                              
+  vcom  "$QSYS_SIMDIR/nios_cpu_instruction_master_translator.vhd"                                                                                                                       
 }
 
 # ----------------------------------------
 # Elaborate top level design
 alias elab {
   echo "\[exec\] elab"
-  vsim +access +r  -t ps -L work -L irq_mapper -L rsp_xbar_mux_001 -L rsp_xbar_mux -L rsp_xbar_demux_001 -L cmd_xbar_mux -L cmd_xbar_demux_001 -L cmd_xbar_demux -L rst_controller -L id_router_001 -L id_router -L addr_router_001 -L addr_router -L onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo -L onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent -L CPU_data_master_translator_avalon_universal_master_0_agent -L onchip_memory2_0_s1_translator -L CPU_data_master_translator -L jtag_uart_0 -L onchip_memory2_0 -L data_clk -L CPU -L data_ctr -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii $TOP_LEVEL_NAME
+  vsim +access +r  -t ps -L work -L irq_mapper -L rsp_xbar_mux_001 -L rsp_xbar_mux -L rsp_xbar_demux_001 -L cmd_xbar_mux -L cmd_xbar_demux_001 -L cmd_xbar_demux -L rst_controller -L id_router_001 -L id_router -L addr_router_001 -L addr_router -L onchip_memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo -L onchip_memory_s1_translator_avalon_universal_slave_0_agent -L CPU_data_master_translator_avalon_universal_master_0_agent -L onchip_memory_s1_translator -L CPU_data_master_translator -L uart -L jtag_uart -L onchip_memory -L data_clk -L CPU -L data_ctr -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii $TOP_LEVEL_NAME
 }
 
 # ----------------------------------------
 # Elaborate the top level design with -dbg -O2 option
 alias elab_debug {
   echo "\[exec\] elab_debug"
-  vsim -dbg -O2 +access +r -t ps -L work -L irq_mapper -L rsp_xbar_mux_001 -L rsp_xbar_mux -L rsp_xbar_demux_001 -L cmd_xbar_mux -L cmd_xbar_demux_001 -L cmd_xbar_demux -L rst_controller -L id_router_001 -L id_router -L addr_router_001 -L addr_router -L onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo -L onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent -L CPU_data_master_translator_avalon_universal_master_0_agent -L onchip_memory2_0_s1_translator -L CPU_data_master_translator -L jtag_uart_0 -L onchip_memory2_0 -L data_clk -L CPU -L data_ctr -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii $TOP_LEVEL_NAME
+  vsim -dbg -O2 +access +r -t ps -L work -L irq_mapper -L rsp_xbar_mux_001 -L rsp_xbar_mux -L rsp_xbar_demux_001 -L cmd_xbar_mux -L cmd_xbar_demux_001 -L cmd_xbar_demux -L rst_controller -L id_router_001 -L id_router -L addr_router_001 -L addr_router -L onchip_memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo -L onchip_memory_s1_translator_avalon_universal_slave_0_agent -L CPU_data_master_translator_avalon_universal_master_0_agent -L onchip_memory_s1_translator -L CPU_data_master_translator -L uart -L jtag_uart -L onchip_memory -L data_clk -L CPU -L data_ctr -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii $TOP_LEVEL_NAME
 }
 
 # ----------------------------------------

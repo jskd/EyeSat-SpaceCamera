@@ -37,7 +37,7 @@
 		 sink_ready	:	OUT  STD_LOGIC;
 		 sink_startofpacket	:	IN  STD_LOGIC;
 		 sink_valid	:	IN  STD_LOGIC;
-		 src_channel	:	OUT  STD_LOGIC_VECTOR (6 DOWNTO 0);
+		 src_channel	:	OUT  STD_LOGIC_VECTOR (7 DOWNTO 0);
 		 src_data	:	OUT  STD_LOGIC_VECTOR (86 DOWNTO 0);
 		 src_endofpacket	:	OUT  STD_LOGIC;
 		 src_ready	:	IN  STD_LOGIC;
@@ -53,7 +53,7 @@
  BEGIN
 
 	sink_ready <= src_ready;
-	src_channel <= ( "0" & "0" & "0" & "0" & "0" & "0" & "1");
+	src_channel <= ( "0" & "0" & "0" & "0" & "0" & "0" & "0" & "1");
 	src_data <= ( sink_data(86 DOWNTO 0));
 	src_endofpacket <= sink_endofpacket;
 	src_startofpacket <= sink_startofpacket;

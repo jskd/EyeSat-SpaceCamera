@@ -48,7 +48,7 @@
  <parameter name="projectName" value="" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1464795285190" />
+ <parameter name="timeStamp" value="1464865732126" />
  <parameter name="useTestBenchNamingPattern" value="true" />
  <instanceScript></instanceScript>
  <module kind="nios" version="1.0" enabled="1" name="nios_inst">
