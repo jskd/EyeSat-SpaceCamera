@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=OUT9_P Pin=GPIO_CMV4000-25
+Removed Pin From Net: NetName=OUTCLK_N Pin=GPIO_CMV4000-28
+Change Component Designator: OldDesignator=GPIO_CMV4000 NewDesignator=DE2_GPIO_0
+Change Component Designator: OldDesignator=GPIO_DE2 NewDesignator=GPIO_CMV4000
+Added Pin To Net: NetName=OUT9_P Pin=DE2_GPIO_0-23
+Added Pin To Net: NetName=OUTCLK_N Pin=DE2_GPIO_0-26
+Added Room: Name=SCH_interface_cmv4000-de2

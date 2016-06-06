@@ -1,0 +1,17 @@
+Removed Pin From Net: NetName=OUT1_P Pin=DE2_GPIO_0-19
+Removed Pin From Net: NetName=OUT1_N Pin=DE2_GPIO_0-20
+Removed Pin From Net: NetName=OUTCTR_P Pin=DE2_GPIO_0-21
+Removed Pin From Net: NetName=OUTCTR_N Pin=DE2_GPIO_0-22
+Removed Pin From Net: NetName=OUT9_P Pin=DE2_GPIO_0-23
+Removed Pin From Net: NetName=OUT9_N Pin=DE2_GPIO_0-24
+Removed Pin From Net: NetName=OUTCLK_P Pin=DE2_GPIO_0-26
+Removed Pin From Net: NetName=OUTCLK_N Pin=DE2_GPIO_0-27
+Added Pin To Net: NetName=OUT1_P Pin=DE2_GPIO_0-15
+Added Pin To Net: NetName=OUT1_N Pin=DE2_GPIO_0-16
+Added Pin To Net: NetName=OUTCTR_P Pin=DE2_GPIO_0-19
+Added Pin To Net: NetName=OUTCTR_N Pin=DE2_GPIO_0-20
+Added Pin To Net: NetName=OUT9_P Pin=DE2_GPIO_0-21
+Added Pin To Net: NetName=OUT9_N Pin=DE2_GPIO_0-22
+Added Pin To Net: NetName=OUTCLK_P Pin=DE2_GPIO_0-23
+Added Pin To Net: NetName=OUTCLK_N Pin=DE2_GPIO_0-24
+Added Room: Name=SCH_interface_cmv4000-de2

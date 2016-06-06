@@ -1,0 +1,23 @@
+Output: Gerber Files
+Type  : Gerber
+From  : Variant [[No Variations]] of Project [PRJ_cmv4000.PrjPcb]
+   Generated File[PCB_cmv4000.GTL]
+   Generated File[PCB_cmv4000.G1]
+   Generated File[PCB_cmv4000.G2]
+   Generated File[PCB_cmv4000.GBL]
+   Generated File[PCB_cmv4000.GTO]
+   Generated File[PCB_cmv4000.GTP]
+   Generated File[PCB_cmv4000.GTS]
+   Generated File[PCB_cmv4000.GBS]
+   Generated File[PCB_cmv4000.GBP]
+   Generated File[PCB_cmv4000.GBO]
+   Generated File[PCB_cmv4000.GM1]
+   Generated File[PCB_cmv4000.RUL]
+   Generated File[PCB_cmv4000.EXTREP]
+   Generated File[PCB_cmv4000.REP]
+
+
+Files Generated   : 14
+Documents Printed : 0
+
+Finished Output Generation At 14:04:23 On 27/03/2015

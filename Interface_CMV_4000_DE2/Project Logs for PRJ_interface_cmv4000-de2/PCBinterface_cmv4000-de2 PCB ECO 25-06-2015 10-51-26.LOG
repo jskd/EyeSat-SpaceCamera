@@ -1,0 +1,13 @@
+Added Pin To Net: NetName=SPI_CLK Pin=GPIO_CMV4000-3
+Added Pin To Net: NetName=SPI_IN Pin=GPIO_CMV4000-5
+Added Pin To Net: NetName=FRAME_REQ Pin=GPIO_CMV4000-7
+Added Pin To Net: NetName=CLK_IN Pin=GPIO_CMV4000-9
+Added Pin To Net: NetName=VCC5 Pin=GPIO_CMV4000-11
+Added Pin To Net: NetName=LVDS_CLK_P Pin=GPIO_CMV4000-13
+Added Pin To Net: NetName=OUT1_P Pin=GPIO_CMV4000-19
+Added Pin To Net: NetName=OUT9_P Pin=GPIO_CMV4000-25
+Added Pin To Net: NetName=OUTCLK_P Pin=GPIO_CMV4000-27
+Added Pin To Net: NetName=VDD33 Pin=GPIO_CMV4000-29
+Added Pin To Net: NetName=OUTCTR_P Pin=GPIO_CMV4000-21
+Added Net: Name=OUTCTR_P
+Added Differential Pair: Name=OUTCTR
