@@ -1,4 +1,75 @@
-|cmv_controller
+|de2_cyclone2
+DRAM_CAS_N <= cmv_controller:inst.SDRAM_CAS_N
+CLOCK_50 => cmv_controller:inst.NIOS_CLK_50
+KEY[0] => cmv_controller:inst.NIOS_PLL_ARESET
+KEY[1] => cmv_controller:inst.NIOS_RESET_N
+KEY[2] => cmv_controller:inst.LVDS_PLL_ARESET
+LVDS_CLK => cmv_controller:inst.LVDS_OUTCLK
+OUTCTR => cmv_controller:inst.LVDS_OUTCTR
+UART_RXD => cmv_controller:inst.UART_RX
+SPI_OUT => cmv_controller:inst.SPI_MISO
+OUT1 => cmv_controller:inst.LVDS_OUTCH[15]
+OUT1 => cmv_controller:inst.LVDS_OUTCH[14]
+OUT1 => cmv_controller:inst.LVDS_OUTCH[13]
+OUT1 => cmv_controller:inst.LVDS_OUTCH[12]
+OUT1 => cmv_controller:inst.LVDS_OUTCH[11]
+OUT1 => cmv_controller:inst.LVDS_OUTCH[10]
+OUT1 => cmv_controller:inst.LVDS_OUTCH[9]
+OUT1 => cmv_controller:inst.LVDS_OUTCH[8]
+OUT9 => cmv_controller:inst.LVDS_OUTCH[7]
+OUT9 => cmv_controller:inst.LVDS_OUTCH[6]
+OUT9 => cmv_controller:inst.LVDS_OUTCH[5]
+OUT9 => cmv_controller:inst.LVDS_OUTCH[4]
+OUT9 => cmv_controller:inst.LVDS_OUTCH[3]
+OUT9 => cmv_controller:inst.LVDS_OUTCH[2]
+OUT9 => cmv_controller:inst.LVDS_OUTCH[1]
+OUT9 => cmv_controller:inst.LVDS_OUTCH[0]
+DRAM_DQ[0] <> cmv_controller:inst.SDRAM_DQ[0]
+DRAM_DQ[1] <> cmv_controller:inst.SDRAM_DQ[1]
+DRAM_DQ[2] <> cmv_controller:inst.SDRAM_DQ[2]
+DRAM_DQ[3] <> cmv_controller:inst.SDRAM_DQ[3]
+DRAM_DQ[4] <> cmv_controller:inst.SDRAM_DQ[4]
+DRAM_DQ[5] <> cmv_controller:inst.SDRAM_DQ[5]
+DRAM_DQ[6] <> cmv_controller:inst.SDRAM_DQ[6]
+DRAM_DQ[7] <> cmv_controller:inst.SDRAM_DQ[7]
+DRAM_DQ[8] <> cmv_controller:inst.SDRAM_DQ[8]
+DRAM_DQ[9] <> cmv_controller:inst.SDRAM_DQ[9]
+DRAM_DQ[10] <> cmv_controller:inst.SDRAM_DQ[10]
+DRAM_DQ[11] <> cmv_controller:inst.SDRAM_DQ[11]
+DRAM_DQ[12] <> cmv_controller:inst.SDRAM_DQ[12]
+DRAM_DQ[13] <> cmv_controller:inst.SDRAM_DQ[13]
+DRAM_DQ[14] <> cmv_controller:inst.SDRAM_DQ[14]
+DRAM_DQ[15] <> cmv_controller:inst.SDRAM_DQ[15]
+DRAM_CKE <= cmv_controller:inst.SDRAM_CKE
+DRAM_CS_N <= cmv_controller:inst.SDRAM_CS_N
+DRAM_LDQM <= cmv_controller:inst.SDRAM_DQM[1]
+DRAM_UDQM <= cmv_controller:inst.SDRAM_DQM[0]
+DRAM_BA_0 <= cmv_controller:inst.SDRAM_BA[1]
+DRAM_BA_1 <= cmv_controller:inst.SDRAM_BA[0]
+DRAM_RAS_N <= cmv_controller:inst.SDRAM_RAS_N
+DRAM_WE_N <= cmv_controller:inst.SDRAM_WE_N
+DRAM_CLK <= cmv_controller:inst.SDRAM_CLK
+UART_TXD <= cmv_controller:inst.UART_TX
+SYS_RES_N <= <GND>
+CLK_IN <= <GND>
+SPI_IN <= cmv_controller:inst.SPI_MOSI
+SPI_CLK <= cmv_controller:inst.SPI_SCLK
+SPI_EN <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+DRAM_ADDR[0] <= cmv_controller:inst.SDRAM_ADDR[0]
+DRAM_ADDR[1] <= cmv_controller:inst.SDRAM_ADDR[1]
+DRAM_ADDR[2] <= cmv_controller:inst.SDRAM_ADDR[2]
+DRAM_ADDR[3] <= cmv_controller:inst.SDRAM_ADDR[3]
+DRAM_ADDR[4] <= cmv_controller:inst.SDRAM_ADDR[4]
+DRAM_ADDR[5] <= cmv_controller:inst.SDRAM_ADDR[5]
+DRAM_ADDR[6] <= cmv_controller:inst.SDRAM_ADDR[6]
+DRAM_ADDR[7] <= cmv_controller:inst.SDRAM_ADDR[7]
+DRAM_ADDR[8] <= cmv_controller:inst.SDRAM_ADDR[8]
+DRAM_ADDR[9] <= cmv_controller:inst.SDRAM_ADDR[9]
+DRAM_ADDR[10] <= cmv_controller:inst.SDRAM_ADDR[10]
+DRAM_ADDR[11] <= cmv_controller:inst.SDRAM_ADDR[11]
+
+
+|de2_cyclone2|cmv_controller:inst
 SDRAM_CAS_N <= nios:inst7.sdram_controller_cas_n
 NIOS_CLK_50 => altpll0:inst1.inclk0
 NIOS_PLL_ARESET => altpll0:inst1.areset
@@ -67,7 +138,7 @@ SDRAM_DQM[0] <= nios:inst7.sdram_controller_dqm[0]
 SDRAM_DQM[1] <= nios:inst7.sdram_controller_dqm[1]
 
 
-|cmv_controller|nios:inst7
+|de2_cyclone2|cmv_controller:inst|nios:inst7
 clk_clk => clk_clk.IN79
 reset_reset_n => _.IN1
 reset_reset_n => _.IN1
@@ -147,7 +218,7 @@ spi_SCLK <= nios_spi:spi.SCLK
 spi_SS_n <= nios_spi:spi.SS_n
 
 
-|cmv_controller|nios:inst7|nios_data_ctr:data_ctr
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_data_ctr:data_ctr
 address[0] => Equal0.IN31
 address[1] => Equal0.IN30
 clk => readdata[0]~reg0.CLK
@@ -258,7 +329,7 @@ readdata[30] <= readdata[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 readdata[31] <= readdata[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|nios_data_ctr:data_ch1
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_data_ctr:data_ch1
 address[0] => Equal0.IN31
 address[1] => Equal0.IN30
 clk => readdata[0]~reg0.CLK
@@ -369,7 +440,7 @@ readdata[30] <= readdata[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 readdata[31] <= readdata[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|nios_data_ctr:data_ch9
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_data_ctr:data_ch9
 address[0] => Equal0.IN31
 address[1] => Equal0.IN30
 clk => readdata[0]~reg0.CLK
@@ -480,7 +551,7 @@ readdata[30] <= readdata[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 readdata[31] <= readdata[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|nios_CPU:cpu
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_CPU:cpu
 clk => clk.IN4
 d_irq[0] => W_ipending_reg_nxt.IN1
 d_irq[1] => W_ipending_reg_nxt.IN1
@@ -754,7 +825,7 @@ jtag_debug_module_waitrequest <= nios_CPU_nios2_oci:the_nios_CPU_nios2_oci.waitr
 no_ci_readra <= <GND>
 
 
-|cmv_controller|nios:inst7|nios_CPU:cpu|nios_CPU_test_bench:the_nios_CPU_test_bench
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_CPU:cpu|nios_CPU_test_bench:the_nios_CPU_test_bench
 D_iw[0] => ~NO_FANOUT~
 D_iw[1] => ~NO_FANOUT~
 D_iw[2] => ~NO_FANOUT~
@@ -1081,7 +1152,7 @@ d_write <= d_write~reg0.DB_MAX_OUTPUT_PORT_TYPE
 test_has_ended <= <GND>
 
 
-|cmv_controller|nios:inst7|nios_CPU:cpu|nios_CPU_register_bank_a_module:nios_CPU_register_bank_a
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_CPU:cpu|nios_CPU_register_bank_a_module:nios_CPU_register_bank_a
 clock => clock.IN1
 data[0] => data[0].IN1
 data[1] => data[1].IN1
@@ -1160,7 +1231,7 @@ q[30] <= altsyncram:the_altsyncram.q_b
 q[31] <= altsyncram:the_altsyncram.q_b
 
 
-|cmv_controller|nios:inst7|nios_CPU:cpu|nios_CPU_register_bank_a_module:nios_CPU_register_bank_a|altsyncram:the_altsyncram
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_CPU:cpu|nios_CPU_register_bank_a_module:nios_CPU_register_bank_a|altsyncram:the_altsyncram
 wren_a => altsyncram_8nf1:auto_generated.wren_a
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -1320,7 +1391,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|cmv_controller|nios:inst7|nios_CPU:cpu|nios_CPU_register_bank_a_module:nios_CPU_register_bank_a|altsyncram:the_altsyncram|altsyncram_8nf1:auto_generated
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_CPU:cpu|nios_CPU_register_bank_a_module:nios_CPU_register_bank_a|altsyncram:the_altsyncram|altsyncram_8nf1:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -1771,7 +1842,7 @@ wren_a => ram_block1a30.PORTAWE
 wren_a => ram_block1a31.PORTAWE
 
 
-|cmv_controller|nios:inst7|nios_CPU:cpu|nios_CPU_register_bank_b_module:nios_CPU_register_bank_b
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_CPU:cpu|nios_CPU_register_bank_b_module:nios_CPU_register_bank_b
 clock => clock.IN1
 data[0] => data[0].IN1
 data[1] => data[1].IN1
@@ -1850,7 +1921,7 @@ q[30] <= altsyncram:the_altsyncram.q_b
 q[31] <= altsyncram:the_altsyncram.q_b
 
 
-|cmv_controller|nios:inst7|nios_CPU:cpu|nios_CPU_register_bank_b_module:nios_CPU_register_bank_b|altsyncram:the_altsyncram
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_CPU:cpu|nios_CPU_register_bank_b_module:nios_CPU_register_bank_b|altsyncram:the_altsyncram
 wren_a => altsyncram_9nf1:auto_generated.wren_a
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -2010,7 +2081,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|cmv_controller|nios:inst7|nios_CPU:cpu|nios_CPU_register_bank_b_module:nios_CPU_register_bank_b|altsyncram:the_altsyncram|altsyncram_9nf1:auto_generated
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_CPU:cpu|nios_CPU_register_bank_b_module:nios_CPU_register_bank_b|altsyncram:the_altsyncram|altsyncram_9nf1:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -2461,7 +2532,7 @@ wren_a => ram_block1a30.PORTAWE
 wren_a => ram_block1a31.PORTAWE
 
 
-|cmv_controller|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci
 D_valid => D_valid.IN1
 E_st_data[0] => E_st_data[0].IN1
 E_st_data[1] => E_st_data[1].IN1
@@ -2702,7 +2773,7 @@ resetrequest <= nios_CPU_nios2_oci_debug:the_nios_CPU_nios2_oci_debug.resetreque
 waitrequest <= nios_CPU_nios2_ocimem:the_nios_CPU_nios2_ocimem.waitrequest
 
 
-|cmv_controller|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_oci_debug:the_nios_CPU_nios2_oci_debug
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_oci_debug:the_nios_CPU_nios2_oci_debug
 clk => clk.IN1
 dbrk_break => oci_hbreak_req.IN1
 debugreq => always0.IN0
@@ -2770,7 +2841,7 @@ resetlatch <= resetlatch~reg0.DB_MAX_OUTPUT_PORT_TYPE
 resetrequest <= resetrequest~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_oci_debug:the_nios_CPU_nios2_oci_debug|altera_std_synchronizer:the_altera_std_synchronizer
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_oci_debug:the_nios_CPU_nios2_oci_debug|altera_std_synchronizer:the_altera_std_synchronizer
 clk => dreg[0].CLK
 clk => din_s1.CLK
 reset_n => dreg[0].ACLR
@@ -2779,7 +2850,7 @@ din => din_s1.DATAIN
 dout <= dout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_ocimem:the_nios_CPU_nios2_ocimem
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_ocimem:the_nios_CPU_nios2_ocimem
 address[0] => ociram_addr.DATAA
 address[1] => ociram_addr.DATAA
 address[2] => ociram_addr.DATAA
@@ -3132,7 +3203,7 @@ ociram_readdata[31] <= nios_CPU_ociram_sp_ram_module:nios_CPU_ociram_sp_ram.q
 waitrequest <= waitrequest~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_ocimem:the_nios_CPU_nios2_ocimem|nios_CPU_ociram_sp_ram_module:nios_CPU_ociram_sp_ram
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_ocimem:the_nios_CPU_nios2_ocimem|nios_CPU_ociram_sp_ram_module:nios_CPU_ociram_sp_ram
 address[0] => address[0].IN1
 address[1] => address[1].IN1
 address[2] => address[2].IN1
@@ -3213,7 +3284,7 @@ q[30] <= altsyncram:the_altsyncram.q_a
 q[31] <= altsyncram:the_altsyncram.q_a
 
 
-|cmv_controller|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_ocimem:the_nios_CPU_nios2_ocimem|nios_CPU_ociram_sp_ram_module:nios_CPU_ociram_sp_ram|altsyncram:the_altsyncram
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_ocimem:the_nios_CPU_nios2_ocimem|nios_CPU_ociram_sp_ram_module:nios_CPU_ociram_sp_ram|altsyncram:the_altsyncram
 wren_a => altsyncram_c471:auto_generated.wren_a
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -3313,7 +3384,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|cmv_controller|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_ocimem:the_nios_CPU_nios2_ocimem|nios_CPU_ociram_sp_ram_module:nios_CPU_ociram_sp_ram|altsyncram:the_altsyncram|altsyncram_c471:auto_generated
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_ocimem:the_nios_CPU_nios2_ocimem|nios_CPU_ociram_sp_ram_module:nios_CPU_ociram_sp_ram|altsyncram:the_altsyncram|altsyncram_c471:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -3732,7 +3803,7 @@ wren_a => ram_block1a30.PORTAWE
 wren_a => ram_block1a31.PORTAWE
 
 
-|cmv_controller|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_avalon_reg:the_nios_CPU_nios2_avalon_reg
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_avalon_reg:the_nios_CPU_nios2_avalon_reg
 address[0] => Equal0.IN8
 address[0] => Equal1.IN1
 address[1] => Equal0.IN7
@@ -3927,7 +3998,7 @@ ocireg_mrs <= writedata[0].DB_MAX_OUTPUT_PORT_TYPE
 take_action_ocireg <= take_action_ocireg.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_oci_break:the_nios_CPU_nios2_oci_break
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_oci_break:the_nios_CPU_nios2_oci_break
 clk => trigger_state.CLK
 clk => break_readreg[0]~reg0.CLK
 clk => break_readreg[1]~reg0.CLK
@@ -4275,7 +4346,7 @@ xbrk_ctrl3[6] <= <GND>
 xbrk_ctrl3[7] <= <GND>
 
 
-|cmv_controller|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_oci_xbrk:the_nios_CPU_nios2_oci_xbrk
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_oci_xbrk:the_nios_CPU_nios2_oci_xbrk
 D_valid => ~NO_FANOUT~
 E_valid => xbrk_break~reg0.ENA
 F_pc[0] => ~NO_FANOUT~
@@ -4344,7 +4415,7 @@ xbrk_traceon <= <GND>
 xbrk_trigout <= <GND>
 
 
-|cmv_controller|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_oci_dbrk:the_nios_CPU_nios2_oci_dbrk
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_oci_dbrk:the_nios_CPU_nios2_oci_dbrk
 E_st_data[0] => cpu_d_writedata[0].DATAIN
 E_st_data[1] => cpu_d_writedata[1].DATAIN
 E_st_data[2] => cpu_d_writedata[2].DATAIN
@@ -4553,7 +4624,7 @@ dbrk_traceon <= dbrk_traceon~reg0.DB_MAX_OUTPUT_PORT_TYPE
 dbrk_trigout <= dbrk_trigout~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_oci_itrace:the_nios_CPU_nios2_oci_itrace
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_oci_itrace:the_nios_CPU_nios2_oci_itrace
 clk => dct_count[0]~reg0.CLK
 clk => dct_count[1]~reg0.CLK
 clk => dct_count[2]~reg0.CLK
@@ -4806,7 +4877,7 @@ trc_ctrl[15] <= <GND>
 trc_on <= <GND>
 
 
-|cmv_controller|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_oci_dtrace:the_nios_CPU_nios2_oci_dtrace
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_oci_dtrace:the_nios_CPU_nios2_oci_dtrace
 clk => dtm[0]~reg0.CLK
 clk => dtm[1]~reg0.CLK
 clk => dtm[2]~reg0.CLK
@@ -5132,7 +5203,7 @@ dtm[34] <= dtm[34]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 dtm[35] <= dtm[35]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_oci_dtrace:the_nios_CPU_nios2_oci_dtrace|nios_CPU_nios2_oci_td_mode:nios_CPU_nios2_oci_trc_ctrl_td_mode
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_oci_dtrace:the_nios_CPU_nios2_oci_dtrace|nios_CPU_nios2_oci_td_mode:nios_CPU_nios2_oci_trc_ctrl_td_mode
 ctrl[0] => ~NO_FANOUT~
 ctrl[1] => ~NO_FANOUT~
 ctrl[2] => ~NO_FANOUT~
@@ -5152,7 +5223,7 @@ td_mode[2] <= ctrl[6].DB_MAX_OUTPUT_PORT_TYPE
 td_mode[3] <= ctrl[5].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_oci_fifo:the_nios_CPU_nios2_oci_fifo
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_oci_fifo:the_nios_CPU_nios2_oci_fifo
 atm[0] => ~NO_FANOUT~
 atm[1] => ~NO_FANOUT~
 atm[2] => ~NO_FANOUT~
@@ -5354,7 +5425,7 @@ tw[34] <= itm[34].DB_MAX_OUTPUT_PORT_TYPE
 tw[35] <= itm[35].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_oci_fifo:the_nios_CPU_nios2_oci_fifo|nios_CPU_nios2_oci_compute_tm_count:nios_CPU_nios2_oci_compute_tm_count_tm_count
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_oci_fifo:the_nios_CPU_nios2_oci_fifo|nios_CPU_nios2_oci_compute_tm_count:nios_CPU_nios2_oci_compute_tm_count_tm_count
 atm_valid => Decoder0.IN1
 dtm_valid => Decoder0.IN2
 itm_valid => Decoder0.IN0
@@ -5362,7 +5433,7 @@ compute_tm_count[0] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 compute_tm_count[1] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_oci_fifo:the_nios_CPU_nios2_oci_fifo|nios_CPU_nios2_oci_fifowp_inc:nios_CPU_nios2_oci_fifowp_inc_fifowp
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_oci_fifo:the_nios_CPU_nios2_oci_fifo|nios_CPU_nios2_oci_fifowp_inc:nios_CPU_nios2_oci_fifowp_inc_fifowp
 free2 => always0.IN1
 free3 => always0.IN1
 tm_count[0] => LessThan0.IN4
@@ -5377,7 +5448,7 @@ fifowp_inc[2] <= <GND>
 fifowp_inc[3] <= <GND>
 
 
-|cmv_controller|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_oci_fifo:the_nios_CPU_nios2_oci_fifo|nios_CPU_nios2_oci_fifocount_inc:nios_CPU_nios2_oci_fifocount_inc_fifocount
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_oci_fifo:the_nios_CPU_nios2_oci_fifo|nios_CPU_nios2_oci_fifocount_inc:nios_CPU_nios2_oci_fifocount_inc_fifocount
 empty => fifocount_inc.OUTPUTSELECT
 empty => fifocount_inc.OUTPUTSELECT
 empty => fifocount_inc.OUTPUTSELECT
@@ -5400,7 +5471,7 @@ fifocount_inc[3] <= fifocount_inc.DB_MAX_OUTPUT_PORT_TYPE
 fifocount_inc[4] <= fifocount_inc.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_oci_fifo:the_nios_CPU_nios2_oci_fifo|nios_CPU_oci_test_bench:the_nios_CPU_oci_test_bench
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_oci_fifo:the_nios_CPU_nios2_oci_fifo|nios_CPU_oci_test_bench:the_nios_CPU_oci_test_bench
 dct_buffer[0] => ~NO_FANOUT~
 dct_buffer[1] => ~NO_FANOUT~
 dct_buffer[2] => ~NO_FANOUT~
@@ -5439,7 +5510,7 @@ test_ending => ~NO_FANOUT~
 test_has_ended => ~NO_FANOUT~
 
 
-|cmv_controller|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_oci_pib:the_nios_CPU_nios2_oci_pib
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_oci_pib:the_nios_CPU_nios2_oci_pib
 clk => ~NO_FANOUT~
 clkx2 => ~NO_FANOUT~
 jrst_n => ~NO_FANOUT~
@@ -5500,7 +5571,7 @@ tr_data[16] <= <GND>
 tr_data[17] <= <GND>
 
 
-|cmv_controller|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_oci_im:the_nios_CPU_nios2_oci_im
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_oci_im:the_nios_CPU_nios2_oci_im
 clk => trc_wrap~reg0.CLK
 clk => trc_im_addr[0]~reg0.CLK
 clk => trc_im_addr[1]~reg0.CLK
@@ -5663,7 +5734,7 @@ trc_wrap <= trc_wrap~reg0.DB_MAX_OUTPUT_PORT_TYPE
 xbrk_wrap_traceoff <= xbrk_wrap_traceoff.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_jtag_debug_module_wrapper:the_nios_CPU_jtag_debug_module_wrapper
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_jtag_debug_module_wrapper:the_nios_CPU_jtag_debug_module_wrapper
 MonDReg[0] => MonDReg[0].IN1
 MonDReg[1] => MonDReg[1].IN1
 MonDReg[2] => MonDReg[2].IN1
@@ -5842,7 +5913,7 @@ take_no_action_ocimem_a <= nios_CPU_jtag_debug_module_sysclk:the_nios_CPU_jtag_d
 take_no_action_tracemem_a <= nios_CPU_jtag_debug_module_sysclk:the_nios_CPU_jtag_debug_module_sysclk.take_no_action_tracemem_a
 
 
-|cmv_controller|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_jtag_debug_module_wrapper:the_nios_CPU_jtag_debug_module_wrapper|nios_CPU_jtag_debug_module_tck:the_nios_CPU_jtag_debug_module_tck
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_jtag_debug_module_wrapper:the_nios_CPU_jtag_debug_module_wrapper|nios_CPU_jtag_debug_module_tck:the_nios_CPU_jtag_debug_module_tck
 MonDReg[0] => Mux36.IN0
 MonDReg[1] => Mux35.IN0
 MonDReg[2] => Mux34.IN0
@@ -6178,7 +6249,7 @@ st_ready_test_idle <= jtag_state_rti.DB_MAX_OUTPUT_PORT_TYPE
 tdo <= tdo.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_jtag_debug_module_wrapper:the_nios_CPU_jtag_debug_module_wrapper|nios_CPU_jtag_debug_module_tck:the_nios_CPU_jtag_debug_module_tck|altera_std_synchronizer:the_altera_std_synchronizer1
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_jtag_debug_module_wrapper:the_nios_CPU_jtag_debug_module_wrapper|nios_CPU_jtag_debug_module_tck:the_nios_CPU_jtag_debug_module_tck|altera_std_synchronizer:the_altera_std_synchronizer1
 clk => dreg[0].CLK
 clk => din_s1.CLK
 reset_n => dreg[0].ACLR
@@ -6187,7 +6258,7 @@ din => din_s1.DATAIN
 dout <= dout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_jtag_debug_module_wrapper:the_nios_CPU_jtag_debug_module_wrapper|nios_CPU_jtag_debug_module_tck:the_nios_CPU_jtag_debug_module_tck|altera_std_synchronizer:the_altera_std_synchronizer2
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_jtag_debug_module_wrapper:the_nios_CPU_jtag_debug_module_wrapper|nios_CPU_jtag_debug_module_tck:the_nios_CPU_jtag_debug_module_tck|altera_std_synchronizer:the_altera_std_synchronizer2
 clk => dreg[0].CLK
 clk => din_s1.CLK
 reset_n => dreg[0].ACLR
@@ -6196,7 +6267,7 @@ din => din_s1.DATAIN
 dout <= dout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_jtag_debug_module_wrapper:the_nios_CPU_jtag_debug_module_wrapper|nios_CPU_jtag_debug_module_sysclk:the_nios_CPU_jtag_debug_module_sysclk
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_jtag_debug_module_wrapper:the_nios_CPU_jtag_debug_module_wrapper|nios_CPU_jtag_debug_module_sysclk:the_nios_CPU_jtag_debug_module_sysclk
 clk => clk.IN2
 ir_in[0] => ir[0].DATAIN
 ir_in[1] => ir[1].DATAIN
@@ -6293,7 +6364,7 @@ take_no_action_ocimem_a <= take_no_action_ocimem_a.DB_MAX_OUTPUT_PORT_TYPE
 take_no_action_tracemem_a <= take_no_action_tracemem_a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_jtag_debug_module_wrapper:the_nios_CPU_jtag_debug_module_wrapper|nios_CPU_jtag_debug_module_sysclk:the_nios_CPU_jtag_debug_module_sysclk|altera_std_synchronizer:the_altera_std_synchronizer3
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_jtag_debug_module_wrapper:the_nios_CPU_jtag_debug_module_wrapper|nios_CPU_jtag_debug_module_sysclk:the_nios_CPU_jtag_debug_module_sysclk|altera_std_synchronizer:the_altera_std_synchronizer3
 clk => dreg[0].CLK
 clk => din_s1.CLK
 reset_n => dreg[0].ACLR
@@ -6302,7 +6373,7 @@ din => din_s1.DATAIN
 dout <= dout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_jtag_debug_module_wrapper:the_nios_CPU_jtag_debug_module_wrapper|nios_CPU_jtag_debug_module_sysclk:the_nios_CPU_jtag_debug_module_sysclk|altera_std_synchronizer:the_altera_std_synchronizer4
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_jtag_debug_module_wrapper:the_nios_CPU_jtag_debug_module_wrapper|nios_CPU_jtag_debug_module_sysclk:the_nios_CPU_jtag_debug_module_sysclk|altera_std_synchronizer:the_altera_std_synchronizer4
 clk => dreg[0].CLK
 clk => din_s1.CLK
 reset_n => dreg[0].ACLR
@@ -6311,7 +6382,7 @@ din => din_s1.DATAIN
 dout <= dout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_jtag_debug_module_wrapper:the_nios_CPU_jtag_debug_module_wrapper|sld_virtual_jtag_basic:nios_CPU_jtag_debug_module_phy
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_jtag_debug_module_wrapper:the_nios_CPU_jtag_debug_module_wrapper|sld_virtual_jtag_basic:nios_CPU_jtag_debug_module_phy
 tck <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_tck
 tdi <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_tdi
 ir_in[0] <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_ir_in
@@ -6346,7 +6417,7 @@ jtag_state_e2ir <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_sta
 jtag_state_uir <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_state_uir
 
 
-|cmv_controller|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_jtag_debug_module_wrapper:the_nios_CPU_jtag_debug_module_wrapper|sld_virtual_jtag_basic:nios_CPU_jtag_debug_module_phy|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_jtag_debug_module_wrapper:the_nios_CPU_jtag_debug_module_wrapper|sld_virtual_jtag_basic:nios_CPU_jtag_debug_module_phy|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst
 usr_tck <= raw_tck.DB_MAX_OUTPUT_PORT_TYPE
 usr_tdi <= tdi.DB_MAX_OUTPUT_PORT_TYPE
 usr_ir_in[0] <= ir_in[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -6418,7 +6489,7 @@ ir_out[0] <= usr_ir_out[0].DB_MAX_OUTPUT_PORT_TYPE
 ir_out[1] <= usr_ir_out[1].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|nios_data_clk:data_clk
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_data_clk:data_clk
 address[0] => Equal0.IN31
 address[0] => Equal1.IN30
 address[0] => Equal2.IN61
@@ -6568,7 +6639,7 @@ readdata[30] <= readdata[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 readdata[31] <= readdata[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|nios_onchip_memory:onchip_memory
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_onchip_memory:onchip_memory
 address[0] => address[0].IN1
 address[1] => address[1].IN1
 address[2] => address[2].IN1
@@ -6655,7 +6726,7 @@ readdata[30] <= altsyncram:the_altsyncram.q_a
 readdata[31] <= altsyncram:the_altsyncram.q_a
 
 
-|cmv_controller|nios:inst7|nios_onchip_memory:onchip_memory|altsyncram:the_altsyncram
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_onchip_memory:onchip_memory|altsyncram:the_altsyncram
 wren_a => altsyncram_6ec1:auto_generated.wren_a
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -6757,7 +6828,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|cmv_controller|nios:inst7|nios_onchip_memory:onchip_memory|altsyncram:the_altsyncram|altsyncram_6ec1:auto_generated
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_onchip_memory:onchip_memory|altsyncram:the_altsyncram|altsyncram_6ec1:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -7272,7 +7343,7 @@ wren_a => ram_block1a30.PORTAWE
 wren_a => ram_block1a31.PORTAWE
 
 
-|cmv_controller|nios:inst7|nios_jtag_uart:jtag_uart
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_jtag_uart:jtag_uart
 av_address => ien_AF.OUTPUTSELECT
 av_address => ien_AE.OUTPUTSELECT
 av_address => ac.OUTPUTSELECT
@@ -7362,7 +7433,7 @@ dataavailable <= dataavailable~reg0.DB_MAX_OUTPUT_PORT_TYPE
 readyfordata <= readyfordata~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_w:the_nios_jtag_uart_scfifo_w
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_w:the_nios_jtag_uart_scfifo_w
 clk => clk.IN1
 fifo_clear => fifo_clear.IN1
 fifo_wdata[0] => fifo_wdata[0].IN1
@@ -7393,7 +7464,7 @@ wfifo_used[4] <= scfifo:wfifo.usedw
 wfifo_used[5] <= scfifo:wfifo.usedw
 
 
-|cmv_controller|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_w:the_nios_jtag_uart_scfifo_w|scfifo:wfifo
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_w:the_nios_jtag_uart_scfifo_w|scfifo:wfifo
 data[0] => scfifo_1n21:auto_generated.data[0]
 data[1] => scfifo_1n21:auto_generated.data[1]
 data[2] => scfifo_1n21:auto_generated.data[2]
@@ -7427,7 +7498,7 @@ usedw[4] <= scfifo_1n21:auto_generated.usedw[4]
 usedw[5] <= scfifo_1n21:auto_generated.usedw[5]
 
 
-|cmv_controller|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_w:the_nios_jtag_uart_scfifo_w|scfifo:wfifo|scfifo_1n21:auto_generated
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_w:the_nios_jtag_uart_scfifo_w|scfifo:wfifo|scfifo_1n21:auto_generated
 aclr => a_dpfifo_8t21:dpfifo.aclr
 clock => a_dpfifo_8t21:dpfifo.clock
 data[0] => a_dpfifo_8t21:dpfifo.data[0]
@@ -7458,7 +7529,7 @@ usedw[5] <= a_dpfifo_8t21:dpfifo.usedw[5]
 wrreq => a_dpfifo_8t21:dpfifo.wreq
 
 
-|cmv_controller|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_w:the_nios_jtag_uart_scfifo_w|scfifo:wfifo|scfifo_1n21:auto_generated|a_dpfifo_8t21:dpfifo
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_w:the_nios_jtag_uart_scfifo_w|scfifo:wfifo|scfifo_1n21:auto_generated|a_dpfifo_8t21:dpfifo
 aclr => a_fefifo_7cf:fifo_state.aclr
 aclr => cntr_fjb:rd_ptr_count.aclr
 aclr => cntr_fjb:wr_ptr.aclr
@@ -7504,7 +7575,7 @@ wreq => dpram_5h21:FIFOram.wren
 wreq => cntr_fjb:wr_ptr.cnt_en
 
 
-|cmv_controller|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_w:the_nios_jtag_uart_scfifo_w|scfifo:wfifo|scfifo_1n21:auto_generated|a_dpfifo_8t21:dpfifo|a_fefifo_7cf:fifo_state
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_w:the_nios_jtag_uart_scfifo_w|scfifo:wfifo|scfifo_1n21:auto_generated|a_dpfifo_8t21:dpfifo|a_fefifo_7cf:fifo_state
 aclr => b_full.IN0
 aclr => b_non_empty.IN0
 aclr => cntr_rj7:count_usedw.aclr
@@ -7536,7 +7607,7 @@ wreq => _.IN0
 wreq => cntr_rj7:count_usedw.updown
 
 
-|cmv_controller|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_w:the_nios_jtag_uart_scfifo_w|scfifo:wfifo|scfifo_1n21:auto_generated|a_dpfifo_8t21:dpfifo|a_fefifo_7cf:fifo_state|cntr_rj7:count_usedw
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_w:the_nios_jtag_uart_scfifo_w|scfifo:wfifo|scfifo_1n21:auto_generated|a_dpfifo_8t21:dpfifo|a_fefifo_7cf:fifo_state|cntr_rj7:count_usedw
 aclr => counter_reg_bit1a[5].ACLR
 aclr => counter_reg_bit1a[4].ACLR
 aclr => counter_reg_bit1a[3].ACLR
@@ -7567,7 +7638,7 @@ updown => counter_comb_bita4.DATAB
 updown => counter_comb_bita5.DATAB
 
 
-|cmv_controller|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_w:the_nios_jtag_uart_scfifo_w|scfifo:wfifo|scfifo_1n21:auto_generated|a_dpfifo_8t21:dpfifo|dpram_5h21:FIFOram
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_w:the_nios_jtag_uart_scfifo_w|scfifo:wfifo|scfifo_1n21:auto_generated|a_dpfifo_8t21:dpfifo|dpram_5h21:FIFOram
 data[0] => altsyncram_9tl1:altsyncram2.data_a[0]
 data[1] => altsyncram_9tl1:altsyncram2.data_a[1]
 data[2] => altsyncram_9tl1:altsyncram2.data_a[2]
@@ -7602,7 +7673,7 @@ wraddress[5] => altsyncram_9tl1:altsyncram2.address_a[5]
 wren => altsyncram_9tl1:altsyncram2.wren_a
 
 
-|cmv_controller|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_w:the_nios_jtag_uart_scfifo_w|scfifo:wfifo|scfifo_1n21:auto_generated|a_dpfifo_8t21:dpfifo|dpram_5h21:FIFOram|altsyncram_9tl1:altsyncram2
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_w:the_nios_jtag_uart_scfifo_w|scfifo:wfifo|scfifo_1n21:auto_generated|a_dpfifo_8t21:dpfifo|dpram_5h21:FIFOram|altsyncram_9tl1:altsyncram2
 address_a[0] => ram_block3a0.PORTAADDR
 address_a[0] => ram_block3a1.PORTAADDR
 address_a[0] => ram_block3a2.PORTAADDR
@@ -7757,7 +7828,7 @@ wren_a => ram_block3a7.PORTAWE
 wren_a => ram_block3a7.ENA0
 
 
-|cmv_controller|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_w:the_nios_jtag_uart_scfifo_w|scfifo:wfifo|scfifo_1n21:auto_generated|a_dpfifo_8t21:dpfifo|cntr_fjb:rd_ptr_count
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_w:the_nios_jtag_uart_scfifo_w|scfifo:wfifo|scfifo_1n21:auto_generated|a_dpfifo_8t21:dpfifo|cntr_fjb:rd_ptr_count
 aclr => counter_reg_bit4a[5].ACLR
 aclr => counter_reg_bit4a[4].ACLR
 aclr => counter_reg_bit4a[3].ACLR
@@ -7782,7 +7853,7 @@ sclr => _.IN0
 sclr => _.IN0
 
 
-|cmv_controller|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_w:the_nios_jtag_uart_scfifo_w|scfifo:wfifo|scfifo_1n21:auto_generated|a_dpfifo_8t21:dpfifo|cntr_fjb:wr_ptr
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_w:the_nios_jtag_uart_scfifo_w|scfifo:wfifo|scfifo_1n21:auto_generated|a_dpfifo_8t21:dpfifo|cntr_fjb:wr_ptr
 aclr => counter_reg_bit4a[5].ACLR
 aclr => counter_reg_bit4a[4].ACLR
 aclr => counter_reg_bit4a[3].ACLR
@@ -7807,7 +7878,7 @@ sclr => _.IN0
 sclr => _.IN0
 
 
-|cmv_controller|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_r:the_nios_jtag_uart_scfifo_r
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_r:the_nios_jtag_uart_scfifo_r
 clk => clk.IN1
 fifo_clear => fifo_clear.IN1
 fifo_rd => fifo_rd.IN1
@@ -7839,7 +7910,7 @@ rfifo_used[4] <= scfifo:rfifo.usedw
 rfifo_used[5] <= scfifo:rfifo.usedw
 
 
-|cmv_controller|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_r:the_nios_jtag_uart_scfifo_r|scfifo:rfifo
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_r:the_nios_jtag_uart_scfifo_r|scfifo:rfifo
 data[0] => scfifo_1n21:auto_generated.data[0]
 data[1] => scfifo_1n21:auto_generated.data[1]
 data[2] => scfifo_1n21:auto_generated.data[2]
@@ -7873,7 +7944,7 @@ usedw[4] <= scfifo_1n21:auto_generated.usedw[4]
 usedw[5] <= scfifo_1n21:auto_generated.usedw[5]
 
 
-|cmv_controller|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_r:the_nios_jtag_uart_scfifo_r|scfifo:rfifo|scfifo_1n21:auto_generated
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_r:the_nios_jtag_uart_scfifo_r|scfifo:rfifo|scfifo_1n21:auto_generated
 aclr => a_dpfifo_8t21:dpfifo.aclr
 clock => a_dpfifo_8t21:dpfifo.clock
 data[0] => a_dpfifo_8t21:dpfifo.data[0]
@@ -7904,7 +7975,7 @@ usedw[5] <= a_dpfifo_8t21:dpfifo.usedw[5]
 wrreq => a_dpfifo_8t21:dpfifo.wreq
 
 
-|cmv_controller|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_r:the_nios_jtag_uart_scfifo_r|scfifo:rfifo|scfifo_1n21:auto_generated|a_dpfifo_8t21:dpfifo
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_r:the_nios_jtag_uart_scfifo_r|scfifo:rfifo|scfifo_1n21:auto_generated|a_dpfifo_8t21:dpfifo
 aclr => a_fefifo_7cf:fifo_state.aclr
 aclr => cntr_fjb:rd_ptr_count.aclr
 aclr => cntr_fjb:wr_ptr.aclr
@@ -7950,7 +8021,7 @@ wreq => dpram_5h21:FIFOram.wren
 wreq => cntr_fjb:wr_ptr.cnt_en
 
 
-|cmv_controller|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_r:the_nios_jtag_uart_scfifo_r|scfifo:rfifo|scfifo_1n21:auto_generated|a_dpfifo_8t21:dpfifo|a_fefifo_7cf:fifo_state
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_r:the_nios_jtag_uart_scfifo_r|scfifo:rfifo|scfifo_1n21:auto_generated|a_dpfifo_8t21:dpfifo|a_fefifo_7cf:fifo_state
 aclr => b_full.IN0
 aclr => b_non_empty.IN0
 aclr => cntr_rj7:count_usedw.aclr
@@ -7982,7 +8053,7 @@ wreq => _.IN0
 wreq => cntr_rj7:count_usedw.updown
 
 
-|cmv_controller|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_r:the_nios_jtag_uart_scfifo_r|scfifo:rfifo|scfifo_1n21:auto_generated|a_dpfifo_8t21:dpfifo|a_fefifo_7cf:fifo_state|cntr_rj7:count_usedw
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_r:the_nios_jtag_uart_scfifo_r|scfifo:rfifo|scfifo_1n21:auto_generated|a_dpfifo_8t21:dpfifo|a_fefifo_7cf:fifo_state|cntr_rj7:count_usedw
 aclr => counter_reg_bit1a[5].ACLR
 aclr => counter_reg_bit1a[4].ACLR
 aclr => counter_reg_bit1a[3].ACLR
@@ -8013,7 +8084,7 @@ updown => counter_comb_bita4.DATAB
 updown => counter_comb_bita5.DATAB
 
 
-|cmv_controller|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_r:the_nios_jtag_uart_scfifo_r|scfifo:rfifo|scfifo_1n21:auto_generated|a_dpfifo_8t21:dpfifo|dpram_5h21:FIFOram
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_r:the_nios_jtag_uart_scfifo_r|scfifo:rfifo|scfifo_1n21:auto_generated|a_dpfifo_8t21:dpfifo|dpram_5h21:FIFOram
 data[0] => altsyncram_9tl1:altsyncram2.data_a[0]
 data[1] => altsyncram_9tl1:altsyncram2.data_a[1]
 data[2] => altsyncram_9tl1:altsyncram2.data_a[2]
@@ -8048,7 +8119,7 @@ wraddress[5] => altsyncram_9tl1:altsyncram2.address_a[5]
 wren => altsyncram_9tl1:altsyncram2.wren_a
 
 
-|cmv_controller|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_r:the_nios_jtag_uart_scfifo_r|scfifo:rfifo|scfifo_1n21:auto_generated|a_dpfifo_8t21:dpfifo|dpram_5h21:FIFOram|altsyncram_9tl1:altsyncram2
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_r:the_nios_jtag_uart_scfifo_r|scfifo:rfifo|scfifo_1n21:auto_generated|a_dpfifo_8t21:dpfifo|dpram_5h21:FIFOram|altsyncram_9tl1:altsyncram2
 address_a[0] => ram_block3a0.PORTAADDR
 address_a[0] => ram_block3a1.PORTAADDR
 address_a[0] => ram_block3a2.PORTAADDR
@@ -8203,7 +8274,7 @@ wren_a => ram_block3a7.PORTAWE
 wren_a => ram_block3a7.ENA0
 
 
-|cmv_controller|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_r:the_nios_jtag_uart_scfifo_r|scfifo:rfifo|scfifo_1n21:auto_generated|a_dpfifo_8t21:dpfifo|cntr_fjb:rd_ptr_count
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_r:the_nios_jtag_uart_scfifo_r|scfifo:rfifo|scfifo_1n21:auto_generated|a_dpfifo_8t21:dpfifo|cntr_fjb:rd_ptr_count
 aclr => counter_reg_bit4a[5].ACLR
 aclr => counter_reg_bit4a[4].ACLR
 aclr => counter_reg_bit4a[3].ACLR
@@ -8228,7 +8299,7 @@ sclr => _.IN0
 sclr => _.IN0
 
 
-|cmv_controller|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_r:the_nios_jtag_uart_scfifo_r|scfifo:rfifo|scfifo_1n21:auto_generated|a_dpfifo_8t21:dpfifo|cntr_fjb:wr_ptr
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_r:the_nios_jtag_uart_scfifo_r|scfifo:rfifo|scfifo_1n21:auto_generated|a_dpfifo_8t21:dpfifo|cntr_fjb:wr_ptr
 aclr => counter_reg_bit4a[5].ACLR
 aclr => counter_reg_bit4a[4].ACLR
 aclr => counter_reg_bit4a[3].ACLR
@@ -8253,7 +8324,7 @@ sclr => _.IN0
 sclr => _.IN0
 
 
-|cmv_controller|nios:inst7|nios_jtag_uart:jtag_uart|alt_jtag_atlantic:nios_jtag_uart_alt_jtag_atlantic
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_jtag_uart:jtag_uart|alt_jtag_atlantic:nios_jtag_uart_alt_jtag_atlantic
 raw_tck => write_stalled.CLK
 raw_tck => wdata[0].CLK
 raw_tck => wdata[1].CLK
@@ -8475,7 +8546,7 @@ t_dat[7] <= t_dat[7].DB_MAX_OUTPUT_PORT_TYPE
 t_pause <= t_pause~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|nios_uart:uart
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_uart:uart
 address[0] => address[0].IN1
 address[1] => address[1].IN1
 address[2] => address[2].IN1
@@ -8524,7 +8595,7 @@ readyfordata <= nios_uart_regs:the_nios_uart_regs.readyfordata
 txd <= nios_uart_tx:the_nios_uart_tx.txd
 
 
-|cmv_controller|nios:inst7|nios_uart:uart|nios_uart_tx:the_nios_uart_tx
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_uart:uart|nios_uart_tx:the_nios_uart_tx
 baud_divisor[0] => baud_rate_counter.DATAB
 baud_divisor[1] => baud_rate_counter.DATAB
 baud_divisor[2] => baud_rate_counter.DATAB
@@ -8629,7 +8700,7 @@ tx_shift_empty <= tx_shift_empty~reg0.DB_MAX_OUTPUT_PORT_TYPE
 txd <= txd~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|nios_uart:uart|nios_uart_rx:the_nios_uart_rx
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_uart:uart|nios_uart_rx:the_nios_uart_rx
 baud_divisor[0] => baud_divisor[0].IN1
 baud_divisor[1] => baud_divisor[1].IN1
 baud_divisor[2] => baud_divisor[2].IN1
@@ -8663,7 +8734,7 @@ rx_data[7] <= rx_data[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 rx_overrun <= rx_overrun~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|nios_uart:uart|nios_uart_rx:the_nios_uart_rx|nios_uart_rx_stimulus_source:the_nios_uart_rx_stimulus_source
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_uart:uart|nios_uart_rx:the_nios_uart_rx|nios_uart_rx_stimulus_source:the_nios_uart_rx_stimulus_source
 baud_divisor[0] => ~NO_FANOUT~
 baud_divisor[1] => ~NO_FANOUT~
 baud_divisor[2] => ~NO_FANOUT~
@@ -8681,7 +8752,7 @@ rxd => source_rxd.DATAIN
 source_rxd <= rxd.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|nios_uart:uart|nios_uart_rx:the_nios_uart_rx|altera_std_synchronizer:the_altera_std_synchronizer
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_uart:uart|nios_uart_rx:the_nios_uart_rx|altera_std_synchronizer:the_altera_std_synchronizer
 clk => dreg[0].CLK
 clk => din_s1.CLK
 reset_n => dreg[0].ACLR
@@ -8690,7 +8761,7 @@ din => din_s1.DATAIN
 dout <= dout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|nios_uart:uart|nios_uart_regs:the_nios_uart_regs
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_uart:uart|nios_uart_regs:the_nios_uart_regs
 address[0] => Equal0.IN2
 address[0] => Equal1.IN2
 address[0] => Equal2.IN2
@@ -8897,7 +8968,7 @@ tx_data[7] <= tx_data[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 tx_wr_strobe <= tx_wr_strobe.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|nios_sdram_controller:sdram_controller
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_sdram_controller:sdram_controller
 az_addr[0] => az_addr[0].IN1
 az_addr[1] => az_addr[1].IN1
 az_addr[2] => az_addr[2].IN1
@@ -9000,7 +9071,7 @@ zs_ras_n <= zs_ras_n.DB_MAX_OUTPUT_PORT_TYPE
 zs_we_n <= zs_we_n.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|nios_sdram_controller:sdram_controller|nios_sdram_controller_input_efifo_module:the_nios_sdram_controller_input_efifo_module
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_sdram_controller:sdram_controller|nios_sdram_controller_input_efifo_module:the_nios_sdram_controller_input_efifo_module
 clk => entry_0[0].CLK
 clk => entry_0[1].CLK
 clk => entry_0[2].CLK
@@ -9229,7 +9300,7 @@ rd_data[39] <= rd_data.DB_MAX_OUTPUT_PORT_TYPE
 rd_data[40] <= rd_data.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|nios_spi:spi
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_spi:spi
 MISO => MISO_reg.DATAA
 clk => MISO_reg.CLK
 clk => SCLK_reg.CLK
@@ -9578,7 +9649,7 @@ irq <= irq_reg.DB_MAX_OUTPUT_PORT_TYPE
 readyfordata <= TRDY.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|altera_merlin_master_translator:cpu_instruction_master_translator
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_master_translator:cpu_instruction_master_translator
 clk => read_accepted.CLK
 reset => read_accepted.ACLR
 uav_write <= <GND>
@@ -9801,7 +9872,7 @@ av_writeresponserequest => ~NO_FANOUT~
 av_writeresponsevalid <= <GND>
 
 
-|cmv_controller|nios:inst7|altera_merlin_master_translator:cpu_data_master_translator
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_master_translator:cpu_data_master_translator
 clk => end_begintransfer.CLK
 clk => write_accepted.CLK
 clk => read_accepted.CLK
@@ -10032,7 +10103,7 @@ av_writeresponserequest => ~NO_FANOUT~
 av_writeresponsevalid <= <GND>
 
 
-|cmv_controller|nios:inst7|altera_merlin_slave_translator:onchip_memory_s1_translator
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_slave_translator:onchip_memory_s1_translator
 clk => in_transfer.CLK
 clk => end_beginbursttransfer.CLK
 clk => end_begintransfer.CLK
@@ -10271,7 +10342,7 @@ av_writeresponserequest <= uav_writeresponserequest.DB_MAX_OUTPUT_PORT_TYPE
 av_writeresponsevalid => uav_writeresponsevalid.DATAIN
 
 
-|cmv_controller|nios:inst7|altera_merlin_slave_translator:cpu_jtag_debug_module_translator
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_slave_translator:cpu_jtag_debug_module_translator
 clk => in_transfer.CLK
 clk => end_beginbursttransfer.CLK
 clk => end_begintransfer.CLK
@@ -10575,7 +10646,7 @@ av_writeresponserequest <= uav_writeresponserequest.DB_MAX_OUTPUT_PORT_TYPE
 av_writeresponsevalid => uav_writeresponsevalid.DATAIN
 
 
-|cmv_controller|nios:inst7|altera_merlin_slave_translator:jtag_uart_avalon_jtag_slave_translator
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_slave_translator:jtag_uart_avalon_jtag_slave_translator
 clk => in_transfer.CLK
 clk => end_beginbursttransfer.CLK
 clk => end_begintransfer.CLK
@@ -10859,7 +10930,7 @@ av_writeresponserequest <= uav_writeresponserequest.DB_MAX_OUTPUT_PORT_TYPE
 av_writeresponsevalid => uav_writeresponsevalid.DATAIN
 
 
-|cmv_controller|nios:inst7|altera_merlin_slave_translator:data_clk_s1_translator
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_slave_translator:data_clk_s1_translator
 clk => in_transfer.CLK
 clk => end_beginbursttransfer.CLK
 clk => end_begintransfer.CLK
@@ -11146,7 +11217,7 @@ av_writeresponserequest <= uav_writeresponserequest.DB_MAX_OUTPUT_PORT_TYPE
 av_writeresponsevalid => uav_writeresponsevalid.DATAIN
 
 
-|cmv_controller|nios:inst7|altera_merlin_slave_translator:data_ctr_s1_translator
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_slave_translator:data_ctr_s1_translator
 clk => in_transfer.CLK
 clk => end_beginbursttransfer.CLK
 clk => end_begintransfer.CLK
@@ -11433,7 +11504,7 @@ av_writeresponserequest <= uav_writeresponserequest.DB_MAX_OUTPUT_PORT_TYPE
 av_writeresponsevalid => uav_writeresponsevalid.DATAIN
 
 
-|cmv_controller|nios:inst7|altera_merlin_slave_translator:data_ch1_s1_translator
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_slave_translator:data_ch1_s1_translator
 clk => in_transfer.CLK
 clk => end_beginbursttransfer.CLK
 clk => end_begintransfer.CLK
@@ -11720,7 +11791,7 @@ av_writeresponserequest <= uav_writeresponserequest.DB_MAX_OUTPUT_PORT_TYPE
 av_writeresponsevalid => uav_writeresponsevalid.DATAIN
 
 
-|cmv_controller|nios:inst7|altera_merlin_slave_translator:data_ch9_s1_translator
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_slave_translator:data_ch9_s1_translator
 clk => in_transfer.CLK
 clk => end_beginbursttransfer.CLK
 clk => end_begintransfer.CLK
@@ -12007,7 +12078,7 @@ av_writeresponserequest <= uav_writeresponserequest.DB_MAX_OUTPUT_PORT_TYPE
 av_writeresponsevalid => uav_writeresponsevalid.DATAIN
 
 
-|cmv_controller|nios:inst7|altera_merlin_slave_translator:spi_spi_control_port_translator
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_slave_translator:spi_spi_control_port_translator
 clk => in_transfer.CLK
 clk => end_beginbursttransfer.CLK
 clk => end_begintransfer.CLK
@@ -12230,7 +12301,7 @@ av_writeresponserequest <= uav_writeresponserequest.DB_MAX_OUTPUT_PORT_TYPE
 av_writeresponsevalid => uav_writeresponsevalid.DATAIN
 
 
-|cmv_controller|nios:inst7|altera_merlin_slave_translator:uart_s1_translator
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_slave_translator:uart_s1_translator
 clk => in_transfer.CLK
 clk => end_beginbursttransfer.CLK
 clk => end_begintransfer.CLK
@@ -12453,7 +12524,7 @@ av_writeresponserequest <= uav_writeresponserequest.DB_MAX_OUTPUT_PORT_TYPE
 av_writeresponsevalid => uav_writeresponsevalid.DATAIN
 
 
-|cmv_controller|nios:inst7|altera_merlin_slave_translator:sdram_controller_s1_translator
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_slave_translator:sdram_controller_s1_translator
 clk => in_transfer.CLK
 clk => end_beginbursttransfer.CLK
 clk => end_begintransfer.CLK
@@ -12627,7 +12698,7 @@ av_writeresponserequest <= uav_writeresponserequest.DB_MAX_OUTPUT_PORT_TYPE
 av_writeresponsevalid => uav_writeresponsevalid.DATAIN
 
 
-|cmv_controller|nios:inst7|altera_merlin_master_agent:cpu_instruction_master_translator_avalon_universal_master_0_agent
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_master_agent:cpu_instruction_master_translator_avalon_universal_master_0_agent
 clk => hold_waitrequest.CLK
 reset => hold_waitrequest.PRESET
 av_address[0] => ~NO_FANOUT~
@@ -12958,7 +13029,7 @@ rp_endofpacket => ~NO_FANOUT~
 rp_ready <= <VCC>
 
 
-|cmv_controller|nios:inst7|altera_merlin_master_agent:cpu_data_master_translator_avalon_universal_master_0_agent
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_master_agent:cpu_data_master_translator_avalon_universal_master_0_agent
 clk => hold_waitrequest.CLK
 reset => hold_waitrequest.PRESET
 av_address[0] => ~NO_FANOUT~
@@ -13289,7 +13360,7 @@ rp_endofpacket => ~NO_FANOUT~
 rp_ready <= <VCC>
 
 
-|cmv_controller|nios:inst7|altera_merlin_slave_agent:onchip_memory_s1_translator_avalon_universal_slave_0_agent
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_slave_agent:onchip_memory_s1_translator_avalon_universal_slave_0_agent
 clk => clk.IN1
 reset => reset.IN1
 m0_address[0] <= <GND>
@@ -13944,7 +14015,7 @@ rp_startofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_startof
 rp_endofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_endofpacket
 
 
-|cmv_controller|nios:inst7|altera_merlin_slave_agent:onchip_memory_s1_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_slave_agent:onchip_memory_s1_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor
 clk => burst_uncompress_address_offset[0].CLK
 clk => burst_uncompress_address_offset[1].CLK
 clk => burst_uncompress_address_offset[2].CLK
@@ -14238,7 +14309,7 @@ source_burstsize[1] <= sink_burstsize[1].DB_MAX_OUTPUT_PORT_TYPE
 source_burstsize[2] <= sink_burstsize[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|altera_avalon_sc_fifo:onchip_memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_avalon_sc_fifo:onchip_memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo
 clk => csr_readdata[0]~reg0.CLK
 clk => csr_readdata[1]~reg0.CLK
 clk => csr_readdata[2]~reg0.CLK
@@ -15033,7 +15104,7 @@ almost_full_data <= <GND>
 almost_empty_data <= <GND>
 
 
-|cmv_controller|nios:inst7|altera_merlin_slave_agent:cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_slave_agent:cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent
 clk => clk.IN1
 reset => reset.IN1
 m0_address[0] <= <GND>
@@ -15688,7 +15759,7 @@ rp_startofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_startof
 rp_endofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_endofpacket
 
 
-|cmv_controller|nios:inst7|altera_merlin_slave_agent:cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_slave_agent:cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor
 clk => burst_uncompress_address_offset[0].CLK
 clk => burst_uncompress_address_offset[1].CLK
 clk => burst_uncompress_address_offset[2].CLK
@@ -15982,7 +16053,7 @@ source_burstsize[1] <= sink_burstsize[1].DB_MAX_OUTPUT_PORT_TYPE
 source_burstsize[2] <= sink_burstsize[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|altera_avalon_sc_fifo:cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_avalon_sc_fifo:cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo
 clk => csr_readdata[0]~reg0.CLK
 clk => csr_readdata[1]~reg0.CLK
 clk => csr_readdata[2]~reg0.CLK
@@ -16777,7 +16848,7 @@ almost_full_data <= <GND>
 almost_empty_data <= <GND>
 
 
-|cmv_controller|nios:inst7|altera_merlin_slave_agent:jtag_uart_avalon_jtag_slave_translator_avalon_universal_slave_0_agent
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_slave_agent:jtag_uart_avalon_jtag_slave_translator_avalon_universal_slave_0_agent
 clk => clk.IN1
 reset => reset.IN1
 m0_address[0] <= <GND>
@@ -17432,7 +17503,7 @@ rp_startofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_startof
 rp_endofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_endofpacket
 
 
-|cmv_controller|nios:inst7|altera_merlin_slave_agent:jtag_uart_avalon_jtag_slave_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_slave_agent:jtag_uart_avalon_jtag_slave_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor
 clk => burst_uncompress_address_offset[0].CLK
 clk => burst_uncompress_address_offset[1].CLK
 clk => burst_uncompress_address_offset[2].CLK
@@ -17726,7 +17797,7 @@ source_burstsize[1] <= sink_burstsize[1].DB_MAX_OUTPUT_PORT_TYPE
 source_burstsize[2] <= sink_burstsize[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|altera_avalon_sc_fifo:jtag_uart_avalon_jtag_slave_translator_avalon_universal_slave_0_agent_rsp_fifo
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_avalon_sc_fifo:jtag_uart_avalon_jtag_slave_translator_avalon_universal_slave_0_agent_rsp_fifo
 clk => csr_readdata[0]~reg0.CLK
 clk => csr_readdata[1]~reg0.CLK
 clk => csr_readdata[2]~reg0.CLK
@@ -18521,7 +18592,7 @@ almost_full_data <= <GND>
 almost_empty_data <= <GND>
 
 
-|cmv_controller|nios:inst7|altera_merlin_slave_agent:data_clk_s1_translator_avalon_universal_slave_0_agent
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_slave_agent:data_clk_s1_translator_avalon_universal_slave_0_agent
 clk => clk.IN1
 reset => reset.IN1
 m0_address[0] <= <GND>
@@ -19176,7 +19247,7 @@ rp_startofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_startof
 rp_endofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_endofpacket
 
 
-|cmv_controller|nios:inst7|altera_merlin_slave_agent:data_clk_s1_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_slave_agent:data_clk_s1_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor
 clk => burst_uncompress_address_offset[0].CLK
 clk => burst_uncompress_address_offset[1].CLK
 clk => burst_uncompress_address_offset[2].CLK
@@ -19470,7 +19541,7 @@ source_burstsize[1] <= sink_burstsize[1].DB_MAX_OUTPUT_PORT_TYPE
 source_burstsize[2] <= sink_burstsize[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|altera_avalon_sc_fifo:data_clk_s1_translator_avalon_universal_slave_0_agent_rsp_fifo
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_avalon_sc_fifo:data_clk_s1_translator_avalon_universal_slave_0_agent_rsp_fifo
 clk => csr_readdata[0]~reg0.CLK
 clk => csr_readdata[1]~reg0.CLK
 clk => csr_readdata[2]~reg0.CLK
@@ -20265,7 +20336,7 @@ almost_full_data <= <GND>
 almost_empty_data <= <GND>
 
 
-|cmv_controller|nios:inst7|altera_merlin_slave_agent:data_ctr_s1_translator_avalon_universal_slave_0_agent
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_slave_agent:data_ctr_s1_translator_avalon_universal_slave_0_agent
 clk => clk.IN1
 reset => reset.IN1
 m0_address[0] <= <GND>
@@ -20920,7 +20991,7 @@ rp_startofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_startof
 rp_endofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_endofpacket
 
 
-|cmv_controller|nios:inst7|altera_merlin_slave_agent:data_ctr_s1_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_slave_agent:data_ctr_s1_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor
 clk => burst_uncompress_address_offset[0].CLK
 clk => burst_uncompress_address_offset[1].CLK
 clk => burst_uncompress_address_offset[2].CLK
@@ -21214,7 +21285,7 @@ source_burstsize[1] <= sink_burstsize[1].DB_MAX_OUTPUT_PORT_TYPE
 source_burstsize[2] <= sink_burstsize[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|altera_avalon_sc_fifo:data_ctr_s1_translator_avalon_universal_slave_0_agent_rsp_fifo
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_avalon_sc_fifo:data_ctr_s1_translator_avalon_universal_slave_0_agent_rsp_fifo
 clk => csr_readdata[0]~reg0.CLK
 clk => csr_readdata[1]~reg0.CLK
 clk => csr_readdata[2]~reg0.CLK
@@ -22009,7 +22080,7 @@ almost_full_data <= <GND>
 almost_empty_data <= <GND>
 
 
-|cmv_controller|nios:inst7|altera_merlin_slave_agent:data_ch1_s1_translator_avalon_universal_slave_0_agent
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_slave_agent:data_ch1_s1_translator_avalon_universal_slave_0_agent
 clk => clk.IN1
 reset => reset.IN1
 m0_address[0] <= <GND>
@@ -22664,7 +22735,7 @@ rp_startofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_startof
 rp_endofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_endofpacket
 
 
-|cmv_controller|nios:inst7|altera_merlin_slave_agent:data_ch1_s1_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_slave_agent:data_ch1_s1_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor
 clk => burst_uncompress_address_offset[0].CLK
 clk => burst_uncompress_address_offset[1].CLK
 clk => burst_uncompress_address_offset[2].CLK
@@ -22958,7 +23029,7 @@ source_burstsize[1] <= sink_burstsize[1].DB_MAX_OUTPUT_PORT_TYPE
 source_burstsize[2] <= sink_burstsize[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|altera_avalon_sc_fifo:data_ch1_s1_translator_avalon_universal_slave_0_agent_rsp_fifo
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_avalon_sc_fifo:data_ch1_s1_translator_avalon_universal_slave_0_agent_rsp_fifo
 clk => csr_readdata[0]~reg0.CLK
 clk => csr_readdata[1]~reg0.CLK
 clk => csr_readdata[2]~reg0.CLK
@@ -23753,7 +23824,7 @@ almost_full_data <= <GND>
 almost_empty_data <= <GND>
 
 
-|cmv_controller|nios:inst7|altera_merlin_slave_agent:data_ch9_s1_translator_avalon_universal_slave_0_agent
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_slave_agent:data_ch9_s1_translator_avalon_universal_slave_0_agent
 clk => clk.IN1
 reset => reset.IN1
 m0_address[0] <= <GND>
@@ -24408,7 +24479,7 @@ rp_startofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_startof
 rp_endofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_endofpacket
 
 
-|cmv_controller|nios:inst7|altera_merlin_slave_agent:data_ch9_s1_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_slave_agent:data_ch9_s1_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor
 clk => burst_uncompress_address_offset[0].CLK
 clk => burst_uncompress_address_offset[1].CLK
 clk => burst_uncompress_address_offset[2].CLK
@@ -24702,7 +24773,7 @@ source_burstsize[1] <= sink_burstsize[1].DB_MAX_OUTPUT_PORT_TYPE
 source_burstsize[2] <= sink_burstsize[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|altera_avalon_sc_fifo:data_ch9_s1_translator_avalon_universal_slave_0_agent_rsp_fifo
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_avalon_sc_fifo:data_ch9_s1_translator_avalon_universal_slave_0_agent_rsp_fifo
 clk => csr_readdata[0]~reg0.CLK
 clk => csr_readdata[1]~reg0.CLK
 clk => csr_readdata[2]~reg0.CLK
@@ -25497,7 +25568,7 @@ almost_full_data <= <GND>
 almost_empty_data <= <GND>
 
 
-|cmv_controller|nios:inst7|altera_merlin_slave_agent:spi_spi_control_port_translator_avalon_universal_slave_0_agent
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_slave_agent:spi_spi_control_port_translator_avalon_universal_slave_0_agent
 clk => clk.IN1
 reset => reset.IN1
 m0_address[0] <= <GND>
@@ -26152,7 +26223,7 @@ rp_startofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_startof
 rp_endofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_endofpacket
 
 
-|cmv_controller|nios:inst7|altera_merlin_slave_agent:spi_spi_control_port_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_slave_agent:spi_spi_control_port_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor
 clk => burst_uncompress_address_offset[0].CLK
 clk => burst_uncompress_address_offset[1].CLK
 clk => burst_uncompress_address_offset[2].CLK
@@ -26446,7 +26517,7 @@ source_burstsize[1] <= sink_burstsize[1].DB_MAX_OUTPUT_PORT_TYPE
 source_burstsize[2] <= sink_burstsize[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|altera_avalon_sc_fifo:spi_spi_control_port_translator_avalon_universal_slave_0_agent_rsp_fifo
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_avalon_sc_fifo:spi_spi_control_port_translator_avalon_universal_slave_0_agent_rsp_fifo
 clk => csr_readdata[0]~reg0.CLK
 clk => csr_readdata[1]~reg0.CLK
 clk => csr_readdata[2]~reg0.CLK
@@ -27241,7 +27312,7 @@ almost_full_data <= <GND>
 almost_empty_data <= <GND>
 
 
-|cmv_controller|nios:inst7|altera_merlin_slave_agent:uart_s1_translator_avalon_universal_slave_0_agent
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_slave_agent:uart_s1_translator_avalon_universal_slave_0_agent
 clk => clk.IN1
 reset => reset.IN1
 m0_address[0] <= <GND>
@@ -27896,7 +27967,7 @@ rp_startofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_startof
 rp_endofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_endofpacket
 
 
-|cmv_controller|nios:inst7|altera_merlin_slave_agent:uart_s1_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_slave_agent:uart_s1_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor
 clk => burst_uncompress_address_offset[0].CLK
 clk => burst_uncompress_address_offset[1].CLK
 clk => burst_uncompress_address_offset[2].CLK
@@ -28190,7 +28261,7 @@ source_burstsize[1] <= sink_burstsize[1].DB_MAX_OUTPUT_PORT_TYPE
 source_burstsize[2] <= sink_burstsize[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|altera_avalon_sc_fifo:uart_s1_translator_avalon_universal_slave_0_agent_rsp_fifo
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_avalon_sc_fifo:uart_s1_translator_avalon_universal_slave_0_agent_rsp_fifo
 clk => csr_readdata[0]~reg0.CLK
 clk => csr_readdata[1]~reg0.CLK
 clk => csr_readdata[2]~reg0.CLK
@@ -28985,7 +29056,7 @@ almost_full_data <= <GND>
 almost_empty_data <= <GND>
 
 
-|cmv_controller|nios:inst7|altera_merlin_slave_agent:sdram_controller_s1_translator_avalon_universal_slave_0_agent
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_slave_agent:sdram_controller_s1_translator_avalon_universal_slave_0_agent
 clk => clk.IN1
 reset => reset.IN1
 m0_address[0] <= <GND>
@@ -29501,7 +29572,7 @@ rp_startofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_startof
 rp_endofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_endofpacket
 
 
-|cmv_controller|nios:inst7|altera_merlin_slave_agent:sdram_controller_s1_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_slave_agent:sdram_controller_s1_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor
 clk => burst_uncompress_address_offset[0].CLK
 clk => burst_uncompress_address_offset[1].CLK
 clk => burst_uncompress_address_offset[2].CLK
@@ -29795,7 +29866,7 @@ source_burstsize[1] <= sink_burstsize[1].DB_MAX_OUTPUT_PORT_TYPE
 source_burstsize[2] <= sink_burstsize[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|altera_avalon_sc_fifo:sdram_controller_s1_translator_avalon_universal_slave_0_agent_rsp_fifo
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_avalon_sc_fifo:sdram_controller_s1_translator_avalon_universal_slave_0_agent_rsp_fifo
 clk => csr_readdata[0]~reg0.CLK
 clk => csr_readdata[1]~reg0.CLK
 clk => csr_readdata[2]~reg0.CLK
@@ -32006,7 +32077,7 @@ almost_full_data <= <GND>
 almost_empty_data <= <GND>
 
 
-|cmv_controller|nios:inst7|altera_avalon_sc_fifo:sdram_controller_s1_translator_avalon_universal_slave_0_agent_rdata_fifo
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_avalon_sc_fifo:sdram_controller_s1_translator_avalon_universal_slave_0_agent_rdata_fifo
 clk => mem.we_a.CLK
 clk => mem.waddr_a[2].CLK
 clk => mem.waddr_a[1].CLK
@@ -32340,7 +32411,7 @@ almost_full_data <= <GND>
 almost_empty_data <= <GND>
 
 
-|cmv_controller|nios:inst7|nios_addr_router:addr_router
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_addr_router:addr_router
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 sink_valid => src_valid.DATAIN
@@ -32586,7 +32657,7 @@ src_endofpacket <= sink_endofpacket.DB_MAX_OUTPUT_PORT_TYPE
 src_ready => sink_ready.DATAIN
 
 
-|cmv_controller|nios:inst7|nios_addr_router:addr_router|nios_addr_router_default_decode:the_default_decode
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_addr_router:addr_router|nios_addr_router_default_decode:the_default_decode
 default_destination_id[0] <= <GND>
 default_destination_id[1] <= <VCC>
 default_destination_id[2] <= <VCC>
@@ -32623,7 +32694,7 @@ default_src_channel[8] <= <GND>
 default_src_channel[9] <= <GND>
 
 
-|cmv_controller|nios:inst7|nios_addr_router_001:addr_router_001
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_addr_router_001:addr_router_001
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 sink_valid => src_valid.DATAIN
@@ -33022,7 +33093,7 @@ src_endofpacket <= sink_endofpacket.DB_MAX_OUTPUT_PORT_TYPE
 src_ready => sink_ready.DATAIN
 
 
-|cmv_controller|nios:inst7|nios_addr_router_001:addr_router_001|nios_addr_router_001_default_decode:the_default_decode
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_addr_router_001:addr_router_001|nios_addr_router_001_default_decode:the_default_decode
 default_destination_id[0] <= <VCC>
 default_destination_id[1] <= <VCC>
 default_destination_id[2] <= <VCC>
@@ -33059,7 +33130,7 @@ default_src_channel[8] <= <GND>
 default_src_channel[9] <= <VCC>
 
 
-|cmv_controller|nios:inst7|nios_id_router:id_router
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_id_router:id_router
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 sink_valid => src_valid.DATAIN
@@ -33288,7 +33359,7 @@ src_endofpacket <= sink_endofpacket.DB_MAX_OUTPUT_PORT_TYPE
 src_ready => sink_ready.DATAIN
 
 
-|cmv_controller|nios:inst7|nios_id_router:id_router|nios_id_router_default_decode:the_default_decode
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_id_router:id_router|nios_id_router_default_decode:the_default_decode
 default_destination_id[0] <= <VCC>
 default_destination_id[1] <= <GND>
 default_destination_id[2] <= <GND>
@@ -33325,7 +33396,7 @@ default_src_channel[8] <= <GND>
 default_src_channel[9] <= <GND>
 
 
-|cmv_controller|nios:inst7|nios_id_router:id_router_001
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_id_router:id_router_001
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 sink_valid => src_valid.DATAIN
@@ -33554,7 +33625,7 @@ src_endofpacket <= sink_endofpacket.DB_MAX_OUTPUT_PORT_TYPE
 src_ready => sink_ready.DATAIN
 
 
-|cmv_controller|nios:inst7|nios_id_router:id_router_001|nios_id_router_default_decode:the_default_decode
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_id_router:id_router_001|nios_id_router_default_decode:the_default_decode
 default_destination_id[0] <= <VCC>
 default_destination_id[1] <= <GND>
 default_destination_id[2] <= <GND>
@@ -33591,7 +33662,7 @@ default_src_channel[8] <= <GND>
 default_src_channel[9] <= <GND>
 
 
-|cmv_controller|nios:inst7|nios_id_router_002:id_router_002
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_id_router_002:id_router_002
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 sink_valid => src_valid.DATAIN
@@ -33816,7 +33887,7 @@ src_endofpacket <= sink_endofpacket.DB_MAX_OUTPUT_PORT_TYPE
 src_ready => sink_ready.DATAIN
 
 
-|cmv_controller|nios:inst7|nios_id_router_002:id_router_002|nios_id_router_002_default_decode:the_default_decode
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_id_router_002:id_router_002|nios_id_router_002_default_decode:the_default_decode
 default_destination_id[0] <= <GND>
 default_destination_id[1] <= <GND>
 default_destination_id[2] <= <GND>
@@ -33853,7 +33924,7 @@ default_src_channel[8] <= <GND>
 default_src_channel[9] <= <GND>
 
 
-|cmv_controller|nios:inst7|nios_id_router_002:id_router_003
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_id_router_002:id_router_003
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 sink_valid => src_valid.DATAIN
@@ -34078,7 +34149,7 @@ src_endofpacket <= sink_endofpacket.DB_MAX_OUTPUT_PORT_TYPE
 src_ready => sink_ready.DATAIN
 
 
-|cmv_controller|nios:inst7|nios_id_router_002:id_router_003|nios_id_router_002_default_decode:the_default_decode
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_id_router_002:id_router_003|nios_id_router_002_default_decode:the_default_decode
 default_destination_id[0] <= <GND>
 default_destination_id[1] <= <GND>
 default_destination_id[2] <= <GND>
@@ -34115,7 +34186,7 @@ default_src_channel[8] <= <GND>
 default_src_channel[9] <= <GND>
 
 
-|cmv_controller|nios:inst7|nios_id_router_002:id_router_004
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_id_router_002:id_router_004
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 sink_valid => src_valid.DATAIN
@@ -34340,7 +34411,7 @@ src_endofpacket <= sink_endofpacket.DB_MAX_OUTPUT_PORT_TYPE
 src_ready => sink_ready.DATAIN
 
 
-|cmv_controller|nios:inst7|nios_id_router_002:id_router_004|nios_id_router_002_default_decode:the_default_decode
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_id_router_002:id_router_004|nios_id_router_002_default_decode:the_default_decode
 default_destination_id[0] <= <GND>
 default_destination_id[1] <= <GND>
 default_destination_id[2] <= <GND>
@@ -34377,7 +34448,7 @@ default_src_channel[8] <= <GND>
 default_src_channel[9] <= <GND>
 
 
-|cmv_controller|nios:inst7|nios_id_router_002:id_router_005
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_id_router_002:id_router_005
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 sink_valid => src_valid.DATAIN
@@ -34602,7 +34673,7 @@ src_endofpacket <= sink_endofpacket.DB_MAX_OUTPUT_PORT_TYPE
 src_ready => sink_ready.DATAIN
 
 
-|cmv_controller|nios:inst7|nios_id_router_002:id_router_005|nios_id_router_002_default_decode:the_default_decode
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_id_router_002:id_router_005|nios_id_router_002_default_decode:the_default_decode
 default_destination_id[0] <= <GND>
 default_destination_id[1] <= <GND>
 default_destination_id[2] <= <GND>
@@ -34639,7 +34710,7 @@ default_src_channel[8] <= <GND>
 default_src_channel[9] <= <GND>
 
 
-|cmv_controller|nios:inst7|nios_id_router_002:id_router_006
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_id_router_002:id_router_006
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 sink_valid => src_valid.DATAIN
@@ -34864,7 +34935,7 @@ src_endofpacket <= sink_endofpacket.DB_MAX_OUTPUT_PORT_TYPE
 src_ready => sink_ready.DATAIN
 
 
-|cmv_controller|nios:inst7|nios_id_router_002:id_router_006|nios_id_router_002_default_decode:the_default_decode
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_id_router_002:id_router_006|nios_id_router_002_default_decode:the_default_decode
 default_destination_id[0] <= <GND>
 default_destination_id[1] <= <GND>
 default_destination_id[2] <= <GND>
@@ -34901,7 +34972,7 @@ default_src_channel[8] <= <GND>
 default_src_channel[9] <= <GND>
 
 
-|cmv_controller|nios:inst7|nios_id_router_002:id_router_007
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_id_router_002:id_router_007
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 sink_valid => src_valid.DATAIN
@@ -35126,7 +35197,7 @@ src_endofpacket <= sink_endofpacket.DB_MAX_OUTPUT_PORT_TYPE
 src_ready => sink_ready.DATAIN
 
 
-|cmv_controller|nios:inst7|nios_id_router_002:id_router_007|nios_id_router_002_default_decode:the_default_decode
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_id_router_002:id_router_007|nios_id_router_002_default_decode:the_default_decode
 default_destination_id[0] <= <GND>
 default_destination_id[1] <= <GND>
 default_destination_id[2] <= <GND>
@@ -35163,7 +35234,7 @@ default_src_channel[8] <= <GND>
 default_src_channel[9] <= <GND>
 
 
-|cmv_controller|nios:inst7|nios_id_router_002:id_router_008
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_id_router_002:id_router_008
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 sink_valid => src_valid.DATAIN
@@ -35388,7 +35459,7 @@ src_endofpacket <= sink_endofpacket.DB_MAX_OUTPUT_PORT_TYPE
 src_ready => sink_ready.DATAIN
 
 
-|cmv_controller|nios:inst7|nios_id_router_002:id_router_008|nios_id_router_002_default_decode:the_default_decode
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_id_router_002:id_router_008|nios_id_router_002_default_decode:the_default_decode
 default_destination_id[0] <= <GND>
 default_destination_id[1] <= <GND>
 default_destination_id[2] <= <GND>
@@ -35425,7 +35496,7 @@ default_src_channel[8] <= <GND>
 default_src_channel[9] <= <GND>
 
 
-|cmv_controller|nios:inst7|nios_id_router_009:id_router_009
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_id_router_009:id_router_009
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 sink_valid => src_valid.DATAIN
@@ -35614,7 +35685,7 @@ src_endofpacket <= sink_endofpacket.DB_MAX_OUTPUT_PORT_TYPE
 src_ready => sink_ready.DATAIN
 
 
-|cmv_controller|nios:inst7|nios_id_router_009:id_router_009|nios_id_router_009_default_decode:the_default_decode
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_id_router_009:id_router_009|nios_id_router_009_default_decode:the_default_decode
 default_destination_id[0] <= <GND>
 default_destination_id[1] <= <GND>
 default_destination_id[2] <= <GND>
@@ -35651,7 +35722,7 @@ default_src_channel[8] <= <GND>
 default_src_channel[9] <= <GND>
 
 
-|cmv_controller|nios:inst7|altera_merlin_burst_adapter:burst_adapter
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_burst_adapter:burst_adapter
 clk => clk.IN1
 reset => reset.IN1
 sink0_valid => sink0_valid.IN1
@@ -35846,7 +35917,7 @@ source0_endofpacket <= altera_merlin_burst_adapter_uncompressed_only:altera_merl
 source0_ready => source0_ready.IN1
 
 
-|cmv_controller|nios:inst7|altera_merlin_burst_adapter:burst_adapter|altera_merlin_burst_adapter_uncompressed_only:altera_merlin_burst_adapter_uncompressed_only.the_ba
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_burst_adapter:burst_adapter|altera_merlin_burst_adapter_uncompressed_only:altera_merlin_burst_adapter_uncompressed_only.the_ba
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 sink0_valid => source0_valid.DATAIN
@@ -36041,7 +36112,7 @@ source0_endofpacket <= sink0_endofpacket.DB_MAX_OUTPUT_PORT_TYPE
 source0_ready => sink0_ready.DATAIN
 
 
-|cmv_controller|nios:inst7|altera_reset_controller:rst_controller
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_reset_controller:rst_controller
 reset_in0 => merged_reset.IN0
 reset_in1 => merged_reset.IN1
 reset_in2 => merged_reset.IN1
@@ -36063,7 +36134,7 @@ reset_out <= r_sync_rst.DB_MAX_OUTPUT_PORT_TYPE
 reset_req <= r_early_rst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1
 reset_in => altera_reset_synchronizer_int_chain_out.PRESET
 reset_in => altera_reset_synchronizer_int_chain[0].PRESET
 reset_in => altera_reset_synchronizer_int_chain[1].PRESET
@@ -36073,7 +36144,7 @@ clk => altera_reset_synchronizer_int_chain[1].CLK
 reset_out <= altera_reset_synchronizer_int_chain_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|altera_reset_controller:rst_controller_001
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_reset_controller:rst_controller_001
 reset_in0 => merged_reset.IN0
 reset_in1 => merged_reset.IN1
 reset_in2 => merged_reset.IN1
@@ -36095,7 +36166,7 @@ reset_out <= altera_reset_synchronizer:alt_rst_sync_uq1.reset_out
 reset_req <= <GND>
 
 
-|cmv_controller|nios:inst7|altera_reset_controller:rst_controller_001|altera_reset_synchronizer:alt_rst_sync_uq1
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_reset_controller:rst_controller_001|altera_reset_synchronizer:alt_rst_sync_uq1
 reset_in => altera_reset_synchronizer_int_chain_out.PRESET
 reset_in => altera_reset_synchronizer_int_chain[0].PRESET
 reset_in => altera_reset_synchronizer_int_chain[1].PRESET
@@ -36105,7 +36176,7 @@ clk => altera_reset_synchronizer_int_chain[1].CLK
 reset_out <= altera_reset_synchronizer_int_chain_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|nios_cmd_xbar_demux:cmd_xbar_demux
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_cmd_xbar_demux:cmd_xbar_demux
 sink_valid[0] => src0_valid.IN0
 sink_valid[0] => src1_valid.IN0
 sink_data[0] => src1_data[0].DATAIN
@@ -36561,7 +36632,7 @@ clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 
 
-|cmv_controller|nios:inst7|nios_cmd_xbar_demux_001:cmd_xbar_demux_001
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_cmd_xbar_demux_001:cmd_xbar_demux_001
 sink_valid[0] => src0_valid.IN0
 sink_valid[0] => src1_valid.IN0
 sink_valid[0] => src2_valid.IN0
@@ -38737,7 +38808,7 @@ clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 
 
-|cmv_controller|nios:inst7|nios_cmd_xbar_mux:cmd_xbar_mux
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_cmd_xbar_mux:cmd_xbar_mux
 sink0_valid => request.IN1
 sink0_valid => src_valid.IN1
 sink0_data[0] => src_payload.IN1
@@ -39087,7 +39158,7 @@ clk => clk.IN1
 reset => reset.IN1
 
 
-|cmv_controller|nios:inst7|nios_cmd_xbar_mux:cmd_xbar_mux|altera_merlin_arbitrator:arb
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_cmd_xbar_mux:cmd_xbar_mux|altera_merlin_arbitrator:arb
 clk => top_priority_reg[0].CLK
 clk => top_priority_reg[1].CLK
 reset => top_priority_reg[0].PRESET
@@ -39109,7 +39180,7 @@ increment_top_priority => top_priority_reg.OUTPUTSELECT
 save_top_priority => ~NO_FANOUT~
 
 
-|cmv_controller|nios:inst7|nios_cmd_xbar_mux:cmd_xbar_mux|altera_merlin_arbitrator:arb|altera_merlin_arb_adder:adder
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_cmd_xbar_mux:cmd_xbar_mux|altera_merlin_arbitrator:arb|altera_merlin_arb_adder:adder
 a[0] => sum.IN0
 a[0] => full_adder.cout[0].IN0
 a[1] => cout.IN0
@@ -39130,7 +39201,7 @@ sum[2] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 sum[3] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|nios_cmd_xbar_mux:cmd_xbar_mux_001
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_cmd_xbar_mux:cmd_xbar_mux_001
 sink0_valid => request.IN1
 sink0_valid => src_valid.IN1
 sink0_data[0] => src_payload.IN1
@@ -39480,7 +39551,7 @@ clk => clk.IN1
 reset => reset.IN1
 
 
-|cmv_controller|nios:inst7|nios_cmd_xbar_mux:cmd_xbar_mux_001|altera_merlin_arbitrator:arb
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_cmd_xbar_mux:cmd_xbar_mux_001|altera_merlin_arbitrator:arb
 clk => top_priority_reg[0].CLK
 clk => top_priority_reg[1].CLK
 reset => top_priority_reg[0].PRESET
@@ -39502,7 +39573,7 @@ increment_top_priority => top_priority_reg.OUTPUTSELECT
 save_top_priority => ~NO_FANOUT~
 
 
-|cmv_controller|nios:inst7|nios_cmd_xbar_mux:cmd_xbar_mux_001|altera_merlin_arbitrator:arb|altera_merlin_arb_adder:adder
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_cmd_xbar_mux:cmd_xbar_mux_001|altera_merlin_arbitrator:arb|altera_merlin_arb_adder:adder
 a[0] => sum.IN0
 a[0] => full_adder.cout[0].IN0
 a[1] => cout.IN0
@@ -39523,7 +39594,7 @@ sum[2] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 sum[3] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|nios_cmd_xbar_demux:rsp_xbar_demux
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_cmd_xbar_demux:rsp_xbar_demux
 sink_valid[0] => src0_valid.IN0
 sink_valid[0] => src1_valid.IN0
 sink_data[0] => src1_data[0].DATAIN
@@ -39979,7 +40050,7 @@ clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 
 
-|cmv_controller|nios:inst7|nios_cmd_xbar_demux:rsp_xbar_demux_001
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_cmd_xbar_demux:rsp_xbar_demux_001
 sink_valid[0] => src0_valid.IN0
 sink_valid[0] => src1_valid.IN0
 sink_data[0] => src1_data[0].DATAIN
@@ -40435,7 +40506,7 @@ clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 
 
-|cmv_controller|nios:inst7|nios_rsp_xbar_demux_002:rsp_xbar_demux_002
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_rsp_xbar_demux_002:rsp_xbar_demux_002
 sink_valid[0] => src0_valid.IN0
 sink_data[0] => src0_data[0].DATAIN
 sink_data[1] => src0_data[1].DATAIN
@@ -40667,7 +40738,7 @@ clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 
 
-|cmv_controller|nios:inst7|nios_rsp_xbar_demux_002:rsp_xbar_demux_003
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_rsp_xbar_demux_002:rsp_xbar_demux_003
 sink_valid[0] => src0_valid.IN0
 sink_data[0] => src0_data[0].DATAIN
 sink_data[1] => src0_data[1].DATAIN
@@ -40899,7 +40970,7 @@ clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 
 
-|cmv_controller|nios:inst7|nios_rsp_xbar_demux_002:rsp_xbar_demux_004
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_rsp_xbar_demux_002:rsp_xbar_demux_004
 sink_valid[0] => src0_valid.IN0
 sink_data[0] => src0_data[0].DATAIN
 sink_data[1] => src0_data[1].DATAIN
@@ -41131,7 +41202,7 @@ clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 
 
-|cmv_controller|nios:inst7|nios_rsp_xbar_demux_002:rsp_xbar_demux_005
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_rsp_xbar_demux_002:rsp_xbar_demux_005
 sink_valid[0] => src0_valid.IN0
 sink_data[0] => src0_data[0].DATAIN
 sink_data[1] => src0_data[1].DATAIN
@@ -41363,7 +41434,7 @@ clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 
 
-|cmv_controller|nios:inst7|nios_rsp_xbar_demux_002:rsp_xbar_demux_006
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_rsp_xbar_demux_002:rsp_xbar_demux_006
 sink_valid[0] => src0_valid.IN0
 sink_data[0] => src0_data[0].DATAIN
 sink_data[1] => src0_data[1].DATAIN
@@ -41595,7 +41666,7 @@ clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 
 
-|cmv_controller|nios:inst7|nios_rsp_xbar_demux_002:rsp_xbar_demux_007
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_rsp_xbar_demux_002:rsp_xbar_demux_007
 sink_valid[0] => src0_valid.IN0
 sink_data[0] => src0_data[0].DATAIN
 sink_data[1] => src0_data[1].DATAIN
@@ -41827,7 +41898,7 @@ clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 
 
-|cmv_controller|nios:inst7|nios_rsp_xbar_demux_002:rsp_xbar_demux_008
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_rsp_xbar_demux_002:rsp_xbar_demux_008
 sink_valid[0] => src0_valid.IN0
 sink_data[0] => src0_data[0].DATAIN
 sink_data[1] => src0_data[1].DATAIN
@@ -42059,7 +42130,7 @@ clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 
 
-|cmv_controller|nios:inst7|nios_rsp_xbar_demux_002:rsp_xbar_demux_009
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_rsp_xbar_demux_002:rsp_xbar_demux_009
 sink_valid[0] => src0_valid.IN0
 sink_data[0] => src0_data[0].DATAIN
 sink_data[1] => src0_data[1].DATAIN
@@ -42291,7 +42362,7 @@ clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 
 
-|cmv_controller|nios:inst7|nios_rsp_xbar_mux:rsp_xbar_mux
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_rsp_xbar_mux:rsp_xbar_mux
 sink0_valid => request[0].IN1
 sink0_data[0] => src_payload.IN1
 sink0_data[1] => src_payload.IN1
@@ -42639,7 +42710,7 @@ clk => clk.IN1
 reset => reset.IN1
 
 
-|cmv_controller|nios:inst7|nios_rsp_xbar_mux:rsp_xbar_mux|altera_merlin_arbitrator:arb
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_rsp_xbar_mux:rsp_xbar_mux|altera_merlin_arbitrator:arb
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 request[0] => grant[0].DATAIN
@@ -42654,7 +42725,7 @@ increment_top_priority => ~NO_FANOUT~
 save_top_priority => ~NO_FANOUT~
 
 
-|cmv_controller|nios:inst7|nios_rsp_xbar_mux:rsp_xbar_mux|altera_merlin_arbitrator:arb|altera_merlin_arb_adder:adder
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_rsp_xbar_mux:rsp_xbar_mux|altera_merlin_arbitrator:arb|altera_merlin_arb_adder:adder
 a[0] => sum.IN0
 a[0] => full_adder.cout[0].IN0
 a[1] => cout.IN0
@@ -42675,7 +42746,7 @@ sum[2] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 sum[3] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|nios_rsp_xbar_mux_001:rsp_xbar_mux_001
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_rsp_xbar_mux_001:rsp_xbar_mux_001
 sink0_valid => request[0].IN1
 sink0_data[0] => src_payload.IN1
 sink0_data[1] => src_payload.IN1
@@ -43943,7 +44014,7 @@ clk => clk.IN1
 reset => reset.IN1
 
 
-|cmv_controller|nios:inst7|nios_rsp_xbar_mux_001:rsp_xbar_mux_001|altera_merlin_arbitrator:arb
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_rsp_xbar_mux_001:rsp_xbar_mux_001|altera_merlin_arbitrator:arb
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 request[0] => grant[0].DATAIN
@@ -43990,7 +44061,7 @@ increment_top_priority => ~NO_FANOUT~
 save_top_priority => ~NO_FANOUT~
 
 
-|cmv_controller|nios:inst7|nios_rsp_xbar_mux_001:rsp_xbar_mux_001|altera_merlin_arbitrator:arb|altera_merlin_arb_adder:adder
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_rsp_xbar_mux_001:rsp_xbar_mux_001|altera_merlin_arbitrator:arb|altera_merlin_arb_adder:adder
 a[0] => Add0.IN20
 a[1] => Add0.IN19
 a[2] => Add0.IN18
@@ -44053,7 +44124,7 @@ sum[18] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 sum[19] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|altera_merlin_width_adapter:width_adapter
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_width_adapter:width_adapter
 clk => byteen_reg[0].CLK
 clk => byteen_reg[1].CLK
 clk => byteen_reg[2].CLK
@@ -44473,7 +44544,7 @@ in_command_size_data[1] => ~NO_FANOUT~
 in_command_size_data[2] => ~NO_FANOUT~
 
 
-|cmv_controller|nios:inst7|altera_merlin_width_adapter:width_adapter_001
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_width_adapter:width_adapter_001
 clk => clk.IN1
 reset => reset.IN1
 in_ready <= in_ready.DB_MAX_OUTPUT_PORT_TYPE
@@ -44696,7 +44767,7 @@ in_command_size_data[1] => ~NO_FANOUT~
 in_command_size_data[2] => ~NO_FANOUT~
 
 
-|cmv_controller|nios:inst7|altera_merlin_width_adapter:width_adapter_001|altera_merlin_burst_uncompressor:uncompressor
+|de2_cyclone2|cmv_controller:inst|nios:inst7|altera_merlin_width_adapter:width_adapter_001|altera_merlin_burst_uncompressor:uncompressor
 clk => burst_uncompress_address_offset[0].CLK
 clk => burst_uncompress_address_offset[1].CLK
 clk => burst_uncompress_address_offset[2].CLK
@@ -44990,7 +45061,7 @@ source_burstsize[1] <= sink_burstsize[1].DB_MAX_OUTPUT_PORT_TYPE
 source_burstsize[2] <= sink_burstsize[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|nios:inst7|nios_irq_mapper:irq_mapper
+|de2_cyclone2|cmv_controller:inst|nios:inst7|nios_irq_mapper:irq_mapper
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 receiver0_irq => sender_irq[0].DATAIN
@@ -45031,14 +45102,14 @@ sender_irq[30] <= <GND>
 sender_irq[31] <= <GND>
 
 
-|cmv_controller|altpll0:inst1
+|de2_cyclone2|cmv_controller:inst|altpll0:inst1
 areset => altpll:altpll_component.areset
 inclk0 => altpll:altpll_component.inclk[0]
 c0 <= altpll:altpll_component.clk[0]
 c1 <= altpll:altpll_component.clk[1]
 
 
-|cmv_controller|altpll0:inst1|altpll:altpll_component
+|de2_cyclone2|cmv_controller:inst|altpll0:inst1|altpll:altpll_component
 inclk[0] => pll.CLK
 inclk[1] => ~NO_FANOUT~
 fbin => ~NO_FANOUT~
@@ -45099,7 +45170,7 @@ fref <= <GND>
 icdrclk <= <GND>
 
 
-|cmv_controller|lvds_decoder:inst
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst
 DATA_OUTCLK <= data_out_clk.DB_MAX_OUTPUT_PORT_TYPE
 PLL_ARESET => altlvds_rx0:inst6.pll_areset
 LVDS_OUTCLK => altlvds_rx0:inst6.rx_inclock
@@ -45292,7 +45363,7 @@ DATA_OUTCTR[8] <= outctr[8].DB_MAX_OUTPUT_PORT_TYPE
 DATA_OUTCTR[9] <= outctr[9].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6
 pll_areset => altlvds_rx:ALTLVDS_RX_component.pll_areset
 rx_data_align => altlvds_rx:ALTLVDS_RX_component.rx_data_align
 rx_in[0] => altlvds_rx:ALTLVDS_RX_component.rx_in[0]
@@ -45486,7 +45557,7 @@ rx_out[169] <= altlvds_rx:ALTLVDS_RX_component.rx_out[169]
 rx_outclock <= altlvds_rx:ALTLVDS_RX_component.rx_outclock
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component
 rx_in[0] => altlvds_rx0_lvds_rx1:auto_generated.rx_in[0]
 rx_in[1] => altlvds_rx0_lvds_rx1:auto_generated.rx_in[1]
 rx_in[2] => altlvds_rx0_lvds_rx1:auto_generated.rx_in[2]
@@ -45903,7 +45974,7 @@ pll_phasecounterselect[3] <= <GND>
 pll_scanclk <= <GND>
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated
 pll_areset => rx_reg[0].ACLR
 pll_areset => rx_reg[1].ACLR
 pll_areset => rx_reg[2].ACLR
@@ -46677,7 +46748,7 @@ rx_out[169] <= rx_reg[169].DB_MAX_OUTPUT_PORT_TYPE
 rx_outclock <= lvds_rx_pll.CLK1
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_dffpipe:h_dffpipe
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_dffpipe:h_dffpipe
 clock => dffe104a[0].CLK
 clock => dffe104a[1].CLK
 clock => dffe104a[2].CLK
@@ -46782,7 +46853,7 @@ q[15] <= dffe104a[15].DB_MAX_OUTPUT_PORT_TYPE
 q[16] <= dffe104a[16].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_dffpipe:l_dffpipe
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_dffpipe:l_dffpipe
 clock => dffe104a[0].CLK
 clock => dffe104a[1].CLK
 clock => dffe104a[2].CLK
@@ -46887,7 +46958,7 @@ q[15] <= dffe104a[15].DB_MAX_OUTPUT_PORT_TYPE
 q[16] <= dffe104a[16].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_cntr:bitslip_cntr
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_cntr:bitslip_cntr
 clock => counter_reg_bit105a_0.CLK
 clock => counter_reg_bit105a_1.CLK
 clock => counter_reg_bit105a_2.CLK
@@ -46902,7 +46973,7 @@ q[2] <= wire_counter_reg_bit105a_regout[2].DB_MAX_OUTPUT_PORT_TYPE
 q[3] <= wire_counter_reg_bit105a_regout[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_cntr:bitslip_cntr|altlvds_rx0_lvds_rx1_altlvds_rx0_cmpr:cmpr106
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_cntr:bitslip_cntr|altlvds_rx0_lvds_rx1_altlvds_rx0_cmpr:cmpr106
 aeb <= aneb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
 dataa[0] => data_wire.IN0
 dataa[1] => data_wire.IN0
@@ -46914,7 +46985,7 @@ datab[2] => data_wire.IN1
 datab[3] => data_wire.IN1
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:h_mux101a
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:h_mux101a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -46947,7 +47018,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:h_mux11a
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:h_mux11a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -46980,7 +47051,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:h_mux17a
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:h_mux17a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -47013,7 +47084,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:h_mux23a
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:h_mux23a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -47046,7 +47117,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:h_mux29a
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:h_mux29a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -47079,7 +47150,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:h_mux35a
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:h_mux35a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -47112,7 +47183,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:h_mux41a
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:h_mux41a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -47145,7 +47216,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:h_mux47a
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:h_mux47a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -47178,7 +47249,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:h_mux53a
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:h_mux53a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -47211,7 +47282,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:h_mux59a
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:h_mux59a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -47244,7 +47315,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:h_mux5a
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:h_mux5a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -47277,7 +47348,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:h_mux65a
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:h_mux65a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -47310,7 +47381,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:h_mux71a
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:h_mux71a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -47343,7 +47414,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:h_mux77a
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:h_mux77a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -47376,7 +47447,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:h_mux83a
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:h_mux83a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -47409,7 +47480,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:h_mux89a
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:h_mux89a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -47442,7 +47513,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:h_mux95a
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:h_mux95a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -47475,7 +47546,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:l_mux102a
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:l_mux102a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -47508,7 +47579,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:l_mux12a
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:l_mux12a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -47541,7 +47612,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:l_mux18a
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:l_mux18a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -47574,7 +47645,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:l_mux24a
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:l_mux24a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -47607,7 +47678,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:l_mux30a
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:l_mux30a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -47640,7 +47711,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:l_mux36a
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:l_mux36a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -47673,7 +47744,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:l_mux42a
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:l_mux42a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -47706,7 +47777,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:l_mux48a
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:l_mux48a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -47739,7 +47810,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:l_mux54a
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:l_mux54a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -47772,7 +47843,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:l_mux60a
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:l_mux60a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -47805,7 +47876,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:l_mux66a
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:l_mux66a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -47838,7 +47909,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:l_mux6a
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:l_mux6a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -47871,7 +47942,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:l_mux72a
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:l_mux72a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -47904,7 +47975,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:l_mux78a
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:l_mux78a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -47937,7 +48008,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:l_mux84a
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:l_mux84a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -47970,7 +48041,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:l_mux90a
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:l_mux90a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -48003,7 +48074,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|cmv_controller|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:l_mux96a
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component|altlvds_rx0_lvds_rx1:auto_generated|altlvds_rx0_lvds_rx1_altlvds_rx0_mux:l_mux96a
 data[0] => w_mux_outputs1411w.IN0
 data[1] => w_mux_outputs1411w.IN0
 data[2] => w_mux_outputs1411w.IN0
@@ -48036,7 +48107,7 @@ sel[3] => muxlut_result0w.IN1
 sel[3] => muxlut_result0w.IN1
 
 
-|cmv_controller|lvds_decoder:inst|lvds_out_map:inst
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|lvds_out_map:inst
 LVDS_DATA[0] => OUTCTR[9].DATAIN
 LVDS_DATA[1] => OUTCTR[8].DATAIN
 LVDS_DATA[2] => OUTCTR[7].DATAIN
@@ -48379,7 +48450,7 @@ OUTCH16[8] <= LVDS_DATA[161].DB_MAX_OUTPUT_PORT_TYPE
 OUTCH16[9] <= LVDS_DATA[160].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cmv_controller|lvds_decoder:inst|lvds_in_map:inst_0
+|de2_cyclone2|cmv_controller:inst|lvds_decoder:inst|lvds_in_map:inst_0
 LVDS_CTR => LVDS_DATA[0].DATAIN
 LVDS_CH[0] => LVDS_DATA[1].DATAIN
 LVDS_CH[1] => LVDS_DATA[2].DATAIN
