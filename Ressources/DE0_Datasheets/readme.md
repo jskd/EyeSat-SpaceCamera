@@ -1,0 +1,1 @@
+https://www.altera.com/support/training/university/boards.html#de0
