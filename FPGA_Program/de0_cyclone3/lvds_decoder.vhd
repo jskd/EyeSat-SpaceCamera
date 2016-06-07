@@ -1,0 +1,150 @@
+-- Copyright (C) 1991-2013 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+
+-- PROGRAM		"Quartus II 64-Bit"
+-- VERSION		"Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version"
+-- CREATED		"Wed Jun 01 12:57:24 2016"
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all; 
+
+LIBRARY work;
+
+ENTITY lvds_decoder IS 
+	PORT
+	(
+		LVDS_OUTCLK :  IN  STD_LOGIC;
+		LVDS_OUTCTR :  IN  STD_LOGIC;
+		PLL_ARESET :  IN  STD_LOGIC;
+		LVDS_OUTCH :  IN  STD_LOGIC_VECTOR(15 DOWNTO 0);
+		DATA_OUTCLK :  OUT  STD_LOGIC;
+		DATA_OUTCH01 :  OUT  STD_LOGIC_VECTOR(9 DOWNTO 0);
+		DATA_OUTCH02 :  OUT  STD_LOGIC_VECTOR(9 DOWNTO 0);
+		DATA_OUTCH03 :  OUT  STD_LOGIC_VECTOR(9 DOWNTO 0);
+		DATA_OUTCH04 :  OUT  STD_LOGIC_VECTOR(9 DOWNTO 0);
+		DATA_OUTCH05 :  OUT  STD_LOGIC_VECTOR(9 DOWNTO 0);
+		DATA_OUTCH06 :  OUT  STD_LOGIC_VECTOR(9 DOWNTO 0);
+		DATA_OUTCH07 :  OUT  STD_LOGIC_VECTOR(9 DOWNTO 0);
+		DATA_OUTCH08 :  OUT  STD_LOGIC_VECTOR(9 DOWNTO 0);
+		DATA_OUTCH09 :  OUT  STD_LOGIC_VECTOR(9 DOWNTO 0);
+		DATA_OUTCH10 :  OUT  STD_LOGIC_VECTOR(9 DOWNTO 0);
+		DATA_OUTCH11 :  OUT  STD_LOGIC_VECTOR(9 DOWNTO 0);
+		DATA_OUTCH12 :  OUT  STD_LOGIC_VECTOR(9 DOWNTO 0);
+		DATA_OUTCH13 :  OUT  STD_LOGIC_VECTOR(9 DOWNTO 0);
+		DATA_OUTCH14 :  OUT  STD_LOGIC_VECTOR(9 DOWNTO 0);
+		DATA_OUTCH15 :  OUT  STD_LOGIC_VECTOR(9 DOWNTO 0);
+		DATA_OUTCH16 :  OUT  STD_LOGIC_VECTOR(9 DOWNTO 0);
+		DATA_OUTCTR :  OUT  STD_LOGIC_VECTOR(9 DOWNTO 0)
+	);
+END lvds_decoder;
+
+ARCHITECTURE bdf_type OF lvds_decoder IS 
+
+COMPONENT lvds_out_map
+	PORT(LVDS_DATA : IN STD_LOGIC_VECTOR(169 DOWNTO 0);
+		 OUTCH01 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 OUTCH02 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 OUTCH03 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 OUTCH04 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 OUTCH05 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 OUTCH06 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 OUTCH07 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 OUTCH08 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 OUTCH09 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 OUTCH10 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 OUTCH11 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 OUTCH12 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 OUTCH13 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 OUTCH14 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 OUTCH15 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 OUTCH16 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 OUTCTR : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
+	);
+END COMPONENT;
+
+COMPONENT altlvds_rx0
+	PORT(pll_areset : IN STD_LOGIC;
+		 rx_data_align : IN STD_LOGIC;
+		 rx_inclock : IN STD_LOGIC;
+		 rx_in : IN STD_LOGIC_VECTOR(16 DOWNTO 0);
+		 rx_outclock : OUT STD_LOGIC;
+		 rx_out : OUT STD_LOGIC_VECTOR(169 DOWNTO 0)
+	);
+END COMPONENT;
+
+COMPONENT lvds_in_map
+	PORT(LVDS_CTR : IN STD_LOGIC;
+		 LVDS_CH : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+		 LVDS_DATA : OUT STD_LOGIC_VECTOR(16 DOWNTO 0)
+	);
+END COMPONENT;
+
+SIGNAL	data_out_clk :  STD_LOGIC;
+SIGNAL	outctr :  STD_LOGIC_VECTOR(9 DOWNTO 0);
+SIGNAL	SYNTHESIZED_WIRE_0 :  STD_LOGIC_VECTOR(169 DOWNTO 0);
+SIGNAL	SYNTHESIZED_WIRE_1 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_2 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_3 :  STD_LOGIC_VECTOR(16 DOWNTO 0);
+
+
+BEGIN 
+
+
+
+b2v_inst : lvds_out_map
+PORT MAP(LVDS_DATA => SYNTHESIZED_WIRE_0,
+		 OUTCH01 => DATA_OUTCH01,
+		 OUTCH02 => DATA_OUTCH02,
+		 OUTCH03 => DATA_OUTCH03,
+		 OUTCH04 => DATA_OUTCH04,
+		 OUTCH05 => DATA_OUTCH05,
+		 OUTCH06 => DATA_OUTCH06,
+		 OUTCH07 => DATA_OUTCH07,
+		 OUTCH08 => DATA_OUTCH08,
+		 OUTCH09 => DATA_OUTCH09,
+		 OUTCH10 => DATA_OUTCH10,
+		 OUTCH11 => DATA_OUTCH11,
+		 OUTCH12 => DATA_OUTCH12,
+		 OUTCH13 => DATA_OUTCH13,
+		 OUTCH14 => DATA_OUTCH14,
+		 OUTCH15 => DATA_OUTCH15,
+		 OUTCH16 => DATA_OUTCH16,
+		 OUTCTR => outctr);
+
+
+SYNTHESIZED_WIRE_2 <= outctr(8) OR SYNTHESIZED_WIRE_1;
+
+
+b2v_inst6 : altlvds_rx0
+PORT MAP(pll_areset => PLL_ARESET,
+		 rx_data_align => SYNTHESIZED_WIRE_2,
+		 rx_inclock => LVDS_OUTCLK,
+		 rx_in => SYNTHESIZED_WIRE_3,
+		 rx_outclock => data_out_clk,
+		 rx_out => SYNTHESIZED_WIRE_0);
+
+
+b2v_inst_0 : lvds_in_map
+PORT MAP(LVDS_CTR => LVDS_OUTCTR,
+		 LVDS_CH => LVDS_OUTCH,
+		 LVDS_DATA => SYNTHESIZED_WIRE_3);
+
+
+SYNTHESIZED_WIRE_1 <= NOT(outctr(9));
+
+
+DATA_OUTCLK <= data_out_clk;
+DATA_OUTCTR <= outctr;
+
+END bdf_type;

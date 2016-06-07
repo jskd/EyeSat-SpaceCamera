@@ -1,0 +1,892 @@
+Info: Starting: Create simulation model
+Info: ip-generate --project-directory=C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/ --output-directory=C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios/simulation/ --file-set=SIM_VHDL --report-file=sopcinfo:C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios.sopcinfo --report-file=html:C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios.html --report-file=sip:C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios/simulation/nios.sip --report-file=csv:C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios.csv --report-file=spd:C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios.spd --report-file=cmp:C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios.cmp --system-info=DEVICE_FAMILY="Cyclone II" --system-info=DEVICE=EP2C35F672C6 --system-info=DEVICE_SPEEDGRADE=6 --component-file=C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios.qsys
+Progress: Loading nios/nios.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.0]
+Progress: Parameterizing module clk_0
+Progress: Adding data_ctr [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module data_ctr
+Progress: Adding data_ch1 [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module data_ch1
+Progress: Adding data_ch9 [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module data_ch9
+Progress: Adding CPU [altera_nios2_qsys 13.0]
+Progress: Parameterizing module CPU
+Progress: Adding data_clk [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module data_clk
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 13.0.1.99.2]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 13.0.1.99.2]
+Progress: Parameterizing module jtag_uart_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: nios.data_clk: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: nios: Generating nios "nios" for SIM_VHDL
+Info: pipeline_bridge_swap_transform: After transform: 8 modules, 32 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_translator_transform: After transform: 17 modules, 68 connections
+Info: merlin_domain_transform: After transform: 34 modules, 182 connections
+Info: merlin_router_transform: After transform: 43 modules, 218 connections
+Info: reset_adaptation_transform: After transform: 44 modules, 171 connections
+Info: merlin_network_to_switch_transform: After transform: 61 modules, 207 connections
+Info: merlin_mm_transform: After transform: 61 modules, 207 connections
+Info: merlin_interrupt_mapper_transform: After transform: 62 modules, 210 connections
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Info: data_ctr: Starting RTL generation for module 'nios_data_ctr'
+Info: data_ctr:   Generation command is [exec C:/logicielge1/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/logicielge1/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin -I C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios_data_ctr --dir=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0001_data_ctr_gen/ --quartus_dir=C:/logicielge1/altera/13.0sp1/quartus --vhdl --config=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0001_data_ctr_gen//nios_data_ctr_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0001_data_ctr_gen/  ]
+Info: data_ctr: Done RTL generation for module 'nios_data_ctr'
+Info: data_ctr: "nios" instantiated altera_avalon_pio "data_ctr"
+Info: CPU: Starting RTL generation for module 'nios_CPU'
+Info: CPU:   Generation command is [exec C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/eperl.exe -I C:/logicielge1/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin -I C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/cpu_lib -I C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/nios_lib -I C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2 -I C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2 -- C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/generate_rtl.epl --name=nios_CPU --dir=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0002_CPU_gen/ --quartus_dir=C:/logicielge1/altera/13.0sp1/quartus --vhdl --config=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0002_CPU_gen//nios_CPU_processor_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0002_CPU_gen/    --bogus  ]
+Info: CPU: # 2016.06.01 17:27:50 (*) Starting Nios II generation
+Info: CPU: # 2016.06.01 17:27:50 (*)   Checking for plaintext license.
+Info: CPU: # 2016.06.01 17:28:25 (*)   Plaintext license not found.
+Info: CPU: # 2016.06.01 17:28:25 (*)   No license required to generate encrypted Nios II/e.
+Info: CPU: # 2016.06.01 17:28:25 (*)   Elaborating CPU configuration settings
+Info: CPU: # 2016.06.01 17:28:25 (*)   Creating all objects for CPU
+Info: CPU: # 2016.06.01 17:28:27 (*)   Creating 'C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0002_CPU_gen//nios_CPU_nios2_waves.do'
+Info: CPU: # 2016.06.01 17:28:27 (*)   Generating RTL from CPU objects
+Info: CPU: # 2016.06.01 17:28:27 (*)   Creating plain-text RTL
+Info: CPU: # 2016.06.01 17:28:33 (*) Done Nios II generation
+Info: CPU: Done RTL generation for module 'nios_CPU'
+Info: CPU: "nios" instantiated altera_nios2_qsys "CPU"
+Info: data_clk: Starting RTL generation for module 'nios_data_clk'
+Info: data_clk:   Generation command is [exec C:/logicielge1/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/logicielge1/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin -I C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios_data_clk --dir=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0003_data_clk_gen/ --quartus_dir=C:/logicielge1/altera/13.0sp1/quartus --vhdl --config=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0003_data_clk_gen//nios_data_clk_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0003_data_clk_gen/  ]
+Info: data_clk: Done RTL generation for module 'nios_data_clk'
+Info: data_clk: "nios" instantiated altera_avalon_pio "data_clk"
+Info: onchip_memory2_0: Starting RTL generation for module 'nios_onchip_memory2_0'
+Info: onchip_memory2_0:   Generation command is [exec C:/logicielge1/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/logicielge1/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin -I C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=nios_onchip_memory2_0 --dir=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0004_onchip_memory2_0_gen/ --quartus_dir=C:/logicielge1/altera/13.0sp1/quartus --vhdl --config=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0004_onchip_memory2_0_gen//nios_onchip_memory2_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0004_onchip_memory2_0_gen/  ]
+Info: onchip_memory2_0: Done RTL generation for module 'nios_onchip_memory2_0'
+Info: onchip_memory2_0: "nios" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: jtag_uart_0: Starting RTL generation for module 'nios_jtag_uart_0'
+Info: jtag_uart_0:   Generation command is [exec C:/logicielge1/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/logicielge1/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin -I C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=nios_jtag_uart_0 --dir=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0005_jtag_uart_0_gen/ --quartus_dir=C:/logicielge1/altera/13.0sp1/quartus --vhdl --config=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0005_jtag_uart_0_gen//nios_jtag_uart_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0005_jtag_uart_0_gen/  ]
+Info: jtag_uart_0: Done RTL generation for module 'nios_jtag_uart_0'
+Info: jtag_uart_0: "nios" instantiated altera_avalon_jtag_uart "jtag_uart_0"
+Info: CPU_data_master_translator: "nios" instantiated altera_merlin_master_translator "CPU_data_master_translator"
+Info: onchip_memory2_0_s1_translator: "nios" instantiated altera_merlin_slave_translator "onchip_memory2_0_s1_translator"
+Info: CPU_data_master_translator_avalon_universal_master_0_agent: "nios" instantiated altera_merlin_master_agent "CPU_data_master_translator_avalon_universal_master_0_agent"
+Info: onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent: "nios" instantiated altera_merlin_slave_agent "onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent"
+Info: onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo: Generating VHDL simulation model
+Warning: Can't contact license server "1718@geiione" -- this server will be ignored
+Warning: Can't contact license server "1717@geiione" -- this server will be ignored
+Warning: Can't contact license server "1800@geiione" -- this server will be ignored
+Warning: Can't contact license server "1718@192.168.89.8" -- this server will be ignored
+Warning: Can't contact license server "1717@192.168.89.8" -- this server will be ignored
+Info: onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo: Generated simulation model nios_onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo.vho
+Info: onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo: "nios" instantiated altera_avalon_sc_fifo "onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo"
+Warning: Can't contact license server "1718@geiione" -- this server will be ignored
+Warning: Can't contact license server "1717@geiione" -- this server will be ignored
+Warning: Can't contact license server "1800@geiione" -- this server will be ignored
+Warning: Can't contact license server "1718@192.168.89.8" -- this server will be ignored
+Warning: Can't contact license server "1717@192.168.89.8" -- this server will be ignored
+Info: addr_router: "nios" instantiated altera_merlin_router "addr_router"
+Warning: Can't contact license server "1718@geiione" -- this server will be ignored
+Warning: Can't contact license server "1717@geiione" -- this server will be ignored
+Warning: Can't contact license server "1800@geiione" -- this server will be ignored
+Warning: Can't contact license server "1718@192.168.89.8" -- this server will be ignored
+Warning: Can't contact license server "1717@192.168.89.8" -- this server will be ignored
+Info: addr_router_001: "nios" instantiated altera_merlin_router "addr_router_001"
+Warning: Can't contact license server "1718@geiione" -- this server will be ignored
+Warning: Can't contact license server "1717@geiione" -- this server will be ignored
+Warning: Can't contact license server "1800@geiione" -- this server will be ignored
+Warning: Can't contact license server "1718@192.168.89.8" -- this server will be ignored
+Warning: Can't contact license server "1717@192.168.89.8" -- this server will be ignored
+Info: id_router: "nios" instantiated altera_merlin_router "id_router"
+Warning: Can't contact license server "1718@geiione" -- this server will be ignored
+Warning: Can't contact license server "1717@geiione" -- this server will be ignored
+Warning: Can't contact license server "1800@geiione" -- this server will be ignored
+Warning: Can't contact license server "1718@192.168.89.8" -- this server will be ignored
+Warning: Can't contact license server "1717@192.168.89.8" -- this server will be ignored
+Info: id_router_001: "nios" instantiated altera_merlin_router "id_router_001"
+Info: rst_controller: "nios" instantiated altera_reset_controller "rst_controller"
+Info: cmd_xbar_demux: Generating VHDL simulation model
+Warning: Can't contact license server "1718@geiione" -- this server will be ignored
+Warning: Can't contact license server "1717@geiione" -- this server will be ignored
+Warning: Can't contact license server "1800@geiione" -- this server will be ignored
+Warning: Can't contact license server "1718@192.168.89.8" -- this server will be ignored
+Warning: Can't contact license server "1717@192.168.89.8" -- this server will be ignored
+Info: cmd_xbar_demux: Generated simulation model nios_cmd_xbar_demux.vho
+Info: cmd_xbar_demux: "nios" instantiated altera_merlin_demultiplexer "cmd_xbar_demux"
+Info: cmd_xbar_demux_001: Generating VHDL simulation model
+Warning: Can't contact license server "1718@geiione" -- this server will be ignored
+Warning: Can't contact license server "1717@geiione" -- this server will be ignored
+Warning: Can't contact license server "1800@geiione" -- this server will be ignored
+Warning: Can't contact license server "1718@192.168.89.8" -- this server will be ignored
+Warning: Can't contact license server "1717@192.168.89.8" -- this server will be ignored
+Info: cmd_xbar_demux_001: Generated simulation model nios_cmd_xbar_demux_001.vho
+Info: cmd_xbar_demux_001: "nios" instantiated altera_merlin_demultiplexer "cmd_xbar_demux_001"
+Info: cmd_xbar_mux: Generating VHDL simulation model
+Warning: Can't contact license server "1718@geiione" -- this server will be ignored
+Warning: Can't contact license server "1717@geiione" -- this server will be ignored
+Warning: Can't contact license server "1800@geiione" -- this server will be ignored
+Warning: Can't contact license server "1718@192.168.89.8" -- this server will be ignored
+Warning: Can't contact license server "1717@192.168.89.8" -- this server will be ignored
+Info: cmd_xbar_mux: Generated simulation model nios_cmd_xbar_mux.vho
+Info: cmd_xbar_mux: "nios" instantiated altera_merlin_multiplexer "cmd_xbar_mux"
+Info: rsp_xbar_demux_001: Generating VHDL simulation model
+Warning: Can't contact license server "1718@geiione" -- this server will be ignored
+Warning: Can't contact license server "1717@geiione" -- this server will be ignored
+Warning: Can't contact license server "1800@geiione" -- this server will be ignored
+Warning: Can't contact license server "1718@192.168.89.8" -- this server will be ignored
+Warning: Can't contact license server "1717@192.168.89.8" -- this server will be ignored
+Info: rsp_xbar_demux_001: Generated simulation model nios_rsp_xbar_demux_001.vho
+Info: rsp_xbar_demux_001: "nios" instantiated altera_merlin_demultiplexer "rsp_xbar_demux_001"
+Info: rsp_xbar_mux: Generating VHDL simulation model
+Warning: Can't contact license server "1718@geiione" -- this server will be ignored
+Warning: Can't contact license server "1717@geiione" -- this server will be ignored
+Warning: Can't contact license server "1800@geiione" -- this server will be ignored
+Warning: Can't contact license server "1718@192.168.89.8" -- this server will be ignored
+Warning: Can't contact license server "1717@192.168.89.8" -- this server will be ignored
+Info: rsp_xbar_mux: Generated simulation model nios_rsp_xbar_mux.vho
+Info: rsp_xbar_mux: "nios" instantiated altera_merlin_multiplexer "rsp_xbar_mux"
+Info: rsp_xbar_mux_001: Generating VHDL simulation model
+Warning: Can't contact license server "1718@geiione" -- this server will be ignored
+Warning: Can't contact license server "1717@geiione" -- this server will be ignored
+Warning: Can't contact license server "1800@geiione" -- this server will be ignored
+Warning: Can't contact license server "1718@192.168.89.8" -- this server will be ignored
+Warning: Can't contact license server "1717@192.168.89.8" -- this server will be ignored
+Info: rsp_xbar_mux_001: Generated simulation model nios_rsp_xbar_mux_001.vho
+Info: rsp_xbar_mux_001: "nios" instantiated altera_merlin_multiplexer "rsp_xbar_mux_001"
+Info: irq_mapper: Generating VHDL simulation model
+Warning: Can't contact license server "1718@geiione" -- this server will be ignored
+Warning: Can't contact license server "1717@geiione" -- this server will be ignored
+Warning: Can't contact license server "1800@geiione" -- this server will be ignored
+Warning: Can't contact license server "1718@192.168.89.8" -- this server will be ignored
+Warning: Can't contact license server "1717@192.168.89.8" -- this server will be ignored
+Info: irq_mapper: Generated simulation model nios_irq_mapper.vho
+Info: irq_mapper: "nios" instantiated altera_irq_mapper "irq_mapper"
+Info: nios: Done nios" with 23 modules, 130 files, 5070860 bytes
+Info: ip-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd=C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios.spd --output-directory=C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios/simulation/
+Info: Doing: ip-make-simscript --spd=C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios.spd --output-directory=C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios/simulation/
+Info: Generating the following file(s) for MODELSIM simulator in C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Skipping VCS script generation since VHDL file $QUARTUS_INSTALL_DIR/eda/sim_lib/altera_syn_attributes.vhd is required for simulation
+Info: Generating the following file(s) for VCSMX simulator in C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios/simulation/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	17 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERAPRO simulator in C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: Finished: Create Modelsim Project.
+Info: 
+Info: Starting: Create testbench Qsys system
+Info: C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios/testbench/nios.ipx
+Info: ip-generate --project-directory=C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/ --output-directory=C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/ --report-file=sopcinfo:C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios.sopcinfo --report-file=html:C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios.html --system-info=DEVICE_FAMILY="Cyclone II" --system-info=DEVICE=EP2C35F672C6 --system-info=DEVICE_SPEEDGRADE=6 --component-file=C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios.qsys
+Progress: Loading nios/nios.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.0]
+Progress: Parameterizing module clk_0
+Progress: Adding data_ctr [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module data_ctr
+Progress: Adding data_ch1 [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module data_ch1
+Progress: Adding data_ch9 [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module data_ch9
+Progress: Adding CPU [altera_nios2_qsys 13.0]
+Progress: Parameterizing module CPU
+Progress: Adding data_clk [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module data_clk
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 13.0.1.99.2]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 13.0.1.99.2]
+Progress: Parameterizing module jtag_uart_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: nios.data_clk: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: ip-generate succeeded.
+Info: Loading component library for testbench.
+Progress: 
+Progress: 
+Progress: 
+Progress: (1) searching C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/root_components.ipx (ipx file)
+Info: Reading index C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/root_components.ipx
+Info: C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/root_components.ipx: Loading now from components.ipx
+Info: Reading index C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/ip_component_categories.ipx
+Info: C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/ip_component_categories.ipx described 0 plugins, 0 paths, in 0,07 seconds
+Info: C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/ip_component_categories.ipx matched 1 files in 0,07 seconds
+Progress: Loading altera_up_avalon_video_alpha_blender/altera_up_avalon_video_alpha_blender_hw.tcl
+Info: C:\logicielge1\altera\13.0sp1\ip\University_Program\Audio_Video\Video\altera_up_avalon_video_alpha_blender\altera_up_avalon_video_alpha_blender_hw.tcl: no _hw.tcl package requested, assuming package require -exact sopc 9.0
+Progress: Loading altera_up_avalon_video_bayer_resampler/altera_up_avalon_video_bayer_resampler_hw.tcl
+Info: C:\logicielge1\altera\13.0sp1\ip\University_Program\Audio_Video\Video\altera_up_avalon_video_bayer_resampler\altera_up_avalon_video_bayer_resampler_hw.tcl: no _hw.tcl package requested, assuming package require -exact sopc 9.0
+Progress: Loading altera_up_avalon_video_character_buffer_with_dma/altera_up_avalon_video_character_buffer_with_dma_hw.tcl
+Info: C:\logicielge1\altera\13.0sp1\ip\University_Program\Audio_Video\Video\altera_up_avalon_video_character_buffer_with_dma\altera_up_avalon_video_character_buffer_with_dma_hw.tcl: no _hw.tcl package requested, assuming package require -exact sopc 9.0
+Progress: Loading altera_up_avalon_video_character_buffer_with_dma/altera_up_avalon_video_character_buffer_with_dma_sw.tcl
+Progress: Loading altera_up_avalon_video_chroma_resampler/altera_up_avalon_video_chroma_resampler_hw.tcl
+Info: C:\logicielge1\altera\13.0sp1\ip\University_Program\Audio_Video\Video\altera_up_avalon_video_chroma_resampler\altera_up_avalon_video_chroma_resampler_hw.tcl: no _hw.tcl package requested, assuming package require -exact sopc 9.0
+Progress: Loading altera_up_avalon_video_clipper/altera_up_avalon_video_clipper_hw.tcl
+Info: C:\logicielge1\altera\13.0sp1\ip\University_Program\Audio_Video\Video\altera_up_avalon_video_clipper\altera_up_avalon_video_clipper_hw.tcl: no _hw.tcl package requested, assuming package require -exact sopc 9.0
+Progress: Loading altera_up_avalon_video_csc/altera_up_avalon_video_csc_hw.tcl
+Info: C:\logicielge1\altera\13.0sp1\ip\University_Program\Audio_Video\Video\altera_up_avalon_video_csc\altera_up_avalon_video_csc_hw.tcl: no _hw.tcl package requested, assuming package require -exact sopc 9.0
+Progress: Loading altera_up_avalon_video_decoder/altera_up_avalon_video_decoder_hw.tcl
+Info: C:\logicielge1\altera\13.0sp1\ip\University_Program\Audio_Video\Video\altera_up_avalon_video_decoder\altera_up_avalon_video_decoder_hw.tcl: no _hw.tcl package requested, assuming package require -exact sopc 9.0
+Progress: Loading altera_up_avalon_video_dma_controller/altera_up_avalon_video_dma_controller_hw.tcl
+Info: C:\logicielge1\altera\13.0sp1\ip\University_Program\Audio_Video\Video\altera_up_avalon_video_dma_controller\altera_up_avalon_video_dma_controller_hw.tcl: no _hw.tcl package requested, assuming package require -exact sopc 9.0
+Progress: Loading altera_up_avalon_video_dual_clock_buffer/altera_up_avalon_video_dual_clock_buffer_hw.tcl
+Info: C:\logicielge1\altera\13.0sp1\ip\University_Program\Audio_Video\Video\altera_up_avalon_video_dual_clock_buffer\altera_up_avalon_video_dual_clock_buffer_hw.tcl: no _hw.tcl package requested, assuming package require -exact sopc 9.0
+Progress: Loading altera_up_avalon_video_edge_detection/altera_up_avalon_video_edge_detection_hw.tcl
+Info: C:\logicielge1\altera\13.0sp1\ip\University_Program\Audio_Video\Video\altera_up_avalon_video_edge_detection\altera_up_avalon_video_edge_detection_hw.tcl: no _hw.tcl package requested, assuming package require -exact sopc 9.0
+Progress: Loading altera_up_avalon_video_pixel_buffer_dma/altera_up_avalon_video_pixel_buffer_dma_hw.tcl
+Info: C:\logicielge1\altera\13.0sp1\ip\University_Program\Audio_Video\Video\altera_up_avalon_video_pixel_buffer_dma\altera_up_avalon_video_pixel_buffer_dma_hw.tcl: no _hw.tcl package requested, assuming package require -exact sopc 9.0
+Progress: Loading altera_up_avalon_video_pixel_buffer_dma/altera_up_avalon_video_pixel_buffer_dma_sw.tcl
+Progress: Loading altera_up_avalon_video_rgb_resampler/altera_up_avalon_video_rgb_resampler_hw.tcl
+Info: C:\logicielge1\altera\13.0sp1\ip\University_Program\Audio_Video\Video\altera_up_avalon_video_rgb_resampler\altera_up_avalon_video_rgb_resampler_hw.tcl: no _hw.tcl package requested, assuming package require -exact sopc 9.0
+Progress: Loading altera_up_avalon_video_scaler/altera_up_avalon_video_scaler_hw.tcl
+Info: C:\logicielge1\altera\13.0sp1\ip\University_Program\Audio_Video\Video\altera_up_avalon_video_scaler\altera_up_avalon_video_scaler_hw.tcl: no _hw.tcl package requested, assuming package require -exact sopc 9.0
+Progress: Loading altera_up_avalon_video_stream_router/altera_up_avalon_video_stream_router_hw.tcl
+Info: C:\logicielge1\altera\13.0sp1\ip\University_Program\Audio_Video\Video\altera_up_avalon_video_stream_router\altera_up_avalon_video_stream_router_hw.tcl: no _hw.tcl package requested, assuming package require -exact sopc 9.0
+Progress: Loading altera_up_avalon_video_test_pattern/altera_up_avalon_video_test_pattern_hw.tcl
+Info: C:\logicielge1\altera\13.0sp1\ip\University_Program\Audio_Video\Video\altera_up_avalon_video_test_pattern\altera_up_avalon_video_test_pattern_hw.tcl: no _hw.tcl package requested, assuming package require -exact sopc 9.0
+Progress: Loading altera_up_avalon_video_vga_controller/altera_up_avalon_video_vga_controller_hw.tcl
+Info: C:\logicielge1\altera\13.0sp1\ip\University_Program\Audio_Video\Video\altera_up_avalon_video_vga_controller\altera_up_avalon_video_vga_controller_hw.tcl: no _hw.tcl package requested, assuming package require -exact sopc 9.0
+Progress: Loading altera_up_avalon_video_vip_bridges/altera_up_avalon_video_raw_to_vip_bridge_hw.tcl
+Info: C:\logicielge1\altera\13.0sp1\ip\University_Program\Audio_Video\Video\altera_up_avalon_video_vip_bridges\altera_up_avalon_video_raw_to_vip_bridge_hw.tcl: no _hw.tcl package requested, assuming package require -exact sopc 9.0
+Progress: Loading altera_up_avalon_video_vip_bridges/altera_up_avalon_video_vip_to_raw_bridge_hw.tcl
+Info: C:\logicielge1\altera\13.0sp1\ip\University_Program\Audio_Video\Video\altera_up_avalon_video_vip_bridges\altera_up_avalon_video_vip_to_raw_bridge_hw.tcl: no _hw.tcl package requested, assuming package require -exact sopc 9.0
+Progress: Loading altera_up_avalon_audio/altera_up_avalon_audio_hw.tcl
+Info: C:\logicielge1\altera\13.0sp1\ip\University_Program\Audio_Video\altera_up_avalon_audio\altera_up_avalon_audio_hw.tcl: no _hw.tcl package requested, assuming package require -exact sopc 9.0
+Progress: Loading altera_up_avalon_audio/altera_up_avalon_audio_sw.tcl
+Progress: Loading altera_up_avalon_audio_and_video_config/altera_up_avalon_audio_and_video_config_hw.tcl
+Info: C:\logicielge1\altera\13.0sp1\ip\University_Program\Audio_Video\altera_up_avalon_audio_and_video_config\altera_up_avalon_audio_and_video_config_hw.tcl: no _hw.tcl package requested, assuming package require -exact sopc 9.0
+Progress: Loading altera_up_avalon_audio_and_video_config/altera_up_avalon_audio_and_video_config_sw.tcl
+Progress: Loading altera_up_avalon_character_lcd/altera_up_avalon_character_lcd_hw.tcl
+Info: C:\logicielge1\altera\13.0sp1\ip\University_Program\Audio_Video\altera_up_avalon_character_lcd\altera_up_avalon_character_lcd_hw.tcl: no _hw.tcl package requested, assuming package require -exact sopc 9.0
+Progress: Loading altera_up_avalon_character_lcd/altera_up_avalon_character_lcd_sw.tcl
+Progress: Loading altera_up_avalon_to_external_bus_bridge/altera_up_avalon_to_external_bus_bridge_hw.tcl
+Info: C:\logicielge1\altera\13.0sp1\ip\University_Program\Bridges\altera_up_avalon_to_external_bus_bridge\altera_up_avalon_to_external_bus_bridge_hw.tcl: no _hw.tcl package requested, assuming package require -exact sopc 9.0
+Progress: Loading altera_up_external_bus_to_avalon_bridge/altera_up_external_bus_to_avalon_bridge_hw.tcl
+Info: C:\logicielge1\altera\13.0sp1\ip\University_Program\Bridges\altera_up_external_bus_to_avalon_bridge\altera_up_external_bus_to_avalon_bridge_hw.tcl: no _hw.tcl package requested, assuming package require -exact sopc 9.0
+Progress: Loading altera_up_avalon_ethernet/altera_up_avalon_ethernet_hw.tcl
+Info: C:\logicielge1\altera\13.0sp1\ip\University_Program\Communications\altera_up_avalon_ethernet\altera_up_avalon_ethernet_hw.tcl: no _hw.tcl package requested, assuming package require -exact sopc 9.0
+Progress: Loading altera_up_avalon_ethernet/altera_up_avalon_ethernet_sw.tcl
+Progress: Loading altera_up_avalon_irda/altera_up_avalon_irda_hw.tcl
+Info: C:\logicielge1\altera\13.0sp1\ip\University_Program\Communications\altera_up_avalon_irda\altera_up_avalon_irda_hw.tcl: no _hw.tcl package requested, assuming package require -exact sopc 9.0
+Progress: Loading altera_up_avalon_irda/altera_up_avalon_irda_sw.tcl
+Progress: Loading altera_up_avalon_rs232/altera_up_avalon_rs232_hw.tcl
+Info: C:\logicielge1\altera\13.0sp1\ip\University_Program\Communications\altera_up_avalon_rs232\altera_up_avalon_rs232_hw.tcl: no _hw.tcl package requested, assuming package require -exact sopc 9.0
+Progress: Loading altera_up_avalon_rs232/altera_up_avalon_rs232_sw.tcl
+Progress: Loading altera_up_avalon_accelerometer_spi/altera_up_avalon_accelerometer_spi_hw.tcl
+Info: C:\logicielge1\altera\13.0sp1\ip\University_Program\Input_Output\altera_up_avalon_accelerometer_spi\altera_up_avalon_accelerometer_spi_hw.tcl: no _hw.tcl package requested, assuming package require -exact sopc 9.0
+Progress: Loading altera_up_avalon_accelerometer_spi/altera_up_avalon_accelerometer_spi_sw.tcl
+Progress: Loading altera_up_avalon_de0_nano_adc/altera_up_avalon_de0_nano_adc_hw.tcl
+Info: C:\logicielge1\altera\13.0sp1\ip\University_Program\Input_Output\altera_up_avalon_de0_nano_adc\altera_up_avalon_de0_nano_adc_hw.tcl: no _hw.tcl package requested, assuming package require -exact sopc 9.0
+Progress: Loading altera_up_avalon_de0_nano_adc/altera_up_avalon_de0_nano_adc_mega_hw.tcl
+Info: C:\logicielge1\altera\13.0sp1\ip\University_Program\Input_Output\altera_up_avalon_de0_nano_adc\altera_up_avalon_de0_nano_adc_mega_hw.tcl: no _hw.tcl package requested, assuming package require -exact sopc 9.0
+Progress: Loading altera_up_avalon_de0_nano_adc/altera_up_avalon_de0_nano_adc_sw.tcl
+Progress: Loading altera_up_avalon_parallel_port/altera_up_avalon_parallel_port_hw.tcl
+Info: C:\logicielge1\altera\13.0sp1\ip\University_Program\Input_Output\altera_up_avalon_parallel_port\altera_up_avalon_parallel_port_hw.tcl: no _hw.tcl package requested, assuming package require -exact sopc 9.0
+Progress: Loading altera_up_avalon_parallel_port/altera_up_avalon_parallel_port_sw.tcl
+Progress: Loading altera_up_avalon_ps2/altera_up_avalon_ps2_hw.tcl
+Info: C:\logicielge1\altera\13.0sp1\ip\University_Program\Input_Output\altera_up_avalon_ps2\altera_up_avalon_ps2_hw.tcl: no _hw.tcl package requested, assuming package require -exact sopc 9.0
+Progress: Loading altera_up_avalon_ps2/altera_up_avalon_ps2_sw.tcl
+Progress: Loading altera_up_avalon_usb/altera_up_avalon_usb_hw.tcl
+Info: C:\logicielge1\altera\13.0sp1\ip\University_Program\Input_Output\altera_up_avalon_usb\altera_up_avalon_usb_hw.tcl: no _hw.tcl package requested, assuming package require -exact sopc 9.0
+Progress: Loading altera_up_avalon_usb/altera_up_avalon_usb_sw.tcl
+Progress: Loading altera_up_avalon_sram/altera_up_avalon_sram_hw.tcl
+Info: C:\logicielge1\altera\13.0sp1\ip\University_Program\Memory\altera_up_avalon_sram\altera_up_avalon_sram_hw.tcl: no _hw.tcl package requested, assuming package require -exact sopc 9.0
+Progress: Loading altera_up_flash_memory/Altera_UP_Flash_Memory_IP_Core_Avalon_Interface_hw.tcl
+Info: C:\logicielge1\altera\13.0sp1\ip\University_Program\Memory\altera_up_flash_memory\Altera_UP_Flash_Memory_IP_Core_Avalon_Interface_hw.tcl: no _hw.tcl package requested, assuming package require -exact sopc 9.0
+Progress: Loading altera_up_sd_card_avalon_interface/Altera_UP_SD_Card_Avalon_Interface_hw.tcl
+Info: C:\logicielge1\altera\13.0sp1\ip\University_Program\Memory\altera_up_sd_card_avalon_interface\Altera_UP_SD_Card_Avalon_Interface_hw.tcl: no _hw.tcl package requested, assuming package require -exact sopc 9.0
+Progress: Loading altera_up_sd_card_avalon_interface/Altera_UP_SD_Card_Avalon_Interface_sw.tcl
+Progress: Loading altera_up_avalon_clocks/altera_up_avalon_clocks_hw.tcl
+Info: C:\logicielge1\altera\13.0sp1\ip\University_Program\altera_up_avalon_clocks\altera_up_avalon_clocks_hw.tcl: no _hw.tcl package requested, assuming package require -exact sopc 9.0
+Progress: Loading altera_up_clocks/altera_up_clocks_hw.tcl
+Info: C:\logicielge1\altera\13.0sp1\ip\University_Program\altera_up_clocks\altera_up_clocks_hw.tcl: no _hw.tcl package requested, assuming package require -exact sopc 9.0
+Info: Reading index C:/logicielge1/altera/13.0sp1/ip/altera/altera_components.ipx
+Info: C:/logicielge1/altera/13.0sp1/ip/altera/altera_components.ipx described 848 plugins, 0 paths, in 0,58 seconds
+Info: C:/logicielge1/altera/13.0sp1/ip/**/* matched 355 files in 5,02 seconds
+Info: C:/Users/innovlab/.altera.quartus/ip/13.0sp1/**/* matched 0 files in 0,00 seconds
+Info: C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios/testbench/ip/**/* matched 0 files in 0,00 seconds
+Info: Reading index C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios/testbench/nios.ipx
+Progress: Loading nios/nios.qsys
+Info: C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/* matched 15 files in 0,01 seconds
+Info: C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/ip/**/* matched 0 files in 0,00 seconds
+Info: C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/*/* matched 5 files in 0,01 seconds
+Info: C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios/testbench/nios.ipx described 0 plugins, 3 paths, in 0,02 seconds
+Progress: Loading testbench/nios_tb.qsys
+Info: C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios/testbench/* matched 8 files in 0,06 seconds
+Info: C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios/testbench/*/* matched 8 files in 0,05 seconds
+Info: Reading index C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/builtin.ipx
+Info: C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/builtin.ipx described 103 plugins, 0 paths, in 0,08 seconds
+Info: C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/**/* matched 9 files in 0,08 seconds
+Info: Reading index C:/logicielge1/altera/13.0sp1/quartus/common/librarian/factories/index.ipx
+Info: C:/logicielge1/altera/13.0sp1/quartus/common/librarian/factories/index.ipx described 151 plugins, 0 paths, in 0,14 seconds
+Info: C:/logicielge1/altera/13.0sp1/quartus/common/librarian/factories/**/* matched 4 files in 0,14 seconds
+Info: C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/$IP_IPX_PATH matched 1 files in 0,00 seconds
+Info: C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/root_components.ipx described 0 plugins, 9 paths, in 5,47 seconds
+Info: C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 5,47 seconds
+Progress: 
+Progress: 
+Progress: 
+Info: Loading presets
+Progress: Loading presets
+Info: Running script C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/tbgen.tcl
+Info: acds::register_package_version 12.1
+Info: send_message Info TB_Gen: QSYS Testbench Generator Rev: $Revision: #2 $
+Info: TB_Gen: QSYS Testbench Generator Rev: $Revision: #2 $
+Info: get_module_property NAME
+Info: send_message Info TB_Gen: System design is: nios
+Info: TB_Gen: System design is: nios
+Info: get_interfaces 
+Info: get_connections 
+Info: get_interface_property clk EXPORT_OF
+Info: get_instance_property clk_0 CLASS_NAME
+Info: get_instance_assignment clk_0 testbench.partner.map.clk_in
+Info: get_interface_property reset EXPORT_OF
+Info: get_instance_property clk_0 CLASS_NAME
+Info: get_instance_assignment clk_0 testbench.partner.map.clk_in_reset
+Info: get_interface_property data_clk EXPORT_OF
+Info: get_instance_property data_clk CLASS_NAME
+Info: get_instance_assignment data_clk testbench.partner.map.external_connection
+Info: get_interface_property data_ctr EXPORT_OF
+Info: get_instance_property data_ctr CLASS_NAME
+Info: get_instance_assignment data_ctr testbench.partner.map.external_connection
+Info: get_interface_property data_ch1 EXPORT_OF
+Info: get_instance_property data_ch1 CLASS_NAME
+Info: get_instance_assignment data_ch1 testbench.partner.map.external_connection
+Info: get_interface_property data_ch9 EXPORT_OF
+Info: get_instance_property data_ch9 CLASS_NAME
+Info: get_instance_assignment data_ch9 testbench.partner.map.external_connection
+Info: send_message Info TB_Gen: Creating testbench system : nios_tb with clock and reset BFMs
+Info: TB_Gen: Creating testbench system : nios_tb with clock and reset BFMs
+Info: create_system nios_tb
+Info: add_instance nios_inst nios 
+Info: set_use_testbench_naming_pattern true
+Info: get_instance_interfaces nios_inst
+Info: get_instance_interface_property nios_inst clk CLASS_NAME
+Info: get_instance_interface_property nios_inst reset CLASS_NAME
+Info: get_instance_interface_property nios_inst data_clk CLASS_NAME
+Info: get_instance_interface_property nios_inst data_ctr CLASS_NAME
+Info: get_instance_interface_property nios_inst data_ch1 CLASS_NAME
+Info: get_instance_interface_property nios_inst data_ch9 CLASS_NAME
+Info: get_instance_interface_property nios_inst clk CLASS_NAME
+Info: send_message Info TB_Gen: clock_sink found: clk
+Info: TB_Gen: clock_sink found: clk
+Info: get_instance_interface_property nios_inst clk CLASS_NAME
+Info: add_instance nios_inst_clk_bfm altera_avalon_clock_source 
+Info: get_instance_property nios_inst_clk_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value nios_inst clk clockRate
+Info: set_instance_parameter_value nios_inst_clk_bfm CLOCK_RATE 50000000.0
+Info: set_instance_parameter_value nios_inst_clk_bfm CLOCK_UNIT 1
+Info: get_instance_property nios_inst_clk_bfm CLASS_NAME
+Info: get_instance_interface_property nios_inst clk CLASS_NAME
+Info: get_instance_interfaces nios_inst_clk_bfm
+Info: get_instance_interface_property nios_inst_clk_bfm clk CLASS_NAME
+Info: add_connection nios_inst_clk_bfm.clk nios_inst.clk
+Info: get_instance_interface_property nios_inst reset CLASS_NAME
+Info: send_message Info TB_Gen: reset_sink found: reset
+Info: TB_Gen: reset_sink found: reset
+Info: get_instance_interface_property nios_inst reset CLASS_NAME
+Info: add_instance nios_inst_reset_bfm altera_avalon_reset_source 
+Info: get_instance_property nios_inst_reset_bfm CLASS_NAME
+Info: get_instance_interface_ports nios_inst reset
+Info: get_instance_interface_port_property nios_inst reset reset_reset_n ROLE
+Info: set_instance_parameter_value nios_inst_reset_bfm ASSERT_HIGH_RESET 0
+Info: set_instance_parameter_value nios_inst_reset_bfm INITIAL_RESET_CYCLES 50
+Info: get_instance_property nios_inst_reset_bfm CLASS_NAME
+Info: get_instance_interfaces nios_inst_reset_bfm
+Info: get_instance_interface_property nios_inst_reset_bfm reset CLASS_NAME
+Info: get_instance_interface_property nios_inst_reset_bfm clk CLASS_NAME
+Info: get_instance_property nios_inst_reset_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value nios_inst reset associatedClock
+Info: get_instance_interfaces nios_inst_clk_bfm
+Info: get_instance_interface_property nios_inst_clk_bfm clk CLASS_NAME
+Info: send_message Warning TB_Gen: nios_inst_reset_bfm is not associated to any clock; connecting nios_inst_reset_bfm to 'nios_inst_clk_bfm.clk'
+Warning: TB_Gen: nios_inst_reset_bfm is not associated to any clock; connecting nios_inst_reset_bfm to 'nios_inst_clk_bfm.clk'
+Info: add_connection nios_inst_clk_bfm.clk nios_inst_reset_bfm.clk
+Info: get_instance_interface_property nios_inst reset CLASS_NAME
+Info: get_instance_interfaces nios_inst_reset_bfm
+Info: get_instance_interface_property nios_inst_reset_bfm reset CLASS_NAME
+Info: get_instance_interface_property nios_inst_reset_bfm clk CLASS_NAME
+Info: add_connection nios_inst_reset_bfm.reset nios_inst.reset
+Info: send_message Info TB_Gen: Saving testbench system: nios_tb.qsys
+Info: TB_Gen: Saving testbench system: nios_tb.qsys
+Info: save_system nios_tb.qsys
+Info: send_message Info TB_Gen: TBGEN SUCCESSFUL
+Info: TB_Gen: TBGEN SUCCESSFUL
+Info: Testbench system: C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios/testbench/nios_tb.qsys
+Info: Done
+Info: ip-generate --project-directory=C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios/testbench/ --output-directory=C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios/testbench/nios_tb/simulation/ --file-set=SIM_VHDL --report-file=html:C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios/testbench/nios_tb.html --system-info=DEVICE_FAMILY="Cyclone II" --system-info=DEVICE=EP2C35F672C6 --system-info=DEVICE_SPEEDGRADE=6 --component-file=C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios/testbench/nios_tb.qsys --report-file=csv:C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios_tb.csv --report-file=spd:C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios_tb.spd
+Progress: Loading testbench/nios_tb.qsys
+Progress: Reading input file
+Progress: Adding nios_inst [nios 1.0]
+Progress: Parameterizing module nios_inst
+Progress: Adding nios_inst_clk_bfm [altera_avalon_clock_source 13.0]
+Progress: Parameterizing module nios_inst_clk_bfm
+Progress: Adding nios_inst_reset_bfm [altera_avalon_reset_source 13.0]
+Progress: Parameterizing module nios_inst_reset_bfm
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: nios_tb.nios_inst.data_clk: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: nios_tb.nios_inst_clk_bfm: Elaborate: altera_clock_source
+Info: nios_tb.nios_inst_clk_bfm:            $Revision: #1 $
+Info: nios_tb.nios_inst_clk_bfm:            $Date: 2013/03/07 $
+Info: nios_tb.nios_inst_reset_bfm: Elaborate: altera_reset_source
+Info: nios_tb.nios_inst_reset_bfm:            $Revision: #1 $
+Info: nios_tb.nios_inst_reset_bfm:            $Date: 2013/03/07 $
+Info: nios_tb.nios_inst_reset_bfm: Reset is negatively asserted.
+Warning: nios_tb.nios_inst: nios_inst.data_clk must be exported, or connected to a matching conduit.
+Warning: nios_tb.nios_inst: nios_inst.data_ctr must be exported, or connected to a matching conduit.
+Warning: nios_tb.nios_inst: nios_inst.data_ch1 must be exported, or connected to a matching conduit.
+Warning: nios_tb.nios_inst: nios_inst.data_ch9 must be exported, or connected to a matching conduit.
+Info: nios_tb: Generating nios_tb "nios_tb" for SIM_VHDL
+Info: pipeline_bridge_swap_transform: After transform: 3 modules, 3 connections
+Info: No custom instruction connections, skipping transform 
+Info: No Avalon connections, skipping transform 
+Info: merlin_translator_transform: After transform: 3 modules, 3 connections
+Info: pipeline_bridge_swap_transform: After transform: 8 modules, 32 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_translator_transform: After transform: 17 modules, 68 connections
+Info: merlin_domain_transform: After transform: 34 modules, 182 connections
+Info: merlin_router_transform: After transform: 43 modules, 218 connections
+Info: reset_adaptation_transform: After transform: 44 modules, 171 connections
+Info: merlin_network_to_switch_transform: After transform: 61 modules, 207 connections
+Info: merlin_mm_transform: After transform: 61 modules, 207 connections
+Info: merlin_interrupt_mapper_transform: After transform: 62 modules, 210 connections
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios_inst: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Info: nios_inst: "nios_tb" instantiated nios "nios_inst"
+Info: nios_inst_clk_bfm: "nios_tb" instantiated altera_avalon_clock_source "nios_inst_clk_bfm"
+Info: nios_inst_reset_bfm: "nios_tb" instantiated altera_avalon_reset_source "nios_inst_reset_bfm"
+Info: data_ctr: Starting RTL generation for module 'nios_data_ctr'
+Info: data_ctr:   Generation command is [exec C:/logicielge1/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/logicielge1/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin -I C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios_data_ctr --dir=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0050_data_ctr_gen/ --quartus_dir=C:/logicielge1/altera/13.0sp1/quartus --vhdl --config=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0050_data_ctr_gen//nios_data_ctr_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0050_data_ctr_gen/  ]
+Info: data_ctr: Done RTL generation for module 'nios_data_ctr'
+Info: data_ctr: "nios_inst" instantiated altera_avalon_pio "data_ctr"
+Info: CPU: Starting RTL generation for module 'nios_CPU'
+Info: CPU:   Generation command is [exec C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/eperl.exe -I C:/logicielge1/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin -I C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/cpu_lib -I C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/nios_lib -I C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2 -I C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2 -- C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/generate_rtl.epl --name=nios_CPU --dir=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0051_CPU_gen/ --quartus_dir=C:/logicielge1/altera/13.0sp1/quartus --vhdl --config=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0051_CPU_gen//nios_CPU_processor_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0051_CPU_gen/    --bogus  ]
+Info: CPU: # 2016.06.01 17:35:23 (*) Starting Nios II generation
+Info: CPU: # 2016.06.01 17:35:23 (*)   Checking for plaintext license.
+Info: CPU: # 2016.06.01 17:36:55 (*)   Plaintext license not found.
+Info: CPU: # 2016.06.01 17:36:55 (*)   No license required to generate encrypted Nios II/e.
+Info: CPU: # 2016.06.01 17:36:55 (*)   Elaborating CPU configuration settings
+Info: CPU: # 2016.06.01 17:36:55 (*)   Creating all objects for CPU
+Info: CPU: # 2016.06.01 17:37:01 (*)   Creating 'C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0051_CPU_gen//nios_CPU_nios2_waves.do'
+Info: CPU: # 2016.06.01 17:37:01 (*)   Generating RTL from CPU objects
+Info: CPU: # 2016.06.01 17:37:01 (*)   Creating plain-text RTL
+Info: CPU: # 2016.06.01 17:37:09 (*) Done Nios II generation
+Info: CPU: Done RTL generation for module 'nios_CPU'
+Info: CPU: "nios_inst" instantiated altera_nios2_qsys "CPU"
+Info: data_clk: Starting RTL generation for module 'nios_data_clk'
+Info: data_clk:   Generation command is [exec C:/logicielge1/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/logicielge1/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin -I C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios_data_clk --dir=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0052_data_clk_gen/ --quartus_dir=C:/logicielge1/altera/13.0sp1/quartus --vhdl --config=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0052_data_clk_gen//nios_data_clk_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0052_data_clk_gen/  ]
+Info: data_clk: Done RTL generation for module 'nios_data_clk'
+Info: data_clk: "nios_inst" instantiated altera_avalon_pio "data_clk"
+Info: onchip_memory2_0: Starting RTL generation for module 'nios_onchip_memory2_0'
+Info: onchip_memory2_0:   Generation command is [exec C:/logicielge1/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/logicielge1/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin -I C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=nios_onchip_memory2_0 --dir=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0053_onchip_memory2_0_gen/ --quartus_dir=C:/logicielge1/altera/13.0sp1/quartus --vhdl --config=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0053_onchip_memory2_0_gen//nios_onchip_memory2_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0053_onchip_memory2_0_gen/  ]
+Info: onchip_memory2_0: Done RTL generation for module 'nios_onchip_memory2_0'
+Info: onchip_memory2_0: "nios_inst" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: jtag_uart_0: Starting RTL generation for module 'nios_jtag_uart_0'
+Info: jtag_uart_0:   Generation command is [exec C:/logicielge1/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/logicielge1/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin -I C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=nios_jtag_uart_0 --dir=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0054_jtag_uart_0_gen/ --quartus_dir=C:/logicielge1/altera/13.0sp1/quartus --vhdl --config=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0054_jtag_uart_0_gen//nios_jtag_uart_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0054_jtag_uart_0_gen/  ]
+Info: jtag_uart_0: Done RTL generation for module 'nios_jtag_uart_0'
+Info: jtag_uart_0: "nios_inst" instantiated altera_avalon_jtag_uart "jtag_uart_0"
+Info: CPU_data_master_translator: "nios_inst" instantiated altera_merlin_master_translator "CPU_data_master_translator"
+Info: onchip_memory2_0_s1_translator: "nios_inst" instantiated altera_merlin_slave_translator "onchip_memory2_0_s1_translator"
+Info: CPU_data_master_translator_avalon_universal_master_0_agent: "nios_inst" instantiated altera_merlin_master_agent "CPU_data_master_translator_avalon_universal_master_0_agent"
+Info: onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent: "nios_inst" instantiated altera_merlin_slave_agent "onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent"
+Info: onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo: Generating VHDL simulation model
+Warning: Can't contact license server "1718@geiione" -- this server will be ignored
+Warning: Can't contact license server "1717@geiione" -- this server will be ignored
+Warning: Can't contact license server "1800@geiione" -- this server will be ignored
+Warning: Can't contact license server "1718@192.168.89.8" -- this server will be ignored
+Warning: Can't contact license server "1717@192.168.89.8" -- this server will be ignored
+Info: onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo: Generated simulation model nios_onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo.vho
+Info: onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo: "nios_inst" instantiated altera_avalon_sc_fifo "onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo"
+Warning: Can't contact license server "1718@geiione" -- this server will be ignored
+Warning: Can't contact license server "1717@geiione" -- this server will be ignored
+Warning: Can't contact license server "1800@geiione" -- this server will be ignored
+Warning: Can't contact license server "1718@192.168.89.8" -- this server will be ignored
+Warning: Can't contact license server "1717@192.168.89.8" -- this server will be ignored
+Info: addr_router: "nios_inst" instantiated altera_merlin_router "addr_router"
+Warning: Can't contact license server "1718@geiione" -- this server will be ignored
+Warning: Can't contact license server "1717@geiione" -- this server will be ignored
+Warning: Can't contact license server "1800@geiione" -- this server will be ignored
+Warning: Can't contact license server "1718@192.168.89.8" -- this server will be ignored
+Warning: Can't contact license server "1717@192.168.89.8" -- this server will be ignored
+Info: addr_router_001: "nios_inst" instantiated altera_merlin_router "addr_router_001"
+Warning: Can't contact license server "1718@geiione" -- this server will be ignored
+Warning: Can't contact license server "1717@geiione" -- this server will be ignored
+Warning: Can't contact license server "1800@geiione" -- this server will be ignored
+Warning: Can't contact license server "1718@192.168.89.8" -- this server will be ignored
+Warning: Can't contact license server "1717@192.168.89.8" -- this server will be ignored
+Info: id_router: "nios_inst" instantiated altera_merlin_router "id_router"
+Warning: Can't contact license server "1718@geiione" -- this server will be ignored
+Warning: Can't contact license server "1717@geiione" -- this server will be ignored
+Warning: Can't contact license server "1800@geiione" -- this server will be ignored
+Warning: Can't contact license server "1718@192.168.89.8" -- this server will be ignored
+Warning: Can't contact license server "1717@192.168.89.8" -- this server will be ignored
+Info: id_router_001: "nios_inst" instantiated altera_merlin_router "id_router_001"
+Info: rst_controller: "nios_inst" instantiated altera_reset_controller "rst_controller"
+Info: cmd_xbar_demux: Generating VHDL simulation model
+Warning: Can't contact license server "1718@geiione" -- this server will be ignored
+Warning: Can't contact license server "1717@geiione" -- this server will be ignored
+Warning: Can't contact license server "1800@geiione" -- this server will be ignored
+Warning: Can't contact license server "1718@192.168.89.8" -- this server will be ignored
+Warning: Can't contact license server "1717@192.168.89.8" -- this server will be ignored
+Info: cmd_xbar_demux: Generated simulation model nios_cmd_xbar_demux.vho
+Info: cmd_xbar_demux: "nios_inst" instantiated altera_merlin_demultiplexer "cmd_xbar_demux"
+Info: cmd_xbar_demux_001: Generating VHDL simulation model
+Warning: Can't contact license server "1718@geiione" -- this server will be ignored
+Warning: Can't contact license server "1717@geiione" -- this server will be ignored
+Warning: Can't contact license server "1800@geiione" -- this server will be ignored
+Warning: Can't contact license server "1718@192.168.89.8" -- this server will be ignored
+Warning: Can't contact license server "1717@192.168.89.8" -- this server will be ignored
+Info: cmd_xbar_demux_001: Generated simulation model nios_cmd_xbar_demux_001.vho
+Info: cmd_xbar_demux_001: "nios_inst" instantiated altera_merlin_demultiplexer "cmd_xbar_demux_001"
+Info: cmd_xbar_mux: Generating VHDL simulation model
+Warning: Can't contact license server "1718@geiione" -- this server will be ignored
+Warning: Can't contact license server "1717@geiione" -- this server will be ignored
+Warning: Can't contact license server "1800@geiione" -- this server will be ignored
+Warning: Can't contact license server "1718@192.168.89.8" -- this server will be ignored
+Warning: Can't contact license server "1717@192.168.89.8" -- this server will be ignored
+Info: cmd_xbar_mux: Generated simulation model nios_cmd_xbar_mux.vho
+Info: cmd_xbar_mux: "nios_inst" instantiated altera_merlin_multiplexer "cmd_xbar_mux"
+Info: rsp_xbar_demux_001: Generating VHDL simulation model
+Warning: Can't contact license server "1718@geiione" -- this server will be ignored
+Warning: Can't contact license server "1717@geiione" -- this server will be ignored
+Warning: Can't contact license server "1800@geiione" -- this server will be ignored
+Warning: Can't contact license server "1718@192.168.89.8" -- this server will be ignored
+Warning: Can't contact license server "1717@192.168.89.8" -- this server will be ignored
+Info: rsp_xbar_demux_001: Generated simulation model nios_rsp_xbar_demux_001.vho
+Info: rsp_xbar_demux_001: "nios_inst" instantiated altera_merlin_demultiplexer "rsp_xbar_demux_001"
+Info: rsp_xbar_mux: Generating VHDL simulation model
+Warning: Can't contact license server "1718@geiione" -- this server will be ignored
+Warning: Can't contact license server "1717@geiione" -- this server will be ignored
+Warning: Can't contact license server "1800@geiione" -- this server will be ignored
+Warning: Can't contact license server "1718@192.168.89.8" -- this server will be ignored
+Warning: Can't contact license server "1717@192.168.89.8" -- this server will be ignored
+Info: rsp_xbar_mux: Generated simulation model nios_rsp_xbar_mux.vho
+Info: rsp_xbar_mux: "nios_inst" instantiated altera_merlin_multiplexer "rsp_xbar_mux"
+Info: rsp_xbar_mux_001: Generating VHDL simulation model
+Warning: Can't contact license server "1718@geiione" -- this server will be ignored
+Warning: Can't contact license server "1717@geiione" -- this server will be ignored
+Warning: Can't contact license server "1800@geiione" -- this server will be ignored
+Warning: Can't contact license server "1718@192.168.89.8" -- this server will be ignored
+Warning: Can't contact license server "1717@192.168.89.8" -- this server will be ignored
+Info: rsp_xbar_mux_001: Generated simulation model nios_rsp_xbar_mux_001.vho
+Info: rsp_xbar_mux_001: "nios_inst" instantiated altera_merlin_multiplexer "rsp_xbar_mux_001"
+Info: irq_mapper: Generating VHDL simulation model
+Warning: Can't contact license server "1718@geiione" -- this server will be ignored
+Warning: Can't contact license server "1717@geiione" -- this server will be ignored
+Warning: Can't contact license server "1800@geiione" -- this server will be ignored
+Warning: Can't contact license server "1718@192.168.89.8" -- this server will be ignored
+Warning: Can't contact license server "1717@192.168.89.8" -- this server will be ignored
+Info: irq_mapper: Generated simulation model nios_irq_mapper.vho
+Info: irq_mapper: "nios_inst" instantiated altera_irq_mapper "irq_mapper"
+Info: nios_tb: Done nios_tb" with 26 modules, 133 files, 5076887 bytes
+Info: ip-generate succeeded.
+Info: sim-script-gen --spd=C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios_tb.spd --output-directory=C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios/testbench/
+Info: Doing: ip-make-simscript --spd=C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios_tb.spd --output-directory=C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios/testbench/
+Info: Generating the following file(s) for MODELSIM simulator in C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios/testbench/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Skipping VCS script generation since VHDL file $QUARTUS_INSTALL_DIR/eda/sim_lib/altera_syn_attributes.vhd is required for simulation
+Info: Generating the following file(s) for VCSMX simulator in C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios/testbench/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios/testbench/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	20 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERAPRO simulator in C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios/testbench/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: Finished: Create testbench Qsys system
+Info: Starting: Create block symbol file (.bsf)
+Info: ip-generate --project-directory=C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/ --output-directory=C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios/ --report-file=bsf:C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios.bsf --system-info=DEVICE_FAMILY="Cyclone II" --system-info=DEVICE=EP2C35F672C6 --system-info=DEVICE_SPEEDGRADE=6 --component-file=C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios.qsys
+Progress: Loading nios/nios.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.0]
+Progress: Parameterizing module clk_0
+Progress: Adding data_ctr [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module data_ctr
+Progress: Adding data_ch1 [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module data_ch1
+Progress: Adding data_ch9 [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module data_ch9
+Progress: Adding CPU [altera_nios2_qsys 13.0]
+Progress: Parameterizing module CPU
+Progress: Adding data_clk [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module data_clk
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 13.0.1.99.2]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 13.0.1.99.2]
+Progress: Parameterizing module jtag_uart_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: nios.data_clk: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory=C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/ --output-directory=C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios/synthesis/ --file-set=QUARTUS_SYNTH --report-file=sopcinfo:C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios.sopcinfo --report-file=html:C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios.html --report-file=qip:C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios/synthesis/nios.qip --report-file=cmp:C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios.cmp --report-file=svd --system-info=DEVICE_FAMILY="Cyclone II" --system-info=DEVICE=EP2C35F672C6 --system-info=DEVICE_SPEEDGRADE=6 --component-file=C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios.qsys --language=VHDL
+Progress: Loading nios/nios.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.0]
+Progress: Parameterizing module clk_0
+Progress: Adding data_ctr [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module data_ctr
+Progress: Adding data_ch1 [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module data_ch1
+Progress: Adding data_ch9 [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module data_ch9
+Progress: Adding CPU [altera_nios2_qsys 13.0]
+Progress: Parameterizing module CPU
+Progress: Adding data_clk [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module data_clk
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 13.0.1.99.2]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 13.0.1.99.2]
+Progress: Parameterizing module jtag_uart_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: nios.data_clk: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: nios: Generating nios "nios" for QUARTUS_SYNTH
+Info: pipeline_bridge_swap_transform: After transform: 8 modules, 32 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_translator_transform: After transform: 17 modules, 68 connections
+Info: merlin_domain_transform: After transform: 34 modules, 182 connections
+Info: merlin_router_transform: After transform: 43 modules, 218 connections
+Info: reset_adaptation_transform: After transform: 44 modules, 171 connections
+Info: merlin_network_to_switch_transform: After transform: 61 modules, 207 connections
+Info: merlin_mm_transform: After transform: 61 modules, 207 connections
+Info: merlin_interrupt_mapper_transform: After transform: 62 modules, 210 connections
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Info: data_ctr: Starting RTL generation for module 'nios_data_ctr'
+Info: data_ctr:   Generation command is [exec C:/logicielge1/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/logicielge1/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin -I C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios_data_ctr --dir=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0097_data_ctr_gen/ --quartus_dir=C:/logicielge1/altera/13.0sp1/quartus --verilog --config=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0097_data_ctr_gen//nios_data_ctr_component_configuration.pl  --do_build_sim=0  ]
+Info: data_ctr: Done RTL generation for module 'nios_data_ctr'
+Info: data_ctr: "nios" instantiated altera_avalon_pio "data_ctr"
+Info: CPU: Starting RTL generation for module 'nios_CPU'
+Info: CPU:   Generation command is [exec C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/eperl.exe -I C:/logicielge1/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin -I C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/cpu_lib -I C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/nios_lib -I C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2 -I C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2 -- C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/generate_rtl.epl --name=nios_CPU --dir=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0098_CPU_gen/ --quartus_dir=C:/logicielge1/altera/13.0sp1/quartus --verilog --config=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0098_CPU_gen//nios_CPU_processor_configuration.pl  --do_build_sim=0    --bogus  ]
+Info: CPU: # 2016.06.01 17:43:13 (*) Starting Nios II generation
+Info: CPU: # 2016.06.01 17:43:13 (*)   Checking for plaintext license.
+Info: CPU: # 2016.06.01 17:43:47 (*)   Plaintext license not found.
+Info: CPU: # 2016.06.01 17:43:47 (*)   No license required to generate encrypted Nios II/e.
+Info: CPU: # 2016.06.01 17:43:47 (*)   Elaborating CPU configuration settings
+Info: CPU: # 2016.06.01 17:43:47 (*)   Creating all objects for CPU
+Info: CPU: # 2016.06.01 17:43:50 (*)   Generating RTL from CPU objects
+Info: CPU: # 2016.06.01 17:43:50 (*)   Creating plain-text RTL
+Info: CPU: # 2016.06.01 17:43:54 (*) Done Nios II generation
+Info: CPU: Done RTL generation for module 'nios_CPU'
+Info: CPU: "nios" instantiated altera_nios2_qsys "CPU"
+Info: data_clk: Starting RTL generation for module 'nios_data_clk'
+Info: data_clk:   Generation command is [exec C:/logicielge1/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/logicielge1/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin -I C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios_data_clk --dir=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0099_data_clk_gen/ --quartus_dir=C:/logicielge1/altera/13.0sp1/quartus --verilog --config=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0099_data_clk_gen//nios_data_clk_component_configuration.pl  --do_build_sim=0  ]
+Info: data_clk: Done RTL generation for module 'nios_data_clk'
+Info: data_clk: "nios" instantiated altera_avalon_pio "data_clk"
+Info: onchip_memory2_0: Starting RTL generation for module 'nios_onchip_memory2_0'
+Info: onchip_memory2_0:   Generation command is [exec C:/logicielge1/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/logicielge1/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin -I C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=nios_onchip_memory2_0 --dir=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0100_onchip_memory2_0_gen/ --quartus_dir=C:/logicielge1/altera/13.0sp1/quartus --verilog --config=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0100_onchip_memory2_0_gen//nios_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_0: Done RTL generation for module 'nios_onchip_memory2_0'
+Info: onchip_memory2_0: "nios" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: jtag_uart_0: Starting RTL generation for module 'nios_jtag_uart_0'
+Info: jtag_uart_0:   Generation command is [exec C:/logicielge1/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/logicielge1/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/logicielge1/altera/13.0sp1/quartus/sopc_builder/bin -I C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/logicielge1/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=nios_jtag_uart_0 --dir=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0101_jtag_uart_0_gen/ --quartus_dir=C:/logicielge1/altera/13.0sp1/quartus --verilog --config=C:/Users/innovlab/AppData/Local/Temp/alt6953_618598749709218828.dir/0101_jtag_uart_0_gen//nios_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart_0: Done RTL generation for module 'nios_jtag_uart_0'
+Info: jtag_uart_0: "nios" instantiated altera_avalon_jtag_uart "jtag_uart_0"
+Info: CPU_data_master_translator: "nios" instantiated altera_merlin_master_translator "CPU_data_master_translator"
+Info: onchip_memory2_0_s1_translator: "nios" instantiated altera_merlin_slave_translator "onchip_memory2_0_s1_translator"
+Info: CPU_data_master_translator_avalon_universal_master_0_agent: "nios" instantiated altera_merlin_master_agent "CPU_data_master_translator_avalon_universal_master_0_agent"
+Info: onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent: "nios" instantiated altera_merlin_slave_agent "onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent"
+Info: onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo: "nios" instantiated altera_avalon_sc_fifo "onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo"
+Info: addr_router: "nios" instantiated altera_merlin_router "addr_router"
+Info: addr_router_001: "nios" instantiated altera_merlin_router "addr_router_001"
+Info: id_router: "nios" instantiated altera_merlin_router "id_router"
+Info: id_router_001: "nios" instantiated altera_merlin_router "id_router_001"
+Info: rst_controller: "nios" instantiated altera_reset_controller "rst_controller"
+Info: cmd_xbar_demux: "nios" instantiated altera_merlin_demultiplexer "cmd_xbar_demux"
+Info: cmd_xbar_demux_001: "nios" instantiated altera_merlin_demultiplexer "cmd_xbar_demux_001"
+Info: cmd_xbar_mux: "nios" instantiated altera_merlin_multiplexer "cmd_xbar_mux"
+Info: rsp_xbar_demux_001: "nios" instantiated altera_merlin_demultiplexer "rsp_xbar_demux_001"
+Info: rsp_xbar_mux: "nios" instantiated altera_merlin_multiplexer "rsp_xbar_mux"
+Info: Reusing file C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_xbar_mux_001: "nios" instantiated altera_merlin_multiplexer "rsp_xbar_mux_001"
+Info: Reusing file C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de2_cyclone2/nios/nios/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: irq_mapper: "nios" instantiated altera_irq_mapper "irq_mapper"
+Info: nios: Done nios" with 23 modules, 92 files, 1812739 bytes
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

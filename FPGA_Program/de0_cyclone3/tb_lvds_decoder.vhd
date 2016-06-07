@@ -1,0 +1,111 @@
+-- Copyright (C) 1991-2013 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+
+-- PROGRAM		"Quartus II 64-Bit"
+-- VERSION		"Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version"
+-- CREATED		"Wed Jun 01 12:58:31 2016"
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all; 
+
+LIBRARY work;
+
+ENTITY tb_lvds_decoder IS 
+	PORT
+	(
+		ARESET :  IN  STD_LOGIC;
+		LVDS_CLK :  IN  STD_LOGIC;
+		LVDS_CTR :  IN  STD_LOGIC;
+		LVDS_CH :  IN  STD_LOGIC_VECTOR(15 DOWNTO 0);
+		DATA_CLK :  OUT  STD_LOGIC;
+		DATA_CH01 :  OUT  STD_LOGIC_VECTOR(9 DOWNTO 0);
+		DATA_CH02 :  OUT  STD_LOGIC_VECTOR(9 DOWNTO 0);
+		DATA_CH03 :  OUT  STD_LOGIC_VECTOR(9 DOWNTO 0);
+		DATA_CH04 :  OUT  STD_LOGIC_VECTOR(9 DOWNTO 0);
+		DATA_CH05 :  OUT  STD_LOGIC_VECTOR(9 DOWNTO 0);
+		DATA_CH06 :  OUT  STD_LOGIC_VECTOR(9 DOWNTO 0);
+		DATA_CH07 :  OUT  STD_LOGIC_VECTOR(9 DOWNTO 0);
+		DATA_CH08 :  OUT  STD_LOGIC_VECTOR(9 DOWNTO 0);
+		DATA_CH09 :  OUT  STD_LOGIC_VECTOR(9 DOWNTO 0);
+		DATA_CH10 :  OUT  STD_LOGIC_VECTOR(9 DOWNTO 0);
+		DATA_CH11 :  OUT  STD_LOGIC_VECTOR(9 DOWNTO 0);
+		DATA_CH12 :  OUT  STD_LOGIC_VECTOR(9 DOWNTO 0);
+		DATA_CH13 :  OUT  STD_LOGIC_VECTOR(9 DOWNTO 0);
+		DATA_CH14 :  OUT  STD_LOGIC_VECTOR(9 DOWNTO 0);
+		DATA_CH15 :  OUT  STD_LOGIC_VECTOR(9 DOWNTO 0);
+		DATA_CH16 :  OUT  STD_LOGIC_VECTOR(9 DOWNTO 0);
+		DATA_CTR :  OUT  STD_LOGIC_VECTOR(9 DOWNTO 0)
+	);
+END tb_lvds_decoder;
+
+ARCHITECTURE bdf_type OF tb_lvds_decoder IS 
+
+COMPONENT lvds_decoder
+	PORT(PLL_ARESET : IN STD_LOGIC;
+		 LVDS_OUTCLK : IN STD_LOGIC;
+		 LVDS_OUTCTR : IN STD_LOGIC;
+		 LVDS_OUTCH : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+		 DATA_OUTCLK : OUT STD_LOGIC;
+		 DATA_OUTCH01 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 DATA_OUTCH02 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 DATA_OUTCH03 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 DATA_OUTCH04 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 DATA_OUTCH05 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 DATA_OUTCH06 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 DATA_OUTCH07 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 DATA_OUTCH08 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 DATA_OUTCH09 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 DATA_OUTCH10 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 DATA_OUTCH11 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 DATA_OUTCH12 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 DATA_OUTCH13 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 DATA_OUTCH14 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 DATA_OUTCH15 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 DATA_OUTCH16 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 DATA_OUTCTR : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
+	);
+END COMPONENT;
+
+
+
+BEGIN 
+
+
+
+b2v_inst : lvds_decoder
+PORT MAP(PLL_ARESET => ARESET,
+		 LVDS_OUTCLK => LVDS_CLK,
+		 LVDS_OUTCTR => LVDS_CTR,
+		 LVDS_OUTCH => LVDS_CH,
+		 DATA_OUTCLK => DATA_CLK,
+		 DATA_OUTCH01 => DATA_CH01,
+		 DATA_OUTCH02 => DATA_CH02,
+		 DATA_OUTCH03 => DATA_CH03,
+		 DATA_OUTCH04 => DATA_CH04,
+		 DATA_OUTCH05 => DATA_CH05,
+		 DATA_OUTCH06 => DATA_CH06,
+		 DATA_OUTCH07 => DATA_CH07,
+		 DATA_OUTCH08 => DATA_CH08,
+		 DATA_OUTCH09 => DATA_CH09,
+		 DATA_OUTCH10 => DATA_CH10,
+		 DATA_OUTCH11 => DATA_CH11,
+		 DATA_OUTCH12 => DATA_CH12,
+		 DATA_OUTCH13 => DATA_CH13,
+		 DATA_OUTCH14 => DATA_CH14,
+		 DATA_OUTCH15 => DATA_CH15,
+		 DATA_OUTCH16 => DATA_CH16,
+		 DATA_OUTCTR => DATA_CTR);
+
+
+END bdf_type;

@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="de0_cyclone3">
+		<CBX_INST_ENTRY INSTANCE_NAME="|de0_cyclone3|cmv_controller:cmv_controller_inst|lvds_decoder:inst|altlvds_rx0:inst6|altlvds_rx:ALTLVDS_RX_component" CBX_FILE_NAME="altlvds_rx0_lvds_rx.v"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|de0_cyclone3|cmv_controller:cmv_controller_inst|nios:inst7|nios_CPU:cpu|nios_CPU_nios2_oci:the_nios_CPU_nios2_oci|nios_CPU_nios2_ocimem:the_nios_CPU_nios2_ocimem|nios_CPU_ociram_sp_ram_module:nios_CPU_ociram_sp_ram|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_l771.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|de0_cyclone3|cmv_controller:cmv_controller_inst|nios:inst7|nios_CPU:cpu|nios_CPU_register_bank_a_module:nios_CPU_register_bank_a|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_hqf1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|de0_cyclone3|cmv_controller:cmv_controller_inst|nios:inst7|nios_CPU:cpu|nios_CPU_register_bank_b_module:nios_CPU_register_bank_b|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_iqf1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|de0_cyclone3|cmv_controller:cmv_controller_inst|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_w:the_nios_jtag_uart_scfifo_w|scfifo:wfifo" CBX_FILE_NAME="scfifo_aq21.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|de0_cyclone3|cmv_controller:cmv_controller_inst|nios:inst7|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_r:the_nios_jtag_uart_scfifo_r|scfifo:rfifo" CBX_FILE_NAME="scfifo_aq21.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|de0_cyclone3|cmv_controller:cmv_controller_inst|nios:inst7|nios_onchip_memory:onchip_memory|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_fhc1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

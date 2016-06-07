@@ -1,0 +1,190 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 16 16 304 304)
+	(text "cmv_controller" (rect 5 0 88 14)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 272 25 284)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "NIOS_CLK_50" (rect 0 0 80 14)(font "Arial" (font_size 8)))
+		(text "NIOS_CLK_50" (rect 21 27 101 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "NIOS_PLL_ARESET" (rect 0 0 110 14)(font "Arial" (font_size 8)))
+		(text "NIOS_PLL_ARESET" (rect 21 43 131 57)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "NIOS_RESET_N" (rect 0 0 88 14)(font "Arial" (font_size 8)))
+		(text "NIOS_RESET_N" (rect 21 59 109 73)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "LVDS_PLL_ARESET" (rect 0 0 115 14)(font "Arial" (font_size 8)))
+		(text "LVDS_PLL_ARESET" (rect 21 75 136 89)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "LVDS_OUTCLK" (rect 0 0 88 14)(font "Arial" (font_size 8)))
+		(text "LVDS_OUTCLK" (rect 21 91 109 105)(font "Arial" (font_size 8)))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "LVDS_OUTCTR" (rect 0 0 88 14)(font "Arial" (font_size 8)))
+		(text "LVDS_OUTCTR" (rect 21 107 109 121)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "LVDS_OUTCH[15..0]" (rect 0 0 116 14)(font "Arial" (font_size 8)))
+		(text "LVDS_OUTCH[15..0]" (rect 21 123 137 137)(font "Arial" (font_size 8)))
+		(line (pt 0 128)(pt 16 128)(line_width 3))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "UART_RX" (rect 0 0 56 14)(font "Arial" (font_size 8)))
+		(text "UART_RX" (rect 21 139 77 153)(font "Arial" (font_size 8)))
+		(line (pt 0 144)(pt 16 144))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "SPI_MISO" (rect 0 0 54 14)(font "Arial" (font_size 8)))
+		(text "SPI_MISO" (rect 21 155 75 169)(font "Arial" (font_size 8)))
+		(line (pt 0 160)(pt 16 160))
+	)
+	(port
+		(pt 288 32)
+		(output)
+		(text "UART_TX" (rect 0 0 55 14)(font "Arial" (font_size 8)))
+		(text "UART_TX" (rect 212 27 267 41)(font "Arial" (font_size 8)))
+		(line (pt 288 32)(pt 272 32))
+	)
+	(port
+		(pt 288 48)
+		(output)
+		(text "SDRAM_CLK" (rect 0 0 74 14)(font "Arial" (font_size 8)))
+		(text "SDRAM_CLK" (rect 193 43 267 57)(font "Arial" (font_size 8)))
+		(line (pt 288 48)(pt 272 48))
+	)
+	(port
+		(pt 288 64)
+		(output)
+		(text "SDRAM_ADDR[11..0]" (rect 0 0 120 14)(font "Arial" (font_size 8)))
+		(text "SDRAM_ADDR[11..0]" (rect 147 59 267 73)(font "Arial" (font_size 8)))
+		(line (pt 288 64)(pt 272 64)(line_width 3))
+	)
+	(port
+		(pt 288 80)
+		(output)
+		(text "SDRAM_BA[1..0]" (rect 0 0 96 14)(font "Arial" (font_size 8)))
+		(text "SDRAM_BA[1..0]" (rect 171 75 267 89)(font "Arial" (font_size 8)))
+		(line (pt 288 80)(pt 272 80)(line_width 3))
+	)
+	(port
+		(pt 288 96)
+		(output)
+		(text "SDRAM_CAS_N" (rect 0 0 92 14)(font "Arial" (font_size 8)))
+		(text "SDRAM_CAS_N" (rect 175 91 267 105)(font "Arial" (font_size 8)))
+		(line (pt 288 96)(pt 272 96))
+	)
+	(port
+		(pt 288 112)
+		(output)
+		(text "SDRAM_CKE" (rect 0 0 74 14)(font "Arial" (font_size 8)))
+		(text "SDRAM_CKE" (rect 193 107 267 121)(font "Arial" (font_size 8)))
+		(line (pt 288 112)(pt 272 112))
+	)
+	(port
+		(pt 288 128)
+		(output)
+		(text "SDRAM_CS_N" (rect 0 0 82 14)(font "Arial" (font_size 8)))
+		(text "SDRAM_CS_N" (rect 185 123 267 137)(font "Arial" (font_size 8)))
+		(line (pt 288 128)(pt 272 128))
+	)
+	(port
+		(pt 288 160)
+		(output)
+		(text "SDRAM_DQM[1..0]" (rect 0 0 106 14)(font "Arial" (font_size 8)))
+		(text "SDRAM_DQM[1..0]" (rect 161 155 267 169)(font "Arial" (font_size 8)))
+		(line (pt 288 160)(pt 272 160)(line_width 3))
+	)
+	(port
+		(pt 288 176)
+		(output)
+		(text "SDRAM_RAS_N" (rect 0 0 92 14)(font "Arial" (font_size 8)))
+		(text "SDRAM_RAS_N" (rect 175 171 267 185)(font "Arial" (font_size 8)))
+		(line (pt 288 176)(pt 272 176))
+	)
+	(port
+		(pt 288 192)
+		(output)
+		(text "SDRAM_WE_N" (rect 0 0 84 14)(font "Arial" (font_size 8)))
+		(text "SDRAM_WE_N" (rect 183 187 267 201)(font "Arial" (font_size 8)))
+		(line (pt 288 192)(pt 272 192))
+	)
+	(port
+		(pt 288 208)
+		(output)
+		(text "SPI_MOSI" (rect 0 0 54 14)(font "Arial" (font_size 8)))
+		(text "SPI_MOSI" (rect 213 203 267 217)(font "Arial" (font_size 8)))
+		(line (pt 288 208)(pt 272 208))
+	)
+	(port
+		(pt 288 224)
+		(output)
+		(text "SPI_SCLK" (rect 0 0 56 14)(font "Arial" (font_size 8)))
+		(text "SPI_SCLK" (rect 211 219 267 233)(font "Arial" (font_size 8)))
+		(line (pt 288 224)(pt 272 224))
+	)
+	(port
+		(pt 288 240)
+		(output)
+		(text "SPI_SS_N" (rect 0 0 56 14)(font "Arial" (font_size 8)))
+		(text "SPI_SS_N" (rect 211 235 267 249)(font "Arial" (font_size 8)))
+		(line (pt 288 240)(pt 272 240))
+	)
+	(port
+		(pt 288 144)
+		(bidir)
+		(text "SDRAM_DQ[15..0]" (rect 0 0 103 14)(font "Arial" (font_size 8)))
+		(text "SDRAM_DQ[15..0]" (rect 164 139 267 153)(font "Arial" (font_size 8)))
+		(line (pt 288 144)(pt 272 144)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 272 272))
+	)
+)
