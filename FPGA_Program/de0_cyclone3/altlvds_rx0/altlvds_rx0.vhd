@@ -148,14 +148,14 @@ BEGIN
 		inclock_period => 10000,
 		inclock_phase_shift => 0,
 		input_data_rate => 200,
-		intended_device_family => "Cyclone II",
+		intended_device_family => "Cyclone III",
 		lose_lock_on_one_change => "UNUSED",
 		lpm_hint => "CBX_MODULE_PREFIX=altlvds_rx0",
 		lpm_type => "altlvds_rx",
 		number_of_channels => 17,
 		outclock_resource => "AUTO",
 		pll_operation_mode => "SOURCE_SYNCHRONOUS",
-		pll_self_reset_on_loss_lock => "UNUSED",
+		pll_self_reset_on_loss_lock => "OFF",
 		port_rx_channel_data_align => "PORT_UNUSED",
 		port_rx_data_align => "PORT_USED",
 		refclk_frequency => "UNUSED",
@@ -169,7 +169,7 @@ BEGIN
 		use_coreclock_input => "OFF",
 		use_dpll_rawperror => "OFF",
 		use_external_pll => "OFF",
-		use_no_phase_shift => "ON",
+		use_no_phase_shift => "OFF",
 		x_on_bitslip => "ON",
 		clk_src_is_pll => "off"
 	)
@@ -200,7 +200,7 @@ END SYN;
 -- Retrieval info: PRIVATE: Enable_DPA_Mode STRING "OFF"
 -- Retrieval info: PRIVATE: Enable_FIFO_DPA_Channels NUMERIC "0"
 -- Retrieval info: PRIVATE: Ext_PLL STRING "OFF"
--- Retrieval info: PRIVATE: INTENDED_DEVICE_FAMILY STRING "Cyclone II"
+-- Retrieval info: PRIVATE: INTENDED_DEVICE_FAMILY STRING "Cyclone III"
 -- Retrieval info: PRIVATE: Le_Serdes STRING "ON"
 -- Retrieval info: PRIVATE: Num_Channel NUMERIC "17"
 -- Retrieval info: PRIVATE: Outclock_Divide_By NUMERIC "0"
@@ -243,14 +243,14 @@ END SYN;
 -- Retrieval info: CONSTANT: INCLOCK_PERIOD NUMERIC "10000"
 -- Retrieval info: CONSTANT: INCLOCK_PHASE_SHIFT NUMERIC "0"
 -- Retrieval info: CONSTANT: INPUT_DATA_RATE NUMERIC "200"
--- Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "Cyclone II"
+-- Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "Cyclone III"
 -- Retrieval info: CONSTANT: LOSE_LOCK_ON_ONE_CHANGE STRING "UNUSED"
 -- Retrieval info: CONSTANT: LPM_HINT STRING "UNUSED"
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "altlvds_rx"
 -- Retrieval info: CONSTANT: NUMBER_OF_CHANNELS NUMERIC "17"
 -- Retrieval info: CONSTANT: OUTCLOCK_RESOURCE STRING "AUTO"
 -- Retrieval info: CONSTANT: PLL_OPERATION_MODE STRING "SOURCE_SYNCHRONOUS"
--- Retrieval info: CONSTANT: PLL_SELF_RESET_ON_LOSS_LOCK STRING "UNUSED"
+-- Retrieval info: CONSTANT: PLL_SELF_RESET_ON_LOSS_LOCK STRING "OFF"
 -- Retrieval info: CONSTANT: PORT_RX_CHANNEL_DATA_ALIGN STRING "PORT_UNUSED"
 -- Retrieval info: CONSTANT: PORT_RX_DATA_ALIGN STRING "PORT_USED"
 -- Retrieval info: CONSTANT: REFCLK_FREQUENCY STRING "UNUSED"
@@ -264,7 +264,7 @@ END SYN;
 -- Retrieval info: CONSTANT: USE_CORECLOCK_INPUT STRING "OFF"
 -- Retrieval info: CONSTANT: USE_DPLL_RAWPERROR STRING "OFF"
 -- Retrieval info: CONSTANT: USE_EXTERNAL_PLL STRING "OFF"
--- Retrieval info: CONSTANT: USE_NO_PHASE_SHIFT STRING "ON"
+-- Retrieval info: CONSTANT: USE_NO_PHASE_SHIFT STRING "OFF"
 -- Retrieval info: CONSTANT: X_ON_BITSLIP STRING "ON"
 -- Retrieval info: USED_PORT: pll_areset 0 0 0 0 INPUT NODEFVAL "pll_areset"
 -- Retrieval info: CONNECT: @pll_areset 0 0 0 0 pll_areset 0 0 0 0

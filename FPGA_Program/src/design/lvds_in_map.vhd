@@ -15,5 +15,5 @@ architecture lvds_in_map_a of lvds_in_map is
 
 	begin  
 		LVDS_DATA <=  LVDS_CH(15 downto 0) & LVDS_CTR;
-
+		
 end architecture lvds_in_map_a;

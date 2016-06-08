@@ -14,7 +14,7 @@
 
 -- PROGRAM		"Quartus II 64-Bit"
 -- VERSION		"Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version"
--- CREATED		"Wed Jun 01 12:57:24 2016"
+-- CREATED		"Wed Jun 08 17:48:22 2016"
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all; 
@@ -51,6 +51,23 @@ END lvds_decoder;
 
 ARCHITECTURE bdf_type OF lvds_decoder IS 
 
+COMPONENT altlvds_rx0
+	PORT(pll_areset : IN STD_LOGIC;
+		 rx_data_align : IN STD_LOGIC;
+		 rx_inclock : IN STD_LOGIC;
+		 rx_in : IN STD_LOGIC_VECTOR(16 DOWNTO 0);
+		 rx_outclock : OUT STD_LOGIC;
+		 rx_out : OUT STD_LOGIC_VECTOR(169 DOWNTO 0)
+	);
+END COMPONENT;
+
+COMPONENT lvds_in_map
+	PORT(LVDS_CTR : IN STD_LOGIC;
+		 LVDS_CH : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+		 LVDS_DATA : OUT STD_LOGIC_VECTOR(16 DOWNTO 0)
+	);
+END COMPONENT;
+
 COMPONENT lvds_out_map
 	PORT(LVDS_DATA : IN STD_LOGIC_VECTOR(169 DOWNTO 0);
 		 OUTCH01 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
@@ -73,37 +90,42 @@ COMPONENT lvds_out_map
 	);
 END COMPONENT;
 
-COMPONENT altlvds_rx0
-	PORT(pll_areset : IN STD_LOGIC;
-		 rx_data_align : IN STD_LOGIC;
-		 rx_inclock : IN STD_LOGIC;
-		 rx_in : IN STD_LOGIC_VECTOR(16 DOWNTO 0);
-		 rx_outclock : OUT STD_LOGIC;
-		 rx_out : OUT STD_LOGIC_VECTOR(169 DOWNTO 0)
-	);
-END COMPONENT;
-
-COMPONENT lvds_in_map
-	PORT(LVDS_CTR : IN STD_LOGIC;
-		 LVDS_CH : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-		 LVDS_DATA : OUT STD_LOGIC_VECTOR(16 DOWNTO 0)
-	);
-END COMPONENT;
-
 SIGNAL	data_out_clk :  STD_LOGIC;
 SIGNAL	outctr :  STD_LOGIC_VECTOR(9 DOWNTO 0);
-SIGNAL	SYNTHESIZED_WIRE_0 :  STD_LOGIC_VECTOR(169 DOWNTO 0);
-SIGNAL	SYNTHESIZED_WIRE_1 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_0 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_1 :  STD_LOGIC_VECTOR(16 DOWNTO 0);
 SIGNAL	SYNTHESIZED_WIRE_2 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_3 :  STD_LOGIC_VECTOR(16 DOWNTO 0);
+SIGNAL	SYNTHESIZED_WIRE_3 :  STD_LOGIC_VECTOR(169 DOWNTO 0);
 
 
 BEGIN 
 
 
 
-b2v_inst : lvds_out_map
-PORT MAP(LVDS_DATA => SYNTHESIZED_WIRE_0,
+b2v_inst_altlvds_rx0 : altlvds_rx0
+PORT MAP(pll_areset => PLL_ARESET,
+		 rx_data_align => SYNTHESIZED_WIRE_0,
+		 rx_inclock => LVDS_OUTCLK,
+		 rx_in => SYNTHESIZED_WIRE_1,
+		 rx_outclock => data_out_clk,
+		 rx_out => SYNTHESIZED_WIRE_3);
+
+
+b2v_inst_lvds_in_map : lvds_in_map
+PORT MAP(LVDS_CTR => LVDS_OUTCTR,
+		 LVDS_CH => LVDS_OUTCH,
+		 LVDS_DATA => SYNTHESIZED_WIRE_1);
+
+
+SYNTHESIZED_WIRE_2 <= NOT(outctr(9));
+
+
+
+SYNTHESIZED_WIRE_0 <= outctr(8) OR SYNTHESIZED_WIRE_2;
+
+
+b2v_inst_out_map : lvds_out_map
+PORT MAP(LVDS_DATA => SYNTHESIZED_WIRE_3,
 		 OUTCH01 => DATA_OUTCH01,
 		 OUTCH02 => DATA_OUTCH02,
 		 OUTCH03 => DATA_OUTCH03,
@@ -121,28 +143,6 @@ PORT MAP(LVDS_DATA => SYNTHESIZED_WIRE_0,
 		 OUTCH15 => DATA_OUTCH15,
 		 OUTCH16 => DATA_OUTCH16,
 		 OUTCTR => outctr);
-
-
-SYNTHESIZED_WIRE_2 <= outctr(8) OR SYNTHESIZED_WIRE_1;
-
-
-b2v_inst6 : altlvds_rx0
-PORT MAP(pll_areset => PLL_ARESET,
-		 rx_data_align => SYNTHESIZED_WIRE_2,
-		 rx_inclock => LVDS_OUTCLK,
-		 rx_in => SYNTHESIZED_WIRE_3,
-		 rx_outclock => data_out_clk,
-		 rx_out => SYNTHESIZED_WIRE_0);
-
-
-b2v_inst_0 : lvds_in_map
-PORT MAP(LVDS_CTR => LVDS_OUTCTR,
-		 LVDS_CH => LVDS_OUTCH,
-		 LVDS_DATA => SYNTHESIZED_WIRE_3);
-
-
-SYNTHESIZED_WIRE_1 <= NOT(outctr(9));
-
 
 DATA_OUTCLK <= data_out_clk;
 DATA_OUTCTR <= outctr;
