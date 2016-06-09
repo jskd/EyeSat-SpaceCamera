@@ -4,7 +4,7 @@ CLOCK_50 => cmv_controller:cmv_controller_inst.NIOS_CLK_50
 KEY[0] => cmv_controller:cmv_controller_inst.NIOS_PLL_ARESET
 KEY[1] => cmv_controller:cmv_controller_inst.NIOS_RESET_N
 KEY[2] => cmv_controller:cmv_controller_inst.LVDS_PLL_ARESET
-CMV_LVDS_CLK => cmv_controller:cmv_controller_inst.LVDS_OUTCLK
+CMV_LVDS_OUTCLK => cmv_controller:cmv_controller_inst.LVDS_OUTCLK
 CMV_LVDS_OUTCTR => cmv_controller:cmv_controller_inst.LVDS_OUTCTR
 UART_RXD => cmv_controller:cmv_controller_inst.UART_RXD
 CMV_SPI_OUT => cmv_controller:cmv_controller_inst.SPI_MISO
@@ -44,17 +44,17 @@ DRAM_CKE <= cmv_controller:cmv_controller_inst.SDRAM_CKE
 DRAM_CS_N <= cmv_controller:cmv_controller_inst.SDRAM_CS_N
 DRAM_LDQM <= cmv_controller:cmv_controller_inst.SDRAM_DQM[1]
 DRAM_UDQM <= cmv_controller:cmv_controller_inst.SDRAM_DQM[0]
-DRAM_BA_0 <= cmv_controller:cmv_controller_inst.SDRAM_BA[1]
-DRAM_BA_1 <= cmv_controller:cmv_controller_inst.SDRAM_BA[0]
 DRAM_RAS_N <= cmv_controller:cmv_controller_inst.SDRAM_RAS_N
 DRAM_WE_N <= cmv_controller:cmv_controller_inst.SDRAM_WE_N
 DRAM_CLK <= cmv_controller:cmv_controller_inst.SDRAM_CLK
 UART_TXD <= cmv_controller:cmv_controller_inst.UART_TXD
 CMV_CLK_IN <= cmv_controller:cmv_controller_inst.CMV_CLK_IN
-CMV_SYS_RES_N <= cmv_controller:cmv_controller_inst.CMV_RES_N
 CMV_SPI_IN <= cmv_controller:cmv_controller_inst.SPI_MOSI
 CMV_SPI_CLK <= cmv_controller:cmv_controller_inst.SPI_SCLK
 CMV_SPI_EN <= inst_not.DB_MAX_OUTPUT_PORT_TYPE
+CMV_FRAME_REQ <= cmv_controller:cmv_controller_inst.CMV_FRAME_REQ
+CMV_LVDS_CLK <= cmv_controller:cmv_controller_inst.CMV_LVDS_CLK
+CMV_SYS_RES_N <= cmv_controller:cmv_controller_inst.CMV_RES_N
 DRAM_ADDR[0] <= cmv_controller:cmv_controller_inst.SDRAM_ADDR[0]
 DRAM_ADDR[1] <= cmv_controller:cmv_controller_inst.SDRAM_ADDR[1]
 DRAM_ADDR[2] <= cmv_controller:cmv_controller_inst.SDRAM_ADDR[2]
@@ -67,12 +67,14 @@ DRAM_ADDR[8] <= cmv_controller:cmv_controller_inst.SDRAM_ADDR[8]
 DRAM_ADDR[9] <= cmv_controller:cmv_controller_inst.SDRAM_ADDR[9]
 DRAM_ADDR[10] <= cmv_controller:cmv_controller_inst.SDRAM_ADDR[10]
 DRAM_ADDR[11] <= cmv_controller:cmv_controller_inst.SDRAM_ADDR[11]
+DRAM_BA[0] <= cmv_controller:cmv_controller_inst.SDRAM_BA[0]
+DRAM_BA[1] <= cmv_controller:cmv_controller_inst.SDRAM_BA[1]
 
 
 |de0_cyclone3|cmv_controller:cmv_controller_inst
 SDRAM_CAS_N <= nios:inst_nios.sdram_controller_cas_n
-NIOS_CLK_50 => altpll0:inst_altpll.inclk0
-NIOS_PLL_ARESET => altpll0:inst_altpll.areset
+NIOS_CLK_50 => altpll0:inst.inclk0
+NIOS_PLL_ARESET => altpll0:inst.areset
 NIOS_RESET_N => nios:inst_nios.reset_reset_n
 LVDS_PLL_ARESET => lvds_decoder:inst_lvds_decoder.PLL_ARESET
 LVDS_OUTCLK => lvds_decoder:inst_lvds_decoder.LVDS_OUTCLK
@@ -118,10 +120,12 @@ SDRAM_WE_N <= nios:inst_nios.sdram_controller_we_n
 SPI_MOSI <= nios:inst_nios.spi_MOSI
 SPI_SCLK <= nios:inst_nios.spi_SCLK
 SPI_SS_N <= nios:inst_nios.spi_SS_n
-SDRAM_CLK <= altpll0:inst_altpll.c1
+SDRAM_CLK <= altpll0:inst.c1
 UART_TXD <= nios:inst_nios.uart_txd
-CMV_CLK_IN <= altpll0:inst_altpll.c2
+CMV_CLK_IN <= altpll0:inst.c2
 CMV_RES_N <= <VCC>
+CMV_LVDS_CLK <= altpll0:inst.c3
+CMV_FRAME_REQ <= <VCC>
 SDRAM_ADDR[0] <= nios:inst_nios.sdram_controller_addr[0]
 SDRAM_ADDR[1] <= nios:inst_nios.sdram_controller_addr[1]
 SDRAM_ADDR[2] <= nios:inst_nios.sdram_controller_addr[2]
@@ -56833,21 +56837,22 @@ sender_irq[30] <= <GND>
 sender_irq[31] <= <GND>
 
 
-|de0_cyclone3|cmv_controller:cmv_controller_inst|altpll0:inst_altpll
+|de0_cyclone3|cmv_controller:cmv_controller_inst|altpll0:inst
 areset => altpll:altpll_component.areset
 inclk0 => altpll:altpll_component.inclk[0]
 c0 <= altpll:altpll_component.clk[0]
 c1 <= altpll:altpll_component.clk[1]
 c2 <= altpll:altpll_component.clk[2]
+c3 <= altpll:altpll_component.clk[3]
 
 
-|de0_cyclone3|cmv_controller:cmv_controller_inst|altpll0:inst_altpll|altpll:altpll_component
-inclk[0] => altpll0_altpll:auto_generated.inclk[0]
-inclk[1] => altpll0_altpll:auto_generated.inclk[1]
+|de0_cyclone3|cmv_controller:cmv_controller_inst|altpll0:inst|altpll:altpll_component
+inclk[0] => altpll0_altpll1:auto_generated.inclk[0]
+inclk[1] => altpll0_altpll1:auto_generated.inclk[1]
 fbin => ~NO_FANOUT~
 pllena => ~NO_FANOUT~
 clkswitch => ~NO_FANOUT~
-areset => altpll0_altpll:auto_generated.areset
+areset => altpll0_altpll1:auto_generated.areset
 pfdena => ~NO_FANOUT~
 clkena[0] => ~NO_FANOUT~
 clkena[1] => ~NO_FANOUT~
@@ -56901,7 +56906,7 @@ fref <= <GND>
 icdrclk <= <GND>
 
 
-|de0_cyclone3|cmv_controller:cmv_controller_inst|altpll0:inst_altpll|altpll:altpll_component|altpll0_altpll:auto_generated
+|de0_cyclone3|cmv_controller:cmv_controller_inst|altpll0:inst|altpll:altpll_component|altpll0_altpll1:auto_generated
 areset => pll1.ARESET
 clk[0] <= pll1.CLK
 clk[1] <= pll1.CLK1

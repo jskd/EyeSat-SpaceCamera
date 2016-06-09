@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="de0_cyclone3">
-		<CBX_INST_ENTRY INSTANCE_NAME="|de0_cyclone3|cmv_controller:cmv_controller_inst|altpll0:inst_altpll|altpll:altpll_component" CBX_FILE_NAME="altpll0_altpll.v"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|de0_cyclone3|cmv_controller:cmv_controller_inst|altpll0:inst|altpll:altpll_component" CBX_FILE_NAME="altpll0_altpll1.v"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|de0_cyclone3|cmv_controller:cmv_controller_inst|nios:inst_nios|nios_jtag_uart:jtag_uart|nios_jtag_uart_scfifo_r:the_nios_jtag_uart_scfifo_r|scfifo:rfifo" CBX_FILE_NAME="scfifo_aq21.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|de0_cyclone3|cmv_controller:cmv_controller_inst|nios:inst_nios|nios_onchip_memory:onchip_memory|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_fhc1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|de0_cyclone3|cmv_controller:cmv_controller_inst|lvds_decoder:inst_lvds_decoder|altlvds_rx0:inst_altlvds_rx0|altlvds_rx:ALTLVDS_RX_component" CBX_FILE_NAME="altlvds_rx0_lvds_rx1.v"/>

@@ -235,25 +235,30 @@ set_location_assignment PIN_C4 -to DRAM_ADDR[0]
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
-set_location_assignment PIN_AA12 -to CMV_LVDS_CLK
-set_instance_assignment -name IO_STANDARD LVDS -to CMV_LVDS_CLK
-set_location_assignment PIN_AA20 -to CMV_LVDS_OUTCH01
+set_location_assignment PIN_T16 -to CMV_LVDS_CLK
+set_instance_assignment -name IO_STANDARD LVDS_E_3R -to CMV_LVDS_CLK
+set_location_assignment PIN_V15 -to CMV_LVDS_OUTCH01
 set_instance_assignment -name IO_STANDARD LVDS -to CMV_LVDS_OUTCH01
 set_location_assignment PIN_AA17 -to CMV_LVDS_OUTCH09
 set_instance_assignment -name IO_STANDARD LVDS -to CMV_LVDS_OUTCH09
 set_location_assignment PIN_W17 -to CMV_LVDS_OUTCTR
 set_instance_assignment -name IO_STANDARD LVDS -to CMV_LVDS_OUTCTR
-set_location_assignment PIN_V7 -to CMV_CLK_IN
-set_location_assignment PIN_V6 -to CMV_SPI_CLK
-set_location_assignment PIN_Y7 -to CMV_SPI_EN
-set_location_assignment PIN_U8 -to CMV_SPI_IN
-set_location_assignment PIN_U9 -to CMV_SPI_OUT
-set_location_assignment PIN_T10 -to CMV_SYS_RES_N
+set_location_assignment PIN_R12 -to CMV_CLK_IN
+set_location_assignment PIN_U8 -to CMV_SPI_CLK
+set_location_assignment PIN_U9 -to CMV_SPI_EN
+set_location_assignment PIN_T9 -to CMV_SPI_IN
+set_location_assignment PIN_U10 -to CMV_SPI_OUT
+set_location_assignment PIN_Y7 -to CMV_SYS_RES_N
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_COLOR 14622752 -section_id Top
 set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
 set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_location_assignment PIN_AB12 -to "CMV_LVDS_CLK(n)"
+set_location_assignment PIN_R16 -to "CMV_LVDS_CLK(n)"
 set_location_assignment PIN_Y17 -to "CMV_LVDS_OUTCTR(n)"
+set_location_assignment PIN_W15 -to "CMV_LVDS_OUTCH01(n)"
+set_location_assignment PIN_T10 -to CMV_FRAME_REQ
+set_location_assignment PIN_AA12 -to CMV_LVDS_OUTCLK
+set_instance_assignment -name IO_STANDARD LVDS -to CMV_LVDS_OUTCLK
+set_location_assignment PIN_AB12 -to "CMV_LVDS_OUTCLK(n)"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

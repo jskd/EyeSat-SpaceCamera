@@ -13,14 +13,15 @@
 --applicable agreement for further details.
 
 
-component altpll0
-	PORT
-	(
-		areset		: IN STD_LOGIC  := '0';
-		inclk0		: IN STD_LOGIC  := '0';
-		c0		: OUT STD_LOGIC ;
-		c1		: OUT STD_LOGIC ;
-		c2		: OUT STD_LOGIC ;
-		c3		: OUT STD_LOGIC 
-	);
-end component;
+FUNCTION altpll0 
+(
+	areset,
+	inclk0
+)
+
+RETURNS (
+	c0,
+	c1,
+	c2,
+	c3
+);

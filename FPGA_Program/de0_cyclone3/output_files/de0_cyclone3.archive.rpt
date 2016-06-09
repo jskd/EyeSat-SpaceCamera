@@ -1,0 +1,240 @@
+Archive Project report for de0_cyclone3
+Wed Jun 08 17:18:23 2016
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Archive Project Summary
+  3. Archive Project Messages
+  4. Files Archived
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------+
+; Archive Project Summary                                        ;
++------------------------+---------------------------------------+
+; Archive Project Status ; Successful - Wed Jun 08 17:18:23 2016 ;
+; Revision Name          ; de0_cyclone3                          ;
+; Top-level Entity Name  ; de0_cyclone3                          ;
+; Family                 ; Cyclone III                           ;
++------------------------+---------------------------------------+
+
+
++--------------------------+
+; Archive Project Messages ;
++--------------------------+
+Warning (292006): Can't contact license server "1718@geiione" -- this server will be ignored
+Warning (292006): Can't contact license server "1717@geiione" -- this server will be ignored
+Warning (292006): Can't contact license server "1800@geiione" -- this server will be ignored
+Warning (292006): Can't contact license server "1718@192.168.89.8" -- this server will be ignored
+Warning (292006): Can't contact license server "1717@192.168.89.8" -- this server will be ignored
+Info: File Set 'Source control' contains:
+    Info: Project source and settings files
+    Info: Automatically detected source files
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated archive 'C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/test.qar'
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated report 'de0_cyclone3.archive.rpt'
+Info (23030): Evaluation of Tcl script c:/logicielge1/altera/13.0sp1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus II 64-Bit Shell was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 341 megabytes
+    Info: Processing ended: Wed Jun 08 17:18:23 2016
+    Info: Elapsed time: 00:00:32
+    Info: Total CPU time (on all processors): 00:00:03
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Files Archived                                                                                            ;
++-----------------------------------------------------------------------------------------------------------+
+; File Name                                                                                                 ;
++-----------------------------------------------------------------------------------------------------------+
+; ../src/design/lvds_in_map.vhd                                                                             ;
+; ../src/design/lvds_out_map.vhd                                                                            ;
+; ../src/design/reverse_bit_order_vector.vhd                                                                ;
+; ./altlvds_rx0/altlvds_rx0.bsf                                                                             ;
+; ./altlvds_rx0/altlvds_rx0.cmp                                                                             ;
+; ./altlvds_rx0/altlvds_rx0.inc                                                                             ;
+; ./altlvds_rx0/altlvds_rx0.ppf                                                                             ;
+; ./altlvds_rx0/altlvds_rx0.qip                                                                             ;
+; ./altlvds_rx0/altlvds_rx0.vhd                                                                             ;
+; ./altlvds_rx0/altlvds_rx0_inst.vhd                                                                        ;
+; ./altpll0/altpll0.bsf                                                                                     ;
+; ./altpll0/altpll0.cmp                                                                                     ;
+; ./altpll0/altpll0.ppf                                                                                     ;
+; ./altpll0/altpll0.qip                                                                                     ;
+; ./altpll0/altpll0.vhd                                                                                     ;
+; ./nios/nios/synthesis/../../nios.cmp                                                                      ;
+; ./nios/nios/synthesis/../../nios.qsys                                                                     ;
+; ./nios/nios/synthesis/../../nios.sopcinfo                                                                 ;
+; ./nios/nios/synthesis/nios.qip                                                                            ;
+; ./nios/nios/synthesis/nios.vhd                                                                            ;
+; ./nios/nios/synthesis/nios_cpu_data_master_translator.vhd                                                 ;
+; ./nios/nios/synthesis/nios_cpu_instruction_master_translator.vhd                                          ;
+; ./nios/nios/synthesis/nios_cpu_jtag_debug_module_translator.vhd                                           ;
+; ./nios/nios/synthesis/nios_data_clk_s1_translator.vhd                                                     ;
+; ./nios/nios/synthesis/nios_data_ctr_s1_translator.vhd                                                     ;
+; ./nios/nios/synthesis/nios_jtag_uart_avalon_jtag_slave_translator.vhd                                     ;
+; ./nios/nios/synthesis/nios_onchip_memory_s1_translator.vhd                                                ;
+; ./nios/nios/synthesis/nios_onchip_memory_s1_translator_avalon_universal_slave_0_agent.vhd                 ;
+; ./nios/nios/synthesis/nios_onchip_memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo.vhd        ;
+; ./nios/nios/synthesis/nios_rst_controller.vhd                                                             ;
+; ./nios/nios/synthesis/nios_rst_controller_001.vhd                                                         ;
+; ./nios/nios/synthesis/nios_sdram_controller_s1_translator.vhd                                             ;
+; ./nios/nios/synthesis/nios_sdram_controller_s1_translator_avalon_universal_slave_0_agent.vhd              ;
+; ./nios/nios/synthesis/nios_sdram_controller_s1_translator_avalon_universal_slave_0_agent_rdata_fifo.vhd   ;
+; ./nios/nios/synthesis/nios_sdram_controller_s1_translator_avalon_universal_slave_0_agent_rsp_fifo.vhd     ;
+; ./nios/nios/synthesis/nios_spi_spi_control_port_translator.vhd                                            ;
+; ./nios/nios/synthesis/nios_uart_s1_translator.vhd                                                         ;
+; ./nios/nios/synthesis/nios_width_adapter.vhd                                                              ;
+; ./nios/nios/synthesis/nios_width_adapter_001.vhd                                                          ;
+; ./nios/nios/synthesis/submodules/altera_avalon_sc_fifo.v                                                  ;
+; ./nios/nios/synthesis/submodules/altera_merlin_address_alignment.sv                                       ;
+; ./nios/nios/synthesis/submodules/altera_merlin_arbitrator.sv                                              ;
+; ./nios/nios/synthesis/submodules/altera_merlin_burst_adapter.sv                                           ;
+; ./nios/nios/synthesis/submodules/altera_merlin_burst_uncompressor.sv                                      ;
+; ./nios/nios/synthesis/submodules/altera_merlin_master_agent.sv                                            ;
+; ./nios/nios/synthesis/submodules/altera_merlin_master_translator.sv                                       ;
+; ./nios/nios/synthesis/submodules/altera_merlin_slave_agent.sv                                             ;
+; ./nios/nios/synthesis/submodules/altera_merlin_slave_translator.sv                                        ;
+; ./nios/nios/synthesis/submodules/altera_merlin_width_adapter.sv                                           ;
+; ./nios/nios/synthesis/submodules/altera_reset_controller.sdc                                              ;
+; ./nios/nios/synthesis/submodules/altera_reset_controller.v                                                ;
+; ./nios/nios/synthesis/submodules/altera_reset_synchronizer.v                                              ;
+; ./nios/nios/synthesis/submodules/nios_addr_router.sv                                                      ;
+; ./nios/nios/synthesis/submodules/nios_addr_router_001.sv                                                  ;
+; ./nios/nios/synthesis/submodules/nios_cmd_xbar_demux.sv                                                   ;
+; ./nios/nios/synthesis/submodules/nios_cmd_xbar_demux_001.sv                                               ;
+; ./nios/nios/synthesis/submodules/nios_cmd_xbar_mux.sv                                                     ;
+; ./nios/nios/synthesis/submodules/nios_CPU.sdc                                                             ;
+; ./nios/nios/synthesis/submodules/nios_CPU.v                                                               ;
+; ./nios/nios/synthesis/submodules/nios_CPU_jtag_debug_module_sysclk.v                                      ;
+; ./nios/nios/synthesis/submodules/nios_CPU_jtag_debug_module_tck.v                                         ;
+; ./nios/nios/synthesis/submodules/nios_CPU_jtag_debug_module_wrapper.v                                     ;
+; ./nios/nios/synthesis/submodules/nios_CPU_oci_test_bench.v                                                ;
+; ./nios/nios/synthesis/submodules/nios_CPU_ociram_default_contents.mif                                     ;
+; ./nios/nios/synthesis/submodules/nios_CPU_rf_ram_a.mif                                                    ;
+; ./nios/nios/synthesis/submodules/nios_CPU_rf_ram_b.mif                                                    ;
+; ./nios/nios/synthesis/submodules/nios_CPU_test_bench.v                                                    ;
+; ./nios/nios/synthesis/submodules/nios_data_clk.v                                                          ;
+; ./nios/nios/synthesis/submodules/nios_data_ctr.v                                                          ;
+; ./nios/nios/synthesis/submodules/nios_id_router.sv                                                        ;
+; ./nios/nios/synthesis/submodules/nios_id_router_002.sv                                                    ;
+; ./nios/nios/synthesis/submodules/nios_id_router_009.sv                                                    ;
+; ./nios/nios/synthesis/submodules/nios_irq_mapper.sv                                                       ;
+; ./nios/nios/synthesis/submodules/nios_jtag_uart.v                                                         ;
+; ./nios/nios/synthesis/submodules/nios_onchip_memory.hex                                                   ;
+; ./nios/nios/synthesis/submodules/nios_onchip_memory.v                                                     ;
+; ./nios/nios/synthesis/submodules/nios_rsp_xbar_demux_002.sv                                               ;
+; ./nios/nios/synthesis/submodules/nios_rsp_xbar_mux.sv                                                     ;
+; ./nios/nios/synthesis/submodules/nios_rsp_xbar_mux_001.sv                                                 ;
+; ./nios/nios/synthesis/submodules/nios_sdram_controller.v                                                  ;
+; ./nios/nios/synthesis/submodules/nios_sdram_controller_test_component.v                                   ;
+; ./nios/nios/synthesis/submodules/nios_spi.v                                                               ;
+; ./nios/nios/synthesis/submodules/nios_uart.v                                                              ;
+; altlvds_rx0/altlvds_rx0.qip                                                                               ;
+; altlvds_rx0/altlvds_rx0.vhd                                                                               ;
+; altpll0/altpll0.qip                                                                                       ;
+; altpll0/altpll0.vhd                                                                                       ;
+; c:/logicielge1/altera/13.0sp1/quartus/bin64/assignment_defaults.qdf                                       ;
+; C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/src/design/lvds_in_map.vhd              ;
+; C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/src/design/lvds_out_map.vhd             ;
+; C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/src/design/reverse_bit_order_vector.vhd ;
+; cmv_controller.bdf                                                                                        ;
+; de0_cyclone3.bdf                                                                                          ;
+; de0_cyclone3.qpf                                                                                          ;
+; de0_cyclone3.qsf                                                                                          ;
+; incremental_db/compiled_partitions/de0_cyclone3.db_info                                                   ;
+; lvds_decoder.bdf                                                                                          ;
+; nios/nios/synthesis/nios.qip                                                                              ;
+; nios/nios/synthesis/nios.vhd                                                                              ;
+; nios/nios/synthesis/nios_cpu_data_master_translator.vhd                                                   ;
+; nios/nios/synthesis/nios_cpu_instruction_master_translator.vhd                                            ;
+; nios/nios/synthesis/nios_cpu_jtag_debug_module_translator.vhd                                             ;
+; nios/nios/synthesis/nios_data_clk_s1_translator.vhd                                                       ;
+; nios/nios/synthesis/nios_data_ctr_s1_translator.vhd                                                       ;
+; nios/nios/synthesis/nios_jtag_uart_avalon_jtag_slave_translator.vhd                                       ;
+; nios/nios/synthesis/nios_onchip_memory_s1_translator.vhd                                                  ;
+; nios/nios/synthesis/nios_onchip_memory_s1_translator_avalon_universal_slave_0_agent.vhd                   ;
+; nios/nios/synthesis/nios_onchip_memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo.vhd          ;
+; nios/nios/synthesis/nios_rst_controller.vhd                                                               ;
+; nios/nios/synthesis/nios_rst_controller_001.vhd                                                           ;
+; nios/nios/synthesis/nios_sdram_controller_s1_translator.vhd                                               ;
+; nios/nios/synthesis/nios_sdram_controller_s1_translator_avalon_universal_slave_0_agent.vhd                ;
+; nios/nios/synthesis/nios_sdram_controller_s1_translator_avalon_universal_slave_0_agent_rdata_fifo.vhd     ;
+; nios/nios/synthesis/nios_sdram_controller_s1_translator_avalon_universal_slave_0_agent_rsp_fifo.vhd       ;
+; nios/nios/synthesis/nios_spi_spi_control_port_translator.vhd                                              ;
+; nios/nios/synthesis/nios_uart_s1_translator.vhd                                                           ;
+; nios/nios/synthesis/nios_width_adapter.vhd                                                                ;
+; nios/nios/synthesis/nios_width_adapter_001.vhd                                                            ;
+; nios/nios/synthesis/submodules/altera_avalon_sc_fifo.v                                                    ;
+; nios/nios/synthesis/submodules/altera_merlin_address_alignment.sv                                         ;
+; nios/nios/synthesis/submodules/altera_merlin_arbitrator.sv                                                ;
+; nios/nios/synthesis/submodules/altera_merlin_burst_adapter.sv                                             ;
+; nios/nios/synthesis/submodules/altera_merlin_burst_uncompressor.sv                                        ;
+; nios/nios/synthesis/submodules/altera_merlin_master_agent.sv                                              ;
+; nios/nios/synthesis/submodules/altera_merlin_master_translator.sv                                         ;
+; nios/nios/synthesis/submodules/altera_merlin_slave_agent.sv                                               ;
+; nios/nios/synthesis/submodules/altera_merlin_slave_translator.sv                                          ;
+; nios/nios/synthesis/submodules/altera_merlin_width_adapter.sv                                             ;
+; nios/nios/synthesis/submodules/altera_reset_controller.sdc                                                ;
+; nios/nios/synthesis/submodules/altera_reset_controller.v                                                  ;
+; nios/nios/synthesis/submodules/altera_reset_synchronizer.v                                                ;
+; nios/nios/synthesis/submodules/nios_addr_router.sv                                                        ;
+; nios/nios/synthesis/submodules/nios_addr_router_001.sv                                                    ;
+; nios/nios/synthesis/submodules/nios_cmd_xbar_demux.sv                                                     ;
+; nios/nios/synthesis/submodules/nios_cmd_xbar_demux_001.sv                                                 ;
+; nios/nios/synthesis/submodules/nios_cmd_xbar_mux.sv                                                       ;
+; nios/nios/synthesis/submodules/nios_CPU.sdc                                                               ;
+; nios/nios/synthesis/submodules/nios_CPU.v                                                                 ;
+; nios/nios/synthesis/submodules/nios_CPU_jtag_debug_module_sysclk.v                                        ;
+; nios/nios/synthesis/submodules/nios_CPU_jtag_debug_module_tck.v                                           ;
+; nios/nios/synthesis/submodules/nios_CPU_jtag_debug_module_wrapper.v                                       ;
+; nios/nios/synthesis/submodules/nios_CPU_oci_test_bench.v                                                  ;
+; nios/nios/synthesis/submodules/nios_CPU_ociram_default_contents.mif                                       ;
+; nios/nios/synthesis/submodules/nios_CPU_rf_ram_a.mif                                                      ;
+; nios/nios/synthesis/submodules/nios_CPU_rf_ram_b.mif                                                      ;
+; nios/nios/synthesis/submodules/nios_CPU_test_bench.v                                                      ;
+; nios/nios/synthesis/submodules/nios_data_clk.v                                                            ;
+; nios/nios/synthesis/submodules/nios_data_ctr.v                                                            ;
+; nios/nios/synthesis/submodules/nios_id_router.sv                                                          ;
+; nios/nios/synthesis/submodules/nios_id_router_002.sv                                                      ;
+; nios/nios/synthesis/submodules/nios_id_router_009.sv                                                      ;
+; nios/nios/synthesis/submodules/nios_irq_mapper.sv                                                         ;
+; nios/nios/synthesis/submodules/nios_jtag_uart.v                                                           ;
+; nios/nios/synthesis/submodules/nios_onchip_memory.hex                                                     ;
+; nios/nios/synthesis/submodules/nios_onchip_memory.v                                                       ;
+; nios/nios/synthesis/submodules/nios_rsp_xbar_demux_002.sv                                                 ;
+; nios/nios/synthesis/submodules/nios_rsp_xbar_mux.sv                                                       ;
+; nios/nios/synthesis/submodules/nios_rsp_xbar_mux_001.sv                                                   ;
+; nios/nios/synthesis/submodules/nios_sdram_controller.v                                                    ;
+; nios/nios/synthesis/submodules/nios_sdram_controller_test_component.v                                     ;
+; nios/nios/synthesis/submodules/nios_spi.v                                                                 ;
+; nios/nios/synthesis/submodules/nios_uart.v                                                                ;
+; tb_lvds_decoder.bdf                                                                                       ;
++-----------------------------------------------------------------------------------------------------------+
+
+
