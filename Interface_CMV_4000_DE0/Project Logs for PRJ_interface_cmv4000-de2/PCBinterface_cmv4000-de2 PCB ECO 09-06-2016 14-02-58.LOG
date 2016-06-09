@@ -1,0 +1,47 @@
+Added Component: Designator=DE0_GPIO_1(HDR2X20)
+Added Component: Designator=GPIO_CMV4000(HDR2X20)
+Added Pin To Net: NetName=OUTCLK_N Pin=DE0_GPIO_1-1
+Added Pin To Net: NetName=OUTCLK_P Pin=DE0_GPIO_1-3
+Added Pin To Net: NetName=OUT9_P Pin=DE0_GPIO_1-9
+Added Pin To Net: NetName=OUT9_N Pin=DE0_GPIO_1-10
+Added Pin To Net: NetName=VCC5 Pin=DE0_GPIO_1-11
+Added Pin To Net: NetName=GND Pin=DE0_GPIO_1-12
+Added Pin To Net: NetName=OUTCTR_N Pin=DE0_GPIO_1-13
+Added Pin To Net: NetName=OUTCTR_P Pin=DE0_GPIO_1-14
+Added Pin To Net: NetName=OUT1_N Pin=DE0_GPIO_1-17
+Added Pin To Net: NetName=OUT1_P Pin=DE0_GPIO_1-18
+Added Pin To Net: NetName=LVDS_CLK_N Pin=DE0_GPIO_1-19
+Added Pin To Net: NetName=LVDS_CLK_P Pin=DE0_GPIO_1-21
+Added Pin To Net: NetName=VDD33 Pin=DE0_GPIO_1-29
+Added Pin To Net: NetName=GND Pin=DE0_GPIO_1-30
+Added Pin To Net: NetName=CLK_IN Pin=DE0_GPIO_1-32
+Added Pin To Net: NetName=SPI_OUT Pin=DE0_GPIO_1-33
+Added Pin To Net: NetName=FRAME_REQ Pin=DE0_GPIO_1-34
+Added Pin To Net: NetName=SPI_EN Pin=DE0_GPIO_1-35
+Added Pin To Net: NetName=SPI_IN Pin=DE0_GPIO_1-36
+Added Pin To Net: NetName=SYS_RES_N Pin=DE0_GPIO_1-37
+Added Pin To Net: NetName=SPI_CLK Pin=DE0_GPIO_1-38
+Added Pin To Net: NetName=SPI_CLK Pin=GPIO_CMV4000-3
+Added Pin To Net: NetName=SYS_RES_N Pin=GPIO_CMV4000-4
+Added Pin To Net: NetName=SPI_IN Pin=GPIO_CMV4000-5
+Added Pin To Net: NetName=SPI_EN Pin=GPIO_CMV4000-6
+Added Pin To Net: NetName=FRAME_REQ Pin=GPIO_CMV4000-7
+Added Pin To Net: NetName=SPI_OUT Pin=GPIO_CMV4000-8
+Added Pin To Net: NetName=CLK_IN Pin=GPIO_CMV4000-9
+Added Pin To Net: NetName=VCC5 Pin=GPIO_CMV4000-11
+Added Pin To Net: NetName=GND Pin=GPIO_CMV4000-12
+Added Pin To Net: NetName=LVDS_CLK_P Pin=GPIO_CMV4000-13
+Added Pin To Net: NetName=LVDS_CLK_N Pin=GPIO_CMV4000-14
+Added Pin To Net: NetName=OUT1_P Pin=GPIO_CMV4000-19
+Added Pin To Net: NetName=OUT1_N Pin=GPIO_CMV4000-20
+Added Pin To Net: NetName=OUTCTR_P Pin=GPIO_CMV4000-21
+Added Pin To Net: NetName=OUTCTR_N Pin=GPIO_CMV4000-22
+Added Pin To Net: NetName=OUT9_P Pin=GPIO_CMV4000-23
+Added Pin To Net: NetName=OUT9_N Pin=GPIO_CMV4000-24
+Added Pin To Net: NetName=OUTCLK_P Pin=GPIO_CMV4000-25
+Added Pin To Net: NetName=OUTCLK_N Pin=GPIO_CMV4000-26
+Added Pin To Net: NetName=VDD33 Pin=GPIO_CMV4000-29
+Added Pin To Net: NetName=GND Pin=GPIO_CMV4000-30
+Added Member To Class: ClassName=SCH_interface_cmv4000-de2 Member=Component DE0_GPIO_1 Header 20X2
+Added Member To Class: ClassName=SCH_interface_cmv4000-de2 Member=Component GPIO_CMV4000 Header 20X2
+Added Room: Name=SCH_interface_cmv4000-de2
