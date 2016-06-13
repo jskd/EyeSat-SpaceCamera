@@ -89,7 +89,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 80 176 248 192)
+	(rect 48 288 216 304)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "UART_RXD" (rect 5 0 62 12)(font "Arial" ))
 	(pt 168 8)
@@ -102,11 +102,11 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 16 176 72 192))
+	(annotation_block (location)(rect -16 288 40 304))
 )
 (pin
 	(input)
-	(rect 72 192 248 208)
+	(rect 40 304 216 320)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "CMV_SPI_OUT" (rect 5 0 80 12)(font "Arial" ))
 	(pt 176 8)
@@ -119,11 +119,11 @@ applicable agreement for further details.
 		(line (pt 117 12)(pt 121 8))
 	)
 	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 16 192 72 208))
+	(annotation_block (location)(rect -16 304 40 320))
 )
 (pin
 	(input)
-	(rect -304 224 -88 240)
+	(rect -184 168 32 184)
 	(text "INPUT" (rect 173 0 201 10)(font "Arial" (font_size 6)))
 	(text "CMV_LVDS_OUTCH01" (rect 5 0 119 12)(font "Arial" ))
 	(pt 216 8)
@@ -136,11 +136,11 @@ applicable agreement for further details.
 		(line (pt 157 12)(pt 161 8))
 	)
 	(text "VCC" (rect 176 7 196 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect -376 192 -312 224))
+	(annotation_block (location)(rect -256 136 -192 168))
 )
 (pin
 	(input)
-	(rect -304 240 -88 256)
+	(rect -184 184 32 200)
 	(text "INPUT" (rect 173 0 201 10)(font "Arial" (font_size 6)))
 	(text "CMV_LVDS_OUTCH09" (rect 5 0 119 12)(font "Arial" ))
 	(pt 216 8)
@@ -153,7 +153,7 @@ applicable agreement for further details.
 		(line (pt 157 12)(pt 161 8))
 	)
 	(text "VCC" (rect 176 7 196 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect -376 240 -312 272))
+	(annotation_block (location)(rect -256 184 -192 216))
 )
 (pin
 	(input)
@@ -204,7 +204,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 888 144 960 224))
+	(annotation_block (location)(rect 888 160 960 240))
 )
 (pin
 	(output)
@@ -442,7 +442,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 832 80 904 104))
+	(annotation_block (location)(rect 832 80 904 112))
 )
 (pin
 	(output)
@@ -791,30 +791,6 @@ applicable agreement for further details.
 	(pt 192 88)
 )
 (connector
-	(text "outch1, outch1, outch1, outch1, outch1,outch1,outch1,outch1, outch9,outch9,outch9,outch9,outch9,outch9,outch9,outch9" (rect -360 152 239 164)(font "Arial" ))
-	(pt -360 168)
-	(pt 264 168)
-	(bus)
-)
-(connector
-	(text "outch1" (rect -78 216 -45 228)(font "Arial" ))
-	(pt -40 232)
-	(pt -88 232)
-)
-(connector
-	(text "outch9" (rect -78 232 -45 244)(font "Arial" ))
-	(pt -40 248)
-	(pt -88 248)
-)
-(connector
-	(pt 248 200)
-	(pt 264 200)
-)
-(connector
-	(pt 264 184)
-	(pt 248 184)
-)
-(connector
 	(pt 568 296)
 	(pt 552 296)
 )
@@ -902,4 +878,54 @@ applicable agreement for further details.
 	(pt 552 120)
 	(pt 568 120)
 )
-(text "Les CH 2..8 et 10..16 ne sont pas routé sur la carte du CMV" (rect -360 168 -21 182)(font "Arial" (font_size 8)))
+(connector
+	(pt 264 200)
+	(pt 248 200)
+)
+(connector
+	(pt 264 184)
+	(pt 232 184)
+)
+(connector
+	(pt 232 184)
+	(pt 232 296)
+)
+(connector
+	(pt 232 296)
+	(pt 216 296)
+)
+(connector
+	(pt 248 200)
+	(pt 248 312)
+)
+(connector
+	(pt 216 312)
+	(pt 248 312)
+)
+(connector
+	(text "outch1, outch1, outch1, outch1, outch1,outch1,outch1,outch1, outch9,outch9,outch9,outch9,outch9,outch9,outch9,outch9" (rect -304 232 295 244)(font "Arial" ))
+	(pt 264 168)
+	(pt 216 168)
+	(bus)
+)
+(connector
+	(pt 216 168)
+	(pt 216 256)
+	(bus)
+)
+(connector
+	(pt 216 256)
+	(pt -328 256)
+	(bus)
+)
+(connector
+	(text "outch1" (rect 42 160 75 172)(font "Arial" ))
+	(pt 80 176)
+	(pt 32 176)
+)
+(connector
+	(text "outch9" (rect 42 176 75 188)(font "Arial" ))
+	(pt 80 192)
+	(pt 32 192)
+)
+(text "Les CH 2..8 et 10..16 ne sont pas routé sur la carte du CMV" (rect -304 264 35 278)(font "Arial" (font_size 8)))
