@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 13.0sp1 232 win32 2016.06.02.13:15:47
+# ACDS 13.0sp1 232 win32 2016.06.13.14:29:16
 
 # ----------------------------------------
 # ncsim - auto-generated simulation script
@@ -49,21 +49,29 @@ mkdir -p ./libraries/work/
 mkdir -p ./libraries/irq_mapper/
 mkdir -p ./libraries/rsp_xbar_mux_001/
 mkdir -p ./libraries/rsp_xbar_mux/
-mkdir -p ./libraries/rsp_xbar_demux_001/
+mkdir -p ./libraries/rsp_xbar_demux_007/
+mkdir -p ./libraries/rsp_xbar_demux/
 mkdir -p ./libraries/cmd_xbar_mux/
 mkdir -p ./libraries/cmd_xbar_demux_001/
 mkdir -p ./libraries/cmd_xbar_demux/
-mkdir -p ./libraries/id_router_001/
+mkdir -p ./libraries/id_router_007/
+mkdir -p ./libraries/id_router_002/
 mkdir -p ./libraries/id_router/
 mkdir -p ./libraries/addr_router_001/
 mkdir -p ./libraries/addr_router/
+mkdir -p ./libraries/sdram_controller_s1_translator_avalon_universal_slave_0_agent_rdata_fifo/
+mkdir -p ./libraries/sdram_controller_s1_translator_avalon_universal_slave_0_agent_rsp_fifo/
 mkdir -p ./libraries/onchip_memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo/
+mkdir -p ./libraries/cmv_transmit_data/
+mkdir -p ./libraries/spi/
+mkdir -p ./libraries/sdram_controller/
 mkdir -p ./libraries/uart/
 mkdir -p ./libraries/jtag_uart/
 mkdir -p ./libraries/onchip_memory/
 mkdir -p ./libraries/data_clk/
 mkdir -p ./libraries/CPU/
 mkdir -p ./libraries/data_ctr/
+mkdir -p ./libraries/sdram_controller_my_partner/
 mkdir -p ./libraries/nios_inst_reset_bfm/
 mkdir -p ./libraries/nios_inst_clk_bfm/
 mkdir -p ./libraries/nios_inst/
@@ -72,7 +80,7 @@ mkdir -p ./libraries/lpm/
 mkdir -p ./libraries/sgate/
 mkdir -p ./libraries/altera_mf/
 mkdir -p ./libraries/altera_lnsim/
-mkdir -p ./libraries/cycloneii/
+mkdir -p ./libraries/cycloneiii/
 
 # ----------------------------------------
 # copy RAM/ROM files to simulation directory
@@ -106,50 +114,65 @@ if [ $SKIP_DEV_COM -eq 0 ]; then
   ncvhdl -v93 "$QUARTUS_INSTALL_DIR/eda/sim_lib/altera_mf.vhd"                    -work altera_mf   
   ncvlog -sv  "$QUARTUS_INSTALL_DIR/eda/sim_lib/altera_lnsim.sv"                  -work altera_lnsim
   ncvhdl -v93 "$QUARTUS_INSTALL_DIR/eda/sim_lib/altera_lnsim_components.vhd"      -work altera_lnsim
-  ncvhdl -v93 "$QUARTUS_INSTALL_DIR/eda/sim_lib/cycloneii_atoms.vhd"              -work cycloneii   
-  ncvhdl -v93 "$QUARTUS_INSTALL_DIR/eda/sim_lib/cycloneii_components.vhd"         -work cycloneii   
+  ncvhdl -v93 "$QUARTUS_INSTALL_DIR/eda/sim_lib/cycloneiii_atoms.vhd"             -work cycloneiii  
+  ncvhdl -v93 "$QUARTUS_INSTALL_DIR/eda/sim_lib/cycloneiii_components.vhd"        -work cycloneiii  
 fi
 
 # ----------------------------------------
 # compile design files in correct order
 if [ $SKIP_COM -eq 0 ]; then
-  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_irq_mapper.vho"                                                          -work irq_mapper                                                          -cdslib ./cds_libs/irq_mapper.cds.lib                                                         
-  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_rsp_xbar_mux_001.vho"                                                    -work rsp_xbar_mux_001                                                    -cdslib ./cds_libs/rsp_xbar_mux_001.cds.lib                                                   
-  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_rsp_xbar_mux.vho"                                                        -work rsp_xbar_mux                                                        -cdslib ./cds_libs/rsp_xbar_mux.cds.lib                                                       
-  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_rsp_xbar_demux_001.vho"                                                  -work rsp_xbar_demux_001                                                  -cdslib ./cds_libs/rsp_xbar_demux_001.cds.lib                                                 
-  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_cmd_xbar_mux.vho"                                                        -work cmd_xbar_mux                                                        -cdslib ./cds_libs/cmd_xbar_mux.cds.lib                                                       
-  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_cmd_xbar_demux_001.vho"                                                  -work cmd_xbar_demux_001                                                  -cdslib ./cds_libs/cmd_xbar_demux_001.cds.lib                                                 
-  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_cmd_xbar_demux.vho"                                                      -work cmd_xbar_demux                                                      -cdslib ./cds_libs/cmd_xbar_demux.cds.lib                                                     
-  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_id_router_001.vho"                                                       -work id_router_001                                                       -cdslib ./cds_libs/id_router_001.cds.lib                                                      
-  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_id_router.vho"                                                           -work id_router                                                           -cdslib ./cds_libs/id_router.cds.lib                                                          
-  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_addr_router_001.vho"                                                     -work addr_router_001                                                     -cdslib ./cds_libs/addr_router_001.cds.lib                                                    
-  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_addr_router.vho"                                                         -work addr_router                                                         -cdslib ./cds_libs/addr_router.cds.lib                                                        
-  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_onchip_memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo.vho" -work onchip_memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo -cdslib ./cds_libs/onchip_memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo.cds.lib
-  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_uart.vhd"                                                                -work uart                                                                -cdslib ./cds_libs/uart.cds.lib                                                               
-  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_jtag_uart.vhd"                                                           -work jtag_uart                                                           -cdslib ./cds_libs/jtag_uart.cds.lib                                                          
-  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_onchip_memory.vhd"                                                       -work onchip_memory                                                       -cdslib ./cds_libs/onchip_memory.cds.lib                                                      
-  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_data_clk.vhd"                                                            -work data_clk                                                            -cdslib ./cds_libs/data_clk.cds.lib                                                           
-  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_CPU.vhd"                                                                 -work CPU                                                                 -cdslib ./cds_libs/CPU.cds.lib                                                                
-  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_CPU_jtag_debug_module_sysclk.vhd"                                        -work CPU                                                                 -cdslib ./cds_libs/CPU.cds.lib                                                                
-  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_CPU_jtag_debug_module_tck.vhd"                                           -work CPU                                                                 -cdslib ./cds_libs/CPU.cds.lib                                                                
-  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_CPU_jtag_debug_module_wrapper.vhd"                                       -work CPU                                                                 -cdslib ./cds_libs/CPU.cds.lib                                                                
-  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_CPU_oci_test_bench.vhd"                                                  -work CPU                                                                 -cdslib ./cds_libs/CPU.cds.lib                                                                
-  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_CPU_test_bench.vhd"                                                      -work CPU                                                                 -cdslib ./cds_libs/CPU.cds.lib                                                                
-  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_data_ctr.vhd"                                                            -work data_ctr                                                            -cdslib ./cds_libs/data_ctr.cds.lib                                                           
-  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/altera_avalon_reset_source.vhd"                                               -work nios_inst_reset_bfm                                                 -cdslib ./cds_libs/nios_inst_reset_bfm.cds.lib                                                
-  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/altera_avalon_clock_source.vhd"                                               -work nios_inst_clk_bfm                                                   -cdslib ./cds_libs/nios_inst_clk_bfm.cds.lib                                                  
-  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios.vhd"                                                                     -work nios_inst                                                           -cdslib ./cds_libs/nios_inst.cds.lib                                                          
-  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_onchip_memory_s1_translator.vhd"                                         -work nios_inst                                                           -cdslib ./cds_libs/nios_inst.cds.lib                                                          
-  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_jtag_uart_avalon_jtag_slave_translator.vhd"                              -work nios_inst                                                           -cdslib ./cds_libs/nios_inst.cds.lib                                                          
-  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_data_ch9_s1_translator.vhd"                                              -work nios_inst                                                           -cdslib ./cds_libs/nios_inst.cds.lib                                                          
-  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_cpu_jtag_debug_module_translator.vhd"                                    -work nios_inst                                                           -cdslib ./cds_libs/nios_inst.cds.lib                                                          
-  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_uart_s1_translator.vhd"                                                  -work nios_inst                                                           -cdslib ./cds_libs/nios_inst.cds.lib                                                          
-  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_data_clk_s1_translator.vhd"                                              -work nios_inst                                                           -cdslib ./cds_libs/nios_inst.cds.lib                                                          
-  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_rst_controller.vhd"                                                      -work nios_inst                                                           -cdslib ./cds_libs/nios_inst.cds.lib                                                          
-  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_rst_controller_001.vhd"                                                  -work nios_inst                                                           -cdslib ./cds_libs/nios_inst.cds.lib                                                          
-  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_cpu_data_master_translator.vhd"                                          -work nios_inst                                                           -cdslib ./cds_libs/nios_inst.cds.lib                                                          
-  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_cpu_instruction_master_translator.vhd"                                   -work nios_inst                                                           -cdslib ./cds_libs/nios_inst.cds.lib                                                          
-  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/nios_tb.vhd"                                                                                                                                                                                                                                                     
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_irq_mapper.vho"                                                               -work irq_mapper                                                               -cdslib ./cds_libs/irq_mapper.cds.lib                                                              
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_rsp_xbar_mux_001.vho"                                                         -work rsp_xbar_mux_001                                                         -cdslib ./cds_libs/rsp_xbar_mux_001.cds.lib                                                        
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_rsp_xbar_mux.vho"                                                             -work rsp_xbar_mux                                                             -cdslib ./cds_libs/rsp_xbar_mux.cds.lib                                                            
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_rsp_xbar_demux_007.vho"                                                       -work rsp_xbar_demux_007                                                       -cdslib ./cds_libs/rsp_xbar_demux_007.cds.lib                                                      
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_rsp_xbar_demux.vho"                                                           -work rsp_xbar_demux                                                           -cdslib ./cds_libs/rsp_xbar_demux.cds.lib                                                          
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_cmd_xbar_mux.vho"                                                             -work cmd_xbar_mux                                                             -cdslib ./cds_libs/cmd_xbar_mux.cds.lib                                                            
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_cmd_xbar_demux_001.vho"                                                       -work cmd_xbar_demux_001                                                       -cdslib ./cds_libs/cmd_xbar_demux_001.cds.lib                                                      
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_cmd_xbar_demux.vho"                                                           -work cmd_xbar_demux                                                           -cdslib ./cds_libs/cmd_xbar_demux.cds.lib                                                          
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_id_router_007.vho"                                                            -work id_router_007                                                            -cdslib ./cds_libs/id_router_007.cds.lib                                                           
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_id_router_002.vho"                                                            -work id_router_002                                                            -cdslib ./cds_libs/id_router_002.cds.lib                                                           
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_id_router.vho"                                                                -work id_router                                                                -cdslib ./cds_libs/id_router.cds.lib                                                               
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_addr_router_001.vho"                                                          -work addr_router_001                                                          -cdslib ./cds_libs/addr_router_001.cds.lib                                                         
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_addr_router.vho"                                                              -work addr_router                                                              -cdslib ./cds_libs/addr_router.cds.lib                                                             
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_sdram_controller_s1_translator_avalon_universal_slave_0_agent_rdata_fifo.vho" -work sdram_controller_s1_translator_avalon_universal_slave_0_agent_rdata_fifo -cdslib ./cds_libs/sdram_controller_s1_translator_avalon_universal_slave_0_agent_rdata_fifo.cds.lib
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_sdram_controller_s1_translator_avalon_universal_slave_0_agent_rsp_fifo.vho"   -work sdram_controller_s1_translator_avalon_universal_slave_0_agent_rsp_fifo   -cdslib ./cds_libs/sdram_controller_s1_translator_avalon_universal_slave_0_agent_rsp_fifo.cds.lib  
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_onchip_memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo.vho"      -work onchip_memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo      -cdslib ./cds_libs/onchip_memory_s1_translator_avalon_universal_slave_0_agent_rsp_fifo.cds.lib     
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_cmv_transmit_data.vhd"                                                        -work cmv_transmit_data                                                        -cdslib ./cds_libs/cmv_transmit_data.cds.lib                                                       
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_spi.vhd"                                                                      -work spi                                                                      -cdslib ./cds_libs/spi.cds.lib                                                                     
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_sdram_controller.vhd"                                                         -work sdram_controller                                                         -cdslib ./cds_libs/sdram_controller.cds.lib                                                        
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_sdram_controller_test_component.vhd"                                          -work sdram_controller                                                         -cdslib ./cds_libs/sdram_controller.cds.lib                                                        
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_uart.vhd"                                                                     -work uart                                                                     -cdslib ./cds_libs/uart.cds.lib                                                                    
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_jtag_uart.vhd"                                                                -work jtag_uart                                                                -cdslib ./cds_libs/jtag_uart.cds.lib                                                               
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_onchip_memory.vhd"                                                            -work onchip_memory                                                            -cdslib ./cds_libs/onchip_memory.cds.lib                                                           
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_data_clk.vhd"                                                                 -work data_clk                                                                 -cdslib ./cds_libs/data_clk.cds.lib                                                                
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_CPU.vhd"                                                                      -work CPU                                                                      -cdslib ./cds_libs/CPU.cds.lib                                                                     
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_CPU_jtag_debug_module_sysclk.vhd"                                             -work CPU                                                                      -cdslib ./cds_libs/CPU.cds.lib                                                                     
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_CPU_jtag_debug_module_tck.vhd"                                                -work CPU                                                                      -cdslib ./cds_libs/CPU.cds.lib                                                                     
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_CPU_jtag_debug_module_wrapper.vhd"                                            -work CPU                                                                      -cdslib ./cds_libs/CPU.cds.lib                                                                     
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_CPU_oci_test_bench.vhd"                                                       -work CPU                                                                      -cdslib ./cds_libs/CPU.cds.lib                                                                     
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_CPU_test_bench.vhd"                                                           -work CPU                                                                      -cdslib ./cds_libs/CPU.cds.lib                                                                     
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_data_ctr.vhd"                                                                 -work data_ctr                                                                 -cdslib ./cds_libs/data_ctr.cds.lib                                                                
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/altera_sdram_partner_module.vhd"                                                   -work sdram_controller_my_partner                                              -cdslib ./cds_libs/sdram_controller_my_partner.cds.lib                                             
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/altera_avalon_reset_source.vhd"                                                    -work nios_inst_reset_bfm                                                      -cdslib ./cds_libs/nios_inst_reset_bfm.cds.lib                                                     
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/altera_avalon_clock_source.vhd"                                                    -work nios_inst_clk_bfm                                                        -cdslib ./cds_libs/nios_inst_clk_bfm.cds.lib                                                       
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios.vhd"                                                                          -work nios_inst                                                                -cdslib ./cds_libs/nios_inst.cds.lib                                                               
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_onchip_memory_s1_translator_avalon_universal_slave_0_agent.vhd"               -work nios_inst                                                                -cdslib ./cds_libs/nios_inst.cds.lib                                                               
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_sdram_controller_s1_translator_avalon_universal_slave_0_agent.vhd"            -work nios_inst                                                                -cdslib ./cds_libs/nios_inst.cds.lib                                                               
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_width_adapter.vhd"                                                            -work nios_inst                                                                -cdslib ./cds_libs/nios_inst.cds.lib                                                               
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_width_adapter_001.vhd"                                                        -work nios_inst                                                                -cdslib ./cds_libs/nios_inst.cds.lib                                                               
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_cpu_instruction_master_translator.vhd"                                        -work nios_inst                                                                -cdslib ./cds_libs/nios_inst.cds.lib                                                               
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_cpu_data_master_translator.vhd"                                               -work nios_inst                                                                -cdslib ./cds_libs/nios_inst.cds.lib                                                               
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_onchip_memory_s1_translator.vhd"                                              -work nios_inst                                                                -cdslib ./cds_libs/nios_inst.cds.lib                                                               
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_cpu_jtag_debug_module_translator.vhd"                                         -work nios_inst                                                                -cdslib ./cds_libs/nios_inst.cds.lib                                                               
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_sdram_controller_s1_translator.vhd"                                           -work nios_inst                                                                -cdslib ./cds_libs/nios_inst.cds.lib                                                               
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_data_clk_s1_translator.vhd"                                                   -work nios_inst                                                                -cdslib ./cds_libs/nios_inst.cds.lib                                                               
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_data_ch9_s1_translator.vhd"                                                   -work nios_inst                                                                -cdslib ./cds_libs/nios_inst.cds.lib                                                               
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_spi_spi_control_port_translator.vhd"                                          -work nios_inst                                                                -cdslib ./cds_libs/nios_inst.cds.lib                                                               
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_uart_s1_translator.vhd"                                                       -work nios_inst                                                                -cdslib ./cds_libs/nios_inst.cds.lib                                                               
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_jtag_uart_avalon_jtag_slave_translator.vhd"                                   -work nios_inst                                                                -cdslib ./cds_libs/nios_inst.cds.lib                                                               
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_rst_controller.vhd"                                                           -work nios_inst                                                                -cdslib ./cds_libs/nios_inst.cds.lib                                                               
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/submodules/nios_rst_controller_001.vhd"                                                       -work nios_inst                                                                -cdslib ./cds_libs/nios_inst.cds.lib                                                               
+  ncvhdl -v93 "$QSYS_SIMDIR/nios_tb/simulation/nios_tb.vhd"                                                                                                                                                                                                                                                                    
 fi
 
 # ----------------------------------------

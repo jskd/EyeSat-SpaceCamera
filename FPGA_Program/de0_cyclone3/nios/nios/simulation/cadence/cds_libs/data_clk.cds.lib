@@ -14,5 +14,5 @@ DEFINE lpm            ./../libraries/lpm/
 DEFINE sgate          ./../libraries/sgate/                     
 DEFINE altera_mf      ./../libraries/altera_mf/                 
 DEFINE altera_lnsim   ./../libraries/altera_lnsim/              
-DEFINE cycloneii      ./../libraries/cycloneii/                 
+DEFINE cycloneiii     ./../libraries/cycloneiii/                
 DEFINE data_clk       ./../libraries/data_clk/                  

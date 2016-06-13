@@ -10,19 +10,18 @@
  </systemtable>
  <clocktable>
   <columns>
-   <clockname preferredWidth="420" />
-   <clocksource preferredWidth="420" />
-   <frequency preferredWidth="401" />
+   <clockname preferredWidth="468" />
+   <clocksource preferredWidth="467" />
+   <frequency preferredWidth="449" />
   </columns>
  </clocktable>
- <library
-   expandedCategories="Project,Library/Interface Protocols,Library,Library/Bridges,Library/Bridges/Memory-Mapped,Library/University Program/Generic IO,Library/University Program,Library/Interface Protocols/Serial" />
- <window width="1696" height="1026" x="-8" y="-8" />
+ <library expandedCategories="Library,Project" />
+ <window width="1696" height="1026" x="489" y="78" />
  <hdlexample language="VERILOG" />
  <generation
-   simulation="NONE"
-   testbench_system="NONE"
-   testbench_simulation="NONE"
+   simulation="VHDL"
+   testbench_system="STANDARD"
+   testbench_simulation="VHDL"
    synthesis="VHDL"
    block_symbol_file="1" />
 </preferences>

@@ -608,7 +608,7 @@ begin
     );
 
 
-  cfgrom_readdata <= A_WE_StdLogicVector(((MonAReg(4 DOWNTO 2) = std_logic_vector'("000"))), std_logic_vector'("00000000000000000001000000100000"), A_WE_StdLogicVector(((MonAReg(4 DOWNTO 2) = std_logic_vector'("001"))), std_logic_vector'("00000000000000000000111000001110"), A_WE_StdLogicVector(((MonAReg(4 DOWNTO 2) = std_logic_vector'("010"))), std_logic_vector'("00000000000001000000000000000000"), A_WE_StdLogicVector(((MonAReg(4 DOWNTO 2) = std_logic_vector'("011"))), std_logic_vector'("00000000000000000000000000000000"), A_WE_StdLogicVector(((MonAReg(4 DOWNTO 2) = std_logic_vector'("100"))), std_logic_vector'("00100000000000000000000000000000"), A_WE_StdLogicVector(((MonAReg(4 DOWNTO 2) = std_logic_vector'("101"))), std_logic_vector'("00000000000000000001000000000000"), A_WE_StdLogicVector(((MonAReg(4 DOWNTO 2) = std_logic_vector'("110"))), std_logic_vector'("00000000000000000000000000000000"), std_logic_vector'("00000000000000000000000000000000"))))))));
+  cfgrom_readdata <= A_WE_StdLogicVector(((MonAReg(4 DOWNTO 2) = std_logic_vector'("000"))), std_logic_vector'("00000000100000000001000000100000"), A_WE_StdLogicVector(((MonAReg(4 DOWNTO 2) = std_logic_vector'("001"))), std_logic_vector'("00000000000000000001100000011000"), A_WE_StdLogicVector(((MonAReg(4 DOWNTO 2) = std_logic_vector'("010"))), std_logic_vector'("00000000000001000000000000000000"), A_WE_StdLogicVector(((MonAReg(4 DOWNTO 2) = std_logic_vector'("011"))), std_logic_vector'("00000000000000000000000000000000"), A_WE_StdLogicVector(((MonAReg(4 DOWNTO 2) = std_logic_vector'("100"))), std_logic_vector'("00100000000000000000000000000000"), A_WE_StdLogicVector(((MonAReg(4 DOWNTO 2) = std_logic_vector'("101"))), std_logic_vector'("00000000100000000001000000000000"), A_WE_StdLogicVector(((MonAReg(4 DOWNTO 2) = std_logic_vector'("110"))), std_logic_vector'("00000000000000000000000000000000"), std_logic_vector'("00000000000000000000000000000000"))))))));
   --vhdl renameroo for output signals
   MonDReg <= internal_MonDReg;
   --vhdl renameroo for output signals
@@ -695,10 +695,10 @@ begin
   process (clk, reset_n)
   begin
     if reset_n = '0' then
-      internal_oci_ienable1 <= std_logic_vector'("00000000000000000000000000000111");
+      internal_oci_ienable1 <= std_logic_vector'("00000000000000000000000000001111");
     elsif clk'event and clk = '1' then
       if std_logic'(take_action_oci_intr_mask_reg) = '1' then 
-        internal_oci_ienable1 <= writedata OR NOT (std_logic_vector'("00000000000000000000000000000111"));
+        internal_oci_ienable1 <= writedata OR NOT (std_logic_vector'("00000000000000000000000000001111"));
       end if;
     end if;
 
@@ -1023,7 +1023,7 @@ entity nios_CPU_nios2_oci_xbrk is
               -- inputs:
                  signal D_valid : IN STD_LOGIC;
                  signal E_valid : IN STD_LOGIC;
-                 signal F_pc : IN STD_LOGIC_VECTOR (11 DOWNTO 0);
+                 signal F_pc : IN STD_LOGIC_VECTOR (21 DOWNTO 0);
                  signal clk : IN STD_LOGIC;
                  signal reset_n : IN STD_LOGIC;
                  signal trigger_state_0 : IN STD_LOGIC;
@@ -1052,7 +1052,7 @@ architecture europa of nios_CPU_nios2_oci_xbrk is
                 signal E_xbrk_traceoff :  STD_LOGIC;
                 signal E_xbrk_traceon :  STD_LOGIC;
                 signal E_xbrk_trigout :  STD_LOGIC;
-                signal cpu_i_address :  STD_LOGIC_VECTOR (13 DOWNTO 0);
+                signal cpu_i_address :  STD_LOGIC_VECTOR (23 DOWNTO 0);
                 signal xbrk0_armed :  STD_LOGIC;
                 signal xbrk0_break_hit :  STD_LOGIC;
                 signal xbrk0_goto0_hit :  STD_LOGIC;
@@ -1230,7 +1230,7 @@ entity nios_CPU_nios2_oci_dbrk is
                  signal E_st_data : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
                  signal av_ld_data_aligned_filtered : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
                  signal clk : IN STD_LOGIC;
-                 signal d_address : IN STD_LOGIC_VECTOR (13 DOWNTO 0);
+                 signal d_address : IN STD_LOGIC_VECTOR (23 DOWNTO 0);
                  signal d_read : IN STD_LOGIC;
                  signal d_waitrequest : IN STD_LOGIC;
                  signal d_write : IN STD_LOGIC;
@@ -1238,7 +1238,7 @@ entity nios_CPU_nios2_oci_dbrk is
                  signal reset_n : IN STD_LOGIC;
 
               -- outputs:
-                 signal cpu_d_address : OUT STD_LOGIC_VECTOR (13 DOWNTO 0);
+                 signal cpu_d_address : OUT STD_LOGIC_VECTOR (23 DOWNTO 0);
                  signal cpu_d_read : OUT STD_LOGIC;
                  signal cpu_d_readdata : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
                  signal cpu_d_wait : OUT STD_LOGIC;
@@ -1767,7 +1767,7 @@ entity nios_CPU_nios2_oci_dtrace is
         port (
               -- inputs:
                  signal clk : IN STD_LOGIC;
-                 signal cpu_d_address : IN STD_LOGIC_VECTOR (13 DOWNTO 0);
+                 signal cpu_d_address : IN STD_LOGIC_VECTOR (23 DOWNTO 0);
                  signal cpu_d_read : IN STD_LOGIC;
                  signal cpu_d_readdata : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
                  signal cpu_d_wait : IN STD_LOGIC;
@@ -1811,7 +1811,7 @@ begin
 
   cpu_d_writedata_0_padded <= cpu_d_writedata OR std_logic_vector'("00000000000000000000000000000000");
   cpu_d_readdata_0_padded <= cpu_d_readdata OR std_logic_vector'("00000000000000000000000000000000");
-  cpu_d_address_0_padded <= (std_logic_vector'("000000000000000000") & (cpu_d_address)) OR std_logic_vector'("00000000000000000000000000000000");
+  cpu_d_address_0_padded <= (std_logic_vector'("00000000") & (cpu_d_address)) OR std_logic_vector'("00000000000000000000000000000000");
   --nios_CPU_nios2_oci_trc_ctrl_td_mode, which is an e_instance
   nios_CPU_nios2_oci_trc_ctrl_td_mode : nios_CPU_nios2_oci_td_mode
     port map(
@@ -2757,12 +2757,12 @@ entity nios_CPU_nios2_oci is
                  signal D_valid : IN STD_LOGIC;
                  signal E_st_data : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
                  signal E_valid : IN STD_LOGIC;
-                 signal F_pc : IN STD_LOGIC_VECTOR (11 DOWNTO 0);
+                 signal F_pc : IN STD_LOGIC_VECTOR (21 DOWNTO 0);
                  signal address_nxt : IN STD_LOGIC_VECTOR (8 DOWNTO 0);
                  signal av_ld_data_aligned_filtered : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
                  signal byteenable_nxt : IN STD_LOGIC_VECTOR (3 DOWNTO 0);
                  signal clk : IN STD_LOGIC;
-                 signal d_address : IN STD_LOGIC_VECTOR (13 DOWNTO 0);
+                 signal d_address : IN STD_LOGIC_VECTOR (23 DOWNTO 0);
                  signal d_read : IN STD_LOGIC;
                  signal d_waitrequest : IN STD_LOGIC;
                  signal d_write : IN STD_LOGIC;
@@ -2903,7 +2903,7 @@ component nios_CPU_nios2_oci_xbrk is
                  -- inputs:
                     signal D_valid : IN STD_LOGIC;
                     signal E_valid : IN STD_LOGIC;
-                    signal F_pc : IN STD_LOGIC_VECTOR (11 DOWNTO 0);
+                    signal F_pc : IN STD_LOGIC_VECTOR (21 DOWNTO 0);
                     signal clk : IN STD_LOGIC;
                     signal reset_n : IN STD_LOGIC;
                     signal trigger_state_0 : IN STD_LOGIC;
@@ -2929,7 +2929,7 @@ component nios_CPU_nios2_oci_dbrk is
                     signal E_st_data : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
                     signal av_ld_data_aligned_filtered : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
                     signal clk : IN STD_LOGIC;
-                    signal d_address : IN STD_LOGIC_VECTOR (13 DOWNTO 0);
+                    signal d_address : IN STD_LOGIC_VECTOR (23 DOWNTO 0);
                     signal d_read : IN STD_LOGIC;
                     signal d_waitrequest : IN STD_LOGIC;
                     signal d_write : IN STD_LOGIC;
@@ -2937,7 +2937,7 @@ component nios_CPU_nios2_oci_dbrk is
                     signal reset_n : IN STD_LOGIC;
 
                  -- outputs:
-                    signal cpu_d_address : OUT STD_LOGIC_VECTOR (13 DOWNTO 0);
+                    signal cpu_d_address : OUT STD_LOGIC_VECTOR (23 DOWNTO 0);
                     signal cpu_d_read : OUT STD_LOGIC;
                     signal cpu_d_readdata : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
                     signal cpu_d_wait : OUT STD_LOGIC;
@@ -2980,7 +2980,7 @@ component nios_CPU_nios2_oci_dtrace is
            port (
                  -- inputs:
                     signal clk : IN STD_LOGIC;
-                    signal cpu_d_address : IN STD_LOGIC_VECTOR (13 DOWNTO 0);
+                    signal cpu_d_address : IN STD_LOGIC_VECTOR (23 DOWNTO 0);
                     signal cpu_d_read : IN STD_LOGIC;
                     signal cpu_d_readdata : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
                     signal cpu_d_wait : IN STD_LOGIC;
@@ -3110,7 +3110,7 @@ end component nios_CPU_jtag_debug_module_wrapper;
                 signal break_readreg :  STD_LOGIC_VECTOR (31 DOWNTO 0);
                 signal byteenable :  STD_LOGIC_VECTOR (3 DOWNTO 0);
                 signal clkx2 :  STD_LOGIC;
-                signal cpu_d_address :  STD_LOGIC_VECTOR (13 DOWNTO 0);
+                signal cpu_d_address :  STD_LOGIC_VECTOR (23 DOWNTO 0);
                 signal cpu_d_read :  STD_LOGIC;
                 signal cpu_d_readdata :  STD_LOGIC_VECTOR (31 DOWNTO 0);
                 signal cpu_d_wait :  STD_LOGIC;
@@ -3609,12 +3609,12 @@ entity nios_CPU is
                  signal reset_n : IN STD_LOGIC;
 
               -- outputs:
-                 signal d_address : OUT STD_LOGIC_VECTOR (13 DOWNTO 0);
+                 signal d_address : OUT STD_LOGIC_VECTOR (23 DOWNTO 0);
                  signal d_byteenable : OUT STD_LOGIC_VECTOR (3 DOWNTO 0);
                  signal d_read : OUT STD_LOGIC;
                  signal d_write : OUT STD_LOGIC;
                  signal d_writedata : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
-                 signal i_address : OUT STD_LOGIC_VECTOR (13 DOWNTO 0);
+                 signal i_address : OUT STD_LOGIC_VECTOR (23 DOWNTO 0);
                  signal i_read : OUT STD_LOGIC;
                  signal jtag_debug_module_debugaccess_to_roms : OUT STD_LOGIC;
                  signal jtag_debug_module_readdata : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
@@ -3634,7 +3634,7 @@ component nios_CPU_test_bench is
                     signal D_iw_opx : IN STD_LOGIC_VECTOR (5 DOWNTO 0);
                     signal D_valid : IN STD_LOGIC;
                     signal E_valid : IN STD_LOGIC;
-                    signal F_pcb : IN STD_LOGIC_VECTOR (13 DOWNTO 0);
+                    signal F_pcb : IN STD_LOGIC_VECTOR (23 DOWNTO 0);
                     signal F_valid : IN STD_LOGIC;
                     signal R_ctrl_ld : IN STD_LOGIC;
                     signal R_ctrl_ld_non_io : IN STD_LOGIC;
@@ -3645,11 +3645,11 @@ component nios_CPU_test_bench is
                     signal W_wr_data : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
                     signal av_ld_data_aligned_unfiltered : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
                     signal clk : IN STD_LOGIC;
-                    signal d_address : IN STD_LOGIC_VECTOR (13 DOWNTO 0);
+                    signal d_address : IN STD_LOGIC_VECTOR (23 DOWNTO 0);
                     signal d_byteenable : IN STD_LOGIC_VECTOR (3 DOWNTO 0);
                     signal d_read : IN STD_LOGIC;
                     signal d_write_nxt : IN STD_LOGIC;
-                    signal i_address : IN STD_LOGIC_VECTOR (13 DOWNTO 0);
+                    signal i_address : IN STD_LOGIC_VECTOR (23 DOWNTO 0);
                     signal i_read : IN STD_LOGIC;
                     signal i_readdata : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
                     signal i_waitrequest : IN STD_LOGIC;
@@ -3702,12 +3702,12 @@ component nios_CPU_nios2_oci is
                     signal D_valid : IN STD_LOGIC;
                     signal E_st_data : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
                     signal E_valid : IN STD_LOGIC;
-                    signal F_pc : IN STD_LOGIC_VECTOR (11 DOWNTO 0);
+                    signal F_pc : IN STD_LOGIC_VECTOR (21 DOWNTO 0);
                     signal address_nxt : IN STD_LOGIC_VECTOR (8 DOWNTO 0);
                     signal av_ld_data_aligned_filtered : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
                     signal byteenable_nxt : IN STD_LOGIC_VECTOR (3 DOWNTO 0);
                     signal clk : IN STD_LOGIC;
-                    signal d_address : IN STD_LOGIC_VECTOR (13 DOWNTO 0);
+                    signal d_address : IN STD_LOGIC_VECTOR (23 DOWNTO 0);
                     signal d_read : IN STD_LOGIC;
                     signal d_waitrequest : IN STD_LOGIC;
                     signal d_write : IN STD_LOGIC;
@@ -3788,7 +3788,7 @@ end component nios_CPU_nios2_oci;
                 signal D_iw_opx :  STD_LOGIC_VECTOR (5 DOWNTO 0);
                 signal D_iw_shift_imm5 :  STD_LOGIC_VECTOR (4 DOWNTO 0);
                 signal D_iw_trap_break_imm5 :  STD_LOGIC_VECTOR (4 DOWNTO 0);
-                signal D_jmp_direct_target_waddr :  STD_LOGIC_VECTOR (11 DOWNTO 0);
+                signal D_jmp_direct_target_waddr :  STD_LOGIC_VECTOR (21 DOWNTO 0);
                 signal D_logic_op :  STD_LOGIC_VECTOR (1 DOWNTO 0);
                 signal D_logic_op_raw :  STD_LOGIC_VECTOR (1 DOWNTO 0);
                 signal D_mem16 :  STD_LOGIC;
@@ -3940,7 +3940,7 @@ end component nios_CPU_nios2_oci;
                 signal E_logic_result :  STD_LOGIC_VECTOR (31 DOWNTO 0);
                 signal E_logic_result_is_0 :  STD_LOGIC;
                 signal E_lt :  STD_LOGIC;
-                signal E_mem_baddr :  STD_LOGIC_VECTOR (13 DOWNTO 0);
+                signal E_mem_baddr :  STD_LOGIC_VECTOR (23 DOWNTO 0);
                 signal E_mem_byte_en :  STD_LOGIC_VECTOR (3 DOWNTO 0);
                 signal E_new_inst :  STD_LOGIC;
                 signal E_shift_rot_cnt :  STD_LOGIC_VECTOR (4 DOWNTO 0);
@@ -4130,15 +4130,15 @@ end component nios_CPU_nios2_oci;
                 signal F_op_xor :  STD_LOGIC;
                 signal F_op_xorhi :  STD_LOGIC;
                 signal F_op_xori :  STD_LOGIC;
-                signal F_pc :  STD_LOGIC_VECTOR (11 DOWNTO 0);
+                signal F_pc :  STD_LOGIC_VECTOR (21 DOWNTO 0);
                 signal F_pc_en :  STD_LOGIC;
-                signal F_pc_no_crst_nxt :  STD_LOGIC_VECTOR (11 DOWNTO 0);
-                signal F_pc_nxt :  STD_LOGIC_VECTOR (11 DOWNTO 0);
-                signal F_pc_plus_one :  STD_LOGIC_VECTOR (11 DOWNTO 0);
+                signal F_pc_no_crst_nxt :  STD_LOGIC_VECTOR (21 DOWNTO 0);
+                signal F_pc_nxt :  STD_LOGIC_VECTOR (21 DOWNTO 0);
+                signal F_pc_plus_one :  STD_LOGIC_VECTOR (21 DOWNTO 0);
                 signal F_pc_sel_nxt :  STD_LOGIC_VECTOR (1 DOWNTO 0);
-                signal F_pcb :  STD_LOGIC_VECTOR (13 DOWNTO 0);
-                signal F_pcb_nxt :  STD_LOGIC_VECTOR (13 DOWNTO 0);
-                signal F_pcb_plus_four :  STD_LOGIC_VECTOR (13 DOWNTO 0);
+                signal F_pcb :  STD_LOGIC_VECTOR (23 DOWNTO 0);
+                signal F_pcb_nxt :  STD_LOGIC_VECTOR (23 DOWNTO 0);
+                signal F_pcb_plus_four :  STD_LOGIC_VECTOR (23 DOWNTO 0);
                 signal F_valid :  STD_LOGIC;
                 signal F_vinst :  STD_LOGIC_VECTOR (55 DOWNTO 0);
                 signal R_compare_op :  STD_LOGIC_VECTOR (1 DOWNTO 0);
@@ -4243,7 +4243,7 @@ end component nios_CPU_nios2_oci;
                 signal W_ienable_reg_nxt :  STD_LOGIC_VECTOR (31 DOWNTO 0);
                 signal W_ipending_reg :  STD_LOGIC_VECTOR (31 DOWNTO 0);
                 signal W_ipending_reg_nxt :  STD_LOGIC_VECTOR (31 DOWNTO 0);
-                signal W_mem_baddr :  STD_LOGIC_VECTOR (13 DOWNTO 0);
+                signal W_mem_baddr :  STD_LOGIC_VECTOR (23 DOWNTO 0);
                 signal W_rf_wr_data :  STD_LOGIC_VECTOR (31 DOWNTO 0);
                 signal W_rf_wren :  STD_LOGIC;
                 signal W_status_reg :  STD_LOGIC;
@@ -4286,11 +4286,11 @@ end component nios_CPU_nios2_oci;
                 signal hbreak_req :  STD_LOGIC;
                 signal i_read_nxt :  STD_LOGIC;
                 signal iactive :  STD_LOGIC_VECTOR (31 DOWNTO 0);
-                signal internal_d_address :  STD_LOGIC_VECTOR (13 DOWNTO 0);
+                signal internal_d_address :  STD_LOGIC_VECTOR (23 DOWNTO 0);
                 signal internal_d_byteenable :  STD_LOGIC_VECTOR (3 DOWNTO 0);
                 signal internal_d_read :  STD_LOGIC;
                 signal internal_d_write :  STD_LOGIC;
-                signal internal_i_address :  STD_LOGIC_VECTOR (13 DOWNTO 0);
+                signal internal_i_address :  STD_LOGIC_VECTOR (23 DOWNTO 0);
                 signal internal_i_read :  STD_LOGIC;
                 signal internal_jtag_debug_module_debugaccess_to_roms :  STD_LOGIC;
                 signal internal_jtag_debug_module_readdata :  STD_LOGIC_VECTOR (31 DOWNTO 0);
@@ -4680,17 +4680,17 @@ begin
   --custom_instruction_master, which is an e_custom_instruction_master
   no_ci_readra <= std_logic'('0');
   E_ci_multi_stall <= std_logic'('0');
-  iactive <= d_irq(31 DOWNTO 0) AND std_logic_vector'("00000000000000000000000000000111");
+  iactive <= d_irq(31 DOWNTO 0) AND std_logic_vector'("00000000000000000000000000001111");
   F_pc_sel_nxt <= A_WE_StdLogicVector((std_logic'(R_ctrl_exception) = '1'), std_logic_vector'("00"), A_WE_StdLogicVector((std_logic'(R_ctrl_break) = '1'), std_logic_vector'("01"), A_WE_StdLogicVector((std_logic'(((W_br_taken OR R_ctrl_uncond_cti_non_br))) = '1'), std_logic_vector'("10"), std_logic_vector'("11"))));
-  F_pc_no_crst_nxt <= A_EXT (A_WE_StdLogicVector(((F_pc_sel_nxt = std_logic_vector'("00"))), std_logic_vector'("00000000000000000000010000001000"), A_WE_StdLogicVector(((F_pc_sel_nxt = std_logic_vector'("01"))), std_logic_vector'("00000000000000000000101000001000"), (std_logic_vector'("00000000000000000000") & (A_WE_StdLogicVector(((F_pc_sel_nxt = std_logic_vector'("10"))), E_arith_result(13 DOWNTO 2), F_pc_plus_one))))), 12);
+  F_pc_no_crst_nxt <= A_EXT (A_WE_StdLogicVector(((F_pc_sel_nxt = std_logic_vector'("00"))), std_logic_vector'("00000000001000000000010000001000"), A_WE_StdLogicVector(((F_pc_sel_nxt = std_logic_vector'("01"))), std_logic_vector'("00000000001000000000101000001000"), (std_logic_vector'("0000000000") & (A_WE_StdLogicVector(((F_pc_sel_nxt = std_logic_vector'("10"))), E_arith_result(23 DOWNTO 2), F_pc_plus_one))))), 22);
   F_pc_nxt <= F_pc_no_crst_nxt;
   F_pcb_nxt <= F_pc_nxt & std_logic_vector'("00");
   F_pc_en <= W_valid;
-  F_pc_plus_one <= A_EXT (((std_logic_vector'("000000000000000000000") & (F_pc)) + std_logic_vector'("000000000000000000000000000000001")), 12);
+  F_pc_plus_one <= A_EXT (((std_logic_vector'("00000000000") & (F_pc)) + std_logic_vector'("000000000000000000000000000000001")), 22);
   process (clk, reset_n)
   begin
     if reset_n = '0' then
-      F_pc <= std_logic_vector'("010000000000");
+      F_pc <= std_logic_vector'("1000000000010000000000");
     elsif clk'event and clk = '1' then
       if std_logic'(F_pc_en) = '1' then 
         F_pc <= F_pc_nxt;
@@ -4767,7 +4767,7 @@ begin
   D_logic_op_raw <= A_WE_StdLogicVector((std_logic'(D_op_opx) = '1'), D_iw_opx(4 DOWNTO 3), D_iw_op(4 DOWNTO 3));
   D_logic_op <= A_WE_StdLogicVector((std_logic'(D_ctrl_alu_force_xor) = '1'), std_logic_vector'("11"), D_logic_op_raw);
   D_compare_op <= A_WE_StdLogicVector((std_logic'(D_op_opx) = '1'), D_iw_opx(4 DOWNTO 3), D_iw_op(4 DOWNTO 3));
-  D_jmp_direct_target_waddr <= A_EXT (D_iw(31 DOWNTO 6), 12);
+  D_jmp_direct_target_waddr <= A_EXT (D_iw(31 DOWNTO 6), 22);
   process (clk, reset_n)
   begin
     if reset_n = '0' then
@@ -4860,7 +4860,7 @@ begin
     );
 
 
-  R_src1 <= A_WE_StdLogicVector((std_logic'(((((R_ctrl_br AND E_valid)) OR ((R_ctrl_retaddr AND R_valid))))) = '1'), (std_logic_vector'("000000000000000000") & ((F_pc_plus_one & std_logic_vector'("00")))), A_WE_StdLogicVector((std_logic'(((R_ctrl_jmp_direct AND E_valid))) = '1'), (std_logic_vector'("000000000000000000") & ((D_jmp_direct_target_waddr & std_logic_vector'("00")))), R_rf_a));
+  R_src1 <= A_WE_StdLogicVector((std_logic'(((((R_ctrl_br AND E_valid)) OR ((R_ctrl_retaddr AND R_valid))))) = '1'), (std_logic_vector'("00000000") & ((F_pc_plus_one & std_logic_vector'("00")))), A_WE_StdLogicVector((std_logic'(((R_ctrl_jmp_direct AND E_valid))) = '1'), (std_logic_vector'("00000000") & ((D_jmp_direct_target_waddr & std_logic_vector'("00")))), R_rf_a));
   R_src2_lo <= A_WE_StdLogicVector((std_logic'(((R_ctrl_force_src2_zero OR R_ctrl_hi_imm16))) = '1'), std_logic_vector'("0000000000000000"), A_WE_StdLogicVector((std_logic'((R_src2_use_imm)) = '1'), D_iw_imm16, R_rf_b(15 DOWNTO 0)));
   R_src2_hi <= A_WE_StdLogicVector((std_logic'(((R_ctrl_force_src2_zero OR R_ctrl_unsigned_lo_imm16))) = '1'), std_logic_vector'("0000000000000000"), A_WE_StdLogicVector((std_logic'((R_ctrl_hi_imm16)) = '1'), D_iw_imm16, A_WE_StdLogicVector((std_logic'((R_src2_use_imm)) = '1'), A_REP(D_iw_imm16(15) , 16), R_rf_b(31 DOWNTO 16))));
   R_src2 <= R_src2_hi & R_src2_lo;
@@ -4928,7 +4928,7 @@ begin
   E_arith_src1 <= Std_Logic_Vector'(A_ToStdLogicVector((E_src1(31) XOR E_invert_arith_src_msb)) & E_src1(30 DOWNTO 0));
   E_arith_src2 <= Std_Logic_Vector'(A_ToStdLogicVector((E_src2(31) XOR E_invert_arith_src_msb)) & E_src2(30 DOWNTO 0));
   E_arith_result <= A_WE_StdLogicVector((std_logic'(E_alu_sub) = '1'), ((std_logic_vector'("0") & (E_arith_src1)) - (std_logic_vector'("0") & (E_arith_src2))), ((std_logic_vector'("0") & (E_arith_src1)) + (std_logic_vector'("0") & (E_arith_src2))));
-  E_mem_baddr <= E_arith_result(13 DOWNTO 0);
+  E_mem_baddr <= E_arith_result(23 DOWNTO 0);
   E_logic_result <= A_WE_StdLogicVector(((R_logic_op = std_logic_vector'("00"))), (NOT ((E_src1 OR E_src2))), A_WE_StdLogicVector(((R_logic_op = std_logic_vector'("01"))), ((E_src1 AND E_src2)), A_WE_StdLogicVector(((R_logic_op = std_logic_vector'("10"))), ((E_src1 OR E_src2)), ((E_src1 XOR E_src2)))));
   E_logic_result_is_0 <= to_std_logic((E_logic_result = std_logic_vector'("00000000000000000000000000000000")));
   E_eq <= E_logic_result_is_0;
@@ -5181,7 +5181,7 @@ begin
   W_wr_data_non_zero <= A_WE_StdLogicVector((std_logic'(R_ctrl_br_cmp) = '1'), (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(W_cmp_result))), A_WE_StdLogicVector((std_logic'(R_ctrl_rdctl_inst) = '1'), W_control_rd_data, W_alu_result(31 DOWNTO 0)));
   W_wr_data <= W_wr_data_non_zero;
   W_br_taken <= R_ctrl_br AND W_cmp_result;
-  W_mem_baddr <= W_alu_result(13 DOWNTO 0);
+  W_mem_baddr <= W_alu_result(23 DOWNTO 0);
   W_status_reg <= W_status_reg_pie;
   E_wrctl_status <= R_ctrl_wrctl_inst AND to_std_logic(((D_iw_control_regnum = std_logic_vector'("000"))));
   E_wrctl_estatus <= R_ctrl_wrctl_inst AND to_std_logic(((D_iw_control_regnum = std_logic_vector'("001"))));
@@ -5193,8 +5193,8 @@ begin
   W_estatus_reg_nxt <= A_WE_StdLogic((std_logic'(E_valid) = '1'), W_estatus_reg_inst_nxt, W_estatus_reg);
   W_bstatus_reg_inst_nxt <= A_WE_StdLogic((std_logic'((R_ctrl_break)) = '1'), W_status_reg, A_WE_StdLogic((std_logic'((E_wrctl_bstatus)) = '1'), E_src1(0), W_bstatus_reg));
   W_bstatus_reg_nxt <= A_WE_StdLogic((std_logic'(E_valid) = '1'), W_bstatus_reg_inst_nxt, W_bstatus_reg);
-  W_ienable_reg_nxt <= (A_WE_StdLogicVector((std_logic'(((E_wrctl_ienable AND E_valid))) = '1'), E_src1(31 DOWNTO 0), W_ienable_reg)) AND std_logic_vector'("00000000000000000000000000000111");
-  W_ipending_reg_nxt <= ((iactive AND W_ienable_reg) AND oci_ienable) AND std_logic_vector'("00000000000000000000000000000111");
+  W_ienable_reg_nxt <= (A_WE_StdLogicVector((std_logic'(((E_wrctl_ienable AND E_valid))) = '1'), E_src1(31 DOWNTO 0), W_ienable_reg)) AND std_logic_vector'("00000000000000000000000000001111");
+  W_ipending_reg_nxt <= ((iactive AND W_ienable_reg) AND oci_ienable) AND std_logic_vector'("00000000000000000000000000001111");
   process (clk, reset_n)
   begin
     if reset_n = '0' then

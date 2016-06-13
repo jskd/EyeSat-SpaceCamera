@@ -37,7 +37,7 @@ entity nios_CPU_test_bench is
                  signal D_iw_opx : IN STD_LOGIC_VECTOR (5 DOWNTO 0);
                  signal D_valid : IN STD_LOGIC;
                  signal E_valid : IN STD_LOGIC;
-                 signal F_pcb : IN STD_LOGIC_VECTOR (13 DOWNTO 0);
+                 signal F_pcb : IN STD_LOGIC_VECTOR (23 DOWNTO 0);
                  signal F_valid : IN STD_LOGIC;
                  signal R_ctrl_ld : IN STD_LOGIC;
                  signal R_ctrl_ld_non_io : IN STD_LOGIC;
@@ -48,11 +48,11 @@ entity nios_CPU_test_bench is
                  signal W_wr_data : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
                  signal av_ld_data_aligned_unfiltered : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
                  signal clk : IN STD_LOGIC;
-                 signal d_address : IN STD_LOGIC_VECTOR (13 DOWNTO 0);
+                 signal d_address : IN STD_LOGIC_VECTOR (23 DOWNTO 0);
                  signal d_byteenable : IN STD_LOGIC_VECTOR (3 DOWNTO 0);
                  signal d_read : IN STD_LOGIC;
                  signal d_write_nxt : IN STD_LOGIC;
-                 signal i_address : IN STD_LOGIC_VECTOR (13 DOWNTO 0);
+                 signal i_address : IN STD_LOGIC_VECTOR (23 DOWNTO 0);
                  signal i_read : IN STD_LOGIC;
                  signal i_readdata : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
                  signal i_waitrequest : IN STD_LOGIC;
