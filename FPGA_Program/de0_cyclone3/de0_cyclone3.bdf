@@ -21,7 +21,7 @@ applicable agreement for further details.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect -96 16 72 32)
+	(rect -104 -32 64 -16)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "CLOCK_50" (rect 5 0 60 12)(font "Arial" ))
 	(pt 168 8)
@@ -34,11 +34,11 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect -160 16 -104 32))
+	(annotation_block (location)(rect -168 -32 -112 -16))
 )
 (pin
 	(input)
-	(rect -96 32 72 48)
+	(rect -104 -8 64 8)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "KEY[0]" (rect 5 0 40 12)(font "Arial" ))
 	(pt 168 8)
@@ -51,11 +51,11 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect -160 32 -104 48))
+	(annotation_block (location)(rect -168 -8 -112 8))
 )
 (pin
 	(input)
-	(rect -96 48 72 64)
+	(rect -104 24 64 40)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "KEY[1]" (rect 5 0 40 12)(font "Arial" ))
 	(pt 168 8)
@@ -68,11 +68,11 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect -160 48 -104 64))
+	(annotation_block (location)(rect -168 24 -112 40))
 )
 (pin
 	(input)
-	(rect -96 64 72 80)
+	(rect -104 56 64 72)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "KEY[2]" (rect 5 0 40 12)(font "Arial" ))
 	(pt 168 8)
@@ -85,7 +85,7 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect -160 64 -104 80))
+	(annotation_block (location)(rect -168 56 -112 72))
 )
 (pin
 	(input)
@@ -718,6 +718,56 @@ applicable agreement for further details.
 		(rectangle (rect 16 16 272 336))
 	)
 )
+(symbol
+	(rect 144 -16 192 16)
+	(text "NOT" (rect 1 0 21 10)(font "Arial" (font_size 6)))
+	(text "inst" (rect 3 21 20 33)(font "Arial" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
+		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 13 16))
+	)
+	(port
+		(pt 48 16)
+		(output)
+		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
+		(line (pt 39 16)(pt 48 16))
+	)
+	(drawing
+		(line (pt 13 25)(pt 13 7))
+		(line (pt 13 7)(pt 31 16))
+		(line (pt 13 25)(pt 31 16))
+		(circle (rect 31 12 39 20))
+	)
+)
+(symbol
+	(rect 144 48 192 80)
+	(text "NOT" (rect 1 0 21 10)(font "Arial" (font_size 6)))
+	(text "inst3" (rect 3 21 26 33)(font "Arial" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
+		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 13 16))
+	)
+	(port
+		(pt 48 16)
+		(output)
+		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
+		(line (pt 39 16)(pt 48 16))
+	)
+	(drawing
+		(line (pt 13 25)(pt 13 7))
+		(line (pt 13 7)(pt 31 16))
+		(line (pt 13 25)(pt 31 16))
+		(circle (rect 31 12 39 20))
+	)
+)
 (connector
 	(pt 264 72)
 	(pt 256 72)
@@ -751,40 +801,8 @@ applicable agreement for further details.
 	(pt 152 128)
 )
 (connector
-	(pt 256 72)
-	(pt 256 24)
-)
-(connector
-	(pt 240 88)
-	(pt 240 40)
-)
-(connector
-	(pt 224 104)
-	(pt 224 56)
-)
-(connector
-	(pt 208 120)
-	(pt 208 72)
-)
-(connector
 	(pt 192 136)
 	(pt 192 88)
-)
-(connector
-	(pt 72 24)
-	(pt 256 24)
-)
-(connector
-	(pt 72 40)
-	(pt 240 40)
-)
-(connector
-	(pt 72 56)
-	(pt 224 56)
-)
-(connector
-	(pt 72 72)
-	(pt 208 72)
 )
 (connector
 	(pt 96 88)
@@ -927,5 +945,45 @@ applicable agreement for further details.
 	(text "outch9" (rect 42 176 75 188)(font "Arial" ))
 	(pt 80 192)
 	(pt 32 192)
+)
+(connector
+	(pt 208 120)
+	(pt 208 64)
+)
+(connector
+	(pt 208 64)
+	(pt 192 64)
+)
+(connector
+	(pt 224 104)
+	(pt 224 32)
+)
+(connector
+	(pt 240 88)
+	(pt 240 0)
+)
+(connector
+	(pt 240 0)
+	(pt 192 0)
+)
+(connector
+	(pt 64 0)
+	(pt 144 0)
+)
+(connector
+	(pt 64 64)
+	(pt 144 64)
+)
+(connector
+	(pt 256 72)
+	(pt 256 -24)
+)
+(connector
+	(pt 64 -24)
+	(pt 256 -24)
+)
+(connector
+	(pt 64 32)
+	(pt 224 32)
 )
 (text "Les CH 2..8 et 10..16 ne sont pas routé sur la carte du CMV" (rect -304 264 35 278)(font "Arial" (font_size 8)))

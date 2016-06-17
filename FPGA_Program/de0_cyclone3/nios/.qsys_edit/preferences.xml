@@ -15,12 +15,12 @@
    <frequency preferredWidth="449" />
   </columns>
  </clocktable>
- <library expandedCategories="Library,Project" />
- <window width="1696" height="1026" x="489" y="78" />
+ <library expandedCategories="Project,Library" />
+ <window width="1696" height="1026" x="-8" y="-8" />
  <hdlexample language="VERILOG" />
  <generation
-   simulation="VHDL"
-   testbench_system="STANDARD"
+   simulation="NONE"
+   testbench_system="NONE"
    testbench_simulation="VHDL"
    synthesis="VHDL"
    block_symbol_file="1" />

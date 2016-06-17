@@ -727,7 +727,7 @@ applicable agreement for further details.
 (symbol
 	(rect 872 -72 1288 584)
 	(text "nios" (rect 197 -1 225 15)(font "Arial" (font_size 10)))
-	(text "inst3" (rect 8 640 31 652)(font "Arial" ))
+	(text "inst1" (rect 8 640 31 652)(font "Arial" ))
 	(port
 		(pt 0 72)
 		(input)

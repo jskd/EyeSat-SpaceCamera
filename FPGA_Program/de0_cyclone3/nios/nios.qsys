@@ -24,7 +24,7 @@
    {
       datum baseAddress
       {
-         value = "8401040";
+         value = "16814328";
          type = "String";
       }
    }
@@ -42,6 +42,14 @@
       {
          value = "6";
          type = "int";
+      }
+   }
+   element sysid_qsys_0.control_slave
+   {
+      datum baseAddress
+      {
+         value = "16814320";
+         type = "String";
       }
    }
    element data_ch1
@@ -80,7 +88,7 @@
    {
       datum baseAddress
       {
-         value = "8398848";
+         value = "16812032";
          type = "String";
       }
    }
@@ -88,7 +96,7 @@
    {
       datum _sortIndex
       {
-         value = "2";
+         value = "3";
          type = "int";
       }
    }
@@ -96,7 +104,7 @@
    {
       datum _sortIndex
       {
-         value = "3";
+         value = "2";
          type = "int";
       }
    }
@@ -104,23 +112,7 @@
    {
       datum baseAddress
       {
-         value = "8401024";
-         type = "String";
-      }
-   }
-   element uart.s1
-   {
-      datum baseAddress
-      {
-         value = "8400896";
-         type = "String";
-      }
-   }
-   element cmv_transmit_data.s1
-   {
-      datum baseAddress
-      {
-         value = "8400960";
+         value = "16814304";
          type = "String";
       }
    }
@@ -128,7 +120,7 @@
    {
       datum baseAddress
       {
-         value = "8400976";
+         value = "16814256";
          type = "String";
       }
    }
@@ -136,7 +128,23 @@
    {
       datum baseAddress
       {
-         value = "8401008";
+         value = "16814288";
+         type = "String";
+      }
+   }
+   element cmv_transmit_data.s1
+   {
+      datum baseAddress
+      {
+         value = "16814240";
+         type = "String";
+      }
+   }
+   element uart.s1
+   {
+      datum baseAddress
+      {
+         value = "16814144";
          type = "String";
       }
    }
@@ -144,7 +152,7 @@
    {
       datum baseAddress
       {
-         value = "0";
+         value = "8388608";
          type = "String";
       }
    }
@@ -152,7 +160,7 @@
    {
       datum baseAddress
       {
-         value = "8392704";
+         value = "16793600";
          type = "String";
       }
    }
@@ -160,7 +168,7 @@
    {
       datum baseAddress
       {
-         value = "8400992";
+         value = "16814272";
          type = "String";
       }
    }
@@ -189,8 +197,16 @@
    {
       datum baseAddress
       {
-         value = "8400928";
+         value = "16814176";
          type = "String";
+      }
+   }
+   element sysid_qsys_0
+   {
+      datum _sortIndex
+      {
+         value = "12";
+         type = "int";
       }
    }
    element uart
@@ -216,7 +232,7 @@
  <parameter name="projectName" value="" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1465815519000" />
+ <parameter name="timeStamp" value="1466073997149" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk.clk_in" type="clock" dir="end" />
@@ -352,7 +368,7 @@
   <parameter name="mpu_enabled" value="false" />
   <parameter name="mmu_enabled" value="false" />
   <parameter name="mmu_autoAssignTlbPtrSz" value="true" />
-  <parameter name="manuallyAssignCpuID" value="true" />
+  <parameter name="manuallyAssignCpuID" value="false" />
   <parameter name="debug_triggerArming" value="true" />
   <parameter name="debug_embeddedPLL" value="true" />
   <parameter name="debug_debugReqSignals" value="false" />
@@ -387,13 +403,13 @@
   <parameter name="mmu_tlbPtrSz" value="7" />
   <parameter name="mmu_tlbNumWays" value="16" />
   <parameter name="mmu_processIDNumBits" value="8" />
-  <parameter name="impl" value="Tiny" />
+  <parameter name="impl" value="Fast" />
   <parameter name="icache_size" value="4096" />
   <parameter name="icache_tagramBlockType" value="Automatic" />
   <parameter name="icache_ramBlockType" value="Automatic" />
   <parameter name="icache_numTCIM" value="0" />
   <parameter name="icache_burstType" value="None" />
-  <parameter name="dcache_bursts" value="false" />
+  <parameter name="dcache_bursts" value="true" />
   <parameter name="dcache_victim_buf_impl" value="ram" />
   <parameter name="debug_level" value="Level1" />
   <parameter name="debug_OCIOnchipTrace" value="_128" />
@@ -408,8 +424,8 @@
   <parameter name="ocimem_ramBlockType" value="Automatic" />
   <parameter name="mmu_ramBlockType" value="Automatic" />
   <parameter name="bht_ramBlockType" value="Automatic" />
-  <parameter name="instAddrWidth" value="24" />
-  <parameter name="dataAddrWidth" value="24" />
+  <parameter name="instAddrWidth" value="25" />
+  <parameter name="dataAddrWidth" value="25" />
   <parameter name="tightlyCoupledDataMaster0AddrWidth" value="1" />
   <parameter name="tightlyCoupledDataMaster1AddrWidth" value="1" />
   <parameter name="tightlyCoupledDataMaster2AddrWidth" value="1" />
@@ -418,8 +434,8 @@
   <parameter name="tightlyCoupledInstructionMaster1AddrWidth" value="1" />
   <parameter name="tightlyCoupledInstructionMaster2AddrWidth" value="1" />
   <parameter name="tightlyCoupledInstructionMaster3AddrWidth" value="1" />
-  <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='sdram_controller.s1' start='0x0' end='0x800000' /><slave name='onchip_memory.s1' start='0x801000' end='0x802000' /><slave name='CPU.jtag_debug_module' start='0x802800' end='0x803000' /><slave name='uart.s1' start='0x803000' end='0x803020' /><slave name='spi.spi_control_port' start='0x803020' end='0x803040' /><slave name='data_ch9.s1' start='0x803050' end='0x803060' /><slave name='data_clk.s1' start='0x803080' end='0x803090' /></address-map>]]></parameter>
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='sdram_controller.s1' start='0x0' end='0x800000' /><slave name='onchip_memory.s1' start='0x801000' end='0x802000' /><slave name='CPU.jtag_debug_module' start='0x802800' end='0x803000' /><slave name='uart.s1' start='0x803000' end='0x803020' /><slave name='spi.spi_control_port' start='0x803020' end='0x803040' /><slave name='cmv_transmit_data.s1' start='0x803040' end='0x803050' /><slave name='data_ch9.s1' start='0x803050' end='0x803060' /><slave name='data_ch1.s1' start='0x803060' end='0x803070' /><slave name='data_ctr.s1' start='0x803070' end='0x803080' /><slave name='data_clk.s1' start='0x803080' end='0x803090' /><slave name='jtag_uart.avalon_jtag_slave' start='0x803090' end='0x803098' /></address-map>]]></parameter>
+  <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='sdram_controller.s1' start='0x800000' end='0x1000000' /><slave name='onchip_memory.s1' start='0x1004000' end='0x1006800' /><slave name='CPU.jtag_debug_module' start='0x1008800' end='0x1009000' /><slave name='uart.s1' start='0x1009040' end='0x1009060' /><slave name='spi.spi_control_port' start='0x1009060' end='0x1009080' /><slave name='data_ch9.s1' start='0x10090B0' end='0x10090C0' /><slave name='data_clk.s1' start='0x10090E0' end='0x10090F0' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='sdram_controller.s1' start='0x800000' end='0x1000000' /><slave name='onchip_memory.s1' start='0x1004000' end='0x1006800' /><slave name='CPU.jtag_debug_module' start='0x1008800' end='0x1009000' /><slave name='uart.s1' start='0x1009040' end='0x1009060' /><slave name='spi.spi_control_port' start='0x1009060' end='0x1009080' /><slave name='cmv_transmit_data.s1' start='0x10090A0' end='0x10090B0' /><slave name='data_ch9.s1' start='0x10090B0' end='0x10090C0' /><slave name='data_ch1.s1' start='0x10090C0' end='0x10090D0' /><slave name='data_ctr.s1' start='0x10090D0' end='0x10090E0' /><slave name='data_clk.s1' start='0x10090E0' end='0x10090F0' /><slave name='sysid_qsys_0.control_slave' start='0x10090F0' end='0x10090F8' /><slave name='jtag_uart.avalon_jtag_slave' start='0x10090F8' end='0x1009100' /></address-map>]]></parameter>
   <parameter name="clockFrequency" value="50000000" />
   <parameter name="deviceFamilyName" value="Cyclone III" />
   <parameter name="internalIrqMaskSystemInfo" value="15" />
@@ -464,7 +480,7 @@
   <parameter name="initMemContent" value="true" />
   <parameter name="initializationFileName" value="onchip_mem.hex" />
   <parameter name="instanceID" value="NONE" />
-  <parameter name="memorySize" value="4096" />
+  <parameter name="memorySize" value="10240" />
   <parameter name="readDuringWriteMode" value="DONT_CARE" />
   <parameter name="simAllowMRAMContentsFile" value="false" />
   <parameter name="simMemInitOnlyFilename" value="0" />
@@ -483,7 +499,7 @@
    version="13.0.1.99.2"
    enabled="1"
    name="jtag_uart">
-  <parameter name="allowMultipleConnections" value="false" />
+  <parameter name="allowMultipleConnections" value="true" />
   <parameter name="hubInstanceID" value="0" />
   <parameter name="readBufferDepth" value="64" />
   <parameter name="readIRQThreshold" value="8" />
@@ -579,6 +595,16 @@
   <parameter name="width" value="8" />
   <parameter name="clockRate" value="50000000" />
  </module>
+ <module
+   kind="altera_avalon_sysid_qsys"
+   version="13.0"
+   enabled="1"
+   name="sysid_qsys_0">
+  <parameter name="id" value="-526922788" />
+  <parameter name="timestamp" value="0" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="50000000" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone III" />
+ </module>
  <connection
    kind="reset"
    version="13.0"
@@ -656,7 +682,7 @@
    start="CPU.instruction_master"
    end="onchip_memory.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00801000" />
+  <parameter name="baseAddress" value="0x01004000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -665,7 +691,7 @@
    start="CPU.instruction_master"
    end="CPU.jtag_debug_module">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00802800" />
+  <parameter name="baseAddress" value="0x01008800" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -702,7 +728,7 @@
    start="CPU.data_master"
    end="CPU.jtag_debug_module">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00802800" />
+  <parameter name="baseAddress" value="0x01008800" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -711,7 +737,7 @@
    start="CPU.data_master"
    end="jtag_uart.avalon_jtag_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00803090" />
+  <parameter name="baseAddress" value="0x010090f8" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -720,7 +746,7 @@
    start="CPU.data_master"
    end="onchip_memory.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00801000" />
+  <parameter name="baseAddress" value="0x01004000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -729,7 +755,7 @@
    start="CPU.data_master"
    end="data_clk.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00803080" />
+  <parameter name="baseAddress" value="0x010090e0" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -738,7 +764,7 @@
    start="CPU.data_master"
    end="data_ctr.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00803070" />
+  <parameter name="baseAddress" value="0x010090d0" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -747,7 +773,7 @@
    start="CPU.data_master"
    end="data_ch1.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00803060" />
+  <parameter name="baseAddress" value="0x010090c0" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -756,7 +782,7 @@
    start="CPU.data_master"
    end="data_ch9.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00803050" />
+  <parameter name="baseAddress" value="0x010090b0" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -765,12 +791,12 @@
    start="CPU.data_master"
    end="spi.spi_control_port">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00803020" />
+  <parameter name="baseAddress" value="0x01009060" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection kind="avalon" version="13.0" start="CPU.data_master" end="uart.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00803000" />
+  <parameter name="baseAddress" value="0x01009040" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -779,7 +805,7 @@
    start="CPU.data_master"
    end="sdram_controller.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="baseAddress" value="0x00800000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -798,7 +824,7 @@
    start="CPU.data_master"
    end="cmv_transmit_data.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00803040" />
+  <parameter name="baseAddress" value="0x010090a0" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -812,7 +838,7 @@
    start="CPU.instruction_master"
    end="sdram_controller.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="baseAddress" value="0x00800000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -821,7 +847,7 @@
    start="CPU.instruction_master"
    end="data_clk.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00803080" />
+  <parameter name="baseAddress" value="0x010090e0" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -830,7 +856,7 @@
    start="CPU.instruction_master"
    end="data_ch9.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00803050" />
+  <parameter name="baseAddress" value="0x010090b0" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -839,7 +865,7 @@
    start="CPU.instruction_master"
    end="spi.spi_control_port">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00803020" />
+  <parameter name="baseAddress" value="0x01009060" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -848,9 +874,29 @@
    start="CPU.instruction_master"
    end="uart.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00803000" />
+  <parameter name="baseAddress" value="0x01009040" />
   <parameter name="defaultConnection" value="false" />
  </connection>
+ <connection kind="clock" version="13.0" start="clk.clk" end="sysid_qsys_0.clk" />
+ <connection
+   kind="reset"
+   version="13.0"
+   start="clk.clk_reset"
+   end="sysid_qsys_0.reset" />
+ <connection
+   kind="avalon"
+   version="13.0"
+   start="CPU.data_master"
+   end="sysid_qsys_0.control_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x010090f0" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="reset"
+   version="13.0"
+   start="CPU.jtag_debug_module_reset"
+   end="sysid_qsys_0.reset" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
 </system>
