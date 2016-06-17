@@ -145,6 +145,7 @@ ELF := cmv_controller.elf
 C_SRCS :=
 CXX_SRCS += main.cpp
 CXX_SRCS += controller/UART.cpp
+CXX_SRCS += controller/SPI.cpp
 ASM_SRCS :=
 # CXX_SRCS += FIFO.hpp
 
