@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>13 juin 2016 14:30:58</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1465821058352</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>17 juin 2016 16:57:14</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1466175434624</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\innovlab\workspace\EyeSat_CMOS_Image_Sensor\FPGA_Program\de0_cyclone3\nios\software\cmv_controller_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\Users\innovlab\workspace\EyeSat_CMOS_Image_Sensor\FPGA_Program\de0_cyclone3\nios\nios.sopcinfo</SopcDesignFile>
@@ -86,7 +86,7 @@
                 <SettingName>hal.linker.enable_alt_load_copy_rodata</SettingName>
                 <Identifier>NONE</Identifier>
                 <Type>Boolean</Type>
-                <Value>1</Value>
+                <Value>0</Value>
                 <DefaultValue>0</DefaultValue>
                 <DestinationFile>none</DestinationFile>
                 <Description>Causes the alt_load() facility to copy the .rodata section. If true, this setting defines the macro ALT_LOAD_COPY_RODATA in linker.h.</Description>
@@ -110,7 +110,7 @@
                 <SettingName>hal.linker.enable_alt_load_copy_exceptions</SettingName>
                 <Identifier>NONE</Identifier>
                 <Type>Boolean</Type>
-                <Value>0</Value>
+                <Value>1</Value>
                 <DefaultValue>0</DefaultValue>
                 <DestinationFile>none</DestinationFile>
                 <Description>Causes the alt_load() facility to copy the .exceptions section. If true, this setting defines the macro ALT_LOAD_COPY_EXCEPTIONS in linker.h.</Description>
@@ -888,67 +888,73 @@
         </Setting>
         <MemoryMap>
                 <slaveDescriptor>sdram_controller</slaveDescriptor>
-                <addressRange>0x00000000 - 0x007FFFFF</addressRange>
+                <addressRange>0x00800000 - 0x00FFFFFF</addressRange>
                 <addressSpan>8388608</addressSpan>
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>onchip_memory</slaveDescriptor>
-                <addressRange>0x00801000 - 0x00801FFF</addressRange>
-                <addressSpan>4096</addressSpan>
+                <addressRange>0x01004000 - 0x010067FF</addressRange>
+                <addressSpan>10240</addressSpan>
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>uart</slaveDescriptor>
-                <addressRange>0x00803000 - 0x0080301F</addressRange>
+                <addressRange>0x01009040 - 0x0100905F</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>spi</slaveDescriptor>
-                <addressRange>0x00803020 - 0x0080303F</addressRange>
+                <addressRange>0x01009060 - 0x0100907F</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>cmv_transmit_data</slaveDescriptor>
-                <addressRange>0x00803040 - 0x0080304F</addressRange>
+                <addressRange>0x010090A0 - 0x010090AF</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>data_ch9</slaveDescriptor>
-                <addressRange>0x00803050 - 0x0080305F</addressRange>
+                <addressRange>0x010090B0 - 0x010090BF</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>data_ch1</slaveDescriptor>
-                <addressRange>0x00803060 - 0x0080306F</addressRange>
+                <addressRange>0x010090C0 - 0x010090CF</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>data_ctr</slaveDescriptor>
-                <addressRange>0x00803070 - 0x0080307F</addressRange>
+                <addressRange>0x010090D0 - 0x010090DF</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>data_clk</slaveDescriptor>
-                <addressRange>0x00803080 - 0x0080308F</addressRange>
+                <addressRange>0x010090E0 - 0x010090EF</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
+                <slaveDescriptor>sysid_qsys_0</slaveDescriptor>
+                <addressRange>0x010090F0 - 0x010090F7</addressRange>
+                <addressSpan>8</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
                 <slaveDescriptor>jtag_uart</slaveDescriptor>
-                <addressRange>0x00803090 - 0x00803097</addressRange>
+                <addressRange>0x010090F8 - 0x010090FF</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>
         <LinkerSection>
                 <sectionName>.text</sectionName>
-                <regionName>onchip_memory</regionName>
+                <regionName>sdram_controller</regionName>
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.rodata</sectionName>

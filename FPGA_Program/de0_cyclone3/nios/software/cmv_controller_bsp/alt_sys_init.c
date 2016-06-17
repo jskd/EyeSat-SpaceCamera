@@ -4,7 +4,7 @@
  * Machine generated for CPU 'CPU' in SOPC Builder design 'nios'
  * SOPC Builder design path: C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de0_cyclone3/nios/nios.sopcinfo
  *
- * Generated: Mon Jun 13 12:19:22 CEST 2016
+ * Generated: Wed Jun 15 18:13:11 CEST 2016
  */
 
 /*
@@ -61,6 +61,7 @@
 #include "altera_nios2_qsys_irq.h"
 #include "altera_avalon_jtag_uart.h"
 #include "altera_avalon_spi.h"
+#include "altera_avalon_sysid_qsys.h"
 #include "altera_avalon_uart.h"
 
 /*
@@ -70,6 +71,7 @@
 ALTERA_NIOS2_QSYS_IRQ_INSTANCE ( CPU, CPU);
 ALTERA_AVALON_JTAG_UART_INSTANCE ( JTAG_UART, jtag_uart);
 ALTERA_AVALON_SPI_INSTANCE ( SPI, spi);
+ALTERA_AVALON_SYSID_QSYS_INSTANCE ( SYSID_QSYS_0, sysid_qsys_0);
 ALTERA_AVALON_UART_INSTANCE ( UART, uart);
 
 /*
@@ -95,5 +97,6 @@ void alt_sys_init( void )
 {
     ALTERA_AVALON_JTAG_UART_INIT ( JTAG_UART, jtag_uart);
     ALTERA_AVALON_SPI_INIT ( SPI, spi);
+    ALTERA_AVALON_SYSID_QSYS_INIT ( SYSID_QSYS_0, sysid_qsys_0);
     ALTERA_AVALON_UART_INIT ( UART, uart);
 }

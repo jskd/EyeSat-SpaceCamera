@@ -3,7 +3,7 @@
 # Machine generated for CPU 'CPU' in SOPC Builder design 'nios'
 # SOPC Builder design path: C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de0_cyclone3/nios/nios.sopcinfo
 #
-# Generated: Mon Jun 13 12:19:22 CEST 2016
+# Generated: Thu Jun 16 12:56:29 CEST 2016
 
 # DO NOT MODIFY THIS FILE
 #
@@ -47,7 +47,7 @@
 # by allowing GDB to cache memory contents on the host.
 
 # sdram_controller
-memory 0x0 0x800000 cache
+memory 0x800000 0x1000000 cache
 
 # onchip_memory
-memory 0x801000 0x802000 cache
+memory 0x1004000 0x1006800 cache

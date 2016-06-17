@@ -4,7 +4,7 @@
  * Machine generated for CPU 'CPU' in SOPC Builder design 'nios'
  * SOPC Builder design path: C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de0_cyclone3/nios/nios.sopcinfo
  *
- * Generated: Mon Jun 13 12:19:22 CEST 2016
+ * Generated: Thu Jun 16 12:56:29 CEST 2016
  */
 
 /*
@@ -50,14 +50,14 @@
 
 MEMORY
 {
-    sdram_controller : ORIGIN = 0x0, LENGTH = 8388608
-    reset : ORIGIN = 0x801000, LENGTH = 32
-    onchip_memory : ORIGIN = 0x801020, LENGTH = 4064
+    sdram_controller : ORIGIN = 0x800000, LENGTH = 8388608
+    reset : ORIGIN = 0x1004000, LENGTH = 32
+    onchip_memory : ORIGIN = 0x1004020, LENGTH = 10208
 }
 
 /* Define symbols for each memory base-address */
-__alt_mem_sdram_controller = 0x0;
-__alt_mem_onchip_memory = 0x801000;
+__alt_mem_sdram_controller = 0x800000;
+__alt_mem_onchip_memory = 0x1004000;
 
 OUTPUT_FORMAT( "elf32-littlenios2",
                "elf32-littlenios2",
@@ -86,7 +86,14 @@ SECTIONS
         KEEP (*(.entry))
     } > reset
 
-    .exceptions :
+    /*
+     *
+     * This section's LMA is set to the .text region.
+     * crt0 will copy to this section's specified mapped region virtual memory address (VMA)
+     *
+     */
+
+    .exceptions : AT ( 0x800000 )
     {
         PROVIDE (__ram_exceptions_start = ABSOLUTE(.));
         . = ALIGN(0x20);
@@ -116,7 +123,14 @@ SECTIONS
 
     PROVIDE (__flash_exceptions_start = LOADADDR(.exceptions));
 
-    .text :
+    /*
+     *
+     * This section's LMA is set to the .text region.
+     * crt0 will copy to this section's specified mapped region virtual memory address (VMA)
+     *
+     */
+
+    .text LOADADDR (.exceptions) + SIZEOF (.exceptions) : AT ( LOADADDR (.exceptions) + SIZEOF (.exceptions) )
     {
         /*
          * All code sections are merged into the text output section, along with
@@ -208,7 +222,7 @@ SECTIONS
         PROVIDE (__DTOR_END__ = ABSOLUTE(.));
         KEEP (*(.jcr))
         . = ALIGN(4);
-    } > onchip_memory = 0x3a880100 /* Nios II NOP instruction */
+    } > sdram_controller = 0x3a880100 /* Nios II NOP instruction */
 
     /*
      *
@@ -217,7 +231,7 @@ SECTIONS
      *
      */
 
-    .rodata : AT ( LOADADDR (.text) + SIZEOF (.text) )
+    .rodata LOADADDR (.text) + SIZEOF (.text) : AT ( LOADADDR (.text) + SIZEOF (.text) )
     {
         PROVIDE (__ram_rodata_start = ABSOLUTE(.));
         . = ALIGN(4);
@@ -234,9 +248,13 @@ SECTIONS
      * This section's LMA is set to the .text region.
      * crt0 will copy to this section's specified mapped region virtual memory address (VMA)
      *
+     * .rwdata region equals the .text region, and is set to be loaded into .text region.
+     * This requires two copies of .rwdata in the .text region. One read writable at VMA.
+     * and one read-only at LMA. crt0 will copy from LMA to VMA on reset
+     *
      */
 
-    .rwdata : AT ( LOADADDR (.rodata) + SIZEOF (.rodata) )
+    .rwdata LOADADDR (.rodata) + SIZEOF (.rodata) : AT ( LOADADDR (.rodata) + SIZEOF (.rodata)+ SIZEOF (.rwdata) )
     {
         PROVIDE (__ram_rwdata_start = ABSOLUTE(.));
         . = ALIGN(4);
@@ -259,7 +277,14 @@ SECTIONS
 
     PROVIDE (__flash_rwdata_start = LOADADDR(.rwdata));
 
-    .bss :
+    /*
+     *
+     * This section's LMA is set to the .text region.
+     * crt0 will copy to this section's specified mapped region virtual memory address (VMA)
+     *
+     */
+
+    .bss LOADADDR (.rwdata) + SIZEOF (.rwdata) : AT ( LOADADDR (.rwdata) + SIZEOF (.rwdata) )
     {
         __bss_start = ABSOLUTE(.);
         PROVIDE (__sbss_start = ABSOLUTE(.));
@@ -304,7 +329,7 @@ SECTIONS
      *
      */
 
-    .sdram_controller : AT ( LOADADDR (.rwdata) + SIZEOF (.rwdata) )
+    .sdram_controller LOADADDR (.bss) + SIZEOF (.bss) : AT ( LOADADDR (.bss) + SIZEOF (.bss) )
     {
         PROVIDE (_alt_partition_sdram_controller_start = ABSOLUTE(.));
         *(.sdram_controller. sdram_controller.*)
@@ -324,7 +349,7 @@ SECTIONS
      *
      */
 
-    .onchip_memory LOADADDR (.sdram_controller) + SIZEOF (.sdram_controller) : AT ( LOADADDR (.sdram_controller) + SIZEOF (.sdram_controller) )
+    .onchip_memory : AT ( LOADADDR (.sdram_controller) + SIZEOF (.sdram_controller) )
     {
         PROVIDE (_alt_partition_onchip_memory_start = ABSOLUTE(.));
         *(.onchip_memory. onchip_memory.*)
@@ -381,7 +406,7 @@ SECTIONS
 /*
  * Don't override this, override the __alt_stack_* symbols instead.
  */
-__alt_data_end = 0x800000;
+__alt_data_end = 0x1000000;
 
 /*
  * The next two symbols define the location of the default stack.  You can
@@ -397,4 +422,4 @@ PROVIDE( __alt_stack_limit   = __alt_stack_base );
  * Override this symbol to put the heap in a different memory.
  */
 PROVIDE( __alt_heap_start    = end );
-PROVIDE( __alt_heap_limit    = 0x800000 );
+PROVIDE( __alt_heap_limit    = 0x1000000 );

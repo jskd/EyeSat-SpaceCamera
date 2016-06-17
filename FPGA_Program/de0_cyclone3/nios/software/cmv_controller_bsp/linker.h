@@ -4,7 +4,7 @@
  * Machine generated for CPU 'CPU' in SOPC Builder design 'nios'
  * SOPC Builder design path: C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de0_cyclone3/nios/nios.sopcinfo
  *
- * Generated: Mon Jun 13 12:19:22 CEST 2016
+ * Generated: Thu Jun 16 12:56:29 CEST 2016
  */
 
 /*
@@ -65,11 +65,11 @@
  *
  */
 
-#define ONCHIP_MEMORY_REGION_BASE 0x801020
-#define ONCHIP_MEMORY_REGION_SPAN 4064
-#define RESET_REGION_BASE 0x801000
+#define ONCHIP_MEMORY_REGION_BASE 0x1004020
+#define ONCHIP_MEMORY_REGION_SPAN 10208
+#define RESET_REGION_BASE 0x1004000
 #define RESET_REGION_SPAN 32
-#define SDRAM_CONTROLLER_REGION_BASE 0x0
+#define SDRAM_CONTROLLER_REGION_BASE 0x800000
 #define SDRAM_CONTROLLER_REGION_SPAN 8388608
 
 
@@ -82,7 +82,7 @@
 #define ALT_RESET_DEVICE ONCHIP_MEMORY
 #define ALT_RODATA_DEVICE SDRAM_CONTROLLER
 #define ALT_RWDATA_DEVICE SDRAM_CONTROLLER
-#define ALT_TEXT_DEVICE ONCHIP_MEMORY
+#define ALT_TEXT_DEVICE SDRAM_CONTROLLER
 
 
 /*
@@ -98,7 +98,7 @@
  *
  */
 
-#define ALT_LOAD_COPY_RODATA
+#define ALT_LOAD_COPY_EXCEPTIONS
 #define ALT_LOAD_COPY_RWDATA
 
 #endif /* __LINKER_H_ */
