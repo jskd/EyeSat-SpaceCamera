@@ -142,9 +142,11 @@ ACDS_VERSION := 13.0sp1
 ELF := cmv_controller.elf
 
 # Paths to C, C++, and assembly source files.
-C_SRCS := hello_world.c
-CXX_SRCS :=
+C_SRCS :=
+CXX_SRCS += main.cpp
+CXX_SRCS += controller/UART.cpp
 ASM_SRCS :=
+# CXX_SRCS += FIFO.hpp
 
 
 # Path to root of object file tree.

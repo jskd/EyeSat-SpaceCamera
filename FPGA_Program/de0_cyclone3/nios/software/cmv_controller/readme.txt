@@ -1,26 +1,11 @@
-Readme - Hello World Software Example
+This template is starting point for creating a project based on your custom C code.
+It will provide you a default project to which you can add your software files. To
+add files to a project, manually copy the file into the application directory (e.g. 
+using Windows Explorer), then right click on your application project and select 
+refresh.
 
-DESCRIPTION:
-Simple program that prints "Hello from Nios II"
-
-The memory footprint of this hosted application is intended to be small (under 100 kbytes) by default
-using a standard reference deisgn.
-
-For an even smaller, reduced footprint version of this template, and an explanation of how
-to reduce the memory footprint for a given application, see the
-"small_hello_world" template.
-
-
-PERIPHERALS USED:
-This example exercises the following peripherals:
-- STDOUT device (UART or JTAG UART)
-
-SOFTWARE SOURCE FILES:
-This example includes the following software source files:
-- hello_world.c: Everyone needs a Hello World program, right?
-
-BOARD/HOST REQUIREMENTS:
-This example requires only a JTAG connection with a Nios Development board. If
-the host communication settings are changed from JTAG UART (default) to use a
-conventional UART, a serial cable between board DB-9 connector  and the host is
-required.
+You can also add files to the project using the Nios II Software Build Tools for Eclipse import function. 
+Select File -> Import. 
+Expand General and select File System in the Import Window and click Next.
+Identify the appropriate source and destination directories.
+Check the files you want to add and click Finish.
