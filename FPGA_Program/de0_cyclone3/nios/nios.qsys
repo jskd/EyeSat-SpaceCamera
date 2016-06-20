@@ -24,7 +24,7 @@
    {
       datum baseAddress
       {
-         value = "16814328";
+         value = "16814248";
          type = "String";
       }
    }
@@ -40,7 +40,7 @@
    {
       datum _sortIndex
       {
-         value = "6";
+         value = "5";
          type = "int";
       }
    }
@@ -48,39 +48,15 @@
    {
       datum baseAddress
       {
-         value = "16814320";
+         value = "16814240";
          type = "String";
       }
    }
-   element data_ch1
+   element data_lvds_in
    {
       datum _sortIndex
       {
-         value = "8";
-         type = "int";
-      }
-   }
-   element data_ch9
-   {
-      datum _sortIndex
-      {
-         value = "9";
-         type = "int";
-      }
-   }
-   element data_clk
-   {
-      datum _sortIndex
-      {
-         value = "5";
-         type = "int";
-      }
-   }
-   element data_ctr
-   {
-      datum _sortIndex
-      {
-         value = "7";
+         value = "6";
          type = "int";
       }
    }
@@ -108,51 +84,11 @@
          type = "int";
       }
    }
-   element data_clk.s1
-   {
-      datum baseAddress
-      {
-         value = "16814304";
-         type = "String";
-      }
-   }
-   element data_ch9.s1
-   {
-      datum baseAddress
-      {
-         value = "16814256";
-         type = "String";
-      }
-   }
-   element data_ctr.s1
-   {
-      datum baseAddress
-      {
-         value = "16814288";
-         type = "String";
-      }
-   }
    element cmv_transmit_data.s1
    {
       datum baseAddress
       {
-         value = "16814240";
-         type = "String";
-      }
-   }
-   element uart.s1
-   {
-      datum baseAddress
-      {
-         value = "16814144";
-         type = "String";
-      }
-   }
-   element sdram_controller.s1
-   {
-      datum baseAddress
-      {
-         value = "8388608";
+         value = "16814208";
          type = "String";
       }
    }
@@ -164,11 +100,27 @@
          type = "String";
       }
    }
-   element data_ch1.s1
+   element sdram_controller.s1
    {
       datum baseAddress
       {
-         value = "16814272";
+         value = "8388608";
+         type = "String";
+      }
+   }
+   element data_lvds_in.s1
+   {
+      datum baseAddress
+      {
+         value = "16814224";
+         type = "String";
+      }
+   }
+   element uart.s1
+   {
+      datum baseAddress
+      {
+         value = "16814144";
          type = "String";
       }
    }
@@ -189,7 +141,7 @@
    {
       datum _sortIndex
       {
-         value = "10";
+         value = "7";
          type = "int";
       }
    }
@@ -205,7 +157,7 @@
    {
       datum _sortIndex
       {
-         value = "12";
+         value = "9";
          type = "int";
       }
    }
@@ -213,7 +165,7 @@
    {
       datum _sortIndex
       {
-         value = "11";
+         value = "8";
          type = "int";
       }
    }
@@ -232,34 +184,19 @@
  <parameter name="projectName" value="" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1466073997149" />
+ <parameter name="timeStamp" value="1466426867175" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk.clk_in" type="clock" dir="end" />
  <interface name="reset" internal="clk.clk_in_reset" type="reset" dir="end" />
  <interface
-   name="data_clk"
-   internal="data_clk.external_connection"
-   type="conduit"
-   dir="end" />
- <interface
    name="data_ctr"
-   internal="data_ctr.external_connection"
-   type="conduit"
-   dir="end" />
- <interface
-   name="data_ch1"
-   internal="data_ch1.external_connection"
+   internal="data_lvds_in.external_connection"
    type="conduit"
    dir="end" />
  <interface
    name="uart"
    internal="uart.external_connection"
-   type="conduit"
-   dir="end" />
- <interface
-   name="data_ch9"
-   internal="data_ch9.external_connection"
    type="conduit"
    dir="end" />
  <interface
@@ -283,54 +220,18 @@
    kind="altera_avalon_pio"
    version="13.0.1.99.2"
    enabled="1"
-   name="data_ctr">
+   name="data_lvds_in">
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
-  <parameter name="captureEdge" value="false" />
+  <parameter name="captureEdge" value="true" />
   <parameter name="direction" value="Input" />
   <parameter name="edgeType" value="RISING" />
-  <parameter name="generateIRQ" value="false" />
-  <parameter name="irqType" value="LEVEL" />
+  <parameter name="generateIRQ" value="true" />
+  <parameter name="irqType" value="EDGE" />
   <parameter name="resetValue" value="0" />
   <parameter name="simDoTestBenchWiring" value="true" />
   <parameter name="simDrivenValue" value="0" />
-  <parameter name="width" value="10" />
-  <parameter name="clockRate" value="50000000" />
- </module>
- <module
-   kind="altera_avalon_pio"
-   version="13.0.1.99.2"
-   enabled="1"
-   name="data_ch1">
-  <parameter name="bitClearingEdgeCapReg" value="false" />
-  <parameter name="bitModifyingOutReg" value="false" />
-  <parameter name="captureEdge" value="false" />
-  <parameter name="direction" value="Input" />
-  <parameter name="edgeType" value="RISING" />
-  <parameter name="generateIRQ" value="false" />
-  <parameter name="irqType" value="LEVEL" />
-  <parameter name="resetValue" value="0" />
-  <parameter name="simDoTestBenchWiring" value="true" />
-  <parameter name="simDrivenValue" value="0" />
-  <parameter name="width" value="10" />
-  <parameter name="clockRate" value="50000000" />
- </module>
- <module
-   kind="altera_avalon_pio"
-   version="13.0.1.99.2"
-   enabled="1"
-   name="data_ch9">
-  <parameter name="bitClearingEdgeCapReg" value="false" />
-  <parameter name="bitModifyingOutReg" value="false" />
-  <parameter name="captureEdge" value="false" />
-  <parameter name="direction" value="Input" />
-  <parameter name="edgeType" value="RISING" />
-  <parameter name="generateIRQ" value="false" />
-  <parameter name="irqType" value="LEVEL" />
-  <parameter name="resetValue" value="0" />
-  <parameter name="simDoTestBenchWiring" value="true" />
-  <parameter name="simDrivenValue" value="0" />
-  <parameter name="width" value="10" />
+  <parameter name="width" value="32" />
   <parameter name="clockRate" value="50000000" />
  </module>
  <module kind="altera_nios2_qsys" version="13.0" enabled="1" name="CPU">
@@ -434,8 +335,8 @@
   <parameter name="tightlyCoupledInstructionMaster1AddrWidth" value="1" />
   <parameter name="tightlyCoupledInstructionMaster2AddrWidth" value="1" />
   <parameter name="tightlyCoupledInstructionMaster3AddrWidth" value="1" />
-  <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='sdram_controller.s1' start='0x800000' end='0x1000000' /><slave name='onchip_memory.s1' start='0x1004000' end='0x1006800' /><slave name='CPU.jtag_debug_module' start='0x1008800' end='0x1009000' /><slave name='uart.s1' start='0x1009040' end='0x1009060' /><slave name='spi.spi_control_port' start='0x1009060' end='0x1009080' /><slave name='data_ch9.s1' start='0x10090B0' end='0x10090C0' /><slave name='data_clk.s1' start='0x10090E0' end='0x10090F0' /></address-map>]]></parameter>
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='sdram_controller.s1' start='0x800000' end='0x1000000' /><slave name='onchip_memory.s1' start='0x1004000' end='0x1006800' /><slave name='CPU.jtag_debug_module' start='0x1008800' end='0x1009000' /><slave name='uart.s1' start='0x1009040' end='0x1009060' /><slave name='spi.spi_control_port' start='0x1009060' end='0x1009080' /><slave name='cmv_transmit_data.s1' start='0x10090A0' end='0x10090B0' /><slave name='data_ch9.s1' start='0x10090B0' end='0x10090C0' /><slave name='data_ch1.s1' start='0x10090C0' end='0x10090D0' /><slave name='data_ctr.s1' start='0x10090D0' end='0x10090E0' /><slave name='data_clk.s1' start='0x10090E0' end='0x10090F0' /><slave name='sysid_qsys_0.control_slave' start='0x10090F0' end='0x10090F8' /><slave name='jtag_uart.avalon_jtag_slave' start='0x10090F8' end='0x1009100' /></address-map>]]></parameter>
+  <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='sdram_controller.s1' start='0x800000' end='0x1000000' /><slave name='onchip_memory.s1' start='0x1004000' end='0x1006800' /><slave name='CPU.jtag_debug_module' start='0x1008800' end='0x1009000' /><slave name='uart.s1' start='0x1009040' end='0x1009060' /><slave name='spi.spi_control_port' start='0x1009060' end='0x1009080' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='sdram_controller.s1' start='0x800000' end='0x1000000' /><slave name='onchip_memory.s1' start='0x1004000' end='0x1006800' /><slave name='CPU.jtag_debug_module' start='0x1008800' end='0x1009000' /><slave name='uart.s1' start='0x1009040' end='0x1009060' /><slave name='spi.spi_control_port' start='0x1009060' end='0x1009080' /><slave name='cmv_transmit_data.s1' start='0x1009080' end='0x1009090' /><slave name='data_lvds_in.s1' start='0x1009090' end='0x10090A0' /><slave name='sysid_qsys_0.control_slave' start='0x10090A0' end='0x10090A8' /><slave name='jtag_uart.avalon_jtag_slave' start='0x10090A8' end='0x10090B0' /></address-map>]]></parameter>
   <parameter name="clockFrequency" value="50000000" />
   <parameter name="deviceFamilyName" value="Cyclone III" />
   <parameter name="internalIrqMaskSystemInfo" value="15" />
@@ -449,24 +350,6 @@
   <parameter name="tightlyCoupledInstructionMaster1MapParam" value="" />
   <parameter name="tightlyCoupledInstructionMaster2MapParam" value="" />
   <parameter name="tightlyCoupledInstructionMaster3MapParam" value="" />
- </module>
- <module
-   kind="altera_avalon_pio"
-   version="13.0.1.99.2"
-   enabled="1"
-   name="data_clk">
-  <parameter name="bitClearingEdgeCapReg" value="false" />
-  <parameter name="bitModifyingOutReg" value="false" />
-  <parameter name="captureEdge" value="true" />
-  <parameter name="direction" value="Input" />
-  <parameter name="edgeType" value="RISING" />
-  <parameter name="generateIRQ" value="true" />
-  <parameter name="irqType" value="EDGE" />
-  <parameter name="resetValue" value="0" />
-  <parameter name="simDoTestBenchWiring" value="true" />
-  <parameter name="simDrivenValue" value="0" />
-  <parameter name="width" value="1" />
-  <parameter name="clockRate" value="50000000" />
  </module>
  <module
    kind="altera_avalon_onchip_memory2"
@@ -605,31 +488,13 @@
   <parameter name="AUTO_CLK_CLOCK_RATE" value="50000000" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone III" />
  </module>
- <connection
-   kind="reset"
-   version="13.0"
-   start="clk.clk_reset"
-   end="data_ch9.reset" />
- <connection
-   kind="reset"
-   version="13.0"
-   start="clk.clk_reset"
-   end="data_ch1.reset" />
  <connection kind="clock" version="13.0" start="clk.clk" end="CPU.clk" />
- <connection kind="clock" version="13.0" start="clk.clk" end="data_clk.clk" />
  <connection
    kind="reset"
    version="13.0"
    start="clk.clk_reset"
-   end="data_ctr.reset" />
- <connection kind="clock" version="13.0" start="clk.clk" end="data_ch1.clk" />
- <connection kind="clock" version="13.0" start="clk.clk" end="data_ctr.clk" />
- <connection kind="clock" version="13.0" start="clk.clk" end="data_ch9.clk" />
- <connection
-   kind="reset"
-   version="13.0"
-   start="clk.clk_reset"
-   end="data_clk.reset" />
+   end="data_lvds_in.reset" />
+ <connection kind="clock" version="13.0" start="clk.clk" end="data_lvds_in.clk" />
  <connection
    kind="reset"
    version="13.0"
@@ -657,22 +522,7 @@
    kind="reset"
    version="13.0"
    start="CPU.jtag_debug_module_reset"
-   end="data_ch9.reset" />
- <connection
-   kind="reset"
-   version="13.0"
-   start="CPU.jtag_debug_module_reset"
-   end="data_ch1.reset" />
- <connection
-   kind="reset"
-   version="13.0"
-   start="CPU.jtag_debug_module_reset"
-   end="data_ctr.reset" />
- <connection
-   kind="reset"
-   version="13.0"
-   start="CPU.jtag_debug_module_reset"
-   end="data_clk.reset" />
+   end="data_lvds_in.reset" />
  <connection kind="interrupt" version="13.0" start="CPU.d_irq" end="jtag_uart.irq">
   <parameter name="irqNumber" value="0" />
  </connection>
@@ -699,13 +549,10 @@
    version="13.0"
    start="CPU.jtag_debug_module_reset"
    end="CPU.reset_n" />
- <connection kind="interrupt" version="13.0" start="CPU.d_irq" end="data_clk.irq">
-  <parameter name="irqNumber" value="1" />
- </connection>
  <connection kind="clock" version="13.0" start="clk.clk" end="uart.clk" />
  <connection kind="reset" version="13.0" start="clk.clk_reset" end="uart.reset" />
  <connection kind="interrupt" version="13.0" start="CPU.d_irq" end="uart.irq">
-  <parameter name="irqNumber" value="2" />
+  <parameter name="irqNumber" value="1" />
  </connection>
  <connection
    kind="clock"
@@ -718,7 +565,7 @@
    start="clk.clk_reset"
    end="sdram_controller.reset" />
  <connection kind="interrupt" version="13.0" start="CPU.d_irq" end="spi.irq">
-  <parameter name="irqNumber" value="3" />
+  <parameter name="irqNumber" value="2" />
  </connection>
  <connection kind="clock" version="13.0" start="clk.clk" end="spi.clk" />
  <connection kind="reset" version="13.0" start="clk.clk_reset" end="spi.reset" />
@@ -737,7 +584,7 @@
    start="CPU.data_master"
    end="jtag_uart.avalon_jtag_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x010090f8" />
+  <parameter name="baseAddress" value="0x010090a8" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -753,36 +600,9 @@
    kind="avalon"
    version="13.0"
    start="CPU.data_master"
-   end="data_clk.s1">
+   end="data_lvds_in.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x010090e0" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="avalon"
-   version="13.0"
-   start="CPU.data_master"
-   end="data_ctr.s1">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x010090d0" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="avalon"
-   version="13.0"
-   start="CPU.data_master"
-   end="data_ch1.s1">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x010090c0" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="avalon"
-   version="13.0"
-   start="CPU.data_master"
-   end="data_ch9.s1">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x010090b0" />
+  <parameter name="baseAddress" value="0x01009090" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -824,7 +644,7 @@
    start="CPU.data_master"
    end="cmv_transmit_data.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x010090a0" />
+  <parameter name="baseAddress" value="0x01009080" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -839,24 +659,6 @@
    end="sdram_controller.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x00800000" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="avalon"
-   version="13.0"
-   start="CPU.instruction_master"
-   end="data_clk.s1">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x010090e0" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="avalon"
-   version="13.0"
-   start="CPU.instruction_master"
-   end="data_ch9.s1">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x010090b0" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -889,7 +691,7 @@
    start="CPU.data_master"
    end="sysid_qsys_0.control_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x010090f0" />
+  <parameter name="baseAddress" value="0x010090a0" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -897,6 +699,13 @@
    version="13.0"
    start="CPU.jtag_debug_module_reset"
    end="sysid_qsys_0.reset" />
+ <connection
+   kind="interrupt"
+   version="13.0"
+   start="CPU.d_irq"
+   end="data_lvds_in.irq">
+  <parameter name="irqNumber" value="3" />
+ </connection>
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
 </system>

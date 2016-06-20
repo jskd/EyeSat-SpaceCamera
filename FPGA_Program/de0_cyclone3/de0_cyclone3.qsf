@@ -253,6 +253,8 @@ set_instance_assignment -name IO_STANDARD LVDS -to CMV_LVDS_OUTCLK
 set_location_assignment PIN_AB12 -to "CMV_LVDS_OUTCLK(n)"
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name VHDL_FILE ../src/design/lvds_to_pio_nios_map.vhd
+set_global_assignment -name VHDL_FILE ../src/design/pio_nios_to_cmv_map.vhd
 set_global_assignment -name QSYS_FILE ./nios/nios.qsys
 set_global_assignment -name BDF_FILE de0_cyclone3.bdf
 set_global_assignment -name BDF_FILE cmv_controller.bdf

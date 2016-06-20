@@ -4,7 +4,7 @@
  * Machine generated for CPU 'CPU' in SOPC Builder design 'nios'
  * SOPC Builder design path: C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/de0_cyclone3/nios/nios.sopcinfo
  *
- * Generated: Thu Jun 16 12:56:29 CEST 2016
+ * Generated: Mon Jun 20 16:58:33 CEST 2016
  */
 
 /*
@@ -153,19 +153,19 @@
 #define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
 #define ALT_NUM_INTERRUPT_CONTROLLERS 1
 #define ALT_STDERR "/dev/jtag_uart"
-#define ALT_STDERR_BASE 0x10090f8
+#define ALT_STDERR_BASE 0x10090a8
 #define ALT_STDERR_DEV jtag_uart
 #define ALT_STDERR_IS_JTAG_UART
 #define ALT_STDERR_PRESENT
 #define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDIN "/dev/jtag_uart"
-#define ALT_STDIN_BASE 0x10090f8
+#define ALT_STDIN_BASE 0x10090a8
 #define ALT_STDIN_DEV jtag_uart
 #define ALT_STDIN_IS_JTAG_UART
 #define ALT_STDIN_PRESENT
 #define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDOUT "/dev/jtag_uart"
-#define ALT_STDOUT_BASE 0x10090f8
+#define ALT_STDOUT_BASE 0x10090a8
 #define ALT_STDOUT_DEV jtag_uart
 #define ALT_STDOUT_IS_JTAG_UART
 #define ALT_STDOUT_PRESENT
@@ -179,7 +179,7 @@
  */
 
 #define ALT_MODULE_CLASS_cmv_transmit_data altera_avalon_pio
-#define CMV_TRANSMIT_DATA_BASE 0x10090a0
+#define CMV_TRANSMIT_DATA_BASE 0x1009080
 #define CMV_TRANSMIT_DATA_BIT_CLEARING_EDGE_REGISTER 0
 #define CMV_TRANSMIT_DATA_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define CMV_TRANSMIT_DATA_CAPTURE 0
@@ -201,111 +201,30 @@
 
 
 /*
- * data_ch1 configuration
+ * data_lvds_in configuration
  *
  */
 
-#define ALT_MODULE_CLASS_data_ch1 altera_avalon_pio
-#define DATA_CH1_BASE 0x10090c0
-#define DATA_CH1_BIT_CLEARING_EDGE_REGISTER 0
-#define DATA_CH1_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define DATA_CH1_CAPTURE 0
-#define DATA_CH1_DATA_WIDTH 10
-#define DATA_CH1_DO_TEST_BENCH_WIRING 1
-#define DATA_CH1_DRIVEN_SIM_VALUE 0
-#define DATA_CH1_EDGE_TYPE "NONE"
-#define DATA_CH1_FREQ 50000000
-#define DATA_CH1_HAS_IN 1
-#define DATA_CH1_HAS_OUT 0
-#define DATA_CH1_HAS_TRI 0
-#define DATA_CH1_IRQ -1
-#define DATA_CH1_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define DATA_CH1_IRQ_TYPE "NONE"
-#define DATA_CH1_NAME "/dev/data_ch1"
-#define DATA_CH1_RESET_VALUE 0
-#define DATA_CH1_SPAN 16
-#define DATA_CH1_TYPE "altera_avalon_pio"
-
-
-/*
- * data_ch9 configuration
- *
- */
-
-#define ALT_MODULE_CLASS_data_ch9 altera_avalon_pio
-#define DATA_CH9_BASE 0x10090b0
-#define DATA_CH9_BIT_CLEARING_EDGE_REGISTER 0
-#define DATA_CH9_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define DATA_CH9_CAPTURE 0
-#define DATA_CH9_DATA_WIDTH 10
-#define DATA_CH9_DO_TEST_BENCH_WIRING 1
-#define DATA_CH9_DRIVEN_SIM_VALUE 0
-#define DATA_CH9_EDGE_TYPE "NONE"
-#define DATA_CH9_FREQ 50000000
-#define DATA_CH9_HAS_IN 1
-#define DATA_CH9_HAS_OUT 0
-#define DATA_CH9_HAS_TRI 0
-#define DATA_CH9_IRQ -1
-#define DATA_CH9_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define DATA_CH9_IRQ_TYPE "NONE"
-#define DATA_CH9_NAME "/dev/data_ch9"
-#define DATA_CH9_RESET_VALUE 0
-#define DATA_CH9_SPAN 16
-#define DATA_CH9_TYPE "altera_avalon_pio"
-
-
-/*
- * data_clk configuration
- *
- */
-
-#define ALT_MODULE_CLASS_data_clk altera_avalon_pio
-#define DATA_CLK_BASE 0x10090e0
-#define DATA_CLK_BIT_CLEARING_EDGE_REGISTER 0
-#define DATA_CLK_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define DATA_CLK_CAPTURE 1
-#define DATA_CLK_DATA_WIDTH 1
-#define DATA_CLK_DO_TEST_BENCH_WIRING 1
-#define DATA_CLK_DRIVEN_SIM_VALUE 0
-#define DATA_CLK_EDGE_TYPE "RISING"
-#define DATA_CLK_FREQ 50000000
-#define DATA_CLK_HAS_IN 1
-#define DATA_CLK_HAS_OUT 0
-#define DATA_CLK_HAS_TRI 0
-#define DATA_CLK_IRQ 1
-#define DATA_CLK_IRQ_INTERRUPT_CONTROLLER_ID 0
-#define DATA_CLK_IRQ_TYPE "EDGE"
-#define DATA_CLK_NAME "/dev/data_clk"
-#define DATA_CLK_RESET_VALUE 0
-#define DATA_CLK_SPAN 16
-#define DATA_CLK_TYPE "altera_avalon_pio"
-
-
-/*
- * data_ctr configuration
- *
- */
-
-#define ALT_MODULE_CLASS_data_ctr altera_avalon_pio
-#define DATA_CTR_BASE 0x10090d0
-#define DATA_CTR_BIT_CLEARING_EDGE_REGISTER 0
-#define DATA_CTR_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define DATA_CTR_CAPTURE 0
-#define DATA_CTR_DATA_WIDTH 10
-#define DATA_CTR_DO_TEST_BENCH_WIRING 1
-#define DATA_CTR_DRIVEN_SIM_VALUE 0
-#define DATA_CTR_EDGE_TYPE "NONE"
-#define DATA_CTR_FREQ 50000000
-#define DATA_CTR_HAS_IN 1
-#define DATA_CTR_HAS_OUT 0
-#define DATA_CTR_HAS_TRI 0
-#define DATA_CTR_IRQ -1
-#define DATA_CTR_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define DATA_CTR_IRQ_TYPE "NONE"
-#define DATA_CTR_NAME "/dev/data_ctr"
-#define DATA_CTR_RESET_VALUE 0
-#define DATA_CTR_SPAN 16
-#define DATA_CTR_TYPE "altera_avalon_pio"
+#define ALT_MODULE_CLASS_data_lvds_in altera_avalon_pio
+#define DATA_LVDS_IN_BASE 0x1009090
+#define DATA_LVDS_IN_BIT_CLEARING_EDGE_REGISTER 0
+#define DATA_LVDS_IN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define DATA_LVDS_IN_CAPTURE 1
+#define DATA_LVDS_IN_DATA_WIDTH 32
+#define DATA_LVDS_IN_DO_TEST_BENCH_WIRING 1
+#define DATA_LVDS_IN_DRIVEN_SIM_VALUE 0
+#define DATA_LVDS_IN_EDGE_TYPE "RISING"
+#define DATA_LVDS_IN_FREQ 50000000
+#define DATA_LVDS_IN_HAS_IN 1
+#define DATA_LVDS_IN_HAS_OUT 0
+#define DATA_LVDS_IN_HAS_TRI 0
+#define DATA_LVDS_IN_IRQ 3
+#define DATA_LVDS_IN_IRQ_INTERRUPT_CONTROLLER_ID 0
+#define DATA_LVDS_IN_IRQ_TYPE "EDGE"
+#define DATA_LVDS_IN_NAME "/dev/data_lvds_in"
+#define DATA_LVDS_IN_RESET_VALUE 0
+#define DATA_LVDS_IN_SPAN 16
+#define DATA_LVDS_IN_TYPE "altera_avalon_pio"
 
 
 /*
@@ -324,7 +243,7 @@
  */
 
 #define ALT_MODULE_CLASS_jtag_uart altera_avalon_jtag_uart
-#define JTAG_UART_BASE 0x10090f8
+#define JTAG_UART_BASE 0x10090a8
 #define JTAG_UART_IRQ 0
 #define JTAG_UART_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define JTAG_UART_NAME "/dev/jtag_uart"
@@ -421,7 +340,7 @@
 #define SPI_DELAYUNITS "ns"
 #define SPI_EXTRADELAY 0
 #define SPI_INSERT_SYNC 0
-#define SPI_IRQ 3
+#define SPI_IRQ 2
 #define SPI_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define SPI_ISMASTER 1
 #define SPI_LSBFIRST 0
@@ -441,13 +360,13 @@
  */
 
 #define ALT_MODULE_CLASS_sysid_qsys_0 altera_avalon_sysid_qsys
-#define SYSID_QSYS_0_BASE 0x10090f0
+#define SYSID_QSYS_0_BASE 0x10090a0
 #define SYSID_QSYS_0_ID -526922788
 #define SYSID_QSYS_0_IRQ -1
 #define SYSID_QSYS_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_QSYS_0_NAME "/dev/sysid_qsys_0"
 #define SYSID_QSYS_0_SPAN 8
-#define SYSID_QSYS_0_TIMESTAMP 1466074184
+#define SYSID_QSYS_0_TIMESTAMP 1466430170
 #define SYSID_QSYS_0_TYPE "altera_avalon_sysid_qsys"
 
 
@@ -462,7 +381,7 @@
 #define UART_DATA_BITS 8
 #define UART_FIXED_BAUD 1
 #define UART_FREQ 50000000
-#define UART_IRQ 2
+#define UART_IRQ 1
 #define UART_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define UART_NAME "/dev/uart"
 #define UART_PARITY 'N'

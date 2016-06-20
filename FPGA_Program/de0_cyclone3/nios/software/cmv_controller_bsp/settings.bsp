@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>17 juin 2016 18:33:17</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1466181197772</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>20 juin 2016 18:56:21</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1466441781299</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\innovlab\workspace\EyeSat_CMOS_Image_Sensor\FPGA_Program\de0_cyclone3\nios\software\cmv_controller_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\Users\innovlab\workspace\EyeSat_CMOS_Image_Sensor\FPGA_Program\de0_cyclone3\nios\nios.sopcinfo</SopcDesignFile>
@@ -912,43 +912,25 @@
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>cmv_transmit_data</slaveDescriptor>
-                <addressRange>0x010090A0 - 0x010090AF</addressRange>
+                <addressRange>0x01009080 - 0x0100908F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>data_ch9</slaveDescriptor>
-                <addressRange>0x010090B0 - 0x010090BF</addressRange>
-                <addressSpan>16</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>data_ch1</slaveDescriptor>
-                <addressRange>0x010090C0 - 0x010090CF</addressRange>
-                <addressSpan>16</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>data_ctr</slaveDescriptor>
-                <addressRange>0x010090D0 - 0x010090DF</addressRange>
-                <addressSpan>16</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>data_clk</slaveDescriptor>
-                <addressRange>0x010090E0 - 0x010090EF</addressRange>
+                <slaveDescriptor>data_lvds_in</slaveDescriptor>
+                <addressRange>0x01009090 - 0x0100909F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>sysid_qsys_0</slaveDescriptor>
-                <addressRange>0x010090F0 - 0x010090F7</addressRange>
+                <addressRange>0x010090A0 - 0x010090A7</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>jtag_uart</slaveDescriptor>
-                <addressRange>0x010090F8 - 0x010090FF</addressRange>
+                <addressRange>0x010090A8 - 0x010090AF</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>
