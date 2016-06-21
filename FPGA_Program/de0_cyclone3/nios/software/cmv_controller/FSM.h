@@ -11,6 +11,8 @@
 class UART;
 class SPI;
 class PIO;
+class PIO_Bus;
+class PIO_Pin;
 
 typedef enum
 {
@@ -41,6 +43,19 @@ class FSM {
 		FSM_state_t _current_state;
 		UART* _uart;
 		SPI* _spi;
+
+
+		PIO* _pio_output;
+		PIO_Pin* _res_n;
+		PIO_Pin* _frame_req;
+		PIO_Bus* _bus_debug;
+
+		PIO* _pio_input;
+		PIO_Bus* _bus_lvds_ctr;
+		PIO_Bus* _bus_lvds_ch0;
+		PIO_Bus* _bus_lvds_ch9;
+		PIO_Pin* _lvds_clk_in;
+
 
 		bool _interactive_mode;
 

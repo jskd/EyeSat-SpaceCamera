@@ -148,6 +148,8 @@ CXX_SRCS += controller/UART.cpp
 CXX_SRCS += controller/SPI.cpp
 CXX_SRCS += FSM.cpp
 CXX_SRCS += controller/PIO.cpp
+CXX_SRCS += controller/PIO_Pin.cpp
+CXX_SRCS += controller/PIO_Bus.cpp
 ASM_SRCS :=
 # CXX_SRCS += FIFO.hpp
 

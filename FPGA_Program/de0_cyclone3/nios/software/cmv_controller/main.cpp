@@ -1,12 +1,16 @@
 #include "system.h"
 #include "FSM.h"
-
+#include "stdio.h"
 
 int main() {
-	FSM* fsm= new FSM();
+	FSM* fsm = new FSM();
 	while (1) {
-		fsm->action();
-		fsm->transition();
+		try {
+			fsm->action();
+			fsm->transition();
+		} catch (const char* msg) {
+			printf("%s\r\n", msg);
+		}
 	}
 	return 0;
 }
