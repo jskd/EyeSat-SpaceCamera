@@ -6,14 +6,17 @@
  */
 
 #include "FSM.h"
-#include "system.h"
-#include "altera_avalon_pio_regs.h"
 #include "controller/UART.h"
 #include "controller/SPI.h"
 #include "controller/PIO.h"
 #include "controller/PIO_Bus.h"
 #include "controller/PIO_Pin.h"
+#include "system.h"
 #include "unistd.h"
+#include "altera_avalon_pio_regs.h"
+#include <streambuf>
+#include <iostream>
+
 FSM::FSM() {
 	_current_state = init;
 }
@@ -89,13 +92,11 @@ void FSM::transition(void) {
 
 void FSM::_init(void) {
 
-	this->_uart = new UART(UART_BASE, UART_IRQ, 64, 64);
+	this->_uart = new UART(UART_BASE, UART_IRQ, 64);
 	_uart->buffer_printf("Init UART ok\r\n");
-	_uart->sendAll();
 
 	this->_spi = new SPI(SPI_BASE);
 	_uart->buffer_printf("Init SPI ok\r\n");
-	_uart->sendAll();
 
 	_pio_input = new PIO(DATA_LVDS_IN_BASE, DATA_LVDS_IN_DATA_WIDTH, PIO::INPUT);
 	_bus_lvds_ctr = new PIO_Bus(*_pio_input, 1, 10, 1);
@@ -103,7 +104,6 @@ void FSM::_init(void) {
 	_bus_lvds_ch9 = new PIO_Bus(*_pio_input, 1, 10, 21);
 	_lvds_clk_in= new PIO_Pin(*_pio_input, 1, 0x0001);
 	_uart->buffer_printf("Init PIO input ok\r\n");
-	_uart->sendAll();
 
 	_pio_output = new PIO(CMV_TRANSMIT_DATA_BASE, CMV_TRANSMIT_DATA_DATA_WIDTH,
 	    PIO::OUTPUT);
@@ -112,10 +112,10 @@ void FSM::_init(void) {
 	_bus_debug= new PIO_Bus(*_pio_output, 1, 6, 2);
 
 	_uart->buffer_printf("Init PIO output ok\r\n");
-	_uart->sendAll();
 
 
 	_uart->buffer_printf("set RES N = 0; frame req = 0\r\n");
+
 	_res_n->off();
 	_frame_req->off();
 
@@ -125,7 +125,7 @@ void FSM::_init(void) {
 	    "PIO_input=%08x | CLK=%01d | CTR=%03x | CH0=%03x | CH9=%03x \r\n",
 	    _pio_input->getValue(), _lvds_clk_in->getValue(),  _bus_lvds_ctr->getValue(),
 	    _bus_lvds_ch0->getValue(), _bus_lvds_ch9->getValue());
-	_uart->sendAll();
+
 
 	usleep(1000000);
 
@@ -140,14 +140,25 @@ void FSM::_init(void) {
 		    "PIO_input=%08x | CLK=%01d | CTR=%03x | CH0=%03x | CH9=%03x \r\n",
 		    _pio_input->getValue(), _lvds_clk_in->getValue(),  _bus_lvds_ctr->getValue(),
 		    _bus_lvds_ch0->getValue(), _bus_lvds_ch9->getValue());
-		_uart->sendAll();
 		usleep(1000000);
 	}
 }
 
 void FSM::_unset(void) {
-	delete this->_uart;
-	delete this->_spi;
+
+	delete _uart;
+	delete _spi;
+
+	delete _bus_lvds_ctr;
+	delete _bus_lvds_ch0;
+	delete _bus_lvds_ch9;
+	delete _lvds_clk_in;
+	delete _res_n;
+	delete _frame_req;
+	delete _bus_debug;
+
+	delete _pio_output;
+	delete _pio_input;
 }
 
 void FSM::_select_mode(void) {

@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>21 juin 2016 13:37:05</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1466509025721</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>23 juin 2016 13:53:43</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1466682823505</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\innovlab\workspace\EyeSat_CMOS_Image_Sensor\FPGA_Program\de0_cyclone3\nios\software\cmv_controller_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\Users\innovlab\workspace\EyeSat_CMOS_Image_Sensor\FPGA_Program\de0_cyclone3\nios\nios.sopcinfo</SopcDesignFile>

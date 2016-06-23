@@ -16,14 +16,11 @@ static void _UART_receive_interrupt(void* context) {
 	IOWR_ALTERA_AVALON_UART_RXDATA( interrupt_context->_base_adress, 0);
 }
 
-UART::UART(unsigned long base_adress, unsigned long irq, unsigned size_in,
-    unsigned size_out) {
+UART::UART(unsigned long base_adress, unsigned long irq, unsigned size_buffer) {
 
 	_base_adress = base_adress;
-	_size_out = size_out;
-	_size_in = size_in;
-	_in_buffer = new FIFO<char>(size_in);
-	_out_buffer = new FIFO<char>(size_out);
+	_size_buffer = size_buffer;
+	_in_buffer = new FIFO<char>(size_buffer);
 
 	// init irq
 	irq_context = (UART_interrupt_context*) malloc(
@@ -35,7 +32,6 @@ UART::UART(unsigned long base_adress, unsigned long irq, unsigned size_in,
 
 UART::~UART() {
 	delete _in_buffer;
-	delete _out_buffer;
 	free(irq_context);
 }
 
@@ -43,48 +39,37 @@ bool UART::inBuffer_isEmpty(void) {
 	return _in_buffer->isEmpty();
 }
 
-bool UART::outBuffer_isEmpty(void) {
-	return _out_buffer->isEmpty();
-}
-
 char UART::buffer_getchar(void) {
 	return _in_buffer->pull();
 }
 
-void UART::sendAll() {
-	while (!outBuffer_isEmpty()) {
-		send();
-	}
+void UART::send(char c) {
+	while (!(IORD_ALTERA_AVALON_UART_STATUS( _base_adress )
+	    & ALTERA_AVALON_UART_STATUS_TRDY_MSK))
+		;
+	IOWR_ALTERA_AVALON_UART_TXDATA(_base_adress, c);
 }
 
-void UART::send() {
-	if (!outBuffer_isEmpty()
-	    && (IORD_ALTERA_AVALON_UART_STATUS( _base_adress )
-	        & ALTERA_AVALON_UART_STATUS_TRDY_MSK)) {
-		IOWR_ALTERA_AVALON_UART_TXDATA(_base_adress, _out_buffer->pull());
-	}
-}
+void UART::buffer_printf(const char* format, ...) {
 
-void UART::buffer_printf( const char* format, ... ) {
+	char buffer[255];
+	int len;
 
-  char buffer[_size_out];
-  int len;
-
-  va_list args;
-  va_start (args, format);
-  len= vsnprintf(buffer, _size_out, format, args );
-  va_end (args);
+	va_list args;
+	va_start(args, format);
+	len = vsnprintf(buffer, 255, format, args);
+	va_end(args);
 
 	for (int i = 0; i < len; i++)
-		_out_buffer->push(buffer[i]);
+		send(buffer[i]);
 }
 
 void UART::buffer_putchar(const char character) {
-	_out_buffer->push(character);
+	send(character);
 }
 
 void UART::buffer_putstr(const char* str) {
 	int len = strlen(str);
 	for (int i = 0; i < len; i++)
-		_out_buffer->push(str[i]);
+		send(str[i]);
 }

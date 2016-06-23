@@ -17,12 +17,11 @@ class UART {
 
 	public:
 
-		UART(unsigned long base_adress, unsigned long irq, unsigned size_in, unsigned size_out);
+		UART(unsigned long base_adress, unsigned long irq, unsigned size_buffer=64);
 
 		virtual ~UART();
 
 		bool inBuffer_isEmpty( void );
-		bool outBuffer_isEmpty( void );
 
 		char buffer_getchar( void );
 
@@ -32,17 +31,13 @@ class UART {
 
 		void buffer_putstr(const char* str);
 
-		void send();
-
-		void sendAll();
+		void send(char c);
 
 	protected:
 
 		FIFO<char>* _in_buffer;
-		FIFO<char>* _out_buffer;
 		unsigned long _base_adress;
-		unsigned _size_in;
-		unsigned _size_out;
+		unsigned _size_buffer;
 
 	private:
 
