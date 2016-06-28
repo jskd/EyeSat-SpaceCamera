@@ -100,8 +100,8 @@ void FSM::_init(void) {
 
 	_pio_input = new PIO(DATA_LVDS_IN_BASE, DATA_LVDS_IN_DATA_WIDTH, PIO::INPUT);
 	_bus_lvds_ctr = new PIO_Bus(*_pio_input, 1, 10, 1);
-	_bus_lvds_ch0 = new PIO_Bus(*_pio_input, 1, 10, 11);
-	_bus_lvds_ch9 = new PIO_Bus(*_pio_input, 1, 10, 21);
+	_bus_lvds_ch0 = new PIO_Bus(*_pio_input, 2, 10, 11);
+	_bus_lvds_ch9 = new PIO_Bus(*_pio_input, 3, 10, 21);
 	_lvds_clk_in= new PIO_Pin(*_pio_input, 1, 0x0001);
 	_uart->buffer_printf("Init PIO input ok\r\n");
 
@@ -113,34 +113,52 @@ void FSM::_init(void) {
 
 	_uart->buffer_printf("Init PIO output ok\r\n");
 
-
+/*
 	_uart->buffer_printf("set RES N = 0; frame req = 0\r\n");
 
 	_res_n->off();
 	_frame_req->off();
 
-	usleep(1000000);
 
-	_uart->buffer_printf(
-	    "PIO_input=%08x | CLK=%01d | CTR=%03x | CH0=%03x | CH9=%03x \r\n",
-	    _pio_input->getValue(), _lvds_clk_in->getValue(),  _bus_lvds_ctr->getValue(),
-	    _bus_lvds_ch0->getValue(), _bus_lvds_ch9->getValue());
+	_uart->buffer_printf("set RES N = 1\r\n");*/
 
-
-	usleep(1000000);
-
-	_uart->buffer_printf("set RES N = 1\r\n");
 	_res_n->on();
-
-	usleep(1000000);
+	_frame_req->off();
 
 	while(1)
 	{
-		_uart->buffer_printf(
-		    "PIO_input=%08x | CLK=%01d | CTR=%03x | CH0=%03x | CH9=%03x \r\n",
-		    _pio_input->getValue(), _lvds_clk_in->getValue(),  _bus_lvds_ctr->getValue(),
-		    _bus_lvds_ch0->getValue(), _bus_lvds_ch9->getValue());
-		usleep(1000000);
+		_uart->buffer_printf("change ff\r\n");
+		_spi->writeCMVRegister(78, 0xff);
+		for(int i=0; i<10;i++)
+		{
+			_uart->buffer_printf(
+	    "PIO_input=%08x | CLK=%01d | CTR=%03x | CH0=%03x | CH9=%03x \r\n",
+	    _pio_input->getValue(), _lvds_clk_in->getValue(),  _bus_lvds_ctr->getValue(),
+	    _bus_lvds_ch0->getValue(), _bus_lvds_ch9->getValue());
+			usleep(500000);
+		}
+
+		_uart->buffer_printf("change 00\r\n");
+		_spi->writeCMVRegister(78, 0x00);
+		for(int i=0; i<10;i++)
+		{
+			_uart->buffer_printf(
+			    "PIO_input=%08x | CLK=%01d | CTR=%03x | CH0=%03x | CH9=%03x \r\n",
+			    _pio_input->getValue(), _lvds_clk_in->getValue(),  _bus_lvds_ctr->getValue(),
+			    _bus_lvds_ch0->getValue(), _bus_lvds_ch9->getValue());
+			usleep(500000);
+		}
+
+		_uart->buffer_printf("change 07\r\n");
+		_spi->writeCMVRegister(78, 0x07);
+		for(int i=0; i<10;i++)
+		{
+			_uart->buffer_printf(
+			    "PIO_input=%08x | CLK=%01d | CTR=%03x | CH0=%03x | CH9=%03x \r\n",
+			    _pio_input->getValue(), _lvds_clk_in->getValue(),  _bus_lvds_ctr->getValue(),
+			    _bus_lvds_ch0->getValue(), _bus_lvds_ch9->getValue());
+			usleep(500000);
+		}
 	}
 }
 

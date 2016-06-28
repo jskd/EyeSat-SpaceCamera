@@ -151,6 +151,7 @@ CXX_SRCS += controller/PIO.cpp
 CXX_SRCS += controller/PIO_Pin.cpp
 CXX_SRCS += controller/PIO_Bus.cpp
 CXX_SRCS += utils/EscapeSequences.cpp
+CXX_SRCS += controller/PIO_LVDS.cpp
 ASM_SRCS :=
 # CXX_SRCS += FIFO.hpp
 

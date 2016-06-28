@@ -24,6 +24,8 @@ class PIO {
 
 		void setValue(unsigned int val);
 
+		void readValue();
+
 		void addPin(unsigned char id, unsigned int mask);
 
 		void addGroup(unsigned char id, const unsigned char width, const unsigned char left_shift);

@@ -9,6 +9,8 @@
 #include "string.h"
 #include "stdarg.h"
 
+#include <sstream>
+
 static void _UART_receive_interrupt(void* context) {
 	UART_interrupt_context* interrupt_context = (UART_interrupt_context*) context;
 	interrupt_context->_in_buffer->push(
@@ -73,3 +75,17 @@ void UART::buffer_putstr(const char* str) {
 	for (int i = 0; i < len; i++)
 		send(str[i]);
 }
+/*
+void UART::operator<<(ostream& output, const UART& uart) {
+
+  std::stringstream ss;
+  ss << output.rdbuf();
+  std::string myString = ss.str();
+
+  uart.buffer_printf("%s", myString);
+}
+
+istream& UART::operator>>(istream& input, UART& uart) {
+	return input >> uart._in_buffer->pull();
+}
+*/

@@ -1,7 +1,8 @@
 #ifndef _UART_H_
 #define _UART_H_
 
-#include "sys/types.h"
+#include <iostream>
+using namespace std;
 
 template<class T>
 class FIFO ;
@@ -10,8 +11,6 @@ typedef struct{
 		 FIFO<char>*  _in_buffer;
 		 unsigned long _base_adress;
 } UART_interrupt_context;
-
-
 
 class UART {
 
@@ -32,6 +31,10 @@ class UART {
 		void buffer_putstr(const char* str);
 
 		void send(char c);
+
+    friend void operator<<( ostream &output,  const UART &uart );
+
+    friend istream& operator>>( istream  &input, UART &uart );
 
 	protected:
 

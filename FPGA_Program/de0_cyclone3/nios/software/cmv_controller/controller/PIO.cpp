@@ -22,6 +22,10 @@ PIO::~PIO() {
 
 void PIO::_init_irq( void ) { }
 
+
+
+
+
 unsigned int PIO::getValue() {
 	return IORD_ALTERA_AVALON_PIO_DATA(_base_address);
 }
