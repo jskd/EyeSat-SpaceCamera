@@ -1,0 +1,3 @@
+@ set SOPC_BUILDER_PATH_71=%SOPC_KIT_NIOS2%+%SOPC_BUILDER_PATH_71%
+@ set SOPC_BUILDER_PATH_72=%SOPC_KIT_NIOS2%+%SOPC_BUILDER_PATH_72%
+@ "%QUARTUS_ROOTDIR%\bin\cygwin\bin\bash.exe" --rcfile ".\nios_bashrc"

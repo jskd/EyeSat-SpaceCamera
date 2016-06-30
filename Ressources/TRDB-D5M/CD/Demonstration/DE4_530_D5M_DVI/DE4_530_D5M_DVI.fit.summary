@@ -1,0 +1,22 @@
+Fitter Status : Successful - Wed Feb 19 14:23:50 2014
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : DE4_530_D5M_DVI
+Top-level Entity Name : DE4_530_D5M_DVI
+Family : Stratix IV
+Device : EP4SGX530KH40C2
+Timing Models : Final
+Logic utilization : 2 %
+    Combinational ALUTs : 6,537 / 424,960 ( 2 % )
+    Memory ALUTs : 712 / 212,480 ( < 1 % )
+    Dedicated logic registers : 5,269 / 424,960 ( 1 % )
+Total registers : 5701
+Total pins : 449 / 888 ( 51 % )
+Total virtual pins : 0
+Total block memory bits : 149,900 / 21,233,664 ( < 1 % )
+DSP block 18-bit elements : 0 / 1,024 ( 0 % )
+Total GXB Receiver Channel PCS : 0 / 24 ( 0 % )
+Total GXB Receiver Channel PMA : 0 / 36 ( 0 % )
+Total GXB Transmitter Channel PCS : 0 / 24 ( 0 % )
+Total GXB Transmitter Channel PMA : 0 / 36 ( 0 % )
+Total PLLs : 3 / 8 ( 38 % )
+Total DLLs : 1 / 4 ( 25 % )

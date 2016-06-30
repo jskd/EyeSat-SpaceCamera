@@ -1,0 +1,15 @@
+PLL_Name	ddr2_multi_port:u8|ddr2:the_ddr2|ddr2_controller_phy:ddr2_controller_phy_inst|ddr2_phy:ddr2_phy_inst|ddr2_phy_alt_mem_phy:ddr2_phy_alt_mem_phy_inst|ddr2_phy_alt_mem_phy_clk_reset:clk|ddr2_phy_alt_mem_phy_pll:half_rate.pll|altpll:altpll_component|altpll_r5v3:auto_generated|pll1
+PLLJITTER	26
+PLLSPEmax	40
+PLLSPEmin	-40
+
+PLL_Name	sys_pll:sys_pll_inst|altpll:altpll_component|sys_pll_altpll:auto_generated|pll1
+PLLJITTER	28
+PLLSPEmax	40
+PLLSPEmin	-40
+
+PLL_Name	vpg:vpg_inst|gen_pll:gen_pll_inst|altpll:altpll_component|gen_pll_altpll:auto_generated|pll1
+PLLJITTER	34
+PLLSPEmax	40
+PLLSPEmin	-40
+

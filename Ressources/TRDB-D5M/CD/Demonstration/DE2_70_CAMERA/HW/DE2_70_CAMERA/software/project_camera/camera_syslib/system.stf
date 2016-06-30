@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stf>
+	<project ptf="D:\NIOS_II\DE2-70\DE2_70_CAMERA\DE2_70_SOPC.ptf" target="Nios II System Library">
+	</project>
+	<cpu name="cpu">
+	</cpu>
+	<os_spec clean_exit="yes" direct_drivers="no" exception_stack="no" instruction_emulation="no" name="none (single-threaded)" no_c_plus_plus="no" no_exit="no" profiling="no" small_footprint="no" sopc_component_dir="altera_hal" stack_checking="no" stderr="null" stdin="null" stdout="null">
+	<sys_defines>
+<define name="alt_max_fd" quote="no" value="32"/>
+<define name="alt_sys_clk" quote="no" value="TIMER"/>
+<define name="alt_timestamp_clk" quote="no" value="TIMER_STAMP"/>
+</sys_defines>
+<make_macros>
+<macro name="alt_sim_optimize" quote="no" value="0"/>
+</make_macros>
+</os_spec>
+	<link_spec auto_gen_script="yes">
+		<script name="none">
+		<section memory="ssram" name=".text"/>
+<section memory="ssram" name=".rodata"/>
+<section memory="ssram" name=".rwdata"/>
+<section memory="ssram" name=".stack"/>
+<section memory="ssram" name=".heap"/>
+<section memory="onchip_mem" name=".exceptionstack" size="0x400"/>
+</script>
+	</link_spec>
+</stf>

@@ -1,0 +1,20 @@
+Analysis & Synthesis Status : Successful - Wed Feb 19 14:19:04 2014
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : DE4_530_D5M_DVI
+Top-level Entity Name : DE4_530_D5M_DVI
+Family : Stratix IV
+Logic utilization : N/A
+    Combinational ALUTs : 6,320
+    Memory ALUTs : 272
+    Dedicated logic registers : 4,617
+Total registers : 4985
+Total pins : 436
+Total virtual pins : 0
+Total block memory bits : 178,060
+DSP block 18-bit elements : 0
+Total GXB Receiver Channel PCS : 0
+Total GXB Receiver Channel PMA : 0
+Total GXB Transmitter Channel PCS : 0
+Total GXB Transmitter Channel PMA : 0
+Total PLLs : 3
+Total DLLs : 1
