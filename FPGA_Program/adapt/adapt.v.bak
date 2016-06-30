@@ -1,0 +1,147 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// PROGRAM		"Quartus II 32-bit"
+// VERSION		"Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version"
+// CREATED		"Tue Jun 28 16:50:55 2016"
+
+module adapt(
+	GPIO_11,
+	GPIO_13,
+	GPIO_14,
+	GPIO_15,
+	GPIO_16,
+	GPIO_116,
+	GPIO_115,
+	GPIO_114,
+	GPIO_113,
+	GPIO_112,
+	GPIO_111,
+	GPIO_110,
+	GPIO_19,
+	GPIO_18,
+	GPIO_17,
+	GPIO_126,
+	GPIO_125,
+	GPIO_124,
+	GPIO_123,
+	GPIO_122,
+	GPIO_121,
+	GPIO_120,
+	GPIO_119,
+	GPIO_118,
+	GPIO_117,
+	GPIO_135,
+	GPIO_134,
+	GPIO_133,
+	GPIO_132,
+	GPIO_131,
+	GPIO_130,
+	GPIO_129,
+	GPIO_128,
+	GPIO_127,
+	VGA_SYNC,
+	VGA_BLANK,
+	VGA_VS,
+	VGA_HS,
+	VGA_CLK,
+	VGA_B,
+	VGA_G,
+	VGA_R
+);
+
+
+input wire	GPIO_11;
+input wire	GPIO_13;
+input wire	GPIO_14;
+input wire	GPIO_15;
+input wire	GPIO_16;
+input wire	GPIO_116;
+input wire	GPIO_115;
+input wire	GPIO_114;
+input wire	GPIO_113;
+input wire	GPIO_112;
+input wire	GPIO_111;
+input wire	GPIO_110;
+input wire	GPIO_19;
+input wire	GPIO_18;
+input wire	GPIO_17;
+input wire	GPIO_126;
+input wire	GPIO_125;
+input wire	GPIO_124;
+input wire	GPIO_123;
+input wire	GPIO_122;
+input wire	GPIO_121;
+input wire	GPIO_120;
+input wire	GPIO_119;
+input wire	GPIO_118;
+input wire	GPIO_117;
+input wire	GPIO_135;
+input wire	GPIO_134;
+input wire	GPIO_133;
+input wire	GPIO_132;
+input wire	GPIO_131;
+input wire	GPIO_130;
+input wire	GPIO_129;
+input wire	GPIO_128;
+input wire	GPIO_127;
+output wire	VGA_SYNC;
+output wire	VGA_BLANK;
+output wire	VGA_VS;
+output wire	VGA_HS;
+output wire	VGA_CLK;
+output wire	[8:0] VGA_B;
+output wire	[9:0] VGA_G;
+output wire	[9:0] VGA_R;
+
+
+assign	VGA_SYNC = GPIO_16;
+assign	VGA_BLANK = GPIO_15;
+assign	VGA_VS = GPIO_14;
+assign	VGA_HS = GPIO_13;
+assign	VGA_CLK = GPIO_11;
+
+
+
+assign	VGA_B[8] = GPIO_135;
+assign	VGA_B[7] = GPIO_134;
+assign	VGA_B[6] = GPIO_133;
+assign	VGA_B[5] = GPIO_132;
+assign	VGA_B[4] = GPIO_131;
+assign	VGA_B[3] = GPIO_130;
+assign	VGA_B[2] = GPIO_129;
+assign	VGA_B[1] = GPIO_128;
+assign	VGA_B[0] = GPIO_127;
+assign	VGA_G[9] = GPIO_126;
+assign	VGA_G[8] = GPIO_125;
+assign	VGA_G[7] = GPIO_124;
+assign	VGA_G[6] = GPIO_123;
+assign	VGA_G[5] = GPIO_122;
+assign	VGA_G[4] = GPIO_121;
+assign	VGA_G[3] = GPIO_120;
+assign	VGA_G[2] = GPIO_119;
+assign	VGA_G[1] = GPIO_118;
+assign	VGA_G[0] = GPIO_117;
+assign	VGA_R[9] = GPIO_116;
+assign	VGA_R[8] = GPIO_115;
+assign	VGA_R[7] = GPIO_114;
+assign	VGA_R[6] = GPIO_113;
+assign	VGA_R[5] = GPIO_112;
+assign	VGA_R[4] = GPIO_111;
+assign	VGA_R[3] = GPIO_110;
+assign	VGA_R[2] = GPIO_19;
+assign	VGA_R[1] = GPIO_18;
+assign	VGA_R[0] = GPIO_17;
+
+endmodule
