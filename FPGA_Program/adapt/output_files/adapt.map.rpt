@@ -1,6 +1,6 @@
 Analysis & Synthesis report for adapt
-Tue Jun 28 17:11:07 2016
-Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+Fri Jul 01 15:50:57 2016
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
 ---------------------
@@ -41,8 +41,8 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Jun 28 17:11:06 2016            ;
-; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
+; Analysis & Synthesis Status        ; Successful - Fri Jul 01 15:50:57 2016            ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; adapt                                            ;
 ; Top-level Entity Name              ; adapt                                            ;
 ; Family                             ; Cyclone II                                       ;
@@ -160,13 +160,13 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                          ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path            ; Library ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------+---------+
-; adapt.v                          ; yes             ; User Verilog HDL File  ; C:/Users/innovlab/Desktop/adapt/adapt.v ;         ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                  ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                    ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------+---------+
+; adapt.v                          ; yes             ; User Verilog HDL File  ; C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/adapt/adapt.v ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -191,10 +191,10 @@ applicable agreement for further details.
 ;                                             ;           ;
 ; I/O pins                                    ; 71        ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
-; Maximum fan-out node                        ; GPIO_1[6] ;
+; Maximum fan-out node                        ; GPIO_1[1] ;
 ; Maximum fan-out                             ; 1         ;
-; Total fan-out                               ; 34        ;
-; Average fan-out                             ; 0.48      ;
+; Total fan-out                               ; 29        ;
+; Average fan-out                             ; 0.41      ;
 +---------------------------------------------+-----------+
 
 
@@ -236,27 +236,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 32-bit Analysis & Synthesis
+Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Tue Jun 28 17:11:04 2016
+    Info: Processing started: Fri Jul 01 15:50:54 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off adapt -c adapt
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file adapt.v
     Info (12023): Found entity 1: adapt
 Info (12127): Elaborating entity "adapt" for the top level hierarchy
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "VGA_B[0]" is stuck at GND
+    Warning (13410): Pin "VGA_R[8]" is stuck at GND
+    Warning (13410): Pin "VGA_R[9]" is stuck at GND
+    Warning (13410): Pin "VGA_G[8]" is stuck at GND
+    Warning (13410): Pin "VGA_G[9]" is stuck at GND
+    Warning (13410): Pin "VGA_B[8]" is stuck at GND
+    Warning (13410): Pin "VGA_B[9]" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
+Warning (21074): Design contains 7 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "GPIO_1[0]"
     Warning (15610): No output dependent on input pin "GPIO_1[2]"
+    Warning (15610): No output dependent on input pin "GPIO_1[31]"
+    Warning (15610): No output dependent on input pin "GPIO_1[32]"
+    Warning (15610): No output dependent on input pin "GPIO_1[33]"
+    Warning (15610): No output dependent on input pin "GPIO_1[34]"
+    Warning (15610): No output dependent on input pin "GPIO_1[35]"
 Info (21057): Implemented 71 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 36 input pins
     Info (21059): Implemented 35 output pins
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 367 megabytes
-    Info: Processing ended: Tue Jun 28 17:11:07 2016
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 15 warnings
+    Info: Peak virtual memory: 463 megabytes
+    Info: Processing ended: Fri Jul 01 15:50:57 2016
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 

@@ -1,6 +1,6 @@
 Fitter report for adapt
-Tue Jun 28 17:11:15 2016
-Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+Fri Jul 01 15:51:07 2016
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
 ---------------------
@@ -56,8 +56,8 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                        ;
 +------------------------------------+--------------------------------------------------+
-; Fitter Status                      ; Successful - Tue Jun 28 17:11:15 2016            ;
-; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
+; Fitter Status                      ; Successful - Fri Jul 01 15:51:07 2016            ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; adapt                                            ;
 ; Top-level Entity Name              ; adapt                                            ;
 ; Family                             ; Cyclone II                                       ;
@@ -134,12 +134,12 @@ applicable agreement for further details.
 ; Number detected on machine ; 2           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.29        ;
+; Average used               ; 1.13        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  28.6%      ;
+;     Processor 2            ;  12.5%      ;
 +----------------------------+-------------+
 
 
@@ -547,7 +547,7 @@ applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/innovlab/Desktop/adapt/output_files/adapt.pin.
+The pin-out file can be found in C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/adapt/output_files/adapt.pin.
 
 
 +-------------------------------------------------------------------+
@@ -590,11 +590,11 @@ The pin-out file can be found in C:/Users/innovlab/Desktop/adapt/output_files/ad
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )       ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )       ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%        ;
-; Peak interconnect usage (total/H/V)         ; 1% / 1% / 1%        ;
+; Peak interconnect usage (total/H/V)         ; 0% / 1% / 1%        ;
 ; Maximum fan-out                             ; 1                   ;
 ; Highest non-global fan-out                  ; 1                   ;
-; Total fan-out                               ; 34                  ;
-; Average fan-out                             ; 0.46                ;
+; Total fan-out                               ; 29                  ;
+; Average fan-out                             ; 0.39                ;
 +---------------------------------------------+---------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -640,7 +640,7 @@ The pin-out file can be found in C:/Users/innovlab/Desktop/adapt/output_files/ad
 ;     -- Registered Output Connections        ; 0                 ; 0                              ;
 ;                                             ;                   ;                                ;
 ; Internal Connections                        ;                   ;                                ;
-;     -- Total Connections                    ; 34                ; 0                              ;
+;     -- Total Connections                    ; 29                ; 0                              ;
 ;     -- Registered Connections               ; 0                 ; 0                              ;
 ;                                             ;                   ;                                ;
 ; External Connections                        ;                   ;                                ;
@@ -697,11 +697,11 @@ The pin-out file can be found in C:/Users/innovlab/Desktop/adapt/output_files/ad
 ; GPIO_1[29] ; U21   ; 6        ; 65           ; 11           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; GPIO_1[2]  ; M22   ; 5        ; 65           ; 22           ; 2           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; GPIO_1[30] ; V26   ; 6        ; 65           ; 11           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; GPIO_1[31] ; V25   ; 6        ; 65           ; 11           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; GPIO_1[32] ; V24   ; 6        ; 65           ; 10           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; GPIO_1[33] ; V23   ; 6        ; 65           ; 10           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; GPIO_1[34] ; W25   ; 6        ; 65           ; 10           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; GPIO_1[35] ; W23   ; 6        ; 65           ; 9            ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; GPIO_1[31] ; V25   ; 6        ; 65           ; 11           ; 2           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; GPIO_1[32] ; V24   ; 6        ; 65           ; 10           ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; GPIO_1[33] ; V23   ; 6        ; 65           ; 10           ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; GPIO_1[34] ; W25   ; 6        ; 65           ; 10           ; 3           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; GPIO_1[35] ; W23   ; 6        ; 65           ; 9            ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; GPIO_1[3]  ; M23   ; 5        ; 65           ; 22           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; GPIO_1[4]  ; M19   ; 5        ; 65           ; 21           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; GPIO_1[5]  ; M20   ; 5        ; 65           ; 21           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
@@ -1506,31 +1506,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------+----------+---------------+---------------+-----------------------+-----+
 ; GPIO_1[0]  ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; GPIO_1[2]  ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; VGA_SYNC   ; Output   ; --            ; --            ; --                    ; --  ;
-; VGA_BLANK  ; Output   ; --            ; --            ; --                    ; --  ;
-; VGA_VS     ; Output   ; --            ; --            ; --                    ; --  ;
-; VGA_HS     ; Output   ; --            ; --            ; --                    ; --  ;
+; GPIO_1[31] ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; GPIO_1[32] ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; GPIO_1[33] ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; GPIO_1[34] ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; GPIO_1[35] ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; VGA_CLK    ; Output   ; --            ; --            ; --                    ; --  ;
-; VGA_B[0]   ; Output   ; --            ; --            ; --                    ; --  ;
-; VGA_B[1]   ; Output   ; --            ; --            ; --                    ; --  ;
-; VGA_B[2]   ; Output   ; --            ; --            ; --                    ; --  ;
-; VGA_B[3]   ; Output   ; --            ; --            ; --                    ; --  ;
-; VGA_B[4]   ; Output   ; --            ; --            ; --                    ; --  ;
-; VGA_B[5]   ; Output   ; --            ; --            ; --                    ; --  ;
-; VGA_B[6]   ; Output   ; --            ; --            ; --                    ; --  ;
-; VGA_B[7]   ; Output   ; --            ; --            ; --                    ; --  ;
-; VGA_B[8]   ; Output   ; --            ; --            ; --                    ; --  ;
-; VGA_B[9]   ; Output   ; --            ; --            ; --                    ; --  ;
-; VGA_G[0]   ; Output   ; --            ; --            ; --                    ; --  ;
-; VGA_G[1]   ; Output   ; --            ; --            ; --                    ; --  ;
-; VGA_G[2]   ; Output   ; --            ; --            ; --                    ; --  ;
-; VGA_G[3]   ; Output   ; --            ; --            ; --                    ; --  ;
-; VGA_G[4]   ; Output   ; --            ; --            ; --                    ; --  ;
-; VGA_G[5]   ; Output   ; --            ; --            ; --                    ; --  ;
-; VGA_G[6]   ; Output   ; --            ; --            ; --                    ; --  ;
-; VGA_G[7]   ; Output   ; --            ; --            ; --                    ; --  ;
-; VGA_G[8]   ; Output   ; --            ; --            ; --                    ; --  ;
-; VGA_G[9]   ; Output   ; --            ; --            ; --                    ; --  ;
+; VGA_HS     ; Output   ; --            ; --            ; --                    ; --  ;
+; VGA_VS     ; Output   ; --            ; --            ; --                    ; --  ;
+; VGA_BLANK  ; Output   ; --            ; --            ; --                    ; --  ;
+; VGA_SYNC   ; Output   ; --            ; --            ; --                    ; --  ;
 ; VGA_R[0]   ; Output   ; --            ; --            ; --                    ; --  ;
 ; VGA_R[1]   ; Output   ; --            ; --            ; --                    ; --  ;
 ; VGA_R[2]   ; Output   ; --            ; --            ; --                    ; --  ;
@@ -1541,30 +1526,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; VGA_R[7]   ; Output   ; --            ; --            ; --                    ; --  ;
 ; VGA_R[8]   ; Output   ; --            ; --            ; --                    ; --  ;
 ; VGA_R[9]   ; Output   ; --            ; --            ; --                    ; --  ;
-; GPIO_1[6]  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; GPIO_1[5]  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; GPIO_1[4]  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; GPIO_1[3]  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; VGA_G[0]   ; Output   ; --            ; --            ; --                    ; --  ;
+; VGA_G[1]   ; Output   ; --            ; --            ; --                    ; --  ;
+; VGA_G[2]   ; Output   ; --            ; --            ; --                    ; --  ;
+; VGA_G[3]   ; Output   ; --            ; --            ; --                    ; --  ;
+; VGA_G[4]   ; Output   ; --            ; --            ; --                    ; --  ;
+; VGA_G[5]   ; Output   ; --            ; --            ; --                    ; --  ;
+; VGA_G[6]   ; Output   ; --            ; --            ; --                    ; --  ;
+; VGA_G[7]   ; Output   ; --            ; --            ; --                    ; --  ;
+; VGA_G[8]   ; Output   ; --            ; --            ; --                    ; --  ;
+; VGA_G[9]   ; Output   ; --            ; --            ; --                    ; --  ;
+; VGA_B[0]   ; Output   ; --            ; --            ; --                    ; --  ;
+; VGA_B[1]   ; Output   ; --            ; --            ; --                    ; --  ;
+; VGA_B[2]   ; Output   ; --            ; --            ; --                    ; --  ;
+; VGA_B[3]   ; Output   ; --            ; --            ; --                    ; --  ;
+; VGA_B[4]   ; Output   ; --            ; --            ; --                    ; --  ;
+; VGA_B[5]   ; Output   ; --            ; --            ; --                    ; --  ;
+; VGA_B[6]   ; Output   ; --            ; --            ; --                    ; --  ;
+; VGA_B[7]   ; Output   ; --            ; --            ; --                    ; --  ;
+; VGA_B[8]   ; Output   ; --            ; --            ; --                    ; --  ;
+; VGA_B[9]   ; Output   ; --            ; --            ; --                    ; --  ;
 ; GPIO_1[1]  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; GPIO_1[27] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; GPIO_1[28] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; GPIO_1[29] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; GPIO_1[30] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; GPIO_1[31] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; GPIO_1[32] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; GPIO_1[33] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; GPIO_1[34] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; GPIO_1[35] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; GPIO_1[17] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; GPIO_1[18] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; GPIO_1[19] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; GPIO_1[20] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; GPIO_1[21] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; GPIO_1[22] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; GPIO_1[23] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; GPIO_1[24] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; GPIO_1[25] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; GPIO_1[26] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; GPIO_1[3]  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; GPIO_1[4]  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; GPIO_1[5]  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; GPIO_1[6]  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; GPIO_1[7]  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; GPIO_1[8]  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; GPIO_1[9]  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
@@ -1575,6 +1561,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; GPIO_1[14] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; GPIO_1[15] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; GPIO_1[16] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; GPIO_1[17] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; GPIO_1[18] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; GPIO_1[19] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; GPIO_1[20] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; GPIO_1[21] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; GPIO_1[22] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; GPIO_1[23] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; GPIO_1[24] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; GPIO_1[25] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; GPIO_1[26] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; GPIO_1[27] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; GPIO_1[28] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; GPIO_1[29] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; GPIO_1[30] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 +------------+----------+---------------+---------------+-----------------------+-----+
 
 
@@ -1585,54 +1585,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------+-------------------+---------+
 ; GPIO_1[0]           ;                   ;         ;
 ; GPIO_1[2]           ;                   ;         ;
-; GPIO_1[6]           ;                   ;         ;
-;      - VGA_SYNC     ; 0                 ; 6       ;
-; GPIO_1[5]           ;                   ;         ;
-;      - VGA_BLANK    ; 0                 ; 6       ;
-; GPIO_1[4]           ;                   ;         ;
-;      - VGA_VS       ; 0                 ; 6       ;
-; GPIO_1[3]           ;                   ;         ;
-;      - VGA_HS       ; 1                 ; 6       ;
+; GPIO_1[31]          ;                   ;         ;
+; GPIO_1[32]          ;                   ;         ;
+; GPIO_1[33]          ;                   ;         ;
+; GPIO_1[34]          ;                   ;         ;
+; GPIO_1[35]          ;                   ;         ;
 ; GPIO_1[1]           ;                   ;         ;
 ;      - VGA_CLK      ; 1                 ; 6       ;
-; GPIO_1[27]          ;                   ;         ;
-;      - VGA_B[1]     ; 1                 ; 6       ;
-; GPIO_1[28]          ;                   ;         ;
-;      - VGA_B[2]     ; 1                 ; 6       ;
-; GPIO_1[29]          ;                   ;         ;
-;      - VGA_B[3]     ; 0                 ; 6       ;
-; GPIO_1[30]          ;                   ;         ;
-;      - VGA_B[4]     ; 1                 ; 6       ;
-; GPIO_1[31]          ;                   ;         ;
-;      - VGA_B[5]     ; 0                 ; 6       ;
-; GPIO_1[32]          ;                   ;         ;
-;      - VGA_B[6]     ; 0                 ; 6       ;
-; GPIO_1[33]          ;                   ;         ;
-;      - VGA_B[7]     ; 1                 ; 6       ;
-; GPIO_1[34]          ;                   ;         ;
-;      - VGA_B[8]     ; 1                 ; 6       ;
-; GPIO_1[35]          ;                   ;         ;
-;      - VGA_B[9]     ; 0                 ; 6       ;
-; GPIO_1[17]          ;                   ;         ;
-;      - VGA_G[0]     ; 0                 ; 6       ;
-; GPIO_1[18]          ;                   ;         ;
-;      - VGA_G[1]     ; 1                 ; 6       ;
-; GPIO_1[19]          ;                   ;         ;
-;      - VGA_G[2]     ; 0                 ; 6       ;
-; GPIO_1[20]          ;                   ;         ;
-;      - VGA_G[3]     ; 0                 ; 6       ;
-; GPIO_1[21]          ;                   ;         ;
-;      - VGA_G[4]     ; 0                 ; 6       ;
-; GPIO_1[22]          ;                   ;         ;
-;      - VGA_G[5]     ; 0                 ; 6       ;
-; GPIO_1[23]          ;                   ;         ;
-;      - VGA_G[6]     ; 1                 ; 6       ;
-; GPIO_1[24]          ;                   ;         ;
-;      - VGA_G[7]     ; 0                 ; 6       ;
-; GPIO_1[25]          ;                   ;         ;
-;      - VGA_G[8]     ; 0                 ; 6       ;
-; GPIO_1[26]          ;                   ;         ;
-;      - VGA_G[9]     ; 0                 ; 6       ;
+; GPIO_1[3]           ;                   ;         ;
+;      - VGA_HS       ; 1                 ; 6       ;
+; GPIO_1[4]           ;                   ;         ;
+;      - VGA_VS       ; 0                 ; 6       ;
+; GPIO_1[5]           ;                   ;         ;
+;      - VGA_BLANK    ; 0                 ; 6       ;
+; GPIO_1[6]           ;                   ;         ;
+;      - VGA_SYNC     ; 0                 ; 6       ;
 ; GPIO_1[7]           ;                   ;         ;
 ;      - VGA_R[0]     ; 0                 ; 6       ;
 ; GPIO_1[8]           ;                   ;         ;
@@ -1650,9 +1617,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; GPIO_1[14]          ;                   ;         ;
 ;      - VGA_R[7]     ; 0                 ; 6       ;
 ; GPIO_1[15]          ;                   ;         ;
-;      - VGA_R[8]     ; 0                 ; 6       ;
+;      - VGA_G[0]     ; 1                 ; 6       ;
 ; GPIO_1[16]          ;                   ;         ;
-;      - VGA_R[9]     ; 0                 ; 6       ;
+;      - VGA_G[1]     ; 0                 ; 6       ;
+; GPIO_1[17]          ;                   ;         ;
+;      - VGA_G[2]     ; 0                 ; 6       ;
+; GPIO_1[18]          ;                   ;         ;
+;      - VGA_G[3]     ; 1                 ; 6       ;
+; GPIO_1[19]          ;                   ;         ;
+;      - VGA_G[4]     ; 0                 ; 6       ;
+; GPIO_1[20]          ;                   ;         ;
+;      - VGA_G[5]     ; 0                 ; 6       ;
+; GPIO_1[21]          ;                   ;         ;
+;      - VGA_G[6]     ; 1                 ; 6       ;
+; GPIO_1[22]          ;                   ;         ;
+;      - VGA_G[7]     ; 0                 ; 6       ;
+; GPIO_1[23]          ;                   ;         ;
+;      - VGA_B[0]     ; 1                 ; 6       ;
+; GPIO_1[24]          ;                   ;         ;
+;      - VGA_B[1]     ; 0                 ; 6       ;
+; GPIO_1[25]          ;                   ;         ;
+;      - VGA_B[2]     ; 0                 ; 6       ;
+; GPIO_1[26]          ;                   ;         ;
+;      - VGA_B[3]     ; 0                 ; 6       ;
+; GPIO_1[27]          ;                   ;         ;
+;      - VGA_B[4]     ; 1                 ; 6       ;
+; GPIO_1[28]          ;                   ;         ;
+;      - VGA_B[5]     ; 1                 ; 6       ;
+; GPIO_1[29]          ;                   ;         ;
+;      - VGA_B[6]     ; 0                 ; 6       ;
+; GPIO_1[30]          ;                   ;         ;
+;      - VGA_B[7]     ; 1                 ; 6       ;
 +---------------------+-------------------+---------+
 
 
@@ -1661,16 +1656,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------+--------------------+
 ; Name       ; Fan-Out            ;
 +------------+--------------------+
-; GPIO_1[16] ; 1                  ;
-; GPIO_1[15] ; 1                  ;
-; GPIO_1[14] ; 1                  ;
-; GPIO_1[13] ; 1                  ;
-; GPIO_1[12] ; 1                  ;
-; GPIO_1[11] ; 1                  ;
-; GPIO_1[10] ; 1                  ;
-; GPIO_1[9]  ; 1                  ;
-; GPIO_1[8]  ; 1                  ;
-; GPIO_1[7]  ; 1                  ;
+; GPIO_1[30] ; 1                  ;
+; GPIO_1[29] ; 1                  ;
+; GPIO_1[28] ; 1                  ;
+; GPIO_1[27] ; 1                  ;
 ; GPIO_1[26] ; 1                  ;
 ; GPIO_1[25] ; 1                  ;
 ; GPIO_1[24] ; 1                  ;
@@ -1681,20 +1670,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; GPIO_1[19] ; 1                  ;
 ; GPIO_1[18] ; 1                  ;
 ; GPIO_1[17] ; 1                  ;
-; GPIO_1[35] ; 1                  ;
-; GPIO_1[34] ; 1                  ;
-; GPIO_1[33] ; 1                  ;
-; GPIO_1[32] ; 1                  ;
-; GPIO_1[31] ; 1                  ;
-; GPIO_1[30] ; 1                  ;
-; GPIO_1[29] ; 1                  ;
-; GPIO_1[28] ; 1                  ;
-; GPIO_1[27] ; 1                  ;
-; GPIO_1[1]  ; 1                  ;
-; GPIO_1[3]  ; 1                  ;
-; GPIO_1[4]  ; 1                  ;
-; GPIO_1[5]  ; 1                  ;
+; GPIO_1[16] ; 1                  ;
+; GPIO_1[15] ; 1                  ;
+; GPIO_1[14] ; 1                  ;
+; GPIO_1[13] ; 1                  ;
+; GPIO_1[12] ; 1                  ;
+; GPIO_1[11] ; 1                  ;
+; GPIO_1[10] ; 1                  ;
+; GPIO_1[9]  ; 1                  ;
+; GPIO_1[8]  ; 1                  ;
+; GPIO_1[7]  ; 1                  ;
 ; GPIO_1[6]  ; 1                  ;
+; GPIO_1[5]  ; 1                  ;
+; GPIO_1[4]  ; 1                  ;
+; GPIO_1[3]  ; 1                  ;
+; GPIO_1[1]  ; 1                  ;
 +------------+--------------------+
 
 
@@ -1703,13 +1693,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+-----------------------+
 ; Other Routing Resource Type ; Usage                 ;
 +-----------------------------+-----------------------+
-; Block interconnects         ; 34 / 94,460 ( < 1 % ) ;
-; C16 interconnects           ; 50 / 3,315 ( 2 % )    ;
+; Block interconnects         ; 29 / 94,460 ( < 1 % ) ;
+; C16 interconnects           ; 35 / 3,315 ( 1 % )    ;
 ; C4 interconnects            ; 33 / 60,840 ( < 1 % ) ;
 ; Global clocks               ; 0 / 16 ( 0 % )        ;
 ; Local interconnects         ; 0 / 33,216 ( 0 % )    ;
-; R24 interconnects           ; 87 / 3,091 ( 3 % )    ;
-; R4 interconnects            ; 7 / 81,294 ( < 1 % )  ;
+; R24 interconnects           ; 72 / 3,091 ( 2 % )    ;
+; R4 interconnects            ; 9 / 81,294 ( < 1 % )  ;
 +-----------------------------+-----------------------+
 
 
@@ -2129,39 +2119,19 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X44_Y12 to location X54_Y23
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X44_Y12 to location X54_Y23
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.22 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.20 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 35 output pins without output pin load capacitance assignment
-    Info (306007): Pin "VGA_SYNC" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "VGA_BLANK" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "VGA_VS" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "VGA_HS" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "VGA_CLK" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "VGA_B[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "VGA_B[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "VGA_B[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "VGA_B[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "VGA_B[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "VGA_B[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "VGA_B[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "VGA_B[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "VGA_B[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "VGA_B[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "VGA_G[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "VGA_G[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "VGA_G[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "VGA_G[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "VGA_G[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "VGA_G[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "VGA_G[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "VGA_G[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "VGA_G[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "VGA_G[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "VGA_HS" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "VGA_VS" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "VGA_BLANK" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "VGA_SYNC" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "VGA_R[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "VGA_R[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "VGA_R[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -2172,23 +2142,43 @@ Warning (306006): Found 35 output pins without output pin load capacitance assig
     Info (306007): Pin "VGA_R[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "VGA_R[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "VGA_R[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "VGA_G[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "VGA_G[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "VGA_G[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "VGA_G[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "VGA_G[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "VGA_G[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "VGA_G[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "VGA_G[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "VGA_G[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "VGA_G[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "VGA_B[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "VGA_B[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "VGA_B[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "VGA_B[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "VGA_B[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "VGA_B[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "VGA_B[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "VGA_B[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "VGA_B[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "VGA_B[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
 Info (306005): Delay annotation completed successfully
 Info (306004): Started post-fitting delay annotation
 Info (306005): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
-Info (144001): Generated suppressed messages file C:/Users/innovlab/Desktop/adapt/output_files/adapt.fit.smsg
-Info: Quartus II 32-bit Fitter was successful. 0 errors, 361 warnings
-    Info: Peak virtual memory: 531 megabytes
-    Info: Processing ended: Tue Jun 28 17:11:16 2016
+Info (144001): Generated suppressed messages file C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/adapt/output_files/adapt.fit.smsg
+Info: Quartus II 64-Bit Fitter was successful. 0 errors, 361 warnings
+    Info: Peak virtual memory: 829 megabytes
+    Info: Processing ended: Fri Jul 01 15:51:07 2016
     Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:10
+    Info: Total CPU time (on all processors): 00:00:09
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/innovlab/Desktop/adapt/output_files/adapt.fit.smsg.
+The suppressed messages can be found in C:/Users/innovlab/workspace/EyeSat_CMOS_Image_Sensor/FPGA_Program/adapt/output_files/adapt.fit.smsg.
 
 

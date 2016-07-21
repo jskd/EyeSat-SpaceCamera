@@ -44,11 +44,13 @@ output [9:0] VGA_B;
 assign	VGA_CLK = GPIO_1[1];
 assign	VGA_HS = GPIO_1[3];
 assign	VGA_VS = GPIO_1[4];
-assign	VGA_BLANK = GPIO_1[5];
-assign	VGA_SYNC = GPIO_1[6];
-assign	VGA_R[9:0] = GPIO_1[16:7];
-assign	VGA_G[9:0] = GPIO_1[26:17];
-assign	VGA_B[9:1] = GPIO_1[35:27];
-assign	VGA_B[0] = 1'b0;
+assign	VGA_BLANK = ~GPIO_1[5];
+assign	VGA_SYNC = ~GPIO_1[6];
+assign	VGA_R[7:0] = GPIO_1[14:7];
+assign	VGA_G[7:0] = GPIO_1[22:15];
+assign	VGA_B[7:0] = GPIO_1[30:23];
+assign	VGA_R[9:8] = 2'b00;
+assign	VGA_G[9:8] = 2'b00;
+assign	VGA_B[9:8] = 2'b00;
 
 endmodule

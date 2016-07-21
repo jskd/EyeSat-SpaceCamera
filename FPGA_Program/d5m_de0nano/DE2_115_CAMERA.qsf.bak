@@ -1,0 +1,173 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2010 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II
+# Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+# Date created = 17:53:46  August 10, 2010
+#
+# -------------------------------------------------------------------------- #
+
+#============================================================
+# Build by Terasic System Builder
+#============================================================
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE22F17C6
+set_global_assignment -name TOP_LEVEL_ENTITY DE2_115_CAMERA
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.1 SP2"
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:53:46  AUGUST 10, 2010"
+
+#============================================================
+# CLOCK
+#============================================================
+
+#============================================================
+# Sma
+#============================================================
+
+#============================================================
+# LED
+#============================================================
+
+#============================================================
+# KEY
+#============================================================
+
+#============================================================
+# EJTAG
+#============================================================
+
+#============================================================
+# SW
+#============================================================
+
+#============================================================
+# SEG7
+#============================================================
+
+#============================================================
+# LCD
+#============================================================
+
+#============================================================
+# RS232
+#============================================================
+
+#============================================================
+# PS2 for Keyboard and Mouse
+#============================================================
+
+#============================================================
+# SDCARD
+#============================================================
+
+#============================================================
+# VGA
+#============================================================
+
+#============================================================
+# Audio
+#============================================================
+
+#============================================================
+# I2C for EEPROM
+#============================================================
+
+#============================================================
+# I2C for Audio Tv-Decoder
+#============================================================
+
+#============================================================
+# Ethernet 0
+#============================================================
+
+#============================================================
+# Ethernet 1
+#============================================================
+
+#============================================================
+# TV Decoder
+#============================================================
+
+#============================================================
+# USB 2.0 OTG
+#============================================================
+
+#============================================================
+# IR Receiver
+#============================================================
+
+#============================================================
+# SDRAM
+#============================================================
+
+#============================================================
+# SRAM
+#============================================================
+
+#============================================================
+# Flash
+#============================================================
+
+#============================================================
+# GPIO, GPIO connect to D5M - 5M Pixel Camera
+#============================================================
+
+#============================================================
+# End of pin assignments by Terasic System Builder
+#============================================================
+
+
+set_global_assignment -name VERILOG_FILE Sdram_Control/command.v
+set_global_assignment -name VERILOG_FILE Sdram_Control/control_interface.v
+set_global_assignment -name VERILOG_FILE Sdram_Control/sdr_data_path.v
+set_global_assignment -name VERILOG_FILE Sdram_Control/Sdram_Control.v
+set_global_assignment -name SOURCE_FILE Sdram_Control/Sdram_Params.h
+set_global_assignment -name VERILOG_FILE Sdram_Control/Sdram_RD_FIFO.v
+set_global_assignment -name VERILOG_FILE Sdram_Control/Sdram_WR_FIFO.v
+set_global_assignment -name VERILOG_FILE v/CCD_Capture.v
+set_global_assignment -name VERILOG_FILE v/I2C_CCD_Config.v
+set_global_assignment -name VERILOG_FILE v/I2C_Controller.v
+set_global_assignment -name VERILOG_FILE v/Line_Buffer.v
+set_global_assignment -name VERILOG_FILE v/RAW2RGB.v
+set_global_assignment -name VERILOG_FILE v/Reset_Delay.v
+set_global_assignment -name VERILOG_FILE v/SEG7_LUT.v
+set_global_assignment -name VERILOG_FILE v/SEG7_LUT_8.v
+set_global_assignment -name VERILOG_FILE v/Stack_RAM.v
+set_global_assignment -name VERILOG_FILE v/VGA_Controller.v
+set_global_assignment -name SDC_FILE DE2_115_D5M_VGA.SDC
+set_global_assignment -name QIP_FILE v/sdram_pll.qip
+set_global_assignment -name SIGNALTAP_FILE stp1.stp
+set_global_assignment -name VERILOG_FILE v/touch_tcon.v
+set_global_assignment -name VERILOG_FILE v/VGA_Param.v
+set_global_assignment -name SOURCE_FILE VGA_Param.h
+set_global_assignment -name VERILOG_FILE v/Line_Buffer1.v
+set_global_assignment -name QIP_FILE v/Line_Buffer1.qip
+set_global_assignment -name VERILOG_FILE DE2_115_CAMERA.v
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity DE0_NANO -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity DE0_NANO -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -entity DE0_NANO -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE0_NANO -section_id Top
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
